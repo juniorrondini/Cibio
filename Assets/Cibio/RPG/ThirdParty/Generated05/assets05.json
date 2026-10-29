@@ -1,0 +1,81 @@
+[
+  {
+    "action": "transition",
+    "columns": 6,
+    "rows": 4,
+    "path": "transition-original.png",
+    "prompt": "Use case: identity-preserve / game sprite animation. Create an actual transparent production SPRITE ATLAS, exactly SIX equal columns and FOUR equal rows, landscape aspect ratio 3:2, all 24 full-body figures separated by generous transparent margins, no labels, no grid lines. References: image 1 is the current golden transformed hero in four directions; image 2 is his normal form. Preserve this recognizable Brazilian male pixel RPG hero: warm brown skin, yellow Brazil jersey with green collar/sleeve edges, blue trousers, dark shoes. Match the same detailed LPC-style small chunky clean pixel clusters, top-down 3/4 RPG camera, not a large anime illustration. NEW ART FOR A TRANSFORMATION SEQUENCE: broader powerful shoulders/chest, visible stronger forearms, jersey stretched with a few torn sleeve edges, distinct aggressive angular golden hair flaring upward and outward. No aura, no background, no glow, no cast shadows: effects added separately by game. ROWS in EXACT order: row 1 facing NORTH with back visible; row 2 facing WEST with left profile visible; row 3 facing SOUTH with face visible; row 4 facing EAST with right profile visible. All six figures of each row keep exactly that orientation. COLUMNS in chronological order: 1 normal dark curly hair, knees bent, fists tight at waist anticipating; 2 knees bend deeper, shoulders tense, dark hair lifts into spikes; 3 rises as torso expands and spikes lengthen with first gold highlights; 4 explosive open arms/raised fists, fully golden spiky hair, expanded chest; 5 lowers arms into strong battle-ready stance, golden hair settles; 6 finished powerful golden form in relaxed battle-ready idle, same hair silhouette as reference 1 but with stronger torso and forearms. Anchor both feet to the SAME horizontal baseline at 84 percent down every cell, keep pelvis centered horizontally in each cell. Slight rise in height and body width is intentional, no drifting between cells, no cropped hair or hands. Character occupies about central 55 percent cell width and 75 percent cell height. Transparent alpha background everywhere except the character. Crisp deliberate pixel art, no painted blur, no words or watermarks. This is new artwork of the hero across his transformation, it must include EVERY one of the 24 requested cells."
+  },
+  {
+    "action": "walk",
+    "columns": 8,
+    "rows": 4,
+    "path": "walk-original.png",
+    "prompt": "Use case: game sprite animation asset. Generate a transparent production pixel-art SPRITE SHEET using ONLY the finished golden powered-up hero from the LAST TWO COLUMNS of the reference. Same identity EXACTLY: brown skin, powerful shoulders and forearms, spiky golden hair, determined face, yellow Brazil jersey with green trim and small torn sleeve edges, blue trousers, dark shoes. Same RPG top-down 3/4 camera and crisp detailed pixel clusters as reference, NOT a painted illustration. Exactly FOUR ROWS: row1 facing NORTH/back, row2 facing WEST/left profile, row3 facing SOUTH/front, row4 facing EAST/right profile. Never change facing within a row. All cells equal square size, feet/ground baseline consistently at 84% down cell and pelvis centered, character about 70-75% cell height, transparent generous margins, NO backgrounds, no shadows, no aura/glow/speed lines, no weapons, no words or gridlines. Keep clothing, body proportions, golden hair and color palette absolutely consistent in every frame. Every frame must be a deliberately different animation pose, with good natural weight transfer. Exactly 8 COLUMNS and FOUR ROWS, 32 complete sprites. A smooth eight-frame WALK cycle, one complete cycle left and right steps. Natural opposite arms and legs, planted foot contact at frames 1 and 5, recoil at 2 and 6, passing at 3 and 7, high point at4 and8. Calm purposeful walking, low knees."
+  },
+  {
+    "action": "run",
+    "columns": 8,
+    "rows": 4,
+    "path": "run-original.png",
+    "prompt": "Use case: game sprite animation asset. Generate a transparent production pixel-art SPRITE SHEET using ONLY the finished golden powered-up hero from the LAST TWO COLUMNS of the reference. Same identity EXACTLY: brown skin, powerful shoulders and forearms, spiky golden hair, determined face, yellow Brazil jersey with green trim and small torn sleeve edges, blue trousers, dark shoes. Same RPG top-down 3/4 camera and crisp detailed pixel clusters as reference, NOT a painted illustration. Exactly FOUR ROWS: row1 facing NORTH/back, row2 facing WEST/left profile, row3 facing SOUTH/front, row4 facing EAST/right profile. Never change facing within a row. All cells equal square size, feet/ground baseline consistently at 84% down cell and pelvis centered, character about 70-75% cell height, transparent generous margins, NO backgrounds, no shadows, no aura/glow/speed lines, no weapons, no words or gridlines. Keep clothing, body proportions, golden hair and color palette absolutely consistent in every frame. Every frame must be a deliberately different animation pose, with good natural weight transfer. Exactly 8 COLUMNS and FOUR ROWS, 32 complete sprites. A smooth eight-frame RUN cycle, strong forward lean, long athletic stride, pronounced arm pumping, airborne frames2 and6, compression at4 and8. Clearly faster and more dynamic than walking."
+  },
+  {
+    "action": "slash",
+    "columns": 6,
+    "rows": 4,
+    "path": "slash-original.png",
+    "prompt": "Use case: game sprite animation asset. Generate a transparent production pixel-art SPRITE SHEET using ONLY the finished golden powered-up hero from the LAST TWO COLUMNS of the reference. Same identity EXACTLY: brown skin, powerful shoulders and forearms, spiky golden hair, determined face, yellow Brazil jersey with green trim and small torn sleeve edges, blue trousers, dark shoes. Same RPG top-down 3/4 camera and crisp detailed pixel clusters as reference, NOT a painted illustration. Exactly FOUR ROWS: row1 facing NORTH/back, row2 facing WEST/left profile, row3 facing SOUTH/front, row4 facing EAST/right profile. Never change facing within a row. All cells equal square size, feet/ground baseline consistently at 84% down cell and pelvis centered, character about 70-75% cell height, transparent generous margins, NO backgrounds, no shadows, no aura/glow/speed lines, no weapons, no words or gridlines. Keep clothing, body proportions, golden hair and color palette absolutely consistent in every frame. Every frame must be a deliberately different animation pose, with good natural weight transfer. Exactly 6 COLUMNS and FOUR ROWS, 24 complete sprites. A six-frame unarmed fighting PUNCH and heavy hook animation: 1 guarded ready stance, 2 hip and shoulder wind-up, 3 straight arm extension, 4 full heavy punch contact with opposite arm guarding, 5 follow-through hook across chest, 6 return to guarded stance. Hands are fists, no weapon."
+  },
+  {
+    "action": "thrust",
+    "columns": 8,
+    "rows": 4,
+    "path": "thrust-original.png",
+    "prompt": "Use case: game sprite animation asset. Generate a transparent production pixel-art SPRITE SHEET using ONLY the finished golden powered-up hero from the LAST TWO COLUMNS of the reference. Same identity EXACTLY: brown skin, powerful shoulders and forearms, spiky golden hair, determined face, yellow Brazil jersey with green trim and small torn sleeve edges, blue trousers, dark shoes. Same RPG top-down 3/4 camera and crisp detailed pixel clusters as reference, NOT a painted illustration. Exactly FOUR ROWS: row1 facing NORTH/back, row2 facing WEST/left profile, row3 facing SOUTH/front, row4 facing EAST/right profile. Never change facing within a row. All cells equal square size, feet/ground baseline consistently at 84% down cell and pelvis centered, character about 70-75% cell height, transparent generous margins, NO backgrounds, no shadows, no aura/glow/speed lines, no weapons, no words or gridlines. Keep clothing, body proportions, golden hair and color palette absolutely consistent in every frame. Every frame must be a deliberately different animation pose, with good natural weight transfer. Exactly 8 COLUMNS and FOUR ROWS, 32 complete sprites. An eight-frame unarmed lunging CROSS PUNCH: 1 guard, 2 sink weight, 3 pull right fist back and rotate torso, 4 fast forward lunge, 5 opposite arm cross punch fully extended toward facing, 6 follow-through step, 7 retract fist, 8 guard. Hands are fists, no weapon."
+  },
+  {
+    "action": "backslash",
+    "columns": 13,
+    "rows": 4,
+    "path": "backslash-original.png",
+    "prompt": "Transparent production pixel-art RPG sprite animation sheet of ONLY the FULLY TRANSFORMED GOLDEN hero from the LAST COLUMN of the reference. ALL FRAMES HAVE GOLDEN SPIKY HAIR and muscular body. DO NOT show normal dark hair, do NOT show a transformation progression. Brown-skinned Brazilian man, big spiky GOLD hair, strong shoulders/forearms, yellow Brazil jersey green trim slightly torn sleeves, blue trousers dark shoes. Same clean detailed pixel style and top-down 3/4 RPG camera as reference. No aura, no glow, no shadows, no speed lines, no weapons or other effects, no background. Four equal ROWS: NORTH/back, WEST/profile, SOUTH/front, EAST/profile, in that order. Maintain each row's facing. Equal sized cells with transparent margins; the projected ground is fixed at 84% down cell, horizontal character center constant. Exact same character size, costume, hair shape and face in every frame. Every frame changes pose for animation. No text or grid. Exactly 13 columns by FOUR rows, 52 sprites. 13-frame SPINNING FINISHING BACKFIST combo, from battle guard through wind-up, pivoting torso, broad sweeping backfist, second elbow and powerful finishing fist, follow-through, returning to battle guard. Dynamic athletic body mechanics and weight transfer. Gold hair in all thirteen frames.",
+    "source_columns": 14,
+    "select_columns": [
+      0,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13
+    ]
+  },
+  {
+    "action": "spellcast",
+    "columns": 7,
+    "rows": 4,
+    "path": "spellcast-original.png",
+    "prompt": "Transparent production pixel-art RPG sprite animation sheet of ONLY the FULLY TRANSFORMED GOLDEN hero from the LAST COLUMN of the reference. ALL FRAMES HAVE GOLDEN SPIKY HAIR and muscular body. DO NOT show normal dark hair, do NOT show a transformation progression. Brown-skinned Brazilian man, big spiky GOLD hair, strong shoulders/forearms, yellow Brazil jersey green trim slightly torn sleeves, blue trousers dark shoes. Same clean detailed pixel style and top-down 3/4 RPG camera as reference. No aura, no glow, no shadows, no speed lines, no weapons or other effects, no background. Four equal ROWS: NORTH/back, WEST/profile, SOUTH/front, EAST/profile, in that order. Maintain each row's facing. Equal sized cells with transparent margins; the projected ground is fixed at 84% down cell, horizontal character center constant. Exact same character size, costume, hair shape and face in every frame. Every frame changes pose for animation. No text or grid. Exactly 7 columns by FOUR rows, 28 sprites. 7-frame ENERGY CHANNELING loop of already GOLDEN character: battle stance, knees flex, fists clench at waist, torso tenses, arms open raised fists with shout, arms lower, recovery guard. No recolor progression, hair stays golden throughout."
+  },
+  {
+    "action": "jump",
+    "columns": 5,
+    "rows": 4,
+    "path": "jump-original.png",
+    "prompt": "Transparent production pixel-art RPG sprite animation sheet of ONLY the FULLY TRANSFORMED GOLDEN hero from the LAST COLUMN of the reference. ALL FRAMES HAVE GOLDEN SPIKY HAIR and muscular body. DO NOT show normal dark hair, do NOT show a transformation progression. Brown-skinned Brazilian man, big spiky GOLD hair, strong shoulders/forearms, yellow Brazil jersey green trim slightly torn sleeves, blue trousers dark shoes. Same clean detailed pixel style and top-down 3/4 RPG camera as reference. No aura, no glow, no shadows, no speed lines, no weapons or other effects, no background. Four equal ROWS: NORTH/back, WEST/profile, SOUTH/front, EAST/profile, in that order. Maintain each row's facing. Equal sized cells with transparent margins; the projected ground is fixed at 84% down cell, horizontal character center constant. Exact same character size, costume, hair shape and face in every frame. Every frame changes pose for animation. No text or grid. Exactly 5 columns by FOUR rows, 20 sprites. 5-frame JUMP: crouch anticipation, upward launch, airborne apex knees tucked, legs extend, landing crouch. Hair stays GOLD throughout. No background or shadow."
+  },
+  {
+    "action": "hurt",
+    "columns": 6,
+    "rows": 4,
+    "path": "hurt-original.png",
+    "prompt": "Transparent production pixel-art RPG sprite animation sheet of ONLY the FULLY TRANSFORMED GOLDEN hero from the LAST COLUMN of the reference. ALL FRAMES HAVE GOLDEN SPIKY HAIR and muscular body. DO NOT show normal dark hair, do NOT show a transformation progression. Brown-skinned Brazilian man, big spiky GOLD hair, strong shoulders/forearms, yellow Brazil jersey green trim slightly torn sleeves, blue trousers dark shoes. Same clean detailed pixel style and top-down 3/4 RPG camera as reference. No aura, no glow, no shadows, no speed lines, no weapons or other effects, no background. Four equal ROWS: NORTH/back, WEST/profile, SOUTH/front, EAST/profile, in that order. Maintain each row's facing. Equal sized cells with transparent margins; the projected ground is fixed at 84% down cell, horizontal character center constant. Exact same character size, costume, hair shape and face in every frame. Every frame changes pose for animation. No text or grid. Exactly 6 columns by FOUR rows, 24 sprites. 6-frame HURT AND COLLAPSE: flinch, recoil, knees buckle, fall sideways, lie low, downed. Golden hair in all frames. No blood."
+  }
+]

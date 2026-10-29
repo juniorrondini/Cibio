@@ -1,0 +1,4 @@
+CIBIO 07 - DESIGN DE SOM
+Gravacoes CC0 de qubodup/Independent.nu (37 hits, OpenGameArt node/2558) e faxcorp (Electricity Game Sound Pack), ja distribuidas com fontes e creditos em SoundDesign05 e Audio-05.txt.
+Novas camadas DSP originais: vento de voo, decolagem, pouso, antecipacao e explosao desperta. Os seis impactos e a transformacao recombinam essas fontes CC0 e sintese propria. Sem audio extraido de franquias.
+Receita: ThirdParty/SoundDesign07/design_audio07.py; depende de numpy e soundfile, fontes Designed05 e sample rate 48000. Novos sons CC0.

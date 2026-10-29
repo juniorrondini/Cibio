@@ -1,0 +1,1 @@
+Captura nativa em tempo real. Pico de saida: 0,523521304130554; eventos: 17

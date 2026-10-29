@@ -1,0 +1,17 @@
+ÁUDIO 05 — FONTES CC0 E RECEITA ORIGINAL
+
+Independent.nu — 37 hits/punches, disponibilizado por qubodup, CC0.
+https://opengameart.org/node/2558
+Usados hit04.mp3.flac, hit12.mp3.flac e hit25.mp3.flac.
+
+faxcorp — Electricity Game Sound Pack, CC0.
+https://opengameart.org/content/electricity-game-sound-pack
+Usados crackleelectricityloop.wav, groundhit.wav e deathboom.wav.
+
+Design original Cibio: impactos com graves e estalos, vento filtrado,
+pressão de energia, variações de socos e explosão de transformação.
+Receita reproduzível: SoundDesign05/design_audio05.py (numpy + soundfile).
+O script original aponta para a pasta de preparação work/RpgResearch/Audio05;
+para reproduzir em outra pasta, ajuste S para esta pasta de fontes e O para a saída.
+16 WAVs finais PCM16 estéreo 48 kHz, com medição em Audio-Measurements.json.
+Não foram usados sons extraídos de Dragon Ball.

@@ -1,0 +1,128 @@
+[
+  {
+    "action": "transition",
+    "frames": 24,
+    "dimensions": [
+      768,
+      512
+    ],
+    "source_dimensions": [
+      1536,
+      1024
+    ],
+    "scale": 0.4663677130044843,
+    "nonempty": true
+  },
+  {
+    "action": "walk",
+    "frames": 36,
+    "dimensions": [
+      1152,
+      512
+    ],
+    "source_dimensions": [
+      1774,
+      887
+    ],
+    "scale": 0.49760765550239233,
+    "nonempty": true
+  },
+  {
+    "action": "run",
+    "frames": 32,
+    "dimensions": [
+      1024,
+      512
+    ],
+    "source_dimensions": [
+      1774,
+      887
+    ],
+    "scale": 0.4444444444444444,
+    "nonempty": true
+  },
+  {
+    "action": "slash",
+    "frames": 24,
+    "dimensions": [
+      768,
+      512
+    ],
+    "source_dimensions": [
+      1536,
+      1024
+    ],
+    "scale": 0.4581497797356828,
+    "nonempty": true
+  },
+  {
+    "action": "thrust",
+    "frames": 32,
+    "dimensions": [
+      1024,
+      512
+    ],
+    "source_dimensions": [
+      1774,
+      887
+    ],
+    "scale": 0.48,
+    "nonempty": true
+  },
+  {
+    "action": "backslash",
+    "frames": 52,
+    "dimensions": [
+      1664,
+      512
+    ],
+    "source_dimensions": [
+      2038,
+      772
+    ],
+    "scale": 0.6265060240963856,
+    "nonempty": true
+  },
+  {
+    "action": "spellcast",
+    "frames": 28,
+    "dimensions": [
+      896,
+      512
+    ],
+    "source_dimensions": [
+      1536,
+      1024
+    ],
+    "scale": 0.46846846846846846,
+    "nonempty": true
+  },
+  {
+    "action": "jump",
+    "frames": 20,
+    "dimensions": [
+      640,
+      512
+    ],
+    "source_dimensions": [
+      1536,
+      1024
+    ],
+    "scale": 0.4094488188976378,
+    "nonempty": true
+  },
+  {
+    "action": "hurt",
+    "frames": 6,
+    "dimensions": [
+      768,
+      128
+    ],
+    "source_dimensions": [
+      1536,
+      1024
+    ],
+    "scale": 0.4581497797356828,
+    "nonempty": true
+  }
+]

@@ -1,0 +1,28 @@
+CIBIO — CRÉDITOS
+
+Personagens: Universal LPC
+Benjamin K. Smith (BenCreating), Durrani, Eliza Wyatt (ElizaWy), ElizaWy, Evert, JaidynReiman, Joe White, Johannes Sjölund (wulax), Manuel Riecke (MrBeast), Matthew Krohn (makrohn), MuffinElZangano, Stephen Challener (Redshrike), TheraHedwig, bluecarrot16
+
+Arte derivada: recoloração brasileira e composição de camadas; CC BY-SA 4.0. Originais e créditos por arquivo em ThirdParty.
+
+Cenário: LPC base / Lanea Zimmerman (Sharm), Atlas de adrix89. CC BY-SA 3.0. Árvores, terreno, casa, barris, ponte e pedras.
+
+Fonte: Pixelify Sans, OFL 1.1 / Stefie Justprince.
+
+Construções: bluecarrot16, Lanea Zimmerman (Sharm), Wolthera van Hövell tot Westerflier (TheraHedwig), Guido Bos, Michele Bucelli (Buch), Casper Nilsson, Xenodora, keith karnage, NaRNeRZz e Talon (Talosaurus). Créditos completos em ThirdParty/Colonial e ThirdParty/Roofs. CC BY-SA 3.0 / 4.0 conforme os originais; arte derivada CC BY-SA 4.0.
+
+Ilustração do menu: original criada com image_gen para Cibio. Código e efeitos: projeto Cibio.
+
+Licenças e fontes completas acompanham o projeto.
+
+Cabelo da transformação: Fabzy, bluecarrot16 e demais autores indicados no CSV; hair/spiked_liberty, CC BY-SA 3.0. Recolorações e composições CC BY-SA 4.0.
+VFX orgânicos: imagens originais criadas com image_gen para Cibio; animação e composição em tempo real.
+
+Sons CC0: Kenney (50 RPG Sound Effects), rubberduck (80 CC0 RPG SFX), TinyWorlds (Forest Ambience). Armadura e cabelos adicionais: autores completos no CharacterCredits.csv.
+
+
+Versão 05: sons CC0 de Independent.nu/qubodup e faxcorp; design de áudio original Cibio. Terreno e atlas de transformação originais criados com image_gen. Prompts, receitas, fontes e licenças em ThirdParty.
+
+Versão 06: cinco atlas originais de energia criados com image_gen, 80 quadros. Partículas nativas da Unity e shaders de volume, luz e bloom seletivo do projeto Cibio. Originais e prompts em ThirdParty/GeneratedVfx06 e Prompts-VFX-06.txt.
+
+Versao 07: voo com arte original gerada com image_gen a partir das referencias do projeto; originais, prompt completo e importador em ThirdParty/Generated07. Sons CC0 e design DSP em SoundDesign07/Audio-07.txt. Fontes-07.zip acompanha a distribuicao.

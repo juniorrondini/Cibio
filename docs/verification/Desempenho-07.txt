@@ -1,0 +1,1 @@
+120 quadros sem captura: 2,276s; 52,7 FPS. Visual: 24fps fixos; audio: captura independente em tempo real.

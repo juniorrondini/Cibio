@@ -1,0 +1,29 @@
+CIBIO — FONTES E LICENÇAS DA VERSÃO 03
+
+Personagens e animações:
+https://github.com/LiberatedPixelCup/Universal-LPC-Spritesheet-Character-Generator
+https://liberatedpixelcup.github.io/Universal-LPC-Spritesheet-Character-Generator/
+Créditos por arquivo: ThirdParty/CharacterCredits.csv.
+Os olhos humanos são camadas de recoloração associadas à definição da cabeça humana; a definição oficial heads_human_male.json acompanha as fontes.
+Originais: opções registradas no CSV. Nesta versão, os derivados de composição/recoloração LPC são fornecidos sob CC BY-SA 4.0.
+
+Cenário:
+https://opengameart.org/content/lpc-tile-atlas
+https://opengameart.org/content/lpc-colonial-buildings
+https://opengameart.org/content/lpc-roofs
+Os créditos completos, incluindo atribuições herdadas, estão em ThirdParty. Os atlas originais conservam as opções de licença indicadas em Attribution.txt e nos arquivos CREDITS de cada conjunto. Os recortes e composições desta versão usam o cenário base LPC e construções coloniais. Os atlas originais incluem também outras artes não utilizadas; os textos GPL e LGPL são preservados com o pacote.
+
+Fonte Pixelify Sans:
+Copyright 2021 The Pixelify Sans Project Authors
+https://github.com/eifetx/Pixelify-Sans
+SIL Open Font License 1.1, texto completo incluído.
+
+Ilustração de menu original gerada com image_gen para Cibio. Não é uma imagem extraída dos jogos de referência.
+
+Licenças:
+https://creativecommons.org/licenses/by-sa/3.0/
+https://creativecommons.org/licenses/by-sa/4.0/
+https://www.gnu.org/licenses/gpl-3.0.html
+https://www.gnu.org/licenses/lgpl-3.0.html
+
+LPC-Art-Source.zip contém fontes, créditos e imagens modificadas, sem DRM.

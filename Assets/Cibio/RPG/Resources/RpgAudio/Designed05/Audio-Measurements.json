@@ -1,0 +1,130 @@
+[
+  {
+    "name": "charge_bass",
+    "seconds": 8.0,
+    "peak": 0.8899999985534541,
+    "rms": 0.27044833260402157,
+    "loop": true,
+    "boundary": 0.0
+  },
+  {
+    "name": "charge_air",
+    "seconds": 8.0,
+    "peak": 0.8899999989805045,
+    "rms": 0.20091942751456043,
+    "loop": true,
+    "boundary": 0.0
+  },
+  {
+    "name": "charge_electric",
+    "seconds": 8.0,
+    "peak": 0.8899999972965514,
+    "rms": 0.08479897841627694,
+    "loop": true,
+    "boundary": 0.0
+  },
+  {
+    "name": "aura_sustain",
+    "seconds": 8.0,
+    "peak": 0.8899999982090278,
+    "rms": 0.22726176010688393,
+    "loop": true,
+    "boundary": 0.0
+  },
+  {
+    "name": "punch_swing0",
+    "seconds": 0.24,
+    "peak": 0.8899999989365738,
+    "rms": 0.20186825464129493,
+    "loop": false,
+    "boundary": 0.0
+  },
+  {
+    "name": "punch_hit0",
+    "seconds": 0.62,
+    "peak": 0.7906369871639871,
+    "rms": 0.14579853032639464,
+    "loop": false,
+    "boundary": 0.0
+  },
+  {
+    "name": "power_hit0",
+    "seconds": 0.62,
+    "peak": 0.8868025337072398,
+    "rms": 0.1580138224229494,
+    "loop": false,
+    "boundary": 0.0
+  },
+  {
+    "name": "punch_swing1",
+    "seconds": 0.265,
+    "peak": 0.8899999988400116,
+    "rms": 0.21738359633244903,
+    "loop": false,
+    "boundary": 0.0
+  },
+  {
+    "name": "punch_hit1",
+    "seconds": 0.74,
+    "peak": 0.8899999985629345,
+    "rms": 0.1264802229769268,
+    "loop": false,
+    "boundary": 0.0
+  },
+  {
+    "name": "power_hit1",
+    "seconds": 0.74,
+    "peak": 0.8899999988386879,
+    "rms": 0.14921472157858753,
+    "loop": false,
+    "boundary": 0.0
+  },
+  {
+    "name": "punch_swing2",
+    "seconds": 0.29,
+    "peak": 0.8899999989468133,
+    "rms": 0.20444209168905725,
+    "loop": false,
+    "boundary": 0.0
+  },
+  {
+    "name": "punch_hit2",
+    "seconds": 0.86,
+    "peak": 0.8899999987935284,
+    "rms": 0.17602622098368811,
+    "loop": false,
+    "boundary": 0.0
+  },
+  {
+    "name": "power_hit2",
+    "seconds": 0.86,
+    "peak": 0.889999998965462,
+    "rms": 0.1876479930626292,
+    "loop": false,
+    "boundary": 0.0
+  },
+  {
+    "name": "transform_ignite",
+    "seconds": 2.8,
+    "peak": 0.8899999990254768,
+    "rms": 0.12511579476671475,
+    "loop": false,
+    "boundary": 0.0
+  },
+  {
+    "name": "wave_blast",
+    "seconds": 1.4,
+    "peak": 0.8899999989271647,
+    "rms": 0.1053412434029785,
+    "loop": false,
+    "boundary": 0.0
+  },
+  {
+    "name": "charge_release",
+    "seconds": 0.5,
+    "peak": 0.8899999979184197,
+    "rms": 0.14126472743615381,
+    "loop": false,
+    "boundary": 0.0
+  }
+]

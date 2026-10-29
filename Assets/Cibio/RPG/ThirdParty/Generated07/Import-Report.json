@@ -1,0 +1,14 @@
+[
+  {
+    "family": "Hero",
+    "frames": 16,
+    "cell": 64,
+    "scale": 0.28994082840236685
+  },
+  {
+    "family": "HeroAwakened",
+    "frames": 16,
+    "cell": 128,
+    "scale": 0.5761772853185596
+  }
+]

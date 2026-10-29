@@ -1,0 +1,1 @@
+PASS Onda desperta libera dano depois da pose, atinge a 4,6 unidades e empurra o alvo.

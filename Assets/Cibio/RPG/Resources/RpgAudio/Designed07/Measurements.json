@@ -1,0 +1,93 @@
+[
+  {
+    "name": "flight_wind",
+    "seconds": 6.0,
+    "peak": 0.7799999987897142,
+    "rms": 0.16829909247174502,
+    "seam": 0.0
+  },
+  {
+    "name": "flight_launch",
+    "seconds": 0.7,
+    "peak": 0.7799999987072673,
+    "rms": 0.16436511088075026,
+    "seam": null
+  },
+  {
+    "name": "flight_land",
+    "seconds": 0.55,
+    "peak": 0.7799999987362745,
+    "rms": 0.16910803383424802,
+    "seam": null
+  },
+  {
+    "name": "wave_windup",
+    "seconds": 0.22,
+    "peak": 0.7799999985463977,
+    "rms": 0.19051073111170477,
+    "seam": null
+  },
+  {
+    "name": "power_surge",
+    "seconds": 0.48,
+    "peak": 0.7799999988717139,
+    "rms": 0.14355288112997547,
+    "seam": null
+  },
+  {
+    "name": "punch_hit0",
+    "seconds": 0.42,
+    "peak": 0.7799999985429885,
+    "rms": 0.14523118674585733,
+    "seam": null
+  },
+  {
+    "name": "power_hit0",
+    "seconds": 0.64,
+    "peak": 0.7799999987799763,
+    "rms": 0.1209493803262408,
+    "seam": null
+  },
+  {
+    "name": "punch_hit1",
+    "seconds": 0.48,
+    "peak": 0.7799999984135797,
+    "rms": 0.1384716127693192,
+    "seam": null
+  },
+  {
+    "name": "power_hit1",
+    "seconds": 0.73,
+    "peak": 0.7799999987364207,
+    "rms": 0.12244149954046182,
+    "seam": null
+  },
+  {
+    "name": "punch_hit2",
+    "seconds": 0.54,
+    "peak": 0.7799999984916609,
+    "rms": 0.17128059348924024,
+    "seam": null
+  },
+  {
+    "name": "power_hit2",
+    "seconds": 0.82,
+    "peak": 0.7799999989488478,
+    "rms": 0.11895151149817855,
+    "seam": null
+  },
+  {
+    "name": "wave_awakened",
+    "seconds": 1.8,
+    "peak": 0.7799999988874157,
+    "rms": 0.09854947455992083,
+    "seam": null
+  },
+  {
+    "name": "transform_ignite",
+    "seconds": 3.0,
+    "peak": 0.7799999988884962,
+    "rms": 0.0892599726970993,
+    "seam": null
+  }
+]

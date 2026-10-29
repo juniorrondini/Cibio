@@ -1,0 +1,21 @@
+using UnityEngine;
+namespace Cibio.RPG
+{
+ [ExecuteAlways,DisallowMultipleComponent]
+ public sealed class RpgTerrain:MonoBehaviour
+ {
+  GameObject floor; Material material;Mesh mesh;
+  public static RpgTerrain Ensure(RpgWorld world){var t=world.GetComponent<RpgTerrain>();return t?t:world.gameObject.AddComponent<RpgTerrain>();}
+  void OnEnable()
+  {
+   var w=GetComponent<RpgWorld>();if(!w||!w.scenery)return;
+   foreach(var r in w.scenery.GetComponentsInChildren<SpriteRenderer>())if(IsGround(r.name))r.enabled=false;
+   floor=new GameObject("Terreno orgânico • caminhos e praça"){hideFlags=HideFlags.DontSave};floor.transform.SetParent(w.scenery,false);
+   mesh=new Mesh{name="Solo contínuo"};mesh.vertices=new[]{new Vector3(-24,-18,0),new Vector3(24,-18,0),new Vector3(24,18,0),new Vector3(-24,18,0)};mesh.uv=new[]{Vector2.zero,Vector2.right,Vector2.one,Vector2.up};mesh.triangles=new[]{0,2,1,0,3,2};mesh.RecalculateBounds();floor.AddComponent<MeshFilter>().sharedMesh=mesh;
+   material=new Material(Resources.Load<Shader>("RpgArt/OrganicGround")){hideFlags=HideFlags.DontSave};material.SetTexture("_Grass",Resources.Load<Texture2D>("RpgArt/Terrain_Grass05"));material.SetTexture("_Stone",Resources.Load<Texture2D>("RpgArt/Terrain_Stone05"));material.SetTexture("_Mask",Resources.Load<Texture2D>("RpgArt/Terrain_Mask05"));var renderer=floor.AddComponent<MeshRenderer>();renderer.sharedMaterial=material;renderer.sortingOrder=-4000;
+  }
+  static bool IsGround(string n)=>n=="Relva"||n=="Praça de pedra"||n=="Caminho";
+  void OnDisable(){var w=GetComponent<RpgWorld>();if(w&&w.scenery)foreach(var r in w.scenery.GetComponentsInChildren<SpriteRenderer>())if(IsGround(r.name))r.enabled=true;Clean(floor);Clean(material);Clean(mesh);}
+  static void Clean(Object o){if(!o)return;if(Application.isPlaying)Destroy(o);else DestroyImmediate(o);}
+ }
+}
