@@ -1,0 +1,12 @@
+PASS Barreira rompe depois de distancia real
+PASS Arrancada imediata42u/s no quadro da ruptura
+PASS Velocidade supersônica quatro vezes o impulso
+PASS Aceleracao apos arrancada chega perto de60 em250ms: 59,92908 at (16.21, -0.50)
+PASS Ctrl detem voo veloz em333ms
+PASS SoltarShift cancela supersônico e volta ao cruzeiro
+PASS Movimento60u/s nao atravessa parede fina em quadro de200ms
+PASS Boom grave e vento supersônico próprios carregados
+PASS Pouso encerra vento e estado supersônico
+PASS Save v3 preservado
+PASS Mixagem nativa forte sem clipping: peak=0,940065801143646
+PASS Velocidade real supera57u/s na vila: peak=59,95496

@@ -1,0 +1,7 @@
+{
+  "old_first250ms_rms": 0.14037140007592752,
+  "new_first250ms_rms": 0.5639482370707606,
+  "attack_gain_db": 12.079212234941261,
+  "new_peak": 0.94000244140625,
+  "clipped_samples": 0
+}

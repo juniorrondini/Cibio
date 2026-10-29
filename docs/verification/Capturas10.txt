@@ -1,0 +1,1 @@
+Frame_0034.png é um alias de Boom10.png: ambas as solicitações eram do mesmo fim de quadro, e o Unity gravou a captura nomeada. Nenhum quadro sintetizado/interpolado. Sequência visual24fps sem áudio; gravação da mixagem separada em tempo real.

@@ -1,0 +1,1 @@
+Sons originais por síntese DSP, CC0 1.0. Ruptura com dois transientes separados por42ms, subgrave descendente58→33Hz, corpo grave, estalo agudo e reverberação curta; loop de vento supersônico separado. 48kHz estéreo; seed1010. Sem áudio extraído de franquias. O jogo destaca o boom no mix por320ms e mantém o limiter. Receita requer numpy e soundfile.

@@ -10,15 +10,16 @@ namespace Cibio.RPG
   public int FormStage=>buff>0?(formStage>=2?2:1):0;
   public Color EnergyColor=>RpgArt.Hex(FormStage==2?"A0D8FF":"FFE1A0");
   public float TransformationDuration=>FormStage==2?1.7f:1.15f;
+  public const float SonicTopSpeed=60,SonicLaunchSpeed=42;
   public bool SonicActive{get;private set;}public float SonicDistance{get;private set;}public int sonicBooms;Vector2 sonicHeading;
   public void ResetSonic(){SonicActive=false;SonicDistance=0;sonicHeading=Vector2.zero;}
   void TravelSonic(Vector2 travel,float dt,bool locked)
   {
    if(FormStage!=2||!flying||!flightBoosting||flightBraking||locked||travel.magnitude<.015f){ResetSonic();return;}
    Vector2 heading=travel.normalized;if(sonicHeading.sqrMagnitude>.1f&&Vector2.Dot(sonicHeading,heading)<.45f){ResetSonic();}if(sonicHeading.sqrMagnitude<.1f)sonicHeading=heading;
-   SonicDistance=Mathf.Min(18,SonicDistance+travel.magnitude);if(!SonicActive&&SonicDistance>=18){SonicActive=true;sonicBooms++;RpgFlightWake09.Boom(this);}
+   SonicDistance=Mathf.Min(18,SonicDistance+travel.magnitude);if(!SonicActive&&SonicDistance>=18){SonicActive=true;velocity=heading*SonicLaunchSpeed;steering=Vector2.zero;sonicBooms++;RpgFlightWake09.Boom(this);}
   }
-  public float FlightSpeed=>SonicActive&&FormStage==2&&flying&&flightBoosting&&!flightBraking?24:(FormStage==2?12:FormStage==1?8:6)*(flightBoosting&&!flightBraking?1.25f:1);
+  public float FlightSpeed=>SonicActive&&FormStage==2&&flying&&flightBoosting&&!flightBraking?SonicTopSpeed:(FormStage==2?12:FormStage==1?8:6)*(flightBoosting&&!flightBraking?1.25f:1);
   public float GroundSpeed(bool run)=>(run?4.5f:2.8f)*(FormStage==2?1.45f:FormStage==1?1.3f:1);
   public float GaitTravel=>gaitTravel;
   public Color BaseTint=>isEnemy?(enemyKind==3?new Color(.72f,.9f,.85f):enemyKind==4?new Color(1,.66f,.7f):Color.white):Color.white;
@@ -67,7 +68,7 @@ float gaitPhase,poseClock;string lastPose="";
   public void Walk(Vector2 input,float speed,float dt,bool run=false)
   {
    running=run;input=Vector2.ClampMagnitude(input,1);bool locked=attackTimer>0||charging||transforming>0||powerPose>0||dead;if(locked)input=Vector2.zero;if(!locked&&!flying&&input.sqrMagnitude>.01f){facing=input.normalized;direction=Mathf.Abs(input.x)>Mathf.Abs(input.y)?(input.x>0?3:1):(input.y>0?0:2);}
-   if(flying){if(flightBraking)input=Vector2.zero;velocity=Vector2.SmoothDamp(velocity,input*speed,ref steering,flightBraking?.045f:.11f,Mathf.Infinity,dt);if(!locked&&velocity.sqrMagnitude>.25f){facing=velocity.normalized;direction=Mathf.Abs(facing.x)>Mathf.Abs(facing.y)?(facing.x>0?3:1):(facing.y>0?0:2);}}
+   if(flying){if(flightBraking)input=Vector2.zero;velocity=Vector2.SmoothDamp(velocity,input*speed,ref steering,flightBraking?.045f:SonicActive?.065f:.11f,Mathf.Infinity,dt);if(!locked&&velocity.sqrMagnitude>.25f){facing=velocity.normalized;direction=Mathf.Abs(facing.x)>Mathf.Abs(facing.y)?(facing.x>0?3:1):(facing.y>0?0:2);}}
    else velocity=Vector2.MoveTowards(velocity,input*speed,dt*(input.sqrMagnitude>.01f?24:30));if(locked){velocity=steering=Vector2.zero;}Vector2 before=Position;transform.position=world.Move(Position,velocity*dt);float travel=Vector2.Distance(before,Position);gaitPhase+=travel/(running?2.9f:2.25f);gaitTravel+=travel;TravelSonic(Position-before,dt,locked);
    if(travel<.00001f&&input.sqrMagnitude>.01f)velocity=Vector2.zero;
   }

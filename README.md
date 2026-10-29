@@ -6,6 +6,16 @@ RPG de ação em pixel art com câmera em perspectiva, exploração de um bairro
 
 ![Forma Ascendente](docs/images/ascendente09.png)
 
+## Versão 10 — Ruptura supersônica
+
+![Boom supersônico](docs/images/boom10.gif)
+
+O boom ganhou **dois estalos de pressão, subgrave descendente e uma cauda mais encorpada**. A mixagem reduz brevemente ambiente/aura/vento por 320 ms para destacar a ruptura, sem alterar o volume do sistema; o limiter permanece ativo. Há um loop específico de vento supersônico.
+
+Ao completar 18 unidades com Shift na Forma Ascendente, a velocidade salta de 15 para **42 u/s no quadro da ruptura** e acelera até **60 u/s**: quatro vezes o impulso inicial e 2,5 vezes o supersônico anterior. O rastro está mais denso, a nuvem de pressão maior e a câmera abre mais rápido, com acompanhamento mais firme para manter o personagem visível. Ctrl continua freando; colisões e consumo de 18 energia/s preservados.
+
+**Validação da versão 10:** 469 verificações passaram (382 da base, 75 da evolução e 12 do supersônico). Velocidade real medida de **59,95 u/s**; freio testado em 333 ms; colisão com parede fina testada em um quadro de 200 ms. Mixagem nativa sem clipping, pico 0.940. O ataque inicial do novo som tem aproximadamente +12 dB de RMS na comparação dos arquivos com os ganhos usados no jogo; essa medida não representa volume acústico do dispositivo. Relatórios em [docs/verification](docs/verification).
+
 ## Versão 09 — Forma Ascendente
 
 Segure **C** até completar a carga e solte para despertar a forma dourada. Depois que a transformação terminar, **pressione C novamente** para evoluir imediatamente ao estágio 2. Não exige outra carga nem conclusão da missão. A evolução custa **25 de energia**, dura **16 segundos** e também funciona durante o voo.
@@ -18,13 +28,13 @@ Dez ciclos exclusivos cobrem idle, caminhada, corrida, salto, três golpes, cana
 
 ### Voo supersônico
 
-Na Forma Ascendente, voe com **1**, mantenha **Shift** e percorra **18 unidades** para disparar o sonic boom: nuvem de vapor animada, som de ruptura, rastro de poses e aumento de velocidade para **24 unidades/s**. A câmera abre a visão conforme a velocidade aumenta.
+Na Forma Ascendente, voe com **1**, mantenha **Shift** e percorra **18 unidades** para disparar o sonic boom: nuvem de vapor animada, som de ruptura, rastro de poses e aumento de velocidade para **60 unidades/s**. A câmera abre a visão conforme a velocidade aumenta.
 
 | Voo | Normal | Dourado | Ascendente |
 | --- | --- | --- | --- |
 | Cruzeiro | 6 u/s | 8 u/s | 12 u/s |
 | Impulso com Shift | 7,5 u/s | 10 u/s | 15 u/s |
-| Após sonic boom | — | — | 24 u/s |
+| Após sonic boom | — | — | 60 u/s |
 | Consumo em cruzeiro | 10/s | 7/s | 9/s |
 | Consumo com impulso | 16/s | 13/s | 15/s |
 | Consumo supersônico | — | — | 18/s |
@@ -110,6 +120,8 @@ $project = (Get-Location).Path
 
 120 quadros, sem capturas: 1,982s, 60,6 FPS. Amostra curta, nao benchmark.
 
+
+Para revisar a ruptura e gravar a mixagem nova: `Cibio.exe -cibio-sonic-review10 "Review10" -logFile "review10.log"`. Esse modo preserva o save.
 
 O modo de revisão executa as verificações da base e da evolução, exercita os quadros das novas animações nas quatro direções, captura o gameplay a 24fps e grava áudio do jogo em tempo real, separadamente. Não altera o save do jogador.
 

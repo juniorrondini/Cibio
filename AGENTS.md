@@ -68,3 +68,9 @@
 - RpgFlightWake09 usa atlas orgânico Vfx_Sonic09 e fantasmas do sprite; sem LineRenderer ou contornos geométricos. Designed09 contém efeitos originais DSP. Fonte CibioUI derivada de Inter OFL, originais e licença preservados.
 - RpgInterface usa cinco skills, tooltips, minimapa e objetivos recolhíveis. Textos em UTF-8; conferir acentos no player. Não voltar ao HUD de painéis grandes nem bloquear controles fora dos limites visuais dos botões.
 - -cibio-review09 testa input real compartilhado, sonic, família nova, fontes, quadros nas4direções e grava áudio em tempo real separado. Preservar savev3 e cena/GUIDs; continuar BuildUpdatedPlayer.
+
+## Atualização10
+- Supersônico: teto60u/s, arrancada imediata42u/s na ruptura, distância18 e dreno18/s preservados. SonicTopSpeed/SonicLaunchSpeed centralizam valores. Não usar teleporte.
+- Boom em Designed10: DSP CC0, duplo transiente42ms, subgrave58→33Hz, clip2s. RpgAudio dá prioridade16 e mix2D com duck320ms; nunca alterar volume do sistema ou remover limiter. Vento supersônico separado.
+- Câmera sonic9.4, follow.065s, previsão3.5; rastro.035s e nuvem7.4. Ctrl e colisões varridas preservados.
+- -cibio-sonic-review10 executa base, evolução e teste de arrancada, velocidade, freio, colisões e captura sonora em tempo real. Preservar cena/GUIDs e savev3.

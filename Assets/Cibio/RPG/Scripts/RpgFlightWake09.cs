@@ -6,13 +6,13 @@ namespace Cibio.RPG
   float nextWake;
   public static void Boom(RpgActor actor)
   {
-   RpgAudio.Play("sonic_boom",actor.Position,.88f);var g=RpgGame.Instance;if(g){g.shake=Mathf.Max(g.shake,.8f);g.GetComponent<RpgFeedback09>().Flash(.075f);}
-   Cloud(actor,4.6f,.65f);RpgEnergyParticles.Eruption(actor.Position+Vector2.up*actor.flightHeight,actor.EnergyColor,2.6f,26);
+   RpgAudio.Play("sonic_boom",actor.Position,1);var g=RpgGame.Instance;if(g){g.shake=Mathf.Max(g.shake,1.45f);g.GetComponent<RpgFeedback09>().Flash(.12f);}
+   Cloud(actor,7.4f,.85f);RpgEnergyParticles.Eruption(actor.Position+Vector2.up*actor.flightHeight,actor.EnergyColor,3.8f,36);
   }
   void Update()
   {
-   var g=RpgGame.Instance;if(!g||!g.Playing)return;var h=g.world.hero;if(!h.SonicActive)return;nextWake-=Time.deltaTime;if(nextWake>0)return;nextWake=.11f;Cloud(h,1.7f,.34f);
-   var ghost=new GameObject("Rastro • forma ascendente");ghost.transform.position=h.body.transform.position;ghost.transform.localScale=h.body.transform.lossyScale;var r=ghost.AddComponent<SpriteRenderer>();r.sprite=h.body.sprite;r.sortingOrder=h.body.sortingOrder-2;r.color=new Color(.64f,.85f,1,.23f);var fade=ghost.AddComponent<RpgWakeFade09>();fade.SetGhost(r,.22f);
+   var g=RpgGame.Instance;if(!g||!g.Playing)return;var h=g.world.hero;if(!h.SonicActive)return;nextWake-=Time.deltaTime;if(nextWake>0)return;nextWake=.035f;Cloud(h,2.4f,.28f);
+   var ghost=new GameObject("Rastro • forma ascendente");ghost.transform.position=h.body.transform.position;ghost.transform.localScale=h.body.transform.lossyScale;var r=ghost.AddComponent<SpriteRenderer>();r.sprite=h.body.sprite;r.sortingOrder=h.body.sortingOrder-2;r.color=new Color(.64f,.85f,1,.32f);var fade=ghost.AddComponent<RpgWakeFade09>();fade.SetGhost(r,.22f);
   }
   static void Cloud(RpgActor h,float size,float life)
   {

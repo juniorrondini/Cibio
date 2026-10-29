@@ -30,3 +30,5 @@ Versao 07: voo com arte original gerada com image_gen a partir das referencias d
 Versão 08: Morro do Eco, missão, comportamento dos batedores/capitão, Palma e Centelha Rubra usam código e composição Cibio, reutilizando os sprites LPC e os efeitos/sons creditados acima. Nenhuma imagem ou áudio de franquia foi adicionado.
 
 Versão 09: Forma Ascendente, oito etapas e dez ciclos exclusivos com cabelo prateado; ícones e vapor sônico criados com image_gen integrado. Originais e prompts completos em ThirdParty/Generated09. Derivados dos personagens Cibio distribuídos sob CC BY-SA 4.0, com atribuições herdadas acima. Novos efeitos sonoros originais DSP CC0 em SoundDesign09. Fonte Cibio UI derivada de Inter (Copyright 2020 The Inter Project Authors), OFL 1.1; original, licença e receita em ThirdParty/Inter09. https://github.com/google/fonts/tree/main/ofl/inter
+
+Versão10: sonic boom e vento supersônico originais, síntese DSP CC0. Receita, créditos e áudio em SoundDesign10 e Fontes-Audio-10.zip.

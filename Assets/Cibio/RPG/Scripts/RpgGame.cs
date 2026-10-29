@@ -22,7 +22,7 @@ namespace Cibio.RPG
         void Awake()
         {
             Instance=this;Application.targetFrameRate=60;world=GetComponent<RpgWorld>();if(!world)world=gameObject.AddComponent<RpgWorld>();world.Build();if(!GetComponent<RpgQuest08>())gameObject.AddComponent<RpgQuest08>();RpgTerrain.Ensure(world);if(!world.hero.GetComponent<RpgPowerForm>())world.hero.gameObject.AddComponent<RpgPowerForm>();lens=Camera.main;if(!lens.GetComponent<RpgAudioLimiter>())lens.gameObject.AddComponent<RpgAudioLimiter>();if(!lens.GetComponent<RpgEnergyBloom>())lens.gameObject.AddComponent<RpgEnergyBloom>();for(int n=0;n<world.enemies.Count;n++)world.enemies[n].ConfigureEnemy(n<7?n%3:world.enemies[n].enemyKind);world.shrines[0].title="Voo da Centelha";world.shrines[0].description="[1] decolar/pousar | 12 energia + 10/s no ar.";world.shrines[1].description="Melhora sua transformação: duração de 24s.";if(!GetComponent<RpgFlightWake09>())gameObject.AddComponent<RpgFlightWake09>();if(!GetComponent<RpgFeedback09>())gameObject.AddComponent<RpgFeedback09>();if(!GetComponent<RpgAudio>())gameObject.AddComponent<RpgAudio>();ready=true;SnapCamera();
-            var args=Environment.GetCommandLineArgs();for(int i=0;i<args.Length-1;i++){if(args[i]=="-cibio-ui-review09"){reviewRun=true;StartCoroutine(gameObject.AddComponent<RpgReview09>().RunUi(args[i+1]));}else if(args[i]=="-cibio-review09"){reviewRun=true;StartCoroutine(gameObject.AddComponent<RpgReview09>().Run(args[i+1]));}else if(args[i]=="-cibio-review08"){reviewRun=true;StartCoroutine(gameObject.AddComponent<RpgReview08>().Run(args[i+1]));}else if(args[i]=="-cibio-review07"){reviewRun=true;StartCoroutine(gameObject.AddComponent<RpgReview07>().Run(args[i+1]));}else if(args[i]=="-cibio-review"){reviewRun=true;StartCoroutine(ReviewEffects06(args[i+1]));}else if(args[i]=="-cibio-vfx-review"){reviewRun=true;StartCoroutine(gameObject.AddComponent<RpgVfxReview>().Run(args[i+1]));}}
+            var args=Environment.GetCommandLineArgs();for(int i=0;i<args.Length-1;i++){if(args[i]=="-cibio-sonic-review10"){reviewRun=true;StartCoroutine(gameObject.AddComponent<RpgSonicReview10>().Run(args[i+1]));}else if(args[i]=="-cibio-ui-review09"){reviewRun=true;StartCoroutine(gameObject.AddComponent<RpgReview09>().RunUi(args[i+1]));}else if(args[i]=="-cibio-review09"){reviewRun=true;StartCoroutine(gameObject.AddComponent<RpgReview09>().Run(args[i+1]));}else if(args[i]=="-cibio-review08"){reviewRun=true;StartCoroutine(gameObject.AddComponent<RpgReview08>().Run(args[i+1]));}else if(args[i]=="-cibio-review07"){reviewRun=true;StartCoroutine(gameObject.AddComponent<RpgReview07>().Run(args[i+1]));}else if(args[i]=="-cibio-review"){reviewRun=true;StartCoroutine(ReviewEffects06(args[i+1]));}else if(args[i]=="-cibio-vfx-review"){reviewRun=true;StartCoroutine(gameObject.AddComponent<RpgVfxReview>().Run(args[i+1]));}}
         }
         public void StartGame(bool continueGame)
         {
@@ -54,11 +54,11 @@ namespace Cibio.RPG
         void LateUpdate()
         {
             if(!lens||!ready)return;
-            lens.orthographicSize=Mathf.Lerp(lens.orthographicSize,world.hero.transforming>0?(world.hero.FormStage==2?5.95f:6.28f):world.hero.SonicActive?8.25f:7.03125f,Time.deltaTime*5);
-            Vector2 target=world.hero.Position+Vector2.up*(.8f+world.hero.flightHeight*.35f)+(world.hero.flying?Vector2.ClampMagnitude(world.hero.velocity*.15f,2):Vector2.zero);
+            lens.orthographicSize=Mathf.Lerp(lens.orthographicSize,world.hero.transforming>0?(world.hero.FormStage==2?5.95f:6.28f):world.hero.SonicActive?9.4f:7.03125f,Time.deltaTime*(world.hero.SonicActive?10:5));
+            Vector2 target=world.hero.Position+Vector2.up*(.8f+world.hero.flightHeight*.35f)+(world.hero.flying?Vector2.ClampMagnitude(world.hero.velocity*.15f,world.hero.SonicActive?3.5f:2):Vector2.zero);
             float h=lens.orthographicSize,w=h*lens.aspect;
             target.x=Mathf.Clamp(target.x,world.bounds.xMin+w,world.bounds.xMax-w);target.y=Mathf.Clamp(target.y,world.bounds.yMin+h,world.bounds.yMax-h);
-            var desired=new Vector3(target.x,target.y,-10);var p=Vector3.SmoothDamp(lens.transform.position,desired,ref followVelocity,.16f);
+            var desired=new Vector3(target.x,target.y,-10);var p=Vector3.SmoothDamp(lens.transform.position,desired,ref followVelocity,world.hero.SonicActive?.065f:.16f);
             if(shake>0){shake=Mathf.Max(0,shake-Time.deltaTime*2);p+=(Vector3)(UnityEngine.Random.insideUnitCircle*shake*.11f);}
             lens.transform.position=new Vector3(Mathf.Round(p.x*32)/32,Mathf.Round(p.y*32)/32,-10);
         }

@@ -1,3 +1,3 @@
-# Cibio — versão 09
+# Cibio — versão10
 
-Leia o [README.md](README.md): Forma Ascendente com novo toque de C, sprites exclusivos, interface renovada e voo supersônico.
+Leia [README.md](README.md). Na Forma Ascendente, voe com Shift por18unidades: BOOM, arrancada42u/s e velocidade máxima60u/s. Ctrl freia.
