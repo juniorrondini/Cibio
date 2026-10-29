@@ -4,7 +4,21 @@
 
 RPG de ação em pixel art com câmera em perspectiva, exploração de um bairro brasileiro, combos, poderes e progressão. Projeto Unity editável, em fase de protótipo jogável para Windows.
 
-![Seu Davi e a vila refinada](docs/images/davi11.png)
+## Versão 12 — Companheiro e Seu Bonero
+
+![Companheiro no Morro do Eco](docs/images/companheiro12.png)
+
+O chefe da missão **A voz do Morro** agora é **Companheiro**, com arte própria inspirada na referência enviada: barba e cabelo brancos, terno escuro, gravata vinho e **estrela vermelha com o número 13 no peito**. São **128 quadros** exclusivos em quatro direções, cobrindo respiração, caminhada, soco, poder e derrota. A barra do chefe mostra nome e vida durante a aproximação. A ficha preserva 280 PV, soco 26 e leque de três projéteis de 16 cada.
+
+O soco funciona de perto e aplica dano no quadro de contato; à distância, o poder antecipa por 850 ms antes de disparar. Os quadros de liberação e recuperação acompanham o disparo. O antigo Seu Davi passa a se chamar **Seu Bonero** nas falas, objetivos, identificação e interface, mantendo seus sprites e gestos próprios.
+
+![Seu Bonero](docs/images/bonero12.png)
+
+O save v3 conserva o progresso e a recompensa única. Quem já derrotou o chefe continua com o objetivo concluído. A vila 64×72, seus objetos, GUIDs e missões anteriores permanecem preservados.
+
+[Animações](docs/images/companheiro12.gif) · [Soco](docs/images/soco12.png) · [Poder](docs/images/poder12.png) · [Quadros](docs/images/companheiro-quadros12.jpg) · [Originais, prompts e importador](Assets/Cibio/RPG/ThirdParty/Generated12/README.md)
+
+Para revisar: `Cibio.exe -cibio-boss-review12 "Review12" -logFile "review12.log"`. O modo exercita combate, missão, save e 128 quadros nativos, preservando o save real.
 
 ## Versão 11 — Seu Davi e Largo das Palmeiras
 
@@ -71,14 +85,14 @@ Consulte também as capturas de [habilidades](docs/images/skills09.png), [contro
 
 A vila mede **64×72 unidades**, incluindo o Morro do Eco, casas, caminhos e largo ao norte. A cena composta continua editável; a versão 11 acrescenta áreas e refina os objetos existentes.
 
-1. Converse com **Seu Davi**, ao sul da praça inicial, usando **E**.
+1. Converse com **Seu Bonero**, ao sul da praça inicial, usando **E**.
 2. Vá ao norte, derrote ou afaste os guardas e desligue os **três amplificadores** com E depois de pousar.
-3. Derrote o **Capitão do Eco** e volte a Seu Davi.
+3. Derrote o **Companheiro** e volte a Seu Bonero.
 4. Receba **100 XP**, recuperação de vida/energia e **Palma da Centelha**. Voo e Coração Canarinho são concedidos se ainda faltarem.
 
-Objetivos, amplificadores, capitão e recompensa ficam no save. Saves antigos conservam nível e altares. A evolução de estágio 2 está disponível antes dessa missão.
+Objetivos, amplificadores, chefe e recompensa ficam no save. Saves antigos conservam nível e altares. A evolução de estágio 2 está disponível antes dessa missão.
 
-Há cinco arquétipos: Cobrador, Fiscal blindado, Arauto da Vuvuzela, Batedor do Morro e Capitão do Eco. Batedores anunciam o bote durante 0,6s; o capitão anuncia uma rajada de três projéteis durante 0,85s. Os novos arquétipos usam combinações das famílias de sprites existentes, com porte e paletas diferentes.
+Há cinco arquétipos: Cobrador, Fiscal blindado, Arauto da Vuvuzela, Batedor do Morro e Companheiro. Batedores anunciam o bote durante 0,6s; Companheiro anuncia sua rajada de três projéteis durante 0,85s. O chefe usa cinco ciclos próprios; os outros inimigos mantêm suas famílias de sprites, portes e paletas.
 
 ## Combate e progressão
 
@@ -132,6 +146,9 @@ $project = (Get-Location).Path
 
 ## Verificação
 
+**Versão12: 691 verificações passaram** — 382 da base, 75 da evolução, 75 da vila e 159 do chefe. Foram capturados os 128 quadros no player Windows, incluindo quatro direções dos cinco ciclos. Soco e projéteis tiveram dano e momento de contato conferidos; o projétil central causa 16 e encerra após o impacto. Missão, recompensa única e saves antigos também foram exercitados. Os 8040 blocos da cena anterior foram mantidos, sem remoções/adições de objetos, e os GUIDs existentes foram preservados. Os cinco atlas foram reproduzidos byte a byte com o importador e os originais incluídos. Relatórios em docs/verification.
+
+
 **Versão11: 532 verificações passaram** — 382 da base, 75 da evolução e75 da vila/NPC. Foram exercitados 32 quadros e auditadas as células por alpha; 17 sprites de cenário também passaram na verificação de conteúdo/margens. A missão completa e o voo supersônico foram testados na cena expandida. Os 7077 blocos originais da cena continuam presentes; a versão refinada tem 8040, sem remoções e com os GUIDs anteriores preservados.
 
 120 quadros sem capturas no Largo: 2,003s, 59,9 FPS. Amostra breve nesta maquina, nao benchmark.
@@ -170,7 +187,7 @@ O progresso usa **Cibio.RPG.v3.Progress**, via PlayerPrefs, e não fica no repos
 | Assets/StreamingAssets/Cibio-Licenses | Créditos e fontes que acompanham o player |
 | docs | Imagens e resultados das revisões |
 
-Famílias LPC: células 64px/PPU32; HeroAwakened: 128px/PPU64; HeroAscendant: 192px/PPU64. Use RpgArt.CellSize/FrameCount. Os protótipos anteriores em Assets/Cibio permanecem preservados.
+Companheiro12: células128px/PPU64, cinco ações próprias. Famílias LPC: células 64px/PPU32; HeroAwakened: 128px/PPU64; HeroAscendant: 192px/PPU64. Use RpgArt.CellSize/FrameCount. Os protótipos anteriores em Assets/Cibio permanecem preservados.
 
 ## Arte, áudio e licenças
 

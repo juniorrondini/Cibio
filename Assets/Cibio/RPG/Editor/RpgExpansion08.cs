@@ -19,7 +19,7 @@ namespace Cibio.RPG.Editor
    for(int x=-19;x<=19;x+=3)Prop(w,root,x%2==0?"Tree_0":"Tree_1",new Vector2(x,41),true);
    foreach(var p in new[]{new Vector2(-17,25),new Vector2(17,27),new Vector2(-16,37),new Vector2(7,39),new Vector2(16,18),new Vector2(-8,39)})Prop(w,root,"Bush",p,false);
    foreach(var p in new[]{new Vector2(-16,20),new Vector2(16,23),new Vector2(-15,33),new Vector2(15,35)})Prop(w,root,"Barrel",p,true);
-   var npc=new GameObject("Seu Davi • missão");npc.transform.SetParent(w.transform,false);npc.transform.position=new Vector2(-2,-6.3f);var image=RpgArt.Put("Seu Davi",RpgArt.Frame("Hero","idle",2,0),npc.transform.position,RpgWorld.Order(-6.3f),npc.transform,new Color(.76f,.87f,1));
+   var npc=new GameObject("Seu Bonero • missão");npc.transform.SetParent(w.transform,false);npc.transform.position=new Vector2(-2,-6.3f);var image=RpgArt.Put("Seu Bonero",RpgArt.Frame("Hero","idle",2,0),npc.transform.position,RpgWorld.Order(-6.3f),npc.transform,new Color(.76f,.87f,1));
    var quest=w.GetComponent<RpgQuest08>();if(!quest)quest=w.gameObject.AddComponent<RpgQuest08>();quest.giver=npc.transform;
    Vector2[] positions={new(-9,24),new(9,29),new(0,37)};
    for(int i=0;i<3;i++){var node=new GameObject("Amplificador "+(i+1));node.transform.SetParent(root,false);node.transform.position=positions[i];node.AddComponent<RpgResonator08>().id=i;RpgArt.Put("Base do amplificador",RpgArt.Tile("terrain_atlas",544,384,32,64),positions[i],RpgWorld.Order(positions[i].y),node.transform);RpgArt.Put("Corpo do amplificador",RpgArt.Image("Barrel"),positions[i]+Vector2.up*.45f,RpgWorld.Order(positions[i].y)+1,node.transform);}

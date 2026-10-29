@@ -9,6 +9,10 @@ namespace Cibio.RPG
  {
   RpgGame g;RpgActor h;RpgQuest08 quest;RpgNpcDavi11 npc;string folder;int frame;readonly List<string> checks=new();
   void Check(bool ok,string text){checks.Add((ok?"PASS ":"FAIL ")+text);File.WriteAllLines(Path.Combine(folder,"Vila11.txt"),checks);if(!ok)throw new InvalidOperationException(text);}
+  public void ValidateMechanics(string path)
+  {
+   folder=path;Directory.CreateDirectory(folder);g=GetComponent<RpgGame>();h=g.world.hero;quest=GetComponent<RpgQuest08>();npc=quest.giver.GetComponent<RpgNpcDavi11>();Tests();
+  }
   public IEnumerator Run(string path)
   {
    folder=path;Directory.CreateDirectory(folder);g=GetComponent<RpgGame>();yield return new WaitForSecondsRealtime(.8f);g.StartGame(false);g.reviewPose=true;h=g.world.hero;quest=g.GetComponent<RpgQuest08>();npc=quest.giver.GetComponent<RpgNpcDavi11>();
@@ -27,7 +31,7 @@ namespace Cibio.RPG
   }
   void Tests()
   {
-   g.StartGame(false);g.reviewPose=true;Check(g.world.bounds==new Rect(-32,-18,64,72),"Mapa64x72 mantem a vila anterior e expande norte/laterais");Check(g.world.enemies.Count==14&&g.world.shrines.Count==3,"Quatorze inimigos, tres altares e seus componentes preservados");Check(npc&&quest.giver.position==new Vector3(-2,-6.3f,0),"Seu Davi mantem identidade do objeto e ancora da missao");
+   g.StartGame(false);g.reviewPose=true;Check(g.world.bounds==new Rect(-32,-18,64,72),"Mapa64x72 mantem a vila anterior e expande norte/laterais");Check(g.world.enemies.Count==14&&g.world.shrines.Count==3,"Quatorze inimigos, tres altares e seus componentes preservados");Check(npc&&quest.giver.position==new Vector3(-2,-6.3f,0),"Seu Bonero mantem identidade do objeto e ancora da missao");
    for(int d=0;d<4;d++)for(int f=0;f<8;f++){var s=RpgNpcDavi11.Frame(d,f);Check(s&&s.texture.name=="Davi11"&&s.pixelsPerUnit==64&&s.rect.size==new Vector2(128,128),$"Davi exclusivo, direcao{d} quadro{f}");}
    npc.Pose(2,0);Check(npc.body.color==Color.white&&npc.body.sprite.texture.name!="Hero_idle","NPC sem reutilizar ou tingir o sprite do jogador");
    foreach(var point in new[]{new Vector2(0,46),new Vector2(29,16),new Vector2(-29,29),new Vector2(-20,40)})Check(Reachable(new Vector2(0,-3),point),"Caminho terrestre acessivel para "+point);

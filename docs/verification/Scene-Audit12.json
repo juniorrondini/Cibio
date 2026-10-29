@@ -1,0 +1,18 @@
+{
+  "original_blocks": 8040,
+  "current_blocks": 8040,
+  "removed_blocks": 0,
+  "added_blocks": 0,
+  "original_scene_sha256": "7ced4603c18b343c3aa6a684bdb3c999efe1db274fa07ab4ce87e29767ab4b25",
+  "new_scene_sha256": "8d3d8089067bb9ddd47950110edaeb2915c9fb9eea1a328e12fe4c6744ff8c8a",
+  "existing_guids_unchanged": true,
+  "boss_anchor": [
+    2.6,
+    39
+  ],
+  "reason": "Separate boss silhouette from amplifier; existing object retained",
+  "save_key": "Cibio.RPG.v3.Progress",
+  "checks": 691,
+  "native_frames": 128,
+  "source_atlases_reproduced_byte_for_byte": 5
+}

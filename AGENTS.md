@@ -83,3 +83,11 @@
 - OrganicGround usa quatro materiais11 e máscara da vila original, caminhos com bordas suaves e repetição suavizada da grama no shader. SoftShadow11 é um shader de sombra de contato, sem bitmap substituto da arte.
 - Preservar componentes/objetos anteriores: árvores que fechavam passagens foram desativadas; uma casa de(0,7) foi movida a(-5,10) para liberar o eixo central. Nenhum objeto original foi apagado. A capela fica em(0,48), sem corte no limite norte.
 - -cibio-village-review11 valida missão/NPC/rotas/colisões,32quadros, mapa e amostra de desempenho. Savev3 intacto. O supersônico10 de60u/s continua disponível.
+
+## Atualização 12
+- Chefe enemyKind4 agora é Companheiro, mesma instância/280HP/26soco/leque3x16. Companheiro12 tem128quadros, células128/PPU64/pivot(.5,.16): idle4, walk9, slash6, spellcast7, hurt6 em quatro direções. Não reutilizar EnemyHeavy para o chefe; guardas blindados continuam EnemyHeavy.
+- RpgBoss12.UpdateScene atualiza NPC/chefe existentes e é idempotente; BuildPlayer chama esse migrador e BuildUpdatedPlayer. Não recriar a vila. IDs/GUIDs anteriores preservados. A âncora do chefe foi ajustada de(0,38.5) para(2.6,39) para o amplificador não cobrir o corpo.
+- Seu Bonero é o nome público do antigo Seu Davi. RpgNpcDavi11, Davi11 e campo captainDefeated são identificadores internos mantidos por compatibilidade; não renomear GUIDs nem migrar/destruir o savev3. Busca do NPC aceita o nome anterior como fallback.
+- Chefe prefere soco abaixo de1.2u; poder só acima de1.8u, antecipação850ms em quadros0–4, liberação5 e recuperação6 durante240ms. Recarga2.8s preservada. Soco dura.6s e contato.55/quadro3. Barra de vida própria aparece até8u.
+- Originais, prompts finais e importador em Generated12; fonte Fontes-Chefe-12.zip acompanha player. Usar image_gen integrado para nova arte; não desenhar sprites via código. Referência do usuário não distribuída.
+- -cibio-boss-review12 valida base/evolução/vila/chefe,128quadros nativos, combate e conclusão da missão, sem alterar save real.

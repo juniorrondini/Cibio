@@ -38,7 +38,7 @@ namespace Cibio.RPG
    h.buff=12;h.formStage=2;h.Pose("thrust",4);h.GetComponent<RpgPowerForm>().Refresh(1);g.StartGame(false);g.reviewPose=true;Check(h.FormStage==0&&h.currentAnimation=="idle"&&h.body.enabled&&h.body.sprite.texture.name=="Hero_idle","Nova partida apos transformacao restaura sprite, porte e pose imediatamente");Check(g.world.enemies[7].body.color==g.world.enemies[7].BaseTint&&g.world.enemies[13].body.color==g.world.enemies[13].BaseTint,"Paletas dos novos inimigos sao restauradas antes do primeiro quadro");
    Check(g.world.bounds.height>=60&&g.world.enemies.Count==14,"Area expandida de 48x36 para 48x60, com 14 inimigos");Check(quest.giver&&quest.nodes.Length==3,"NPC e tres amplificadores persistidos na cena");
    foreach(var n in quest.nodes)Check(Reachable(new Vector2(0,-3),n.transform.position),"Caminho terrestre livre para amplificador "+n.id);
-   Check(Reachable(new Vector2(0,-3),quest.giver.position),"Caminho livre para Seu Davi");
+   Check(Reachable(new Vector2(0,-3),quest.giver.position),"Caminho livre para Seu Bonero");
    h.transform.position=quest.nodes[0].transform.position;quest.TryInteract();Check(g.progress.silenced==0,"Nao desliga amplificador antes de receber a missao");h.transform.position=quest.giver.position;g.Interact();Check(g.progress.questStage==1,"Conversa aceita missao sem alterar os altares");
    h.transform.position=quest.nodes[0].transform.position;quest.TryInteract();Check(g.progress.silenced==0,"Guardas proximos bloqueiam a interacao");
    for(int i=7;i<g.world.enemies.Count;i++){var e=g.world.enemies[i];e.invincible=0;e.TakeDamage(10000);}Check(g.progress.captainDefeated,"Derrotar capitao registra objetivo da missao");

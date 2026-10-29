@@ -17,7 +17,7 @@ namespace Cibio.RPG
             string key=name+"/"+(pivot??Vector2.zero);
             if(!sprites.TryGetValue(key,out var s)) {var t=Texture(name);s=Sprite.Create(t,new Rect(0,0,t.width,t.height),pivot??new Vector2(.5f,.05f),ImagePPU(name),0,SpriteMeshType.FullRect);sprites[key]=s;}return s;
         }
-        public static int CellSize(string person)=>person=="HeroAscendant"?192:person=="HeroAwakened"?128:64;
+        public static int CellSize(string person)=>person=="HeroAscendant"?192:person=="HeroAwakened"||person=="Companheiro12"?128:64;
         public static int FrameCount(string person,string action)=>Texture(person+"_"+action).width/CellSize(person);
         public static Sprite Frame(string person,string action,int direction,int frame)
         {

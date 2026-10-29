@@ -22,7 +22,7 @@ namespace Cibio.RPG
   public float FlightSpeed=>SonicActive&&FormStage==2&&flying&&flightBoosting&&!flightBraking?SonicTopSpeed:(FormStage==2?12:FormStage==1?8:6)*(flightBoosting&&!flightBraking?1.25f:1);
   public float GroundSpeed(bool run)=>(run?4.5f:2.8f)*(FormStage==2?1.45f:FormStage==1?1.3f:1);
   public float GaitTravel=>gaitTravel;
-  public Color BaseTint=>isEnemy?(enemyKind==3?new Color(.72f,.9f,.85f):enemyKind==4?new Color(1,.66f,.7f):Color.white):Color.white;
+  public Color BaseTint=>isEnemy?(enemyKind==3?new Color(.72f,.9f,.85f):Color.white):Color.white;
   public Vector2 Home=>home;
   public void SetHome(Vector2 p){home=p;}
   public void SetFlightControls(bool boost,bool brake){flightBraking=flying&&brake;flightBoosting=flying&&boost&&!brake;}
@@ -39,8 +39,8 @@ float gaitPhase,poseClock;string lastPose="";
   public Vector2 Position=>(Vector2)transform.position;
   public int MaxHealth=>isEnemy?(enemyKind==4?280:enemyKind==3?78:enemyKind==1?120:enemyKind==2?55:65):100+((RpgGame.Instance?RpgGame.Instance.progress.level:1)-1)*12;
   public float Damage=>isEnemy?(enemyKind==4?26:enemyKind==3?15:enemyKind==1?22:12):(20+(RpgGame.Instance.progress.level-1)*3)*(FormStage==2?3.15f:FormStage==1?2.3f:1);
-  public string EnemyName=>enemyKind==4?"Capitão do Eco":enemyKind==3?"Batedor do Morro":enemyKind==1?"Fiscal blindado":enemyKind==2?"Arauto da Vuvuzela":"Cobrador";
-  public string Family=>isEnemy?(enemyKind==1||enemyKind==4?"EnemyHeavy":enemyKind==2?"EnemyCaster":"Enemy"):FormStage==2?"HeroAscendant":buff>0?"HeroAwakened":charging&&charge>=55?"HeroLift":"Hero";
+  public string EnemyName=>enemyKind==4?"Companheiro":enemyKind==3?"Batedor do Morro":enemyKind==1?"Fiscal blindado":enemyKind==2?"Arauto da Vuvuzela":"Cobrador";
+  public string Family=>isEnemy?(enemyKind==4?"Companheiro12":enemyKind==1?"EnemyHeavy":enemyKind==2?"EnemyCaster":"Enemy"):FormStage==2?"HeroAscendant":buff>0?"HeroAwakened":charging&&charge>=55?"HeroLift":"Hero";
   public void Initialize(){home=Position;health=MaxHealth;shadow=RpgArt.Put("Sombra",RpgArt.Pixel,Position+Vector2.down*.04f,-3900,transform,new Color(.04f,.08f,.07f,.3f));shadow.transform.localScale=new Vector3(.72f,.12f,1);body=RpgArt.Put("Sprite animado",RpgArt.Frame(Family,"idle",2,0),Position,RpgWorld.Order(Position.y),transform);}
   public void ConfigureEnemy(int kind){enemyKind=kind;gameObject.name=EnemyName;health=MaxHealth;transform.localScale=Vector3.one*(kind==4?1.32f:kind==3?.98f:kind==1?1.12f:kind==2?.96f:1);body.color=BaseTint;Pose("idle",0);}
   public void Tick(float dt)
@@ -58,11 +58,12 @@ float gaitPhase,poseClock;string lastPose="";
    string anim=charging||transforming>0||powerPose>0?"spellcast":isEnemy&&eliteTell>0?"spellcast":attackTimer>0?attackAction:flightHeight>.02f?"flight":jumpTimer>0?"jump":velocity.sqrMagnitude>.05f?(running?"run":"walk"):"idle";
    if(anim!=lastPose){poseClock=0;if(anim=="walk"||anim=="run"){if(lastPose!="walk"&&lastPose!="run")gaitPhase=0;}lastPose=anim;}else poseClock+=dt;
    int count=RpgArt.FrameCount(Family,anim);
-   int frame=anim=="walk"?1+(int)(gaitPhase*8)%8:anim=="run"?(int)(gaitPhase*8)%8:anim=="flight"?(velocity.sqrMagnitude>.25f?2:0)+(int)(poseClock*4)%2:anim=="jump"?Mathf.Clamp((int)((.65f-jumpTimer)/.65f*count),0,count-1):attackTimer>0&&anim==attackAction?Mathf.Clamp((int)(AttackProgress*count),0,count-1):anim=="spellcast"?(int)(poseClock*9)%7:(int)(poseClock*2)%2;
+   int frame=anim=="walk"?1+(int)(gaitPhase*8)%8:anim=="run"?(int)(gaitPhase*8)%8:anim=="flight"?(velocity.sqrMagnitude>.25f?2:0)+(int)(poseClock*4)%2:anim=="jump"?Mathf.Clamp((int)((.65f-jumpTimer)/.65f*count),0,count-1):attackTimer>0&&anim==attackAction?Mathf.Clamp((int)(AttackProgress*count),0,count-1):anim=="spellcast"?(int)(poseClock*9)%7:(int)(poseClock*2)%count;
+   if(isEnemy&&enemyKind==4&&eliteTell>0)frame=Mathf.Clamp((int)((.85f-eliteTell)/.85f*5),0,4);
    if(charging)frame=charge<20?1:charge<50?2:charge<75?3:4;
-   if(powerPose>0)frame=castWindup>0?2:5;
+   if(powerPose>0)frame=isEnemy&&enemyKind==4?(powerPose>.12f?5:6):castWindup>0?2:5;
    if(transforming>0){float age=TransformationDuration-transforming;frame=FormStage==2?new[]{2,3,4,5,5,4,3,2}[Mathf.Clamp((int)(age/TransformationDuration*8),0,7)]:age<.24f?2:age<.66f?5:2;}
-   Pose(anim,frame);body.color=transforming<=0&&invincible>0&&((int)(clock*18)%2==0)?new Color(1,.65f,.63f):isEnemy?(eliteTell>0?new Color(1,.52f,.4f):enemyKind==3?new Color(.72f,.9f,.85f):enemyKind==4?new Color(1,.66f,.7f):Color.white):Color.white;
+   Pose(anim,frame);body.color=transforming<=0&&invincible>0&&((int)(clock*18)%2==0)?new Color(1,.65f,.63f):isEnemy?(eliteTell>0?new Color(1,.52f,.4f):enemyKind==3?new Color(.72f,.9f,.85f):Color.white):Color.white;
   }
   public void Pose(string animation,int frame){currentAnimation=animation;animationFrame=frame;body.sprite=RpgArt.Frame(transforming>0&&FormStage<2?"HeroLift":Family,animation,direction,frame);body.sortingOrder=RpgWorld.Order(Position.y);body.transform.localPosition=new Vector3(0,flightHeight+(flightHeight>.02f?Mathf.Sin(clock*4)*.035f:0)+(jumpTimer>0?Mathf.Sin(jumpTimer/.65f*Mathf.PI)*.75f:0),0);shadow.transform.localPosition=new Vector3(0,-.04f,0);}
   public void Walk(Vector2 input,float speed,float dt,bool run=false)
@@ -97,11 +98,12 @@ float gaitPhase,poseClock;string lastPose="";
   float eliteTell,eliteRush;bool rushHit;Vector2 eliteAim;public bool WindingUp=>eliteTell>0;
   void EliteBrain(RpgActor target,Vector2 delta,float distance,float dt)
   {
+   if(attackTimer>0||powerPose>0){Walk(Vector2.zero,0,dt);return;}
    if(Vector2.Distance(Position,home)>9){Walk((home-Position).normalized,2.5f,dt);return;}
    if(eliteRush>0){float step=Mathf.Min(dt,eliteRush);eliteRush-=dt;Vector2 a=Position,b=world.Move(a,eliteAim*11*step);transform.position=b;gaitPhase+=Vector2.Distance(a,b)/2.9f;gaitTravel+=Vector2.Distance(a,b);velocity=eliteAim*11;running=true;Vector2 d=b-a;float u=d.sqrMagnitude>.0001f?Mathf.Clamp01(Vector2.Dot(target.Position-a,d)/d.sqrMagnitude):0;if(!rushHit&&target.flightHeight<1&&Vector2.Distance(target.Position,a+d*u)<1.05f){target.TakeDamage(Damage);rushHit=true;}return;}
-   running=false;if(eliteTell>0){velocity=Vector2.zero;eliteTell-=dt;if(eliteTell<=0){if(enemyKind==4){for(int k=-1;k<=1;k++)RpgProjectile.Fire(this,Quaternion.Euler(0,0,k*19)*eliteAim);}else {eliteRush=.24f;rushHit=false;RpgEffects.Burst(Position,RpgArt.Hex("DA927F"),1.1f,.3f);}enemyCooldown=enemyKind==4?2.8f:2.1f;}return;}
+   running=false;if(eliteTell>0){velocity=Vector2.zero;eliteTell-=dt;if(eliteTell<=0){if(enemyKind==4){for(int k=-1;k<=1;k++)RpgProjectile.Fire(this,Quaternion.Euler(0,0,k*19)*eliteAim);Cast(.24f);}else {eliteRush=.24f;rushHit=false;RpgEffects.Burst(Position,RpgArt.Hex("DA927F"),1.1f,.3f);}enemyCooldown=enemyKind==4?2.8f:2.1f;}return;}
    if(distance>7){Walk(Vector2.zero,0,dt);return;}
-   if(enemyCooldown<=0&&distance<(enemyKind==4?6.5f:4.4f)){eliteAim=delta.normalized;eliteTell=enemyKind==4?.85f:.6f;facing=eliteAim;direction=Mathf.Abs(facing.x)>Mathf.Abs(facing.y)?(facing.x>0?3:1):(facing.y>0?0:2);RpgEffects.Spark(Position+Vector2.up, RpgArt.Hex(enemyKind==4?"FF697E":"FAC97C"),2);RpgAudio.Play("wave_windup",Position,.2f);return;}
+   if(enemyCooldown<=0&&distance<(enemyKind==4?6.5f:4.4f)&&(enemyKind!=4||distance>1.8f)){eliteAim=delta.normalized;eliteTell=enemyKind==4?.85f:.6f;facing=eliteAim;direction=Mathf.Abs(facing.x)>Mathf.Abs(facing.y)?(facing.x>0?3:1):(facing.y>0?0:2);RpgEffects.Spark(Position+Vector2.up, RpgArt.Hex(enemyKind==4?"FF697E":"FAC97C"),2);RpgAudio.Play("wave_windup",Position,.2f);return;}
    if(distance<1.2f){Walk(Vector2.zero,0,dt);if(enemyCooldown<=0){facing=delta.normalized;Attack();enemyCooldown=2;}}
    else{Vector2 toward=delta.normalized;Vector2 orbit=new(-toward.y,toward.x);Walk(enemyKind==3&&distance<3?toward*.45f+orbit*.65f:toward,enemyKind==3?2.6f:1.6f,dt);}
   }

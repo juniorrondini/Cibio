@@ -27818,7 +27818,7 @@ GameObject:
   - component: {fileID: 220737350}
   - component: {fileID: 220737349}
   m_Layer: 0
-  m_Name: "Capit\xE3o do Eco"
+  m_Name: Companheiro
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -27860,7 +27860,7 @@ MonoBehaviour:
   clock: 0
   enemyCooldown: 0
   deadTime: 0
-  home: {x: 0, y: 38.5}
+  home: {x: 2.6, y: 39}
   flying: 0
   running: 0
   flightBoosting: 0
@@ -27881,7 +27881,7 @@ Transform:
   m_GameObject: {fileID: 220737348}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 38.5, z: 0}
+  m_LocalPosition: {x: 2.6, y: 39, z: 0}
   m_LocalScale: {x: 1.32, y: 1.32, z: 1.32}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -112845,7 +112845,7 @@ GameObject:
   - component: {fileID: 954675043}
   - component: {fileID: 954675044}
   m_Layer: 0
-  m_Name: "Seu Davi \u2022 miss\xE3o"
+  m_Name: "Seu Bonero \u2022 miss\xE3o"
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -217297,7 +217297,7 @@ GameObject:
   - component: {fileID: 1917957950}
   - component: {fileID: 1917957951}
   m_Layer: 0
-  m_Name: Seu Davi
+  m_Name: Seu Bonero
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -245086,7 +245086,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: -232
   m_MaskInteraction: 0
-  m_Sprite: {fileID: 21300000, guid: 30110039fc2871b449283cb489d4ea60, type: 2}
+  m_Sprite: {fileID: 21300000, guid: 541cd977211a5504dbee58c9aa3eeceb, type: 2}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
