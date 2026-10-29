@@ -1,0 +1,10 @@
+{
+  "original_blocks": 6813,
+  "expanded_blocks": 7077,
+  "removed_blocks": 0,
+  "original_transform_blocks_changed": 2,
+  "note": "Original scene objects/GUIDs retained. Root children appended; two northern tree renderers and colliders disabled.",
+  "frames_checked_nonempty_and_registered": 384,
+  "frames_touching_authored_edge": 20,
+  "edge_note": "Some original LPC running soles touch the authored cell boundary; edge contact alone is not evidence of a cut. Native cells retained and reviewed in contact sheets."
+}

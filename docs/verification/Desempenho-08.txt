@@ -1,0 +1,1 @@
+120 quadros sem capturas: 2,125s; 56,5 FPS. Sequencia visual fixa: 24fps.

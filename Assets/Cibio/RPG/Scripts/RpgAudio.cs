@@ -19,8 +19,8 @@ namespace Cibio.RPG
    if(!active&&wasCharging&&h.buff<=0)Play("charge_release",h.Position,.3f);wasCharging=active;
    Fade(bass,active?Mathf.Lerp(.12f,.32f,q):0,dt);Fade(air,active?Mathf.Lerp(.04f,.25f,q):0,dt);Fade(electric,active?Mathf.SmoothStep(0,.21f,q):0,dt);
    bass.pitch=Mathf.Lerp(.86f,1.08f,q);air.pitch=Mathf.Lerp(.75f,1.15f,q);electric.pitch=Mathf.Lerp(.8f,1.12f,q);
-   Fade(sustain,g.Playing&&h.buff>0&&!h.dead?.14f:0,dt);Fade(ambient,h.transforming>0?.035f:g.Playing?.15f:.10f,dt);
-   Fade(flight,g.Playing&&h.flying?Mathf.Lerp(.08f,.23f,h.velocity.magnitude/8):0,dt);flight.pitch=Mathf.Lerp(.85f,1.2f,h.velocity.magnitude/8);
+   Fade(sustain,g.Playing&&h.buff>0&&!h.dead?(h.FormStage==2?.19f:.14f):0,dt);Fade(ambient,h.transforming>0?.035f:g.Playing?.15f:.10f,dt);
+   Fade(flight,g.Playing&&h.flying?Mathf.Lerp(.08f,.23f,h.velocity.magnitude/8):0,dt);flight.pitch=Mathf.Lerp(.85f,h.FormStage==2?1.35f:1.2f,h.velocity.magnitude/15);sustain.pitch=h.FormStage==2?.82f:1;
    stepTimer-=Time.deltaTime;if(g.Playing&&!h.dead&&h.velocity.magnitude>.5f&&h.jumpTimer<=0&&h.flightHeight<=0&&stepTimer<=0){stepTimer=h.running?.22f:.34f;Play("footstep0"+Random.Range(0,4),h.Position,.14f,Random.Range(.94f,1.07f));}
    if(Input.GetKeyDown(KeyCode.M))AudioListener.volume=AudioListener.volume>.01f?0:1;
   }

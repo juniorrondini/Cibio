@@ -23,10 +23,10 @@ namespace Cibio.RPG
    var r=Create("Poder • explosão de energia",null);r.transform.position=p+Vector2.up*.55f;var fx=r.gameObject.AddComponent<RpgEffects>();fx.image=r;fx.duration=duration;fx.tint=c;fx.startSize=radius*1.15f;fx.endSize=radius*1.85f;r.sortingOrder=RpgWorld.Order(p.y)+3;if(radius>1.1f)RpgEnergyParticles.Eruption(p,c,radius,Mathf.Clamp(Mathf.RoundToInt(radius*6),8,30));return fx;
   }
   public static void Strike(Vector2 p,Vector2 facing,int combo,Color color){var fx=Burst(p,color,.7f+combo*.15f,.26f+combo*.04f);fx.motion=facing*.45f;fx.phase=combo*.23f;}
-  public static void PowerStrike(Vector2 p,Vector2 facing,int combo)
+  public static void PowerStrike(Vector2 p,Vector2 facing,int combo,Color? energy=null)
   {
-   for(int i=0;i<2+combo;i++){var fx=Burst(p+facing*(i*.22f),RpgArt.Hex(i%2==0?"FFE7A6":"FFD377"),.7f+combo*.25f,.22f+i*.045f);fx.motion=facing*(1.8f+i*.4f);}
-   RpgEnergyParticles.Eruption(p,RpgArt.Hex("FFF0CA"),1.8f+combo*.5f,12+combo*5);
+   for(int i=0;i<2+combo;i++){var fx=Burst(p+facing*(i*.22f),energy??RpgArt.Hex(i%2==0?"FFE7A6":"FFD377"),.7f+combo*.25f,.22f+i*.045f);fx.motion=facing*(1.8f+i*.4f);}
+   RpgEnergyParticles.Eruption(p,energy??RpgArt.Hex("FFF0CA"),1.8f+combo*.5f,12+combo*5);
   }
   void Update()
   {

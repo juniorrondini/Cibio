@@ -1,0 +1,5378 @@
+[
+  {
+    "family": "Hero",
+    "action": "walk",
+    "direction": 0,
+    "frame": 0,
+    "bounds": [
+      17,
+      13,
+      47,
+      60
+    ],
+    "visible_pixels": 1103,
+    "touches_authored_cell_edge": false
+  },
+  {
+    "family": "Hero",
+    "action": "walk",
+    "direction": 0,
+    "frame": 1,
+    "bounds": [
+      17,
+      13,
+      47,
+      60
+    ],
+    "visible_pixels": 1100,
+    "touches_authored_cell_edge": false
+  },
+  {
+    "family": "Hero",
+    "action": "walk",
+    "direction": 0,
+    "frame": 2,
+    "bounds": [
+      17,
+      13,
+      47,
+      61
+    ],
+    "visible_pixels": 1086,
+    "touches_authored_cell_edge": false
+  },
+  {
+    "family": "Hero",
+    "action": "walk",
+    "direction": 0,
+    "frame": 3,
+    "bounds": [
+      17,
+      14,
+      47,
+      62
+    ],
+    "visible_pixels": 1057,
+    "touches_authored_cell_edge": false
+  },
+  {
+    "family": "Hero",
+    "action": "walk",
+    "direction": 0,
+    "frame": 4,
+    "bounds": [
+      17,
+      13,
+      47,
+      61
+    ],
+    "visible_pixels": 1093,
+    "touches_authored_cell_edge": false
+  },
+  {
+    "family": "Hero",
+    "action": "walk",
+    "direction": 0,
+    "frame": 5,
+    "bounds": [
+      17,
+      13,
+      47,
+      60
+    ],
+    "visible_pixels": 1100,
+    "touches_authored_cell_edge": false
+  },
+  {
+    "family": "Hero",
+    "action": "walk",
+    "direction": 0,
+    "frame": 6,
+    "bounds": [
+      17,
+      13,
+      47,
+      61
+    ],
+    "visible_pixels": 1087,
+    "touches_authored_cell_edge": false
+  },
+  {
+    "family": "Hero",
+    "action": "walk",
+    "direction": 0,
+    "frame": 7,
+    "bounds": [
+      18,
+      14,
+      47,
+      62
+    ],
+    "visible_pixels": 1058,
+    "touches_authored_cell_edge": false
+  },
+  {
+    "family": "Hero",
+    "action": "walk",
+    "direction": 0,
+    "frame": 8,
+    "bounds": [
+      17,
+      13,
+      47,
+      61
+    ],
+    "visible_pixels": 1094,
+    "touches_authored_cell_edge": false
+  },
+  {
+    "family": "Hero",
+    "action": "walk",
+    "direction": 1,
+    "frame": 0,
+    "bounds": [
+      21,
+      13,
+      44,
+      61
+    ],
+    "visible_pixels": 846,
+    "touches_authored_cell_edge": false
+  },
+  {
+    "family": "Hero",
+    "action": "walk",
+    "direction": 1,
+    "frame": 1,
+    "bounds": [
+      19,
+      14,
+      44,
+      61
+    ],
+    "visible_pixels": 807,
+    "touches_authored_cell_edge": false
+  },
+  {
+    "family": "Hero",
+    "action": "walk",
+    "direction": 1,
+    "frame": 2,
+    "bounds": [
+      21,
+      13,
+      44,
+      60
+    ],
+    "visible_pixels": 811,
+    "touches_authored_cell_edge": false
+  },
+  {
+    "family": "Hero",
+    "action": "walk",
+    "direction": 1,
+    "frame": 3,
+    "bounds": [
+      21,
+      13,
+      44,
+      60
+    ],
+    "visible_pixels": 809,
+    "touches_authored_cell_edge": false
+  },
+  {
+    "family": "Hero",
+    "action": "walk",
+    "direction": 1,
+    "frame": 4,
+    "bounds": [
+      21,
+      13,
+      45,
+      61
+    ],
+    "visible_pixels": 877,
+    "touches_authored_cell_edge": false
+  },
+  {
+    "family": "Hero",
+    "action": "walk",
+    "direction": 1,
+    "frame": 5,
+    "bounds": [
+      20,
+      14,
+      47,
+      61
+    ],
+    "visible_pixels": 893,
+    "touches_authored_cell_edge": false
+  },
+  {
+    "family": "Hero",
+    "action": "walk",
+    "direction": 1,
+    "frame": 6,
+    "bounds": [
+      21,
+      13,
+      45,
+      61
+    ],
+    "visible_pixels": 875,
+    "touches_authored_cell_edge": false
+  },
+  {
+    "family": "Hero",
+    "action": "walk",
+    "direction": 1,
+    "frame": 7,
+    "bounds": [
+      21,
+      13,
+      44,
+      61
+    ],
+    "visible_pixels": 833,
+    "touches_authored_cell_edge": false
+  },
+  {
+    "family": "Hero",
+    "action": "walk",
+    "direction": 1,
+    "frame": 8,
+    "bounds": [
+      21,
+      13,
+      44,
+      61
+    ],
+    "visible_pixels": 816,
+    "touches_authored_cell_edge": false
+  },
+  {
+    "family": "Hero",
+    "action": "walk",
+    "direction": 2,
+    "frame": 0,
+    "bounds": [
+      17,
+      13,
+      46,
+      61
+    ],
+    "visible_pixels": 1097,
+    "touches_authored_cell_edge": false
+  },
+  {
+    "family": "Hero",
+    "action": "walk",
+    "direction": 2,
+    "frame": 1,
+    "bounds": [
+      17,
+      13,
+      46,
+      61
+    ],
+    "visible_pixels": 1102,
+    "touches_authored_cell_edge": false
+  },
+  {
+    "family": "Hero",
+    "action": "walk",
+    "direction": 2,
+    "frame": 2,
+    "bounds": [
+      17,
+      13,
+      46,
+      62
+    ],
+    "visible_pixels": 1094,
+    "touches_authored_cell_edge": false
+  },
+  {
+    "family": "Hero",
+    "action": "walk",
+    "direction": 2,
+    "frame": 3,
+    "bounds": [
+      18,
+      14,
+      46,
+      62
+    ],
+    "visible_pixels": 1063,
+    "touches_authored_cell_edge": false
+  },
+  {
+    "family": "Hero",
+    "action": "walk",
+    "direction": 2,
+    "frame": 4,
+    "bounds": [
+      17,
+      13,
+      46,
+      62
+    ],
+    "visible_pixels": 1094,
+    "touches_authored_cell_edge": false
+  },
+  {
+    "family": "Hero",
+    "action": "walk",
+    "direction": 2,
+    "frame": 5,
+    "bounds": [
+      17,
+      13,
+      46,
+      61
+    ],
+    "visible_pixels": 1102,
+    "touches_authored_cell_edge": false
+  },
+  {
+    "family": "Hero",
+    "action": "walk",
+    "direction": 2,
+    "frame": 6,
+    "bounds": [
+      17,
+      13,
+      46,
+      62
+    ],
+    "visible_pixels": 1094,
+    "touches_authored_cell_edge": false
+  },
+  {
+    "family": "Hero",
+    "action": "walk",
+    "direction": 2,
+    "frame": 7,
+    "bounds": [
+      17,
+      14,
+      45,
+      62
+    ],
+    "visible_pixels": 1063,
+    "touches_authored_cell_edge": false
+  },
+  {
+    "family": "Hero",
+    "action": "walk",
+    "direction": 2,
+    "frame": 8,
+    "bounds": [
+      17,
+      13,
+      46,
+      62
+    ],
+    "visible_pixels": 1094,
+    "touches_authored_cell_edge": false
+  },
+  {
+    "family": "Hero",
+    "action": "walk",
+    "direction": 3,
+    "frame": 0,
+    "bounds": [
+      19,
+      13,
+      42,
+      61
+    ],
+    "visible_pixels": 846,
+    "touches_authored_cell_edge": false
+  },
+  {
+    "family": "Hero",
+    "action": "walk",
+    "direction": 3,
+    "frame": 1,
+    "bounds": [
+      19,
+      14,
+      44,
+      61
+    ],
+    "visible_pixels": 808,
+    "touches_authored_cell_edge": false
+  },
+  {
+    "family": "Hero",
+    "action": "walk",
+    "direction": 3,
+    "frame": 2,
+    "bounds": [
+      19,
+      13,
+      42,
+      60
+    ],
+    "visible_pixels": 812,
+    "touches_authored_cell_edge": false
+  },
+  {
+    "family": "Hero",
+    "action": "walk",
+    "direction": 3,
+    "frame": 3,
+    "bounds": [
+      19,
+      13,
+      42,
+      60
+    ],
+    "visible_pixels": 810,
+    "touches_authored_cell_edge": false
+  },
+  {
+    "family": "Hero",
+    "action": "walk",
+    "direction": 3,
+    "frame": 4,
+    "bounds": [
+      18,
+      13,
+      42,
+      61
+    ],
+    "visible_pixels": 878,
+    "touches_authored_cell_edge": false
+  },
+  {
+    "family": "Hero",
+    "action": "walk",
+    "direction": 3,
+    "frame": 5,
+    "bounds": [
+      16,
+      14,
+      43,
+      61
+    ],
+    "visible_pixels": 893,
+    "touches_authored_cell_edge": false
+  },
+  {
+    "family": "Hero",
+    "action": "walk",
+    "direction": 3,
+    "frame": 6,
+    "bounds": [
+      18,
+      13,
+      42,
+      61
+    ],
+    "visible_pixels": 876,
+    "touches_authored_cell_edge": false
+  },
+  {
+    "family": "Hero",
+    "action": "walk",
+    "direction": 3,
+    "frame": 7,
+    "bounds": [
+      19,
+      13,
+      42,
+      61
+    ],
+    "visible_pixels": 834,
+    "touches_authored_cell_edge": false
+  },
+  {
+    "family": "Hero",
+    "action": "walk",
+    "direction": 3,
+    "frame": 8,
+    "bounds": [
+      19,
+      13,
+      42,
+      61
+    ],
+    "visible_pixels": 817,
+    "touches_authored_cell_edge": false
+  },
+  {
+    "family": "Hero",
+    "action": "run",
+    "direction": 0,
+    "frame": 0,
+    "bounds": [
+      16,
+      12,
+      45,
+      60
+    ],
+    "visible_pixels": 961,
+    "touches_authored_cell_edge": false
+  },
+  {
+    "family": "Hero",
+    "action": "run",
+    "direction": 0,
+    "frame": 1,
+    "bounds": [
+      17,
+      13,
+      46,
+      63
+    ],
+    "visible_pixels": 968,
+    "touches_authored_cell_edge": true
+  },
+  {
+    "family": "Hero",
+    "action": "run",
+    "direction": 0,
+    "frame": 2,
+    "bounds": [
+      18,
+      12,
+      47,
+      63
+    ],
+    "visible_pixels": 997,
+    "touches_authored_cell_edge": true
+  },
+  {
+    "family": "Hero",
+    "action": "run",
+    "direction": 0,
+    "frame": 3,
+    "bounds": [
+      19,
+      10,
+      48,
+      63
+    ],
+    "visible_pixels": 1027,
+    "touches_authored_cell_edge": true
+  },
+  {
+    "family": "Hero",
+    "action": "run",
+    "direction": 0,
+    "frame": 4,
+    "bounds": [
+      20,
+      12,
+      49,
+      60
+    ],
+    "visible_pixels": 956,
+    "touches_authored_cell_edge": false
+  },
+  {
+    "family": "Hero",
+    "action": "run",
+    "direction": 0,
+    "frame": 5,
+    "bounds": [
+      19,
+      13,
+      48,
+      63
+    ],
+    "visible_pixels": 966,
+    "touches_authored_cell_edge": true
+  },
+  {
+    "family": "Hero",
+    "action": "run",
+    "direction": 0,
+    "frame": 6,
+    "bounds": [
+      18,
+      12,
+      47,
+      63
+    ],
+    "visible_pixels": 998,
+    "touches_authored_cell_edge": true
+  },
+  {
+    "family": "Hero",
+    "action": "run",
+    "direction": 0,
+    "frame": 7,
+    "bounds": [
+      17,
+      10,
+      46,
+      63
+    ],
+    "visible_pixels": 1028,
+    "touches_authored_cell_edge": true
+  },
+  {
+    "family": "Hero",
+    "action": "run",
+    "direction": 1,
+    "frame": 0,
+    "bounds": [
+      18,
+      15,
+      46,
+      61
+    ],
+    "visible_pixels": 779,
+    "touches_authored_cell_edge": false
+  },
+  {
+    "family": "Hero",
+    "action": "run",
+    "direction": 1,
+    "frame": 1,
+    "bounds": [
+      19,
+      16,
+      43,
+      62
+    ],
+    "visible_pixels": 710,
+    "touches_authored_cell_edge": false
+  },
+  {
+    "family": "Hero",
+    "action": "run",
+    "direction": 1,
+    "frame": 2,
+    "bounds": [
+      19,
+      15,
+      42,
+      62
+    ],
+    "visible_pixels": 693,
+    "touches_authored_cell_edge": false
+  },
+  {
+    "family": "Hero",
+    "action": "run",
+    "direction": 1,
+    "frame": 3,
+    "bounds": [
+      18,
+      13,
+      46,
+      58
+    ],
+    "visible_pixels": 786,
+    "touches_authored_cell_edge": false
+  },
+  {
+    "family": "Hero",
+    "action": "run",
+    "direction": 1,
+    "frame": 4,
+    "bounds": [
+      17,
+      15,
+      46,
+      61
+    ],
+    "visible_pixels": 769,
+    "touches_authored_cell_edge": false
+  },
+  {
+    "family": "Hero",
+    "action": "run",
+    "direction": 1,
+    "frame": 5,
+    "bounds": [
+      19,
+      16,
+      41,
+      62
+    ],
+    "visible_pixels": 707,
+    "touches_authored_cell_edge": false
+  },
+  {
+    "family": "Hero",
+    "action": "run",
+    "direction": 1,
+    "frame": 6,
+    "bounds": [
+      19,
+      15,
+      42,
+      62
+    ],
+    "visible_pixels": 705,
+    "touches_authored_cell_edge": false
+  },
+  {
+    "family": "Hero",
+    "action": "run",
+    "direction": 1,
+    "frame": 7,
+    "bounds": [
+      18,
+      13,
+      46,
+      60
+    ],
+    "visible_pixels": 774,
+    "touches_authored_cell_edge": false
+  },
+  {
+    "family": "Hero",
+    "action": "run",
+    "direction": 2,
+    "frame": 0,
+    "bounds": [
+      18,
+      13,
+      44,
+      63
+    ],
+    "visible_pixels": 895,
+    "touches_authored_cell_edge": true
+  },
+  {
+    "family": "Hero",
+    "action": "run",
+    "direction": 2,
+    "frame": 1,
+    "bounds": [
+      18,
+      14,
+      44,
+      63
+    ],
+    "visible_pixels": 927,
+    "touches_authored_cell_edge": true
+  },
+  {
+    "family": "Hero",
+    "action": "run",
+    "direction": 2,
+    "frame": 2,
+    "bounds": [
+      18,
+      13,
+      44,
+      62
+    ],
+    "visible_pixels": 969,
+    "touches_authored_cell_edge": false
+  },
+  {
+    "family": "Hero",
+    "action": "run",
+    "direction": 2,
+    "frame": 3,
+    "bounds": [
+      18,
+      11,
+      44,
+      59
+    ],
+    "visible_pixels": 923,
+    "touches_authored_cell_edge": false
+  },
+  {
+    "family": "Hero",
+    "action": "run",
+    "direction": 2,
+    "frame": 4,
+    "bounds": [
+      18,
+      13,
+      44,
+      63
+    ],
+    "visible_pixels": 895,
+    "touches_authored_cell_edge": true
+  },
+  {
+    "family": "Hero",
+    "action": "run",
+    "direction": 2,
+    "frame": 5,
+    "bounds": [
+      18,
+      14,
+      44,
+      63
+    ],
+    "visible_pixels": 927,
+    "touches_authored_cell_edge": true
+  },
+  {
+    "family": "Hero",
+    "action": "run",
+    "direction": 2,
+    "frame": 6,
+    "bounds": [
+      18,
+      13,
+      44,
+      62
+    ],
+    "visible_pixels": 969,
+    "touches_authored_cell_edge": false
+  },
+  {
+    "family": "Hero",
+    "action": "run",
+    "direction": 2,
+    "frame": 7,
+    "bounds": [
+      18,
+      11,
+      44,
+      59
+    ],
+    "visible_pixels": 924,
+    "touches_authored_cell_edge": false
+  },
+  {
+    "family": "Hero",
+    "action": "run",
+    "direction": 3,
+    "frame": 0,
+    "bounds": [
+      17,
+      15,
+      45,
+      61
+    ],
+    "visible_pixels": 781,
+    "touches_authored_cell_edge": false
+  },
+  {
+    "family": "Hero",
+    "action": "run",
+    "direction": 3,
+    "frame": 1,
+    "bounds": [
+      20,
+      16,
+      44,
+      62
+    ],
+    "visible_pixels": 712,
+    "touches_authored_cell_edge": false
+  },
+  {
+    "family": "Hero",
+    "action": "run",
+    "direction": 3,
+    "frame": 2,
+    "bounds": [
+      21,
+      15,
+      44,
+      62
+    ],
+    "visible_pixels": 695,
+    "touches_authored_cell_edge": false
+  },
+  {
+    "family": "Hero",
+    "action": "run",
+    "direction": 3,
+    "frame": 3,
+    "bounds": [
+      17,
+      13,
+      45,
+      58
+    ],
+    "visible_pixels": 788,
+    "touches_authored_cell_edge": false
+  },
+  {
+    "family": "Hero",
+    "action": "run",
+    "direction": 3,
+    "frame": 4,
+    "bounds": [
+      17,
+      15,
+      46,
+      61
+    ],
+    "visible_pixels": 771,
+    "touches_authored_cell_edge": false
+  },
+  {
+    "family": "Hero",
+    "action": "run",
+    "direction": 3,
+    "frame": 5,
+    "bounds": [
+      22,
+      16,
+      44,
+      62
+    ],
+    "visible_pixels": 709,
+    "touches_authored_cell_edge": false
+  },
+  {
+    "family": "Hero",
+    "action": "run",
+    "direction": 3,
+    "frame": 6,
+    "bounds": [
+      21,
+      15,
+      44,
+      62
+    ],
+    "visible_pixels": 707,
+    "touches_authored_cell_edge": false
+  },
+  {
+    "family": "Hero",
+    "action": "run",
+    "direction": 3,
+    "frame": 7,
+    "bounds": [
+      17,
+      13,
+      45,
+      60
+    ],
+    "visible_pixels": 776,
+    "touches_authored_cell_edge": false
+  },
+  {
+    "family": "Hero",
+    "action": "flight",
+    "direction": 0,
+    "frame": 0,
+    "bounds": [
+      17,
+      13,
+      47,
+      61
+    ],
+    "visible_pixels": 1119,
+    "touches_authored_cell_edge": false
+  },
+  {
+    "family": "Hero",
+    "action": "flight",
+    "direction": 0,
+    "frame": 1,
+    "bounds": [
+      15,
+      13,
+      45,
+      61
+    ],
+    "visible_pixels": 1113,
+    "touches_authored_cell_edge": false
+  },
+  {
+    "family": "Hero",
+    "action": "flight",
+    "direction": 0,
+    "frame": 2,
+    "bounds": [
+      16,
+      10,
+      53,
+      61
+    ],
+    "visible_pixels": 1218,
+    "touches_authored_cell_edge": false
+  },
+  {
+    "family": "Hero",
+    "action": "flight",
+    "direction": 0,
+    "frame": 3,
+    "bounds": [
+      16,
+      10,
+      54,
+      61
+    ],
+    "visible_pixels": 1213,
+    "touches_authored_cell_edge": false
+  },
+  {
+    "family": "Hero",
+    "action": "flight",
+    "direction": 1,
+    "frame": 0,
+    "bounds": [
+      18,
+      12,
+      44,
+      61
+    ],
+    "visible_pixels": 972,
+    "touches_authored_cell_edge": false
+  },
+  {
+    "family": "Hero",
+    "action": "flight",
+    "direction": 1,
+    "frame": 1,
+    "bounds": [
+      18,
+      12,
+      44,
+      61
+    ],
+    "visible_pixels": 981,
+    "touches_authored_cell_edge": false
+  },
+  {
+    "family": "Hero",
+    "action": "flight",
+    "direction": 1,
+    "frame": 2,
+    "bounds": [
+      5,
+      14,
+      47,
+      61
+    ],
+    "visible_pixels": 1208,
+    "touches_authored_cell_edge": false
+  },
+  {
+    "family": "Hero",
+    "action": "flight",
+    "direction": 1,
+    "frame": 3,
+    "bounds": [
+      6,
+      14,
+      47,
+      61
+    ],
+    "visible_pixels": 1165,
+    "touches_authored_cell_edge": false
+  },
+  {
+    "family": "Hero",
+    "action": "flight",
+    "direction": 2,
+    "frame": 0,
+    "bounds": [
+      15,
+      15,
+      48,
+      61
+    ],
+    "visible_pixels": 1162,
+    "touches_authored_cell_edge": false
+  },
+  {
+    "family": "Hero",
+    "action": "flight",
+    "direction": 2,
+    "frame": 1,
+    "bounds": [
+      15,
+      15,
+      48,
+      61
+    ],
+    "visible_pixels": 1146,
+    "touches_authored_cell_edge": false
+  },
+  {
+    "family": "Hero",
+    "action": "flight",
+    "direction": 2,
+    "frame": 2,
+    "bounds": [
+      10,
+      15,
+      50,
+      61
+    ],
+    "visible_pixels": 1140,
+    "touches_authored_cell_edge": false
+  },
+  {
+    "family": "Hero",
+    "action": "flight",
+    "direction": 2,
+    "frame": 3,
+    "bounds": [
+      10,
+      15,
+      50,
+      61
+    ],
+    "visible_pixels": 1142,
+    "touches_authored_cell_edge": false
+  },
+  {
+    "family": "Hero",
+    "action": "flight",
+    "direction": 3,
+    "frame": 0,
+    "bounds": [
+      18,
+      13,
+      45,
+      61
+    ],
+    "visible_pixels": 958,
+    "touches_authored_cell_edge": false
+  },
+  {
+    "family": "Hero",
+    "action": "flight",
+    "direction": 3,
+    "frame": 1,
+    "bounds": [
+      18,
+      12,
+      45,
+      61
+    ],
+    "visible_pixels": 979,
+    "touches_authored_cell_edge": false
+  },
+  {
+    "family": "Hero",
+    "action": "flight",
+    "direction": 3,
+    "frame": 2,
+    "bounds": [
+      18,
+      14,
+      58,
+      61
+    ],
+    "visible_pixels": 1170,
+    "touches_authored_cell_edge": false
+  },
+  {
+    "family": "Hero",
+    "action": "flight",
+    "direction": 3,
+    "frame": 3,
+    "bounds": [
+      18,
+      14,
+      59,
+      61
+    ],
+    "visible_pixels": 1172,
+    "touches_authored_cell_edge": false
+  },
+  {
+    "family": "Hero",
+    "action": "slash",
+    "direction": 0,
+    "frame": 0,
+    "bounds": [
+      17,
+      14,
+      47,
+      61
+    ],
+    "visible_pixels": 1103,
+    "touches_authored_cell_edge": false
+  },
+  {
+    "family": "Hero",
+    "action": "slash",
+    "direction": 0,
+    "frame": 1,
+    "bounds": [
+      18,
+      15,
+      47,
+      62
+    ],
+    "visible_pixels": 1015,
+    "touches_authored_cell_edge": false
+  },
+  {
+    "family": "Hero",
+    "action": "slash",
+    "direction": 0,
+    "frame": 2,
+    "bounds": [
+      17,
+      15,
+      46,
+      62
+    ],
+    "visible_pixels": 967,
+    "touches_authored_cell_edge": false
+  },
+  {
+    "family": "Hero",
+    "action": "slash",
+    "direction": 0,
+    "frame": 3,
+    "bounds": [
+      19,
+      14,
+      48,
+      62
+    ],
+    "visible_pixels": 1038,
+    "touches_authored_cell_edge": false
+  },
+  {
+    "family": "Hero",
+    "action": "slash",
+    "direction": 0,
+    "frame": 4,
+    "bounds": [
+      18,
+      14,
+      53,
+      62
+    ],
+    "visible_pixels": 1105,
+    "touches_authored_cell_edge": false
+  },
+  {
+    "family": "Hero",
+    "action": "slash",
+    "direction": 0,
+    "frame": 5,
+    "bounds": [
+      18,
+      14,
+      56,
+      62
+    ],
+    "visible_pixels": 1124,
+    "touches_authored_cell_edge": false
+  },
+  {
+    "family": "Hero",
+    "action": "slash",
+    "direction": 1,
+    "frame": 0,
+    "bounds": [
+      21,
+      13,
+      44,
+      61
+    ],
+    "visible_pixels": 846,
+    "touches_authored_cell_edge": false
+  },
+  {
+    "family": "Hero",
+    "action": "slash",
+    "direction": 1,
+    "frame": 1,
+    "bounds": [
+      17,
+      15,
+      42,
+      61
+    ],
+    "visible_pixels": 876,
+    "touches_authored_cell_edge": false
+  },
+  {
+    "family": "Hero",
+    "action": "slash",
+    "direction": 1,
+    "frame": 2,
+    "bounds": [
+      19,
+      13,
+      43,
+      61
+    ],
+    "visible_pixels": 915,
+    "touches_authored_cell_edge": false
+  },
+  {
+    "family": "Hero",
+    "action": "slash",
+    "direction": 1,
+    "frame": 3,
+    "bounds": [
+      11,
+      13,
+      44,
+      61
+    ],
+    "visible_pixels": 948,
+    "touches_authored_cell_edge": false
+  },
+  {
+    "family": "Hero",
+    "action": "slash",
+    "direction": 1,
+    "frame": 4,
+    "bounds": [
+      8,
+      13,
+      43,
+      61
+    ],
+    "visible_pixels": 960,
+    "touches_authored_cell_edge": false
+  },
+  {
+    "family": "Hero",
+    "action": "slash",
+    "direction": 1,
+    "frame": 5,
+    "bounds": [
+      11,
+      13,
+      43,
+      61
+    ],
+    "visible_pixels": 946,
+    "touches_authored_cell_edge": false
+  },
+  {
+    "family": "Hero",
+    "action": "slash",
+    "direction": 2,
+    "frame": 0,
+    "bounds": [
+      17,
+      13,
+      46,
+      61
+    ],
+    "visible_pixels": 1097,
+    "touches_authored_cell_edge": false
+  },
+  {
+    "family": "Hero",
+    "action": "slash",
+    "direction": 2,
+    "frame": 1,
+    "bounds": [
+      18,
+      13,
+      44,
+      61
+    ],
+    "visible_pixels": 1011,
+    "touches_authored_cell_edge": false
+  },
+  {
+    "family": "Hero",
+    "action": "slash",
+    "direction": 2,
+    "frame": 2,
+    "bounds": [
+      17,
+      15,
+      44,
+      61
+    ],
+    "visible_pixels": 925,
+    "touches_authored_cell_edge": false
+  },
+  {
+    "family": "Hero",
+    "action": "slash",
+    "direction": 2,
+    "frame": 3,
+    "bounds": [
+      20,
+      14,
+      46,
+      61
+    ],
+    "visible_pixels": 983,
+    "touches_authored_cell_edge": false
+  },
+  {
+    "family": "Hero",
+    "action": "slash",
+    "direction": 2,
+    "frame": 4,
+    "bounds": [
+      20,
+      13,
+      54,
+      61
+    ],
+    "visible_pixels": 1059,
+    "touches_authored_cell_edge": false
+  },
+  {
+    "family": "Hero",
+    "action": "slash",
+    "direction": 2,
+    "frame": 5,
+    "bounds": [
+      19,
+      13,
+      57,
+      61
+    ],
+    "visible_pixels": 1080,
+    "touches_authored_cell_edge": false
+  },
+  {
+    "family": "Hero",
+    "action": "slash",
+    "direction": 3,
+    "frame": 0,
+    "bounds": [
+      19,
+      13,
+      42,
+      61
+    ],
+    "visible_pixels": 846,
+    "touches_authored_cell_edge": false
+  },
+  {
+    "family": "Hero",
+    "action": "slash",
+    "direction": 3,
+    "frame": 1,
+    "bounds": [
+      21,
+      15,
+      46,
+      61
+    ],
+    "visible_pixels": 876,
+    "touches_authored_cell_edge": false
+  },
+  {
+    "family": "Hero",
+    "action": "slash",
+    "direction": 3,
+    "frame": 2,
+    "bounds": [
+      20,
+      13,
+      44,
+      61
+    ],
+    "visible_pixels": 915,
+    "touches_authored_cell_edge": false
+  },
+  {
+    "family": "Hero",
+    "action": "slash",
+    "direction": 3,
+    "frame": 3,
+    "bounds": [
+      19,
+      13,
+      52,
+      61
+    ],
+    "visible_pixels": 948,
+    "touches_authored_cell_edge": false
+  },
+  {
+    "family": "Hero",
+    "action": "slash",
+    "direction": 3,
+    "frame": 4,
+    "bounds": [
+      20,
+      13,
+      55,
+      61
+    ],
+    "visible_pixels": 960,
+    "touches_authored_cell_edge": false
+  },
+  {
+    "family": "Hero",
+    "action": "slash",
+    "direction": 3,
+    "frame": 5,
+    "bounds": [
+      20,
+      13,
+      52,
+      61
+    ],
+    "visible_pixels": 946,
+    "touches_authored_cell_edge": false
+  },
+  {
+    "family": "Hero",
+    "action": "thrust",
+    "direction": 0,
+    "frame": 0,
+    "bounds": [
+      17,
+      14,
+      47,
+      61
+    ],
+    "visible_pixels": 1100,
+    "touches_authored_cell_edge": false
+  },
+  {
+    "family": "Hero",
+    "action": "thrust",
+    "direction": 0,
+    "frame": 1,
+    "bounds": [
+      18,
+      15,
+      47,
+      63
+    ],
+    "visible_pixels": 1040,
+    "touches_authored_cell_edge": true
+  },
+  {
+    "family": "Hero",
+    "action": "thrust",
+    "direction": 0,
+    "frame": 2,
+    "bounds": [
+      19,
+      14,
+      48,
+      63
+    ],
+    "visible_pixels": 967,
+    "touches_authored_cell_edge": true
+  },
+  {
+    "family": "Hero",
+    "action": "thrust",
+    "direction": 0,
+    "frame": 3,
+    "bounds": [
+      19,
+      14,
+      48,
+      63
+    ],
+    "visible_pixels": 925,
+    "touches_authored_cell_edge": true
+  },
+  {
+    "family": "Hero",
+    "action": "thrust",
+    "direction": 0,
+    "frame": 4,
+    "bounds": [
+      20,
+      15,
+      49,
+      63
+    ],
+    "visible_pixels": 912,
+    "touches_authored_cell_edge": true
+  },
+  {
+    "family": "Hero",
+    "action": "thrust",
+    "direction": 0,
+    "frame": 5,
+    "bounds": [
+      20,
+      15,
+      49,
+      63
+    ],
+    "visible_pixels": 902,
+    "touches_authored_cell_edge": true
+  },
+  {
+    "family": "Hero",
+    "action": "thrust",
+    "direction": 0,
+    "frame": 6,
+    "bounds": [
+      20,
+      15,
+      49,
+      63
+    ],
+    "visible_pixels": 912,
+    "touches_authored_cell_edge": true
+  },
+  {
+    "family": "Hero",
+    "action": "thrust",
+    "direction": 0,
+    "frame": 7,
+    "bounds": [
+      19,
+      14,
+      48,
+      63
+    ],
+    "visible_pixels": 925,
+    "touches_authored_cell_edge": true
+  },
+  {
+    "family": "Hero",
+    "action": "thrust",
+    "direction": 1,
+    "frame": 0,
+    "bounds": [
+      21,
+      13,
+      44,
+      61
+    ],
+    "visible_pixels": 846,
+    "touches_authored_cell_edge": false
+  },
+  {
+    "family": "Hero",
+    "action": "thrust",
+    "direction": 1,
+    "frame": 1,
+    "bounds": [
+      19,
+      13,
+      44,
+      61
+    ],
+    "visible_pixels": 875,
+    "touches_authored_cell_edge": false
+  },
+  {
+    "family": "Hero",
+    "action": "thrust",
+    "direction": 1,
+    "frame": 2,
+    "bounds": [
+      19,
+      13,
+      45,
+      61
+    ],
+    "visible_pixels": 893,
+    "touches_authored_cell_edge": false
+  },
+  {
+    "family": "Hero",
+    "action": "thrust",
+    "direction": 1,
+    "frame": 3,
+    "bounds": [
+      21,
+      13,
+      46,
+      61
+    ],
+    "visible_pixels": 881,
+    "touches_authored_cell_edge": false
+  },
+  {
+    "family": "Hero",
+    "action": "thrust",
+    "direction": 1,
+    "frame": 4,
+    "bounds": [
+      15,
+      13,
+      42,
+      61
+    ],
+    "visible_pixels": 850,
+    "touches_authored_cell_edge": false
+  },
+  {
+    "family": "Hero",
+    "action": "thrust",
+    "direction": 1,
+    "frame": 5,
+    "bounds": [
+      12,
+      13,
+      42,
+      61
+    ],
+    "visible_pixels": 865,
+    "touches_authored_cell_edge": false
+  },
+  {
+    "family": "Hero",
+    "action": "thrust",
+    "direction": 1,
+    "frame": 6,
+    "bounds": [
+      15,
+      13,
+      42,
+      61
+    ],
+    "visible_pixels": 850,
+    "touches_authored_cell_edge": false
+  },
+  {
+    "family": "Hero",
+    "action": "thrust",
+    "direction": 1,
+    "frame": 7,
+    "bounds": [
+      21,
+      13,
+      46,
+      61
+    ],
+    "visible_pixels": 885,
+    "touches_authored_cell_edge": false
+  },
+  {
+    "family": "Hero",
+    "action": "thrust",
+    "direction": 2,
+    "frame": 0,
+    "bounds": [
+      17,
+      13,
+      46,
+      61
+    ],
+    "visible_pixels": 1097,
+    "touches_authored_cell_edge": false
+  },
+  {
+    "family": "Hero",
+    "action": "thrust",
+    "direction": 2,
+    "frame": 1,
+    "bounds": [
+      18,
+      13,
+      44,
+      60
+    ],
+    "visible_pixels": 951,
+    "touches_authored_cell_edge": false
+  },
+  {
+    "family": "Hero",
+    "action": "thrust",
+    "direction": 2,
+    "frame": 2,
+    "bounds": [
+      18,
+      13,
+      44,
+      60
+    ],
+    "visible_pixels": 878,
+    "touches_authored_cell_edge": false
+  },
+  {
+    "family": "Hero",
+    "action": "thrust",
+    "direction": 2,
+    "frame": 3,
+    "bounds": [
+      18,
+      13,
+      44,
+      60
+    ],
+    "visible_pixels": 885,
+    "touches_authored_cell_edge": false
+  },
+  {
+    "family": "Hero",
+    "action": "thrust",
+    "direction": 2,
+    "frame": 4,
+    "bounds": [
+      18,
+      14,
+      44,
+      60
+    ],
+    "visible_pixels": 852,
+    "touches_authored_cell_edge": false
+  },
+  {
+    "family": "Hero",
+    "action": "thrust",
+    "direction": 2,
+    "frame": 5,
+    "bounds": [
+      18,
+      14,
+      44,
+      60
+    ],
+    "visible_pixels": 844,
+    "touches_authored_cell_edge": false
+  },
+  {
+    "family": "Hero",
+    "action": "thrust",
+    "direction": 2,
+    "frame": 6,
+    "bounds": [
+      18,
+      14,
+      44,
+      60
+    ],
+    "visible_pixels": 852,
+    "touches_authored_cell_edge": false
+  },
+  {
+    "family": "Hero",
+    "action": "thrust",
+    "direction": 2,
+    "frame": 7,
+    "bounds": [
+      18,
+      13,
+      44,
+      60
+    ],
+    "visible_pixels": 885,
+    "touches_authored_cell_edge": false
+  },
+  {
+    "family": "Hero",
+    "action": "thrust",
+    "direction": 3,
+    "frame": 0,
+    "bounds": [
+      19,
+      13,
+      42,
+      61
+    ],
+    "visible_pixels": 846,
+    "touches_authored_cell_edge": false
+  },
+  {
+    "family": "Hero",
+    "action": "thrust",
+    "direction": 3,
+    "frame": 1,
+    "bounds": [
+      19,
+      13,
+      44,
+      61
+    ],
+    "visible_pixels": 875,
+    "touches_authored_cell_edge": false
+  },
+  {
+    "family": "Hero",
+    "action": "thrust",
+    "direction": 3,
+    "frame": 2,
+    "bounds": [
+      18,
+      13,
+      44,
+      61
+    ],
+    "visible_pixels": 893,
+    "touches_authored_cell_edge": false
+  },
+  {
+    "family": "Hero",
+    "action": "thrust",
+    "direction": 3,
+    "frame": 3,
+    "bounds": [
+      17,
+      13,
+      42,
+      61
+    ],
+    "visible_pixels": 881,
+    "touches_authored_cell_edge": false
+  },
+  {
+    "family": "Hero",
+    "action": "thrust",
+    "direction": 3,
+    "frame": 4,
+    "bounds": [
+      21,
+      13,
+      48,
+      61
+    ],
+    "visible_pixels": 850,
+    "touches_authored_cell_edge": false
+  },
+  {
+    "family": "Hero",
+    "action": "thrust",
+    "direction": 3,
+    "frame": 5,
+    "bounds": [
+      21,
+      13,
+      51,
+      61
+    ],
+    "visible_pixels": 865,
+    "touches_authored_cell_edge": false
+  },
+  {
+    "family": "Hero",
+    "action": "thrust",
+    "direction": 3,
+    "frame": 6,
+    "bounds": [
+      21,
+      13,
+      48,
+      61
+    ],
+    "visible_pixels": 850,
+    "touches_authored_cell_edge": false
+  },
+  {
+    "family": "Hero",
+    "action": "thrust",
+    "direction": 3,
+    "frame": 7,
+    "bounds": [
+      17,
+      13,
+      42,
+      61
+    ],
+    "visible_pixels": 885,
+    "touches_authored_cell_edge": false
+  },
+  {
+    "family": "Hero",
+    "action": "backslash",
+    "direction": 0,
+    "frame": 0,
+    "bounds": [
+      17,
+      18,
+      46,
+      62
+    ],
+    "visible_pixels": 845,
+    "touches_authored_cell_edge": false
+  },
+  {
+    "family": "Hero",
+    "action": "backslash",
+    "direction": 0,
+    "frame": 1,
+    "bounds": [
+      18,
+      14,
+      48,
+      61
+    ],
+    "visible_pixels": 924,
+    "touches_authored_cell_edge": false
+  },
+  {
+    "family": "Hero",
+    "action": "backslash",
+    "direction": 0,
+    "frame": 2,
+    "bounds": [
+      14,
+      15,
+      43,
+      61
+    ],
+    "visible_pixels": 847,
+    "touches_authored_cell_edge": false
+  },
+  {
+    "family": "Hero",
+    "action": "backslash",
+    "direction": 0,
+    "frame": 3,
+    "bounds": [
+      12,
+      16,
+      41,
+      61
+    ],
+    "visible_pixels": 838,
+    "touches_authored_cell_edge": false
+  },
+  {
+    "family": "Hero",
+    "action": "backslash",
+    "direction": 0,
+    "frame": 4,
+    "bounds": [
+      12,
+      16,
+      41,
+      61
+    ],
+    "visible_pixels": 838,
+    "touches_authored_cell_edge": false
+  },
+  {
+    "family": "Hero",
+    "action": "backslash",
+    "direction": 0,
+    "frame": 5,
+    "bounds": [
+      12,
+      16,
+      41,
+      61
+    ],
+    "visible_pixels": 838,
+    "touches_authored_cell_edge": false
+  },
+  {
+    "family": "Hero",
+    "action": "backslash",
+    "direction": 0,
+    "frame": 6,
+    "bounds": [
+      18,
+      14,
+      48,
+      61
+    ],
+    "visible_pixels": 924,
+    "touches_authored_cell_edge": false
+  },
+  {
+    "family": "Hero",
+    "action": "backslash",
+    "direction": 0,
+    "frame": 7,
+    "bounds": [
+      11,
+      16,
+      40,
+      61
+    ],
+    "visible_pixels": 838,
+    "touches_authored_cell_edge": false
+  },
+  {
+    "family": "Hero",
+    "action": "backslash",
+    "direction": 0,
+    "frame": 8,
+    "bounds": [
+      13,
+      15,
+      42,
+      61
+    ],
+    "visible_pixels": 832,
+    "touches_authored_cell_edge": false
+  },
+  {
+    "family": "Hero",
+    "action": "backslash",
+    "direction": 0,
+    "frame": 9,
+    "bounds": [
+      19,
+      14,
+      50,
+      61
+    ],
+    "visible_pixels": 874,
+    "touches_authored_cell_edge": false
+  },
+  {
+    "family": "Hero",
+    "action": "backslash",
+    "direction": 0,
+    "frame": 10,
+    "bounds": [
+      21,
+      14,
+      54,
+      61
+    ],
+    "visible_pixels": 918,
+    "touches_authored_cell_edge": false
+  },
+  {
+    "family": "Hero",
+    "action": "backslash",
+    "direction": 0,
+    "frame": 11,
+    "bounds": [
+      21,
+      14,
+      54,
+      61
+    ],
+    "visible_pixels": 918,
+    "touches_authored_cell_edge": false
+  },
+  {
+    "family": "Hero",
+    "action": "backslash",
+    "direction": 0,
+    "frame": 12,
+    "bounds": [
+      21,
+      14,
+      54,
+      61
+    ],
+    "visible_pixels": 918,
+    "touches_authored_cell_edge": false
+  },
+  {
+    "family": "Hero",
+    "action": "backslash",
+    "direction": 1,
+    "frame": 0,
+    "bounds": [
+      20,
+      13,
+      55,
+      61
+    ],
+    "visible_pixels": 916,
+    "touches_authored_cell_edge": false
+  },
+  {
+    "family": "Hero",
+    "action": "backslash",
+    "direction": 1,
+    "frame": 1,
+    "bounds": [
+      13,
+      15,
+      44,
+      61
+    ],
+    "visible_pixels": 818,
+    "touches_authored_cell_edge": false
+  },
+  {
+    "family": "Hero",
+    "action": "backslash",
+    "direction": 1,
+    "frame": 2,
+    "bounds": [
+      11,
+      16,
+      41,
+      61
+    ],
+    "visible_pixels": 797,
+    "touches_authored_cell_edge": false
+  },
+  {
+    "family": "Hero",
+    "action": "backslash",
+    "direction": 1,
+    "frame": 3,
+    "bounds": [
+      11,
+      16,
+      41,
+      61
+    ],
+    "visible_pixels": 786,
+    "touches_authored_cell_edge": false
+  },
+  {
+    "family": "Hero",
+    "action": "backslash",
+    "direction": 1,
+    "frame": 4,
+    "bounds": [
+      11,
+      16,
+      41,
+      61
+    ],
+    "visible_pixels": 786,
+    "touches_authored_cell_edge": false
+  },
+  {
+    "family": "Hero",
+    "action": "backslash",
+    "direction": 1,
+    "frame": 5,
+    "bounds": [
+      11,
+      16,
+      41,
+      61
+    ],
+    "visible_pixels": 786,
+    "touches_authored_cell_edge": false
+  },
+  {
+    "family": "Hero",
+    "action": "backslash",
+    "direction": 1,
+    "frame": 6,
+    "bounds": [
+      13,
+      15,
+      44,
+      61
+    ],
+    "visible_pixels": 818,
+    "touches_authored_cell_edge": false
+  },
+  {
+    "family": "Hero",
+    "action": "backslash",
+    "direction": 1,
+    "frame": 7,
+    "bounds": [
+      13,
+      16,
+      40,
+      61
+    ],
+    "visible_pixels": 733,
+    "touches_authored_cell_edge": false
+  },
+  {
+    "family": "Hero",
+    "action": "backslash",
+    "direction": 1,
+    "frame": 8,
+    "bounds": [
+      17,
+      16,
+      41,
+      61
+    ],
+    "visible_pixels": 765,
+    "touches_authored_cell_edge": false
+  },
+  {
+    "family": "Hero",
+    "action": "backslash",
+    "direction": 1,
+    "frame": 9,
+    "bounds": [
+      19,
+      14,
+      45,
+      61
+    ],
+    "visible_pixels": 791,
+    "touches_authored_cell_edge": false
+  },
+  {
+    "family": "Hero",
+    "action": "backslash",
+    "direction": 1,
+    "frame": 10,
+    "bounds": [
+      20,
+      13,
+      50,
+      61
+    ],
+    "visible_pixels": 882,
+    "touches_authored_cell_edge": false
+  },
+  {
+    "family": "Hero",
+    "action": "backslash",
+    "direction": 1,
+    "frame": 11,
+    "bounds": [
+      20,
+      13,
+      50,
+      61
+    ],
+    "visible_pixels": 882,
+    "touches_authored_cell_edge": false
+  },
+  {
+    "family": "Hero",
+    "action": "backslash",
+    "direction": 1,
+    "frame": 12,
+    "bounds": [
+      20,
+      13,
+      50,
+      61
+    ],
+    "visible_pixels": 882,
+    "touches_authored_cell_edge": false
+  },
+  {
+    "family": "Hero",
+    "action": "backslash",
+    "direction": 2,
+    "frame": 0,
+    "bounds": [
+      14,
+      12,
+      41,
+      62
+    ],
+    "visible_pixels": 840,
+    "touches_authored_cell_edge": false
+  },
+  {
+    "family": "Hero",
+    "action": "backslash",
+    "direction": 2,
+    "frame": 1,
+    "bounds": [
+      17,
+      14,
+      45,
+      62
+    ],
+    "visible_pixels": 871,
+    "touches_authored_cell_edge": false
+  },
+  {
+    "family": "Hero",
+    "action": "backslash",
+    "direction": 2,
+    "frame": 2,
+    "bounds": [
+      21,
+      14,
+      47,
+      62
+    ],
+    "visible_pixels": 807,
+    "touches_authored_cell_edge": false
+  },
+  {
+    "family": "Hero",
+    "action": "backslash",
+    "direction": 2,
+    "frame": 3,
+    "bounds": [
+      22,
+      14,
+      48,
+      62
+    ],
+    "visible_pixels": 807,
+    "touches_authored_cell_edge": false
+  },
+  {
+    "family": "Hero",
+    "action": "backslash",
+    "direction": 2,
+    "frame": 4,
+    "bounds": [
+      22,
+      14,
+      48,
+      62
+    ],
+    "visible_pixels": 807,
+    "touches_authored_cell_edge": false
+  },
+  {
+    "family": "Hero",
+    "action": "backslash",
+    "direction": 2,
+    "frame": 5,
+    "bounds": [
+      22,
+      14,
+      48,
+      62
+    ],
+    "visible_pixels": 807,
+    "touches_authored_cell_edge": false
+  },
+  {
+    "family": "Hero",
+    "action": "backslash",
+    "direction": 2,
+    "frame": 6,
+    "bounds": [
+      17,
+      14,
+      45,
+      62
+    ],
+    "visible_pixels": 871,
+    "touches_authored_cell_edge": false
+  },
+  {
+    "family": "Hero",
+    "action": "backslash",
+    "direction": 2,
+    "frame": 7,
+    "bounds": [
+      24,
+      14,
+      50,
+      62
+    ],
+    "visible_pixels": 806,
+    "touches_authored_cell_edge": false
+  },
+  {
+    "family": "Hero",
+    "action": "backslash",
+    "direction": 2,
+    "frame": 8,
+    "bounds": [
+      21,
+      14,
+      47,
+      62
+    ],
+    "visible_pixels": 798,
+    "touches_authored_cell_edge": false
+  },
+  {
+    "family": "Hero",
+    "action": "backslash",
+    "direction": 2,
+    "frame": 9,
+    "bounds": [
+      15,
+      12,
+      44,
+      62
+    ],
+    "visible_pixels": 887,
+    "touches_authored_cell_edge": false
+  },
+  {
+    "family": "Hero",
+    "action": "backslash",
+    "direction": 2,
+    "frame": 10,
+    "bounds": [
+      9,
+      11,
+      43,
+      62
+    ],
+    "visible_pixels": 906,
+    "touches_authored_cell_edge": false
+  },
+  {
+    "family": "Hero",
+    "action": "backslash",
+    "direction": 2,
+    "frame": 11,
+    "bounds": [
+      9,
+      11,
+      43,
+      62
+    ],
+    "visible_pixels": 906,
+    "touches_authored_cell_edge": false
+  },
+  {
+    "family": "Hero",
+    "action": "backslash",
+    "direction": 2,
+    "frame": 12,
+    "bounds": [
+      9,
+      11,
+      43,
+      62
+    ],
+    "visible_pixels": 906,
+    "touches_authored_cell_edge": false
+  },
+  {
+    "family": "Hero",
+    "action": "backslash",
+    "direction": 3,
+    "frame": 0,
+    "bounds": [
+      8,
+      13,
+      43,
+      61
+    ],
+    "visible_pixels": 917,
+    "touches_authored_cell_edge": false
+  },
+  {
+    "family": "Hero",
+    "action": "backslash",
+    "direction": 3,
+    "frame": 1,
+    "bounds": [
+      19,
+      15,
+      50,
+      61
+    ],
+    "visible_pixels": 819,
+    "touches_authored_cell_edge": false
+  },
+  {
+    "family": "Hero",
+    "action": "backslash",
+    "direction": 3,
+    "frame": 2,
+    "bounds": [
+      22,
+      16,
+      52,
+      61
+    ],
+    "visible_pixels": 797,
+    "touches_authored_cell_edge": false
+  },
+  {
+    "family": "Hero",
+    "action": "backslash",
+    "direction": 3,
+    "frame": 3,
+    "bounds": [
+      22,
+      16,
+      52,
+      61
+    ],
+    "visible_pixels": 786,
+    "touches_authored_cell_edge": false
+  },
+  {
+    "family": "Hero",
+    "action": "backslash",
+    "direction": 3,
+    "frame": 4,
+    "bounds": [
+      22,
+      16,
+      52,
+      61
+    ],
+    "visible_pixels": 786,
+    "touches_authored_cell_edge": false
+  },
+  {
+    "family": "Hero",
+    "action": "backslash",
+    "direction": 3,
+    "frame": 5,
+    "bounds": [
+      22,
+      16,
+      52,
+      61
+    ],
+    "visible_pixels": 786,
+    "touches_authored_cell_edge": false
+  },
+  {
+    "family": "Hero",
+    "action": "backslash",
+    "direction": 3,
+    "frame": 6,
+    "bounds": [
+      19,
+      15,
+      50,
+      61
+    ],
+    "visible_pixels": 819,
+    "touches_authored_cell_edge": false
+  },
+  {
+    "family": "Hero",
+    "action": "backslash",
+    "direction": 3,
+    "frame": 7,
+    "bounds": [
+      23,
+      16,
+      50,
+      61
+    ],
+    "visible_pixels": 741,
+    "touches_authored_cell_edge": false
+  },
+  {
+    "family": "Hero",
+    "action": "backslash",
+    "direction": 3,
+    "frame": 8,
+    "bounds": [
+      22,
+      16,
+      46,
+      61
+    ],
+    "visible_pixels": 765,
+    "touches_authored_cell_edge": false
+  },
+  {
+    "family": "Hero",
+    "action": "backslash",
+    "direction": 3,
+    "frame": 9,
+    "bounds": [
+      18,
+      14,
+      44,
+      61
+    ],
+    "visible_pixels": 792,
+    "touches_authored_cell_edge": false
+  },
+  {
+    "family": "Hero",
+    "action": "backslash",
+    "direction": 3,
+    "frame": 10,
+    "bounds": [
+      13,
+      13,
+      43,
+      61
+    ],
+    "visible_pixels": 883,
+    "touches_authored_cell_edge": false
+  },
+  {
+    "family": "Hero",
+    "action": "backslash",
+    "direction": 3,
+    "frame": 11,
+    "bounds": [
+      13,
+      13,
+      43,
+      61
+    ],
+    "visible_pixels": 883,
+    "touches_authored_cell_edge": false
+  },
+  {
+    "family": "Hero",
+    "action": "backslash",
+    "direction": 3,
+    "frame": 12,
+    "bounds": [
+      13,
+      13,
+      43,
+      61
+    ],
+    "visible_pixels": 883,
+    "touches_authored_cell_edge": false
+  },
+  {
+    "family": "HeroAwakened",
+    "action": "walk",
+    "direction": 0,
+    "frame": 0,
+    "bounds": [
+      30,
+      24,
+      98,
+      123
+    ],
+    "visible_pixels": 4840,
+    "touches_authored_cell_edge": false
+  },
+  {
+    "family": "HeroAwakened",
+    "action": "walk",
+    "direction": 0,
+    "frame": 1,
+    "bounds": [
+      28,
+      23,
+      94,
+      122
+    ],
+    "visible_pixels": 4222,
+    "touches_authored_cell_edge": false
+  },
+  {
+    "family": "HeroAwakened",
+    "action": "walk",
+    "direction": 0,
+    "frame": 2,
+    "bounds": [
+      34,
+      23,
+      97,
+      123
+    ],
+    "visible_pixels": 4027,
+    "touches_authored_cell_edge": false
+  },
+  {
+    "family": "HeroAwakened",
+    "action": "walk",
+    "direction": 0,
+    "frame": 3,
+    "bounds": [
+      31,
+      22,
+      95,
+      123
+    ],
+    "visible_pixels": 4134,
+    "touches_authored_cell_edge": false
+  },
+  {
+    "family": "HeroAwakened",
+    "action": "walk",
+    "direction": 0,
+    "frame": 4,
+    "bounds": [
+      35,
+      22,
+      93,
+      123
+    ],
+    "visible_pixels": 3990,
+    "touches_authored_cell_edge": false
+  },
+  {
+    "family": "HeroAwakened",
+    "action": "walk",
+    "direction": 0,
+    "frame": 5,
+    "bounds": [
+      29,
+      22,
+      95,
+      123
+    ],
+    "visible_pixels": 4379,
+    "touches_authored_cell_edge": false
+  },
+  {
+    "family": "HeroAwakened",
+    "action": "walk",
+    "direction": 0,
+    "frame": 6,
+    "bounds": [
+      33,
+      22,
+      98,
+      122
+    ],
+    "visible_pixels": 4084,
+    "touches_authored_cell_edge": false
+  },
+  {
+    "family": "HeroAwakened",
+    "action": "walk",
+    "direction": 0,
+    "frame": 7,
+    "bounds": [
+      32,
+      22,
+      97,
+      123
+    ],
+    "visible_pixels": 4168,
+    "touches_authored_cell_edge": false
+  },
+  {
+    "family": "HeroAwakened",
+    "action": "walk",
+    "direction": 0,
+    "frame": 8,
+    "bounds": [
+      34,
+      22,
+      94,
+      123
+    ],
+    "visible_pixels": 3983,
+    "touches_authored_cell_edge": false
+  },
+  {
+    "family": "HeroAwakened",
+    "action": "walk",
+    "direction": 1,
+    "frame": 0,
+    "bounds": [
+      38,
+      26,
+      95,
+      123
+    ],
+    "visible_pixels": 4254,
+    "touches_authored_cell_edge": false
+  },
+  {
+    "family": "HeroAwakened",
+    "action": "walk",
+    "direction": 1,
+    "frame": 1,
+    "bounds": [
+      36,
+      21,
+      93,
+      124
+    ],
+    "visible_pixels": 4022,
+    "touches_authored_cell_edge": false
+  },
+  {
+    "family": "HeroAwakened",
+    "action": "walk",
+    "direction": 1,
+    "frame": 2,
+    "bounds": [
+      33,
+      20,
+      91,
+      124
+    ],
+    "visible_pixels": 4005,
+    "touches_authored_cell_edge": false
+  },
+  {
+    "family": "HeroAwakened",
+    "action": "walk",
+    "direction": 1,
+    "frame": 3,
+    "bounds": [
+      35,
+      22,
+      91,
+      124
+    ],
+    "visible_pixels": 4046,
+    "touches_authored_cell_edge": false
+  },
+  {
+    "family": "HeroAwakened",
+    "action": "walk",
+    "direction": 1,
+    "frame": 4,
+    "bounds": [
+      35,
+      22,
+      89,
+      123
+    ],
+    "visible_pixels": 3893,
+    "touches_authored_cell_edge": false
+  },
+  {
+    "family": "HeroAwakened",
+    "action": "walk",
+    "direction": 1,
+    "frame": 5,
+    "bounds": [
+      37,
+      21,
+      94,
+      123
+    ],
+    "visible_pixels": 3955,
+    "touches_authored_cell_edge": false
+  },
+  {
+    "family": "HeroAwakened",
+    "action": "walk",
+    "direction": 1,
+    "frame": 6,
+    "bounds": [
+      35,
+      21,
+      89,
+      124
+    ],
+    "visible_pixels": 3975,
+    "touches_authored_cell_edge": false
+  },
+  {
+    "family": "HeroAwakened",
+    "action": "walk",
+    "direction": 1,
+    "frame": 7,
+    "bounds": [
+      35,
+      22,
+      88,
+      124
+    ],
+    "visible_pixels": 3950,
+    "touches_authored_cell_edge": false
+  },
+  {
+    "family": "HeroAwakened",
+    "action": "walk",
+    "direction": 1,
+    "frame": 8,
+    "bounds": [
+      35,
+      22,
+      89,
+      123
+    ],
+    "visible_pixels": 3934,
+    "touches_authored_cell_edge": false
+  },
+  {
+    "family": "HeroAwakened",
+    "action": "walk",
+    "direction": 2,
+    "frame": 0,
+    "bounds": [
+      30,
+      29,
+      98,
+      123
+    ],
+    "visible_pixels": 4751,
+    "touches_authored_cell_edge": false
+  },
+  {
+    "family": "HeroAwakened",
+    "action": "walk",
+    "direction": 2,
+    "frame": 1,
+    "bounds": [
+      29,
+      24,
+      97,
+      123
+    ],
+    "visible_pixels": 4525,
+    "touches_authored_cell_edge": false
+  },
+  {
+    "family": "HeroAwakened",
+    "action": "walk",
+    "direction": 2,
+    "frame": 2,
+    "bounds": [
+      30,
+      24,
+      98,
+      123
+    ],
+    "visible_pixels": 4442,
+    "touches_authored_cell_edge": false
+  },
+  {
+    "family": "HeroAwakened",
+    "action": "walk",
+    "direction": 2,
+    "frame": 3,
+    "bounds": [
+      31,
+      26,
+      96,
+      123
+    ],
+    "visible_pixels": 4144,
+    "touches_authored_cell_edge": false
+  },
+  {
+    "family": "HeroAwakened",
+    "action": "walk",
+    "direction": 2,
+    "frame": 4,
+    "bounds": [
+      30,
+      23,
+      98,
+      122
+    ],
+    "visible_pixels": 4449,
+    "touches_authored_cell_edge": false
+  },
+  {
+    "family": "HeroAwakened",
+    "action": "walk",
+    "direction": 2,
+    "frame": 5,
+    "bounds": [
+      29,
+      23,
+      98,
+      122
+    ],
+    "visible_pixels": 4599,
+    "touches_authored_cell_edge": false
+  },
+  {
+    "family": "HeroAwakened",
+    "action": "walk",
+    "direction": 2,
+    "frame": 6,
+    "bounds": [
+      36,
+      23,
+      100,
+      122
+    ],
+    "visible_pixels": 4195,
+    "touches_authored_cell_edge": false
+  },
+  {
+    "family": "HeroAwakened",
+    "action": "walk",
+    "direction": 2,
+    "frame": 7,
+    "bounds": [
+      30,
+      23,
+      96,
+      122
+    ],
+    "visible_pixels": 4261,
+    "touches_authored_cell_edge": false
+  },
+  {
+    "family": "HeroAwakened",
+    "action": "walk",
+    "direction": 2,
+    "frame": 8,
+    "bounds": [
+      32,
+      26,
+      98,
+      123
+    ],
+    "visible_pixels": 4348,
+    "touches_authored_cell_edge": false
+  },
+  {
+    "family": "HeroAwakened",
+    "action": "walk",
+    "direction": 3,
+    "frame": 0,
+    "bounds": [
+      33,
+      25,
+      90,
+      123
+    ],
+    "visible_pixels": 4244,
+    "touches_authored_cell_edge": false
+  },
+  {
+    "family": "HeroAwakened",
+    "action": "walk",
+    "direction": 3,
+    "frame": 1,
+    "bounds": [
+      33,
+      22,
+      96,
+      124
+    ],
+    "visible_pixels": 4206,
+    "touches_authored_cell_edge": false
+  },
+  {
+    "family": "HeroAwakened",
+    "action": "walk",
+    "direction": 3,
+    "frame": 2,
+    "bounds": [
+      37,
+      21,
+      99,
+      124
+    ],
+    "visible_pixels": 4114,
+    "touches_authored_cell_edge": false
+  },
+  {
+    "family": "HeroAwakened",
+    "action": "walk",
+    "direction": 3,
+    "frame": 3,
+    "bounds": [
+      39,
+      21,
+      98,
+      124
+    ],
+    "visible_pixels": 4231,
+    "touches_authored_cell_edge": false
+  },
+  {
+    "family": "HeroAwakened",
+    "action": "walk",
+    "direction": 3,
+    "frame": 4,
+    "bounds": [
+      36,
+      21,
+      93,
+      122
+    ],
+    "visible_pixels": 3815,
+    "touches_authored_cell_edge": false
+  },
+  {
+    "family": "HeroAwakened",
+    "action": "walk",
+    "direction": 3,
+    "frame": 5,
+    "bounds": [
+      33,
+      21,
+      94,
+      124
+    ],
+    "visible_pixels": 4089,
+    "touches_authored_cell_edge": false
+  },
+  {
+    "family": "HeroAwakened",
+    "action": "walk",
+    "direction": 3,
+    "frame": 6,
+    "bounds": [
+      38,
+      23,
+      96,
+      124
+    ],
+    "visible_pixels": 4011,
+    "touches_authored_cell_edge": false
+  },
+  {
+    "family": "HeroAwakened",
+    "action": "walk",
+    "direction": 3,
+    "frame": 7,
+    "bounds": [
+      37,
+      22,
+      98,
+      123
+    ],
+    "visible_pixels": 4201,
+    "touches_authored_cell_edge": false
+  },
+  {
+    "family": "HeroAwakened",
+    "action": "walk",
+    "direction": 3,
+    "frame": 8,
+    "bounds": [
+      37,
+      21,
+      93,
+      123
+    ],
+    "visible_pixels": 3834,
+    "touches_authored_cell_edge": false
+  },
+  {
+    "family": "HeroAwakened",
+    "action": "run",
+    "direction": 0,
+    "frame": 0,
+    "bounds": [
+      25,
+      21,
+      99,
+      124
+    ],
+    "visible_pixels": 4072,
+    "touches_authored_cell_edge": false
+  },
+  {
+    "family": "HeroAwakened",
+    "action": "run",
+    "direction": 0,
+    "frame": 1,
+    "bounds": [
+      29,
+      27,
+      96,
+      123
+    ],
+    "visible_pixels": 3587,
+    "touches_authored_cell_edge": false
+  },
+  {
+    "family": "HeroAwakened",
+    "action": "run",
+    "direction": 0,
+    "frame": 2,
+    "bounds": [
+      29,
+      25,
+      99,
+      123
+    ],
+    "visible_pixels": 3678,
+    "touches_authored_cell_edge": false
+  },
+  {
+    "family": "HeroAwakened",
+    "action": "run",
+    "direction": 0,
+    "frame": 3,
+    "bounds": [
+      33,
+      34,
+      95,
+      123
+    ],
+    "visible_pixels": 3558,
+    "touches_authored_cell_edge": false
+  },
+  {
+    "family": "HeroAwakened",
+    "action": "run",
+    "direction": 0,
+    "frame": 4,
+    "bounds": [
+      26,
+      25,
+      100,
+      124
+    ],
+    "visible_pixels": 3913,
+    "touches_authored_cell_edge": false
+  },
+  {
+    "family": "HeroAwakened",
+    "action": "run",
+    "direction": 0,
+    "frame": 5,
+    "bounds": [
+      25,
+      26,
+      95,
+      123
+    ],
+    "visible_pixels": 3708,
+    "touches_authored_cell_edge": false
+  },
+  {
+    "family": "HeroAwakened",
+    "action": "run",
+    "direction": 0,
+    "frame": 6,
+    "bounds": [
+      25,
+      23,
+      99,
+      123
+    ],
+    "visible_pixels": 3784,
+    "touches_authored_cell_edge": false
+  },
+  {
+    "family": "HeroAwakened",
+    "action": "run",
+    "direction": 0,
+    "frame": 7,
+    "bounds": [
+      26,
+      36,
+      93,
+      124
+    ],
+    "visible_pixels": 3590,
+    "touches_authored_cell_edge": false
+  },
+  {
+    "family": "HeroAwakened",
+    "action": "run",
+    "direction": 1,
+    "frame": 0,
+    "bounds": [
+      13,
+      32,
+      94,
+      123
+    ],
+    "visible_pixels": 4098,
+    "touches_authored_cell_edge": false
+  },
+  {
+    "family": "HeroAwakened",
+    "action": "run",
+    "direction": 1,
+    "frame": 1,
+    "bounds": [
+      12,
+      35,
+      95,
+      123
+    ],
+    "visible_pixels": 3832,
+    "touches_authored_cell_edge": false
+  },
+  {
+    "family": "HeroAwakened",
+    "action": "run",
+    "direction": 1,
+    "frame": 2,
+    "bounds": [
+      19,
+      30,
+      94,
+      122
+    ],
+    "visible_pixels": 3675,
+    "touches_authored_cell_edge": false
+  },
+  {
+    "family": "HeroAwakened",
+    "action": "run",
+    "direction": 1,
+    "frame": 3,
+    "bounds": [
+      10,
+      37,
+      91,
+      123
+    ],
+    "visible_pixels": 3712,
+    "touches_authored_cell_edge": false
+  },
+  {
+    "family": "HeroAwakened",
+    "action": "run",
+    "direction": 1,
+    "frame": 4,
+    "bounds": [
+      15,
+      30,
+      95,
+      124
+    ],
+    "visible_pixels": 4188,
+    "touches_authored_cell_edge": false
+  },
+  {
+    "family": "HeroAwakened",
+    "action": "run",
+    "direction": 1,
+    "frame": 5,
+    "bounds": [
+      15,
+      34,
+      93,
+      122
+    ],
+    "visible_pixels": 3788,
+    "touches_authored_cell_edge": false
+  },
+  {
+    "family": "HeroAwakened",
+    "action": "run",
+    "direction": 1,
+    "frame": 6,
+    "bounds": [
+      12,
+      29,
+      96,
+      122
+    ],
+    "visible_pixels": 3937,
+    "touches_authored_cell_edge": false
+  },
+  {
+    "family": "HeroAwakened",
+    "action": "run",
+    "direction": 1,
+    "frame": 7,
+    "bounds": [
+      16,
+      38,
+      92,
+      123
+    ],
+    "visible_pixels": 3808,
+    "touches_authored_cell_edge": false
+  },
+  {
+    "family": "HeroAwakened",
+    "action": "run",
+    "direction": 2,
+    "frame": 0,
+    "bounds": [
+      29,
+      30,
+      101,
+      123
+    ],
+    "visible_pixels": 3678,
+    "touches_authored_cell_edge": false
+  },
+  {
+    "family": "HeroAwakened",
+    "action": "run",
+    "direction": 2,
+    "frame": 1,
+    "bounds": [
+      33,
+      35,
+      102,
+      123
+    ],
+    "visible_pixels": 3330,
+    "touches_authored_cell_edge": false
+  },
+  {
+    "family": "HeroAwakened",
+    "action": "run",
+    "direction": 2,
+    "frame": 2,
+    "bounds": [
+      32,
+      35,
+      101,
+      123
+    ],
+    "visible_pixels": 3301,
+    "touches_authored_cell_edge": false
+  },
+  {
+    "family": "HeroAwakened",
+    "action": "run",
+    "direction": 2,
+    "frame": 3,
+    "bounds": [
+      34,
+      38,
+      96,
+      123
+    ],
+    "visible_pixels": 3378,
+    "touches_authored_cell_edge": false
+  },
+  {
+    "family": "HeroAwakened",
+    "action": "run",
+    "direction": 2,
+    "frame": 4,
+    "bounds": [
+      29,
+      29,
+      98,
+      123
+    ],
+    "visible_pixels": 3627,
+    "touches_authored_cell_edge": false
+  },
+  {
+    "family": "HeroAwakened",
+    "action": "run",
+    "direction": 2,
+    "frame": 5,
+    "bounds": [
+      36,
+      38,
+      107,
+      123
+    ],
+    "visible_pixels": 3384,
+    "touches_authored_cell_edge": false
+  },
+  {
+    "family": "HeroAwakened",
+    "action": "run",
+    "direction": 2,
+    "frame": 6,
+    "bounds": [
+      34,
+      35,
+      104,
+      124
+    ],
+    "visible_pixels": 3455,
+    "touches_authored_cell_edge": false
+  },
+  {
+    "family": "HeroAwakened",
+    "action": "run",
+    "direction": 2,
+    "frame": 7,
+    "bounds": [
+      37,
+      38,
+      105,
+      123
+    ],
+    "visible_pixels": 3477,
+    "touches_authored_cell_edge": false
+  },
+  {
+    "family": "HeroAwakened",
+    "action": "run",
+    "direction": 3,
+    "frame": 0,
+    "bounds": [
+      34,
+      35,
+      111,
+      123
+    ],
+    "visible_pixels": 4010,
+    "touches_authored_cell_edge": false
+  },
+  {
+    "family": "HeroAwakened",
+    "action": "run",
+    "direction": 3,
+    "frame": 1,
+    "bounds": [
+      34,
+      39,
+      114,
+      124
+    ],
+    "visible_pixels": 3775,
+    "touches_authored_cell_edge": false
+  },
+  {
+    "family": "HeroAwakened",
+    "action": "run",
+    "direction": 3,
+    "frame": 2,
+    "bounds": [
+      33,
+      34,
+      113,
+      123
+    ],
+    "visible_pixels": 4003,
+    "touches_authored_cell_edge": false
+  },
+  {
+    "family": "HeroAwakened",
+    "action": "run",
+    "direction": 3,
+    "frame": 3,
+    "bounds": [
+      35,
+      36,
+      114,
+      123
+    ],
+    "visible_pixels": 3719,
+    "touches_authored_cell_edge": false
+  },
+  {
+    "family": "HeroAwakened",
+    "action": "run",
+    "direction": 3,
+    "frame": 4,
+    "bounds": [
+      33,
+      30,
+      113,
+      123
+    ],
+    "visible_pixels": 4041,
+    "touches_authored_cell_edge": false
+  },
+  {
+    "family": "HeroAwakened",
+    "action": "run",
+    "direction": 3,
+    "frame": 5,
+    "bounds": [
+      33,
+      36,
+      110,
+      123
+    ],
+    "visible_pixels": 3611,
+    "touches_authored_cell_edge": false
+  },
+  {
+    "family": "HeroAwakened",
+    "action": "run",
+    "direction": 3,
+    "frame": 6,
+    "bounds": [
+      33,
+      33,
+      114,
+      124
+    ],
+    "visible_pixels": 3923,
+    "touches_authored_cell_edge": false
+  },
+  {
+    "family": "HeroAwakened",
+    "action": "run",
+    "direction": 3,
+    "frame": 7,
+    "bounds": [
+      36,
+      36,
+      110,
+      124
+    ],
+    "visible_pixels": 3811,
+    "touches_authored_cell_edge": false
+  },
+  {
+    "family": "HeroAwakened",
+    "action": "flight",
+    "direction": 0,
+    "frame": 0,
+    "bounds": [
+      29,
+      18,
+      101,
+      123
+    ],
+    "visible_pixels": 5306,
+    "touches_authored_cell_edge": false
+  },
+  {
+    "family": "HeroAwakened",
+    "action": "flight",
+    "direction": 0,
+    "frame": 1,
+    "bounds": [
+      28,
+      18,
+      99,
+      123
+    ],
+    "visible_pixels": 5260,
+    "touches_authored_cell_edge": false
+  },
+  {
+    "family": "HeroAwakened",
+    "action": "flight",
+    "direction": 0,
+    "frame": 2,
+    "bounds": [
+      33,
+      16,
+      116,
+      123
+    ],
+    "visible_pixels": 5307,
+    "touches_authored_cell_edge": false
+  },
+  {
+    "family": "HeroAwakened",
+    "action": "flight",
+    "direction": 0,
+    "frame": 3,
+    "bounds": [
+      32,
+      16,
+      115,
+      123
+    ],
+    "visible_pixels": 5305,
+    "touches_authored_cell_edge": false
+  },
+  {
+    "family": "HeroAwakened",
+    "action": "flight",
+    "direction": 1,
+    "frame": 0,
+    "bounds": [
+      34,
+      20,
+      97,
+      123
+    ],
+    "visible_pixels": 4795,
+    "touches_authored_cell_edge": false
+  },
+  {
+    "family": "HeroAwakened",
+    "action": "flight",
+    "direction": 1,
+    "frame": 1,
+    "bounds": [
+      33,
+      17,
+      96,
+      123
+    ],
+    "visible_pixels": 4988,
+    "touches_authored_cell_edge": false
+  },
+  {
+    "family": "HeroAwakened",
+    "action": "flight",
+    "direction": 1,
+    "frame": 2,
+    "bounds": [
+      12,
+      24,
+      95,
+      123
+    ],
+    "visible_pixels": 5109,
+    "touches_authored_cell_edge": false
+  },
+  {
+    "family": "HeroAwakened",
+    "action": "flight",
+    "direction": 1,
+    "frame": 3,
+    "bounds": [
+      10,
+      25,
+      94,
+      123
+    ],
+    "visible_pixels": 5076,
+    "touches_authored_cell_edge": false
+  },
+  {
+    "family": "HeroAwakened",
+    "action": "flight",
+    "direction": 2,
+    "frame": 0,
+    "bounds": [
+      29,
+      22,
+      103,
+      123
+    ],
+    "visible_pixels": 5591,
+    "touches_authored_cell_edge": false
+  },
+  {
+    "family": "HeroAwakened",
+    "action": "flight",
+    "direction": 2,
+    "frame": 1,
+    "bounds": [
+      24,
+      22,
+      100,
+      123
+    ],
+    "visible_pixels": 5728,
+    "touches_authored_cell_edge": false
+  },
+  {
+    "family": "HeroAwakened",
+    "action": "flight",
+    "direction": 2,
+    "frame": 2,
+    "bounds": [
+      21,
+      25,
+      103,
+      123
+    ],
+    "visible_pixels": 4925,
+    "touches_authored_cell_edge": false
+  },
+  {
+    "family": "HeroAwakened",
+    "action": "flight",
+    "direction": 2,
+    "frame": 3,
+    "bounds": [
+      20,
+      25,
+      103,
+      123
+    ],
+    "visible_pixels": 4985,
+    "touches_authored_cell_edge": false
+  },
+  {
+    "family": "HeroAwakened",
+    "action": "flight",
+    "direction": 3,
+    "frame": 0,
+    "bounds": [
+      33,
+      20,
+      98,
+      123
+    ],
+    "visible_pixels": 4896,
+    "touches_authored_cell_edge": false
+  },
+  {
+    "family": "HeroAwakened",
+    "action": "flight",
+    "direction": 3,
+    "frame": 1,
+    "bounds": [
+      32,
+      20,
+      98,
+      123
+    ],
+    "visible_pixels": 4968,
+    "touches_authored_cell_edge": false
+  },
+  {
+    "family": "HeroAwakened",
+    "action": "flight",
+    "direction": 3,
+    "frame": 2,
+    "bounds": [
+      33,
+      30,
+      117,
+      123
+    ],
+    "visible_pixels": 4747,
+    "touches_authored_cell_edge": false
+  },
+  {
+    "family": "HeroAwakened",
+    "action": "flight",
+    "direction": 3,
+    "frame": 3,
+    "bounds": [
+      34,
+      27,
+      118,
+      123
+    ],
+    "visible_pixels": 4905,
+    "touches_authored_cell_edge": false
+  },
+  {
+    "family": "HeroAwakened",
+    "action": "slash",
+    "direction": 0,
+    "frame": 0,
+    "bounds": [
+      27,
+      21,
+      99,
+      124
+    ],
+    "visible_pixels": 5012,
+    "touches_authored_cell_edge": false
+  },
+  {
+    "family": "HeroAwakened",
+    "action": "slash",
+    "direction": 0,
+    "frame": 1,
+    "bounds": [
+      27,
+      21,
+      105,
+      124
+    ],
+    "visible_pixels": 5240,
+    "touches_authored_cell_edge": false
+  },
+  {
+    "family": "HeroAwakened",
+    "action": "slash",
+    "direction": 0,
+    "frame": 2,
+    "bounds": [
+      28,
+      22,
+      114,
+      123
+    ],
+    "visible_pixels": 5109,
+    "touches_authored_cell_edge": false
+  },
+  {
+    "family": "HeroAwakened",
+    "action": "slash",
+    "direction": 0,
+    "frame": 3,
+    "bounds": [
+      0,
+      21,
+      97,
+      123
+    ],
+    "visible_pixels": 5274,
+    "touches_authored_cell_edge": true
+  },
+  {
+    "family": "HeroAwakened",
+    "action": "slash",
+    "direction": 0,
+    "frame": 4,
+    "bounds": [
+      16,
+      25,
+      97,
+      123
+    ],
+    "visible_pixels": 5002,
+    "touches_authored_cell_edge": false
+  },
+  {
+    "family": "HeroAwakened",
+    "action": "slash",
+    "direction": 0,
+    "frame": 5,
+    "bounds": [
+      29,
+      21,
+      99,
+      124
+    ],
+    "visible_pixels": 4925,
+    "touches_authored_cell_edge": false
+  },
+  {
+    "family": "HeroAwakened",
+    "action": "slash",
+    "direction": 1,
+    "frame": 0,
+    "bounds": [
+      29,
+      21,
+      96,
+      123
+    ],
+    "visible_pixels": 4813,
+    "touches_authored_cell_edge": false
+  },
+  {
+    "family": "HeroAwakened",
+    "action": "slash",
+    "direction": 1,
+    "frame": 1,
+    "bounds": [
+      19,
+      21,
+      102,
+      124
+    ],
+    "visible_pixels": 5569,
+    "touches_authored_cell_edge": false
+  },
+  {
+    "family": "HeroAwakened",
+    "action": "slash",
+    "direction": 1,
+    "frame": 2,
+    "bounds": [
+      4,
+      21,
+      99,
+      124
+    ],
+    "visible_pixels": 5470,
+    "touches_authored_cell_edge": false
+  },
+  {
+    "family": "HeroAwakened",
+    "action": "slash",
+    "direction": 1,
+    "frame": 3,
+    "bounds": [
+      5,
+      20,
+      101,
+      124
+    ],
+    "visible_pixels": 5379,
+    "touches_authored_cell_edge": false
+  },
+  {
+    "family": "HeroAwakened",
+    "action": "slash",
+    "direction": 1,
+    "frame": 4,
+    "bounds": [
+      28,
+      21,
+      102,
+      124
+    ],
+    "visible_pixels": 4856,
+    "touches_authored_cell_edge": false
+  },
+  {
+    "family": "HeroAwakened",
+    "action": "slash",
+    "direction": 1,
+    "frame": 5,
+    "bounds": [
+      28,
+      21,
+      98,
+      124
+    ],
+    "visible_pixels": 4907,
+    "touches_authored_cell_edge": false
+  },
+  {
+    "family": "HeroAwakened",
+    "action": "slash",
+    "direction": 2,
+    "frame": 0,
+    "bounds": [
+      27,
+      23,
+      100,
+      123
+    ],
+    "visible_pixels": 5175,
+    "touches_authored_cell_edge": false
+  },
+  {
+    "family": "HeroAwakened",
+    "action": "slash",
+    "direction": 2,
+    "frame": 1,
+    "bounds": [
+      27,
+      23,
+      101,
+      123
+    ],
+    "visible_pixels": 5126,
+    "touches_authored_cell_edge": false
+  },
+  {
+    "family": "HeroAwakened",
+    "action": "slash",
+    "direction": 2,
+    "frame": 2,
+    "bounds": [
+      27,
+      22,
+      100,
+      123
+    ],
+    "visible_pixels": 5106,
+    "touches_authored_cell_edge": false
+  },
+  {
+    "family": "HeroAwakened",
+    "action": "slash",
+    "direction": 2,
+    "frame": 3,
+    "bounds": [
+      23,
+      24,
+      100,
+      124
+    ],
+    "visible_pixels": 5400,
+    "touches_authored_cell_edge": false
+  },
+  {
+    "family": "HeroAwakened",
+    "action": "slash",
+    "direction": 2,
+    "frame": 4,
+    "bounds": [
+      21,
+      23,
+      98,
+      123
+    ],
+    "visible_pixels": 4976,
+    "touches_authored_cell_edge": false
+  },
+  {
+    "family": "HeroAwakened",
+    "action": "slash",
+    "direction": 2,
+    "frame": 5,
+    "bounds": [
+      29,
+      23,
+      102,
+      123
+    ],
+    "visible_pixels": 5268,
+    "touches_authored_cell_edge": false
+  },
+  {
+    "family": "HeroAwakened",
+    "action": "slash",
+    "direction": 3,
+    "frame": 0,
+    "bounds": [
+      28,
+      24,
+      98,
+      123
+    ],
+    "visible_pixels": 4576,
+    "touches_authored_cell_edge": false
+  },
+  {
+    "family": "HeroAwakened",
+    "action": "slash",
+    "direction": 3,
+    "frame": 1,
+    "bounds": [
+      25,
+      24,
+      105,
+      123
+    ],
+    "visible_pixels": 5433,
+    "touches_authored_cell_edge": false
+  },
+  {
+    "family": "HeroAwakened",
+    "action": "slash",
+    "direction": 3,
+    "frame": 2,
+    "bounds": [
+      26,
+      24,
+      125,
+      123
+    ],
+    "visible_pixels": 5308,
+    "touches_authored_cell_edge": false
+  },
+  {
+    "family": "HeroAwakened",
+    "action": "slash",
+    "direction": 3,
+    "frame": 3,
+    "bounds": [
+      25,
+      23,
+      126,
+      122
+    ],
+    "visible_pixels": 5288,
+    "touches_authored_cell_edge": false
+  },
+  {
+    "family": "HeroAwakened",
+    "action": "slash",
+    "direction": 3,
+    "frame": 4,
+    "bounds": [
+      23,
+      24,
+      98,
+      123
+    ],
+    "visible_pixels": 4604,
+    "touches_authored_cell_edge": false
+  },
+  {
+    "family": "HeroAwakened",
+    "action": "slash",
+    "direction": 3,
+    "frame": 5,
+    "bounds": [
+      29,
+      25,
+      102,
+      124
+    ],
+    "visible_pixels": 4671,
+    "touches_authored_cell_edge": false
+  },
+  {
+    "family": "HeroAwakened",
+    "action": "thrust",
+    "direction": 0,
+    "frame": 0,
+    "bounds": [
+      27,
+      22,
+      101,
+      124
+    ],
+    "visible_pixels": 5158,
+    "touches_authored_cell_edge": false
+  },
+  {
+    "family": "HeroAwakened",
+    "action": "thrust",
+    "direction": 0,
+    "frame": 1,
+    "bounds": [
+      29,
+      29,
+      99,
+      124
+    ],
+    "visible_pixels": 4543,
+    "touches_authored_cell_edge": false
+  },
+  {
+    "family": "HeroAwakened",
+    "action": "thrust",
+    "direction": 0,
+    "frame": 2,
+    "bounds": [
+      13,
+      24,
+      98,
+      124
+    ],
+    "visible_pixels": 5004,
+    "touches_authored_cell_edge": false
+  },
+  {
+    "family": "HeroAwakened",
+    "action": "thrust",
+    "direction": 0,
+    "frame": 3,
+    "bounds": [
+      23,
+      26,
+      106,
+      124
+    ],
+    "visible_pixels": 4736,
+    "touches_authored_cell_edge": false
+  },
+  {
+    "family": "HeroAwakened",
+    "action": "thrust",
+    "direction": 0,
+    "frame": 4,
+    "bounds": [
+      9,
+      24,
+      103,
+      123
+    ],
+    "visible_pixels": 5351,
+    "touches_authored_cell_edge": false
+  },
+  {
+    "family": "HeroAwakened",
+    "action": "thrust",
+    "direction": 0,
+    "frame": 5,
+    "bounds": [
+      25,
+      26,
+      106,
+      122
+    ],
+    "visible_pixels": 4833,
+    "touches_authored_cell_edge": false
+  },
+  {
+    "family": "HeroAwakened",
+    "action": "thrust",
+    "direction": 0,
+    "frame": 6,
+    "bounds": [
+      28,
+      27,
+      98,
+      124
+    ],
+    "visible_pixels": 4619,
+    "touches_authored_cell_edge": false
+  },
+  {
+    "family": "HeroAwakened",
+    "action": "thrust",
+    "direction": 0,
+    "frame": 7,
+    "bounds": [
+      28,
+      23,
+      100,
+      124
+    ],
+    "visible_pixels": 4985,
+    "touches_authored_cell_edge": false
+  },
+  {
+    "family": "HeroAwakened",
+    "action": "thrust",
+    "direction": 1,
+    "frame": 0,
+    "bounds": [
+      33,
+      20,
+      103,
+      123
+    ],
+    "visible_pixels": 5001,
+    "touches_authored_cell_edge": false
+  },
+  {
+    "family": "HeroAwakened",
+    "action": "thrust",
+    "direction": 1,
+    "frame": 1,
+    "bounds": [
+      30,
+      24,
+      105,
+      123
+    ],
+    "visible_pixels": 4779,
+    "touches_authored_cell_edge": false
+  },
+  {
+    "family": "HeroAwakened",
+    "action": "thrust",
+    "direction": 1,
+    "frame": 2,
+    "bounds": [
+      19,
+      21,
+      106,
+      123
+    ],
+    "visible_pixels": 5363,
+    "touches_authored_cell_edge": false
+  },
+  {
+    "family": "HeroAwakened",
+    "action": "thrust",
+    "direction": 1,
+    "frame": 3,
+    "bounds": [
+      16,
+      26,
+      110,
+      122
+    ],
+    "visible_pixels": 4617,
+    "touches_authored_cell_edge": false
+  },
+  {
+    "family": "HeroAwakened",
+    "action": "thrust",
+    "direction": 1,
+    "frame": 4,
+    "bounds": [
+      0,
+      22,
+      109,
+      123
+    ],
+    "visible_pixels": 5408,
+    "touches_authored_cell_edge": true
+  },
+  {
+    "family": "HeroAwakened",
+    "action": "thrust",
+    "direction": 1,
+    "frame": 5,
+    "bounds": [
+      10,
+      24,
+      102,
+      123
+    ],
+    "visible_pixels": 5206,
+    "touches_authored_cell_edge": false
+  },
+  {
+    "family": "HeroAwakened",
+    "action": "thrust",
+    "direction": 1,
+    "frame": 6,
+    "bounds": [
+      28,
+      24,
+      104,
+      123
+    ],
+    "visible_pixels": 4685,
+    "touches_authored_cell_edge": false
+  },
+  {
+    "family": "HeroAwakened",
+    "action": "thrust",
+    "direction": 1,
+    "frame": 7,
+    "bounds": [
+      34,
+      22,
+      101,
+      122
+    ],
+    "visible_pixels": 4907,
+    "touches_authored_cell_edge": false
+  },
+  {
+    "family": "HeroAwakened",
+    "action": "thrust",
+    "direction": 2,
+    "frame": 0,
+    "bounds": [
+      27,
+      29,
+      100,
+      124
+    ],
+    "visible_pixels": 4999,
+    "touches_authored_cell_edge": false
+  },
+  {
+    "family": "HeroAwakened",
+    "action": "thrust",
+    "direction": 2,
+    "frame": 1,
+    "bounds": [
+      25,
+      29,
+      105,
+      123
+    ],
+    "visible_pixels": 5093,
+    "touches_authored_cell_edge": false
+  },
+  {
+    "family": "HeroAwakened",
+    "action": "thrust",
+    "direction": 2,
+    "frame": 2,
+    "bounds": [
+      29,
+      27,
+      105,
+      123
+    ],
+    "visible_pixels": 5045,
+    "touches_authored_cell_edge": false
+  },
+  {
+    "family": "HeroAwakened",
+    "action": "thrust",
+    "direction": 2,
+    "frame": 3,
+    "bounds": [
+      25,
+      28,
+      101,
+      124
+    ],
+    "visible_pixels": 4804,
+    "touches_authored_cell_edge": false
+  },
+  {
+    "family": "HeroAwakened",
+    "action": "thrust",
+    "direction": 2,
+    "frame": 4,
+    "bounds": [
+      23,
+      26,
+      101,
+      124
+    ],
+    "visible_pixels": 4807,
+    "touches_authored_cell_edge": false
+  },
+  {
+    "family": "HeroAwakened",
+    "action": "thrust",
+    "direction": 2,
+    "frame": 5,
+    "bounds": [
+      22,
+      29,
+      106,
+      124
+    ],
+    "visible_pixels": 4921,
+    "touches_authored_cell_edge": false
+  },
+  {
+    "family": "HeroAwakened",
+    "action": "thrust",
+    "direction": 2,
+    "frame": 6,
+    "bounds": [
+      26,
+      25,
+      100,
+      122
+    ],
+    "visible_pixels": 4793,
+    "touches_authored_cell_edge": false
+  },
+  {
+    "family": "HeroAwakened",
+    "action": "thrust",
+    "direction": 2,
+    "frame": 7,
+    "bounds": [
+      28,
+      29,
+      99,
+      123
+    ],
+    "visible_pixels": 4879,
+    "touches_authored_cell_edge": false
+  },
+  {
+    "family": "HeroAwakened",
+    "action": "thrust",
+    "direction": 3,
+    "frame": 0,
+    "bounds": [
+      25,
+      25,
+      96,
+      123
+    ],
+    "visible_pixels": 4775,
+    "touches_authored_cell_edge": false
+  },
+  {
+    "family": "HeroAwakened",
+    "action": "thrust",
+    "direction": 3,
+    "frame": 1,
+    "bounds": [
+      23,
+      24,
+      106,
+      122
+    ],
+    "visible_pixels": 4864,
+    "touches_authored_cell_edge": false
+  },
+  {
+    "family": "HeroAwakened",
+    "action": "thrust",
+    "direction": 3,
+    "frame": 2,
+    "bounds": [
+      20,
+      24,
+      113,
+      122
+    ],
+    "visible_pixels": 5489,
+    "touches_authored_cell_edge": false
+  },
+  {
+    "family": "HeroAwakened",
+    "action": "thrust",
+    "direction": 3,
+    "frame": 3,
+    "bounds": [
+      23,
+      24,
+      106,
+      122
+    ],
+    "visible_pixels": 4511,
+    "touches_authored_cell_edge": false
+  },
+  {
+    "family": "HeroAwakened",
+    "action": "thrust",
+    "direction": 3,
+    "frame": 4,
+    "bounds": [
+      16,
+      24,
+      127,
+      122
+    ],
+    "visible_pixels": 5224,
+    "touches_authored_cell_edge": true
+  },
+  {
+    "family": "HeroAwakened",
+    "action": "thrust",
+    "direction": 3,
+    "frame": 5,
+    "bounds": [
+      24,
+      24,
+      105,
+      122
+    ],
+    "visible_pixels": 4810,
+    "touches_authored_cell_edge": false
+  },
+  {
+    "family": "HeroAwakened",
+    "action": "thrust",
+    "direction": 3,
+    "frame": 6,
+    "bounds": [
+      26,
+      24,
+      110,
+      122
+    ],
+    "visible_pixels": 4822,
+    "touches_authored_cell_edge": false
+  },
+  {
+    "family": "HeroAwakened",
+    "action": "thrust",
+    "direction": 3,
+    "frame": 7,
+    "bounds": [
+      23,
+      24,
+      94,
+      122
+    ],
+    "visible_pixels": 4798,
+    "touches_authored_cell_edge": false
+  },
+  {
+    "family": "HeroAwakened",
+    "action": "backslash",
+    "direction": 0,
+    "frame": 0,
+    "bounds": [
+      32,
+      25,
+      97,
+      123
+    ],
+    "visible_pixels": 4541,
+    "touches_authored_cell_edge": false
+  },
+  {
+    "family": "HeroAwakened",
+    "action": "backslash",
+    "direction": 0,
+    "frame": 1,
+    "bounds": [
+      27,
+      25,
+      95,
+      123
+    ],
+    "visible_pixels": 4485,
+    "touches_authored_cell_edge": false
+  },
+  {
+    "family": "HeroAwakened",
+    "action": "backslash",
+    "direction": 0,
+    "frame": 2,
+    "bounds": [
+      28,
+      24,
+      98,
+      123
+    ],
+    "visible_pixels": 4661,
+    "touches_authored_cell_edge": false
+  },
+  {
+    "family": "HeroAwakened",
+    "action": "backslash",
+    "direction": 0,
+    "frame": 3,
+    "bounds": [
+      16,
+      24,
+      97,
+      123
+    ],
+    "visible_pixels": 4888,
+    "touches_authored_cell_edge": false
+  },
+  {
+    "family": "HeroAwakened",
+    "action": "backslash",
+    "direction": 0,
+    "frame": 4,
+    "bounds": [
+      10,
+      24,
+      98,
+      123
+    ],
+    "visible_pixels": 4959,
+    "touches_authored_cell_edge": false
+  },
+  {
+    "family": "HeroAwakened",
+    "action": "backslash",
+    "direction": 0,
+    "frame": 5,
+    "bounds": [
+      20,
+      26,
+      102,
+      123
+    ],
+    "visible_pixels": 4820,
+    "touches_authored_cell_edge": false
+  },
+  {
+    "family": "HeroAwakened",
+    "action": "backslash",
+    "direction": 0,
+    "frame": 6,
+    "bounds": [
+      25,
+      24,
+      95,
+      123
+    ],
+    "visible_pixels": 4431,
+    "touches_authored_cell_edge": false
+  },
+  {
+    "family": "HeroAwakened",
+    "action": "backslash",
+    "direction": 0,
+    "frame": 7,
+    "bounds": [
+      35,
+      23,
+      95,
+      123
+    ],
+    "visible_pixels": 4195,
+    "touches_authored_cell_edge": false
+  },
+  {
+    "family": "HeroAwakened",
+    "action": "backslash",
+    "direction": 0,
+    "frame": 8,
+    "bounds": [
+      16,
+      24,
+      94,
+      123
+    ],
+    "visible_pixels": 4285,
+    "touches_authored_cell_edge": false
+  },
+  {
+    "family": "HeroAwakened",
+    "action": "backslash",
+    "direction": 0,
+    "frame": 9,
+    "bounds": [
+      22,
+      24,
+      98,
+      123
+    ],
+    "visible_pixels": 4317,
+    "touches_authored_cell_edge": false
+  },
+  {
+    "family": "HeroAwakened",
+    "action": "backslash",
+    "direction": 0,
+    "frame": 10,
+    "bounds": [
+      33,
+      23,
+      96,
+      123
+    ],
+    "visible_pixels": 3892,
+    "touches_authored_cell_edge": false
+  },
+  {
+    "family": "HeroAwakened",
+    "action": "backslash",
+    "direction": 0,
+    "frame": 11,
+    "bounds": [
+      32,
+      24,
+      93,
+      123
+    ],
+    "visible_pixels": 4400,
+    "touches_authored_cell_edge": false
+  },
+  {
+    "family": "HeroAwakened",
+    "action": "backslash",
+    "direction": 0,
+    "frame": 12,
+    "bounds": [
+      31,
+      25,
+      96,
+      123
+    ],
+    "visible_pixels": 4585,
+    "touches_authored_cell_edge": false
+  },
+  {
+    "family": "HeroAwakened",
+    "action": "backslash",
+    "direction": 1,
+    "frame": 0,
+    "bounds": [
+      32,
+      21,
+      92,
+      123
+    ],
+    "visible_pixels": 4323,
+    "touches_authored_cell_edge": false
+  },
+  {
+    "family": "HeroAwakened",
+    "action": "backslash",
+    "direction": 1,
+    "frame": 1,
+    "bounds": [
+      22,
+      20,
+      95,
+      123
+    ],
+    "visible_pixels": 4386,
+    "touches_authored_cell_edge": false
+  },
+  {
+    "family": "HeroAwakened",
+    "action": "backslash",
+    "direction": 1,
+    "frame": 2,
+    "bounds": [
+      25,
+      20,
+      94,
+      123
+    ],
+    "visible_pixels": 4476,
+    "touches_authored_cell_edge": false
+  },
+  {
+    "family": "HeroAwakened",
+    "action": "backslash",
+    "direction": 1,
+    "frame": 3,
+    "bounds": [
+      27,
+      20,
+      107,
+      123
+    ],
+    "visible_pixels": 5006,
+    "touches_authored_cell_edge": false
+  },
+  {
+    "family": "HeroAwakened",
+    "action": "backslash",
+    "direction": 1,
+    "frame": 4,
+    "bounds": [
+      22,
+      20,
+      102,
+      123
+    ],
+    "visible_pixels": 4980,
+    "touches_authored_cell_edge": false
+  },
+  {
+    "family": "HeroAwakened",
+    "action": "backslash",
+    "direction": 1,
+    "frame": 5,
+    "bounds": [
+      21,
+      21,
+      107,
+      123
+    ],
+    "visible_pixels": 4997,
+    "touches_authored_cell_edge": false
+  },
+  {
+    "family": "HeroAwakened",
+    "action": "backslash",
+    "direction": 1,
+    "frame": 6,
+    "bounds": [
+      27,
+      21,
+      97,
+      123
+    ],
+    "visible_pixels": 4374,
+    "touches_authored_cell_edge": false
+  },
+  {
+    "family": "HeroAwakened",
+    "action": "backslash",
+    "direction": 1,
+    "frame": 7,
+    "bounds": [
+      25,
+      22,
+      107,
+      123
+    ],
+    "visible_pixels": 4795,
+    "touches_authored_cell_edge": false
+  },
+  {
+    "family": "HeroAwakened",
+    "action": "backslash",
+    "direction": 1,
+    "frame": 8,
+    "bounds": [
+      24,
+      22,
+      95,
+      123
+    ],
+    "visible_pixels": 4067,
+    "touches_authored_cell_edge": false
+  },
+  {
+    "family": "HeroAwakened",
+    "action": "backslash",
+    "direction": 1,
+    "frame": 9,
+    "bounds": [
+      23,
+      21,
+      97,
+      123
+    ],
+    "visible_pixels": 4796,
+    "touches_authored_cell_edge": false
+  },
+  {
+    "family": "HeroAwakened",
+    "action": "backslash",
+    "direction": 1,
+    "frame": 10,
+    "bounds": [
+      28,
+      22,
+      92,
+      123
+    ],
+    "visible_pixels": 3990,
+    "touches_authored_cell_edge": false
+  },
+  {
+    "family": "HeroAwakened",
+    "action": "backslash",
+    "direction": 1,
+    "frame": 11,
+    "bounds": [
+      28,
+      22,
+      91,
+      123
+    ],
+    "visible_pixels": 4190,
+    "touches_authored_cell_edge": false
+  },
+  {
+    "family": "HeroAwakened",
+    "action": "backslash",
+    "direction": 1,
+    "frame": 12,
+    "bounds": [
+      30,
+      21,
+      91,
+      123
+    ],
+    "visible_pixels": 4311,
+    "touches_authored_cell_edge": false
+  },
+  {
+    "family": "HeroAwakened",
+    "action": "backslash",
+    "direction": 2,
+    "frame": 0,
+    "bounds": [
+      30,
+      25,
+      96,
+      123
+    ],
+    "visible_pixels": 4679,
+    "touches_authored_cell_edge": false
+  },
+  {
+    "family": "HeroAwakened",
+    "action": "backslash",
+    "direction": 2,
+    "frame": 1,
+    "bounds": [
+      32,
+      23,
+      104,
+      123
+    ],
+    "visible_pixels": 4789,
+    "touches_authored_cell_edge": false
+  },
+  {
+    "family": "HeroAwakened",
+    "action": "backslash",
+    "direction": 2,
+    "frame": 2,
+    "bounds": [
+      29,
+      23,
+      117,
+      123
+    ],
+    "visible_pixels": 5164,
+    "touches_authored_cell_edge": false
+  },
+  {
+    "family": "HeroAwakened",
+    "action": "backslash",
+    "direction": 2,
+    "frame": 3,
+    "bounds": [
+      30,
+      21,
+      113,
+      123
+    ],
+    "visible_pixels": 4861,
+    "touches_authored_cell_edge": false
+  },
+  {
+    "family": "HeroAwakened",
+    "action": "backslash",
+    "direction": 2,
+    "frame": 4,
+    "bounds": [
+      30,
+      23,
+      111,
+      123
+    ],
+    "visible_pixels": 5040,
+    "touches_authored_cell_edge": false
+  },
+  {
+    "family": "HeroAwakened",
+    "action": "backslash",
+    "direction": 2,
+    "frame": 5,
+    "bounds": [
+      25,
+      25,
+      105,
+      123
+    ],
+    "visible_pixels": 4404,
+    "touches_authored_cell_edge": false
+  },
+  {
+    "family": "HeroAwakened",
+    "action": "backslash",
+    "direction": 2,
+    "frame": 6,
+    "bounds": [
+      27,
+      25,
+      102,
+      123
+    ],
+    "visible_pixels": 4541,
+    "touches_authored_cell_edge": false
+  },
+  {
+    "family": "HeroAwakened",
+    "action": "backslash",
+    "direction": 2,
+    "frame": 7,
+    "bounds": [
+      27,
+      24,
+      94,
+      123
+    ],
+    "visible_pixels": 4364,
+    "touches_authored_cell_edge": false
+  },
+  {
+    "family": "HeroAwakened",
+    "action": "backslash",
+    "direction": 2,
+    "frame": 8,
+    "bounds": [
+      25,
+      25,
+      93,
+      123
+    ],
+    "visible_pixels": 4451,
+    "touches_authored_cell_edge": false
+  },
+  {
+    "family": "HeroAwakened",
+    "action": "backslash",
+    "direction": 2,
+    "frame": 9,
+    "bounds": [
+      38,
+      25,
+      99,
+      123
+    ],
+    "visible_pixels": 4232,
+    "touches_authored_cell_edge": false
+  },
+  {
+    "family": "HeroAwakened",
+    "action": "backslash",
+    "direction": 2,
+    "frame": 10,
+    "bounds": [
+      33,
+      24,
+      94,
+      123
+    ],
+    "visible_pixels": 4196,
+    "touches_authored_cell_edge": false
+  },
+  {
+    "family": "HeroAwakened",
+    "action": "backslash",
+    "direction": 2,
+    "frame": 11,
+    "bounds": [
+      31,
+      23,
+      94,
+      123
+    ],
+    "visible_pixels": 4640,
+    "touches_authored_cell_edge": false
+  },
+  {
+    "family": "HeroAwakened",
+    "action": "backslash",
+    "direction": 2,
+    "frame": 12,
+    "bounds": [
+      30,
+      23,
+      96,
+      123
+    ],
+    "visible_pixels": 4750,
+    "touches_authored_cell_edge": false
+  },
+  {
+    "family": "HeroAwakened",
+    "action": "backslash",
+    "direction": 3,
+    "frame": 0,
+    "bounds": [
+      36,
+      22,
+      101,
+      123
+    ],
+    "visible_pixels": 4309,
+    "touches_authored_cell_edge": false
+  },
+  {
+    "family": "HeroAwakened",
+    "action": "backslash",
+    "direction": 3,
+    "frame": 1,
+    "bounds": [
+      33,
+      21,
+      109,
+      123
+    ],
+    "visible_pixels": 4459,
+    "touches_authored_cell_edge": false
+  },
+  {
+    "family": "HeroAwakened",
+    "action": "backslash",
+    "direction": 3,
+    "frame": 2,
+    "bounds": [
+      29,
+      20,
+      108,
+      123
+    ],
+    "visible_pixels": 4722,
+    "touches_authored_cell_edge": false
+  },
+  {
+    "family": "HeroAwakened",
+    "action": "backslash",
+    "direction": 3,
+    "frame": 3,
+    "bounds": [
+      18,
+      20,
+      106,
+      123
+    ],
+    "visible_pixels": 5134,
+    "touches_authored_cell_edge": false
+  },
+  {
+    "family": "HeroAwakened",
+    "action": "backslash",
+    "direction": 3,
+    "frame": 4,
+    "bounds": [
+      26,
+      21,
+      107,
+      123
+    ],
+    "visible_pixels": 4764,
+    "touches_authored_cell_edge": false
+  },
+  {
+    "family": "HeroAwakened",
+    "action": "backslash",
+    "direction": 3,
+    "frame": 5,
+    "bounds": [
+      23,
+      20,
+      106,
+      123
+    ],
+    "visible_pixels": 5154,
+    "touches_authored_cell_edge": false
+  },
+  {
+    "family": "HeroAwakened",
+    "action": "backslash",
+    "direction": 3,
+    "frame": 6,
+    "bounds": [
+      28,
+      21,
+      106,
+      123
+    ],
+    "visible_pixels": 4549,
+    "touches_authored_cell_edge": false
+  },
+  {
+    "family": "HeroAwakened",
+    "action": "backslash",
+    "direction": 3,
+    "frame": 7,
+    "bounds": [
+      22,
+      21,
+      95,
+      123
+    ],
+    "visible_pixels": 4511,
+    "touches_authored_cell_edge": false
+  },
+  {
+    "family": "HeroAwakened",
+    "action": "backslash",
+    "direction": 3,
+    "frame": 8,
+    "bounds": [
+      32,
+      21,
+      99,
+      123
+    ],
+    "visible_pixels": 4288,
+    "touches_authored_cell_edge": false
+  },
+  {
+    "family": "HeroAwakened",
+    "action": "backslash",
+    "direction": 3,
+    "frame": 9,
+    "bounds": [
+      28,
+      21,
+      111,
+      123
+    ],
+    "visible_pixels": 4833,
+    "touches_authored_cell_edge": false
+  },
+  {
+    "family": "HeroAwakened",
+    "action": "backslash",
+    "direction": 3,
+    "frame": 10,
+    "bounds": [
+      34,
+      21,
+      100,
+      123
+    ],
+    "visible_pixels": 4263,
+    "touches_authored_cell_edge": false
+  },
+  {
+    "family": "HeroAwakened",
+    "action": "backslash",
+    "direction": 3,
+    "frame": 11,
+    "bounds": [
+      37,
+      21,
+      100,
+      123
+    ],
+    "visible_pixels": 4135,
+    "touches_authored_cell_edge": false
+  },
+  {
+    "family": "HeroAwakened",
+    "action": "backslash",
+    "direction": 3,
+    "frame": 12,
+    "bounds": [
+      37,
+      21,
+      97,
+      123
+    ],
+    "visible_pixels": 4222,
+    "touches_authored_cell_edge": false
+  }
+]

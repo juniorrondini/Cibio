@@ -8,7 +8,7 @@ namespace Cibio.RPG
 {
     [Serializable] public sealed class RpgProgress
     {
-        public int version=3,level=1,xp,perks,defeated;public float x,y=-3;
+        public int version=3,level=1,xp,perks,defeated,questStage,silenced;public bool captainDefeated;public float x,y=-3;
         public bool Has(int id)=>(perks&(1<<id))!=0;
         public int NextLevel=>level*50;
     }
@@ -17,36 +17,36 @@ namespace Cibio.RPG
         public static RpgGame Instance;public const string SaveKey="Cibio.RPG.v3.Progress";
         public RpgWorld world;public Camera lens;public Material effectsMaterial;public RpgProgress progress=new();
         public bool Playing=>mode==1;public bool HasSave=>PlayerPrefs.HasKey(SaveKey);public int mode; // 0 menu, 1 play, 2 pause, 3 credits
-        public string message="";public float messageUntil,shake,saveTimer;public float dashCooldown,waveCooldown,impactPause;Vector3 followVelocity;public bool ready;bool bufferedAttack;int session;
+        public string message="";public float messageUntil,shake,saveTimer;public float dashCooldown,waveCooldown,boltCooldown,impactPause;Vector3 followVelocity;public bool ready;bool bufferedAttack;int session;
         public bool reviewPose,reviewRun;public readonly List<FloatingText> floating=new();public sealed class FloatingText{public Vector2 p;public string text;public Color color;public float born;}
         void Awake()
         {
-            Instance=this;Application.targetFrameRate=60;world=GetComponent<RpgWorld>();if(!world)world=gameObject.AddComponent<RpgWorld>();world.Build();RpgTerrain.Ensure(world);if(!world.hero.GetComponent<RpgPowerForm>())world.hero.gameObject.AddComponent<RpgPowerForm>();lens=Camera.main;if(!lens.GetComponent<RpgAudioLimiter>())lens.gameObject.AddComponent<RpgAudioLimiter>();if(!lens.GetComponent<RpgEnergyBloom>())lens.gameObject.AddComponent<RpgEnergyBloom>();for(int n=0;n<world.enemies.Count;n++)world.enemies[n].ConfigureEnemy(n%3);world.shrines[0].title="Voo da Centelha";world.shrines[0].description="[1] decolar/pousar | 12 energia + 10/s no ar.";world.shrines[1].description="Melhora sua transformação: duração de 24s.";if(!GetComponent<RpgAudio>())gameObject.AddComponent<RpgAudio>();ready=true;SnapCamera();
-            var args=Environment.GetCommandLineArgs();for(int i=0;i<args.Length-1;i++){if(args[i]=="-cibio-review07"){reviewRun=true;StartCoroutine(gameObject.AddComponent<RpgReview07>().Run(args[i+1]));}else if(args[i]=="-cibio-review"){reviewRun=true;StartCoroutine(ReviewEffects06(args[i+1]));}else if(args[i]=="-cibio-vfx-review"){reviewRun=true;StartCoroutine(gameObject.AddComponent<RpgVfxReview>().Run(args[i+1]));}}
+            Instance=this;Application.targetFrameRate=60;world=GetComponent<RpgWorld>();if(!world)world=gameObject.AddComponent<RpgWorld>();world.Build();if(!GetComponent<RpgQuest08>())gameObject.AddComponent<RpgQuest08>();RpgTerrain.Ensure(world);if(!world.hero.GetComponent<RpgPowerForm>())world.hero.gameObject.AddComponent<RpgPowerForm>();lens=Camera.main;if(!lens.GetComponent<RpgAudioLimiter>())lens.gameObject.AddComponent<RpgAudioLimiter>();if(!lens.GetComponent<RpgEnergyBloom>())lens.gameObject.AddComponent<RpgEnergyBloom>();for(int n=0;n<world.enemies.Count;n++)world.enemies[n].ConfigureEnemy(n<7?n%3:world.enemies[n].enemyKind);world.shrines[0].title="Voo da Centelha";world.shrines[0].description="[1] decolar/pousar | 12 energia + 10/s no ar.";world.shrines[1].description="Melhora sua transformação: duração de 24s.";if(!GetComponent<RpgAudio>())gameObject.AddComponent<RpgAudio>();ready=true;SnapCamera();
+            var args=Environment.GetCommandLineArgs();for(int i=0;i<args.Length-1;i++){if(args[i]=="-cibio-review08"){reviewRun=true;StartCoroutine(gameObject.AddComponent<RpgReview08>().Run(args[i+1]));}else if(args[i]=="-cibio-review07"){reviewRun=true;StartCoroutine(gameObject.AddComponent<RpgReview07>().Run(args[i+1]));}else if(args[i]=="-cibio-review"){reviewRun=true;StartCoroutine(ReviewEffects06(args[i+1]));}else if(args[i]=="-cibio-vfx-review"){reviewRun=true;StartCoroutine(gameObject.AddComponent<RpgVfxReview>().Run(args[i+1]));}}
         }
         public void StartGame(bool continueGame)
         {
             session++;progress=continueGame?Load():new RpgProgress();mode=1;var hero=world.hero;
             Vector2 spawn=new(progress.x,progress.y);hero.transform.position=world.CanStand(spawn)?spawn:new Vector2(0,-3);
-            bufferedAttack=false;hero.ResetMotion();hero.health=hero.MaxHealth;hero.energy=100;hero.buff=hero.charge=hero.attackTimer=hero.jumpTimer=hero.invincible=hero.transforming=hero.powerPose=0;hero.dead=hero.charging=false;hero.deadTime=0;hero.velocity=Vector2.zero;hero.direction=2;hero.facing=Vector2.down;dashCooldown=waveCooldown=impactPause=0;
-            foreach(var enemy in world.enemies)enemy.ResetEnemy();
-            Save();SnapCamera();Notify("Explore os altares ✦ [E] aprender  •  [C] carregar energia");
+            bufferedAttack=false;hero.ResetMotion();hero.health=hero.MaxHealth;hero.energy=100;hero.buff=hero.charge=hero.attackTimer=hero.jumpTimer=hero.invincible=hero.transforming=hero.powerPose=0;hero.dead=hero.charging=false;hero.deadTime=0;hero.velocity=Vector2.zero;hero.direction=2;hero.facing=Vector2.down;dashCooldown=waveCooldown=boltCooldown=impactPause=0;hero.Pose("idle",0);var form=hero.GetComponent<RpgPowerForm>();if(form)form.Refresh(1);var aura=hero.GetComponent<RpgAura>();if(aura)aura.Refresh(1);foreach(var ps in hero.GetComponentsInChildren<ParticleSystem>())ps.Clear();
+            foreach(var enemy in world.enemies)enemy.ResetEnemy();GetComponent<RpgQuest08>().RefreshState();
+            Save();SnapCamera();Notify("Seu Davi espera ao sul da praça • [E] conversar • [C] carregar energia");
         }
         void Update()
         {
             if(!ready)return;
             if(Input.GetKeyDown(KeyCode.Escape)){if(mode==1){Save();mode=2;}else if(mode==2)mode=1;else if(mode==3)mode=0;}
             if(!Playing||reviewPose)return;if(Input.GetKeyDown(KeyCode.J)||Input.GetMouseButtonDown(0)&&!RpgInterface.PointerOverHud())bufferedAttack=true;if(impactPause>0){impactPause=Mathf.Max(0,impactPause-Time.unscaledDeltaTime);return;}float dt=Time.deltaTime;
-            var hero=world.hero;dashCooldown=Mathf.Max(0,dashCooldown-dt);waveCooldown=Mathf.Max(0,waveCooldown-dt);
+            var hero=world.hero;dashCooldown=Mathf.Max(0,dashCooldown-dt);waveCooldown=Mathf.Max(0,waveCooldown-dt);boltCooldown=Mathf.Max(0,boltCooldown-dt);
             if(hero.dead){if(Input.GetKeyDown(KeyCode.R))Revive();}
             else
             {
                 SetChargeHeld(Input.GetKey(KeyCode.C));
                 Vector2 input=new(Input.GetAxisRaw("Horizontal"),Input.GetAxisRaw("Vertical"));
-                bool run=Input.GetKey(KeyCode.LeftShift);float speed=hero.flying?(hero.buff>0?8:6):(run?4.5f:2.8f)*(hero.buff>0?1.30f:1);hero.Walk(input,speed,dt,run);
+                bool run=Input.GetKey(KeyCode.LeftShift);hero.SetFlightControls(run,Input.GetKey(KeyCode.LeftControl)||Input.GetKey(KeyCode.RightControl));float speed=hero.flying?hero.FlightSpeed:hero.GroundSpeed(run);hero.Walk(input,speed,dt,run);
                 if(bufferedAttack){hero.Attack();bufferedAttack=false;}
                 if(Input.GetKeyDown(KeyCode.Space))hero.Jump();
-                if(Input.GetKeyDown(KeyCode.E))Interact();if(Input.GetKeyDown(KeyCode.Alpha1))Dash();if(Input.GetKeyDown(KeyCode.Alpha2))Wave();
+                if(Input.GetKeyDown(KeyCode.E))Interact();if(Input.GetKeyDown(KeyCode.Alpha1))Dash();if(Input.GetKeyDown(KeyCode.Alpha2))Wave();if(Input.GetKeyDown(KeyCode.Alpha3))Bolt();
             }
             hero.Tick(dt);foreach(var enemy in world.enemies)enemy.Tick(dt);
             saveTimer+=dt;if(saveTimer>12){saveTimer=0;Save();}floating.RemoveAll(t=>Time.unscaledTime-t.born>1.15f);
@@ -55,7 +55,7 @@ namespace Cibio.RPG
         {
             if(!lens||!ready)return;
             lens.orthographicSize=Mathf.Lerp(lens.orthographicSize,world.hero.transforming>0?6.28f:7.03125f,Time.deltaTime*5);
-            Vector2 target=world.hero.Position+Vector2.up*.8f;
+            Vector2 target=world.hero.Position+Vector2.up*(.8f+world.hero.flightHeight*.35f)+(world.hero.flying?Vector2.ClampMagnitude(world.hero.velocity*.15f,2):Vector2.zero);
             float h=lens.orthographicSize,w=h*lens.aspect;
             target.x=Mathf.Clamp(target.x,world.bounds.xMin+w,world.bounds.xMax-w);target.y=Mathf.Clamp(target.y,world.bounds.yMin+h,world.bounds.yMax-h);
             var desired=new Vector3(target.x,target.y,-10);var p=Vector3.SmoothDamp(lens.transform.position,desired,ref followVelocity,.16f);
@@ -65,7 +65,7 @@ namespace Cibio.RPG
         public void SnapCamera(){if(lens)lens.transform.position=new Vector3(world.hero.Position.x,world.hero.Position.y+.8f,-10);}
         public bool Interact()
         {
-            var s=world.NearestShrine(world.hero.Position);if(!s){Notify("Aproxime-se de um altar e pressione [E].");return false;}
+            if(world.hero.dead||world.hero.attackTimer>0||world.hero.transforming>0)return false;if(GetComponent<RpgQuest08>().TryInteract())return true;var s=world.NearestShrine(world.hero.Position);if(!s){Notify("Aproxime-se de um altar e pressione [E].");return false;}
             if(progress.Has(s.id)){Notify(s.title+" já faz parte de você.");return false;}
             progress.perks|=1<<s.id;Save();Notify("PODER DESPERTO  •  "+s.title);RpgEffects.Burst(world.hero.Position,s.color,3,1);RpgAudio.Play("item_gem_01",world.hero.Position,.5f);shake=.4f;return true;
         }
@@ -80,15 +80,15 @@ namespace Cibio.RPG
         {
             var h=world.hero;if(!progress.Has(2)){Notify("O altar da Liberdade guarda esse poder [E].");return false;}
             if(h.dead||h.charging||h.transforming>0||h.attackTimer>0||h.powerPose>0||h.energy<40||waveCooldown>0)return false;
-            bool power=h.buff>0;h.energy-=40;waveCooldown=power?4:5;h.Cast(power?.72f:.55f);
-            StartCoroutine(LibertyPulse(h.Position,power,h.flightHeight,h.Damage*(power?3.1f:2.2f),session));return true;
+            bool power=h.buff>0;h.energy-=40;waveCooldown=power?4:5;h.Cast(power?.72f:.55f,power?.18f:.12f);
+            StartCoroutine(LibertyPulse(h.Position,power,h.flightHeight,h.Damage*(h.FormStage==2?2.8f:power?2.4f:2.2f),session,h.FormStage));return true;
         }
-        IEnumerator LibertyPulse(Vector2 origin,bool power,float lift,float damage,int startedSession)
+        IEnumerator LibertyPulse(Vector2 origin,bool power,float lift,float damage,int startedSession,int stage)
         {
             // Wind-up is visible; damage and impact sound begin at the release pose.
             RpgAudio.Play("wave_windup",origin,.38f);yield return ActiveDelay(power?.18f:.12f,startedSession);
-            if(world.hero.dead||session!=startedSession||!Playing)yield break;float radius=power?5.4f:3.8f;var tint=RpgArt.Hex(power?"FFE3A1":"BCB5FF");
-            RpgEffects.Burst(origin+Vector2.up*lift,tint,radius,power?.85f:.65f);if(power)RpgEffects.PowerStrike(origin+Vector2.up*lift,world.hero.facing,2);
+            if(world.hero.dead||session!=startedSession||!Playing)yield break;float radius=stage==2?6.2f:power?5.4f:3.8f;var tint=RpgArt.Hex(stage==2?"FF576B":power?"FFE3A1":"BCB5FF");
+            RpgEffects.Burst(origin+Vector2.up*lift,tint,radius,power?.85f:.65f);if(power)RpgEffects.PowerStrike(origin+Vector2.up*lift,world.hero.facing,2,tint);
             RpgAudio.Play(power?"wave_awakened":"wave_blast",origin,power?.8f:.65f);shake=Mathf.Max(shake,power?1.5f:.65f);
             foreach(var e in world.enemies)if(!e.dead&&Vector2.Distance(origin,e.Position)<radius){e.TakeDamage(damage);Vector2 away=(e.Position-origin).normalized;e.transform.position=world.Move(e.Position,away*(power?1.5f:.45f));e.enemyCooldown=Mathf.Max(e.enemyCooldown,power?1.6f:.7f);}
             if(power){yield return ActiveDelay(.16f,startedSession);if(world.hero.dead||session!=startedSession||!Playing)yield break;RpgEffects.Burst(origin+Vector2.up*lift,RpgArt.Hex("FFF0C2"),3.5f,.55f);}
@@ -96,6 +96,12 @@ namespace Cibio.RPG
         IEnumerator ActiveDelay(float seconds,int startedSession)
         {
             while(seconds>0&&session==startedSession&&!world.hero.dead){if(mode==0||mode==3)yield break;if(Playing)seconds-=Time.deltaTime;yield return null;}
+        }
+        public bool Bolt()
+        {
+            var h=world.hero;if(progress.questStage!=3){Notify("Conclua a missão de Seu Davi para aprender a Palma da Centelha.");return false;}
+            if(h.dead||h.charging||h.transforming>0||h.attackTimer>0||h.powerPose>0||h.energy<22||boltCooldown>0)return false;
+            h.energy-=22;boltCooldown=h.FormStage==2?1.1f:1.8f;h.Cast(.32f);RpgProjectile.FireHero(h,h.facing);return true;
         }
         public void SetChargeHeld(bool held)
         {
@@ -107,12 +113,12 @@ namespace Cibio.RPG
         public void ReleaseCharge()
         {
             var h=world.hero;if(h.dead){h.charge=0;h.charging=false;return;}
-            if(h.charge>=99){h.buff=progress.Has(1)?24:16;h.transforming=1.15f;h.invincible=1.25f;h.attackTimer=0;h.velocity=Vector2.zero;h.Pose("spellcast",2);shake=1;Notify("AURA CANARINHA  •  transformação ativa por "+(int)h.buff+"s");h.GetComponent<RpgPowerForm>().Awaken();RpgAudio.Play("transform_ignite",h.Position,.95f);}
+            if(h.charge>=99){bool second=h.FormStage>0&&progress.questStage==3;if(second&&h.energy<25){Notify("São necessários 25 de energia para despertar a Centelha Rubra.");h.charge=0;h.charging=false;return;}h.formStage=second?2:1;if(second)h.energy-=25;h.buff=second?12:progress.Has(1)?24:16;h.transforming=1.15f;h.invincible=1.25f;h.attackTimer=0;h.velocity=Vector2.zero;h.Pose("spellcast",2);shake=1;Notify((second?"CENTELHA RUBRA • ESTÁGIO 2":"AURA CANARINHA • ESTÁGIO 1")+" • "+(int)h.buff+"s");h.GetComponent<RpgPowerForm>().Awaken();RpgAudio.Play("transform_ignite",h.Position,.95f);}
             else if(h.charge>5)Notify("Energia recuperada. Para transformar, complete a carga e solte [C].");h.charge=0;h.charging=false;
         }
-        public void EnemyDefeated()
+        public void EnemyDefeated(RpgActor victim=null)
         {
-            progress.defeated++;progress.xp+=25;
+            if(victim&&victim.enemyKind==4)GetComponent<RpgQuest08>().CaptainDefeated();progress.defeated++;progress.xp+=victim&&victim.enemyKind==4?100:25;
             while(progress.xp>=progress.NextLevel){progress.xp-=progress.NextLevel;progress.level++;world.hero.health=world.hero.MaxHealth;Notify("NÍVEL "+progress.level+"  •  mais vida e força");RpgEffects.Burst(world.hero.Position,RpgArt.Hex("80E1BF"),3,1);RpgAudio.Play("handleCoins",world.hero.Position,.35f);}
             Save();
         }
@@ -120,7 +126,7 @@ namespace Cibio.RPG
         public void Save(){if(reviewRun||!ready||mode==0||mode==3)return;progress.x=world.hero.Position.x;progress.y=world.hero.Position.y;PlayerPrefs.SetString(SaveKey,JsonUtility.ToJson(progress));PlayerPrefs.Save();}
         public static RpgProgress Load()
         {
-            try{var p=JsonUtility.FromJson<RpgProgress>(PlayerPrefs.GetString(SaveKey,""));if(p!=null&&p.version==3&&p.level>=1&&p.level<1000&&!float.IsNaN(p.x)&&!float.IsNaN(p.y)&&!float.IsInfinity(p.x)&&!float.IsInfinity(p.y)){p.perks&=7;p.xp=Mathf.Max(0,p.xp);return p;}}catch(Exception){}return new RpgProgress();
+            try{var p=JsonUtility.FromJson<RpgProgress>(PlayerPrefs.GetString(SaveKey,""));if(p!=null&&p.version==3&&p.level>=1&&p.level<1000&&!float.IsNaN(p.x)&&!float.IsNaN(p.y)&&!float.IsInfinity(p.x)&&!float.IsInfinity(p.y)){p.perks&=7;p.xp=Mathf.Max(0,p.xp);p.questStage=Mathf.Clamp(p.questStage,0,3);p.silenced&=7;return p;}}catch(Exception){}return new RpgProgress();
         }
         void OnApplicationQuit(){if(mode==1||mode==2)Save();}
         public void Notify(string text){message=text;messageUntil=Time.unscaledTime+4.5f;}

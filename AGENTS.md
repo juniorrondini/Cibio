@@ -51,3 +51,12 @@
 - Onda tem antecipacao e alcance 3.8 normal/5.4 desperto. Testes visuais verificam dano apos release e knockback a 4.6.
 - Designed07 contem sons CC0/DSP; RpgAudioLimiter no listener limita picos sem hard clipping.
 - -cibio-review07 testa voo, combos e gait, grava audio em tempo real separado da captura visual fixa 24fps; salva relatorios. Nunca alterar save durante review.
+
+## Atualização 08
+- Cena ampliada de 48x36 para 48x60; Morro do Eco ao norte, NPC Seu Davi (-2,-6.3), 3 amplificadores e 7 inimigos novos. Mantém os 7 anteriores. Bounds é serializado. Duas árvores na entrada norte foram desativadas.
+- RpgExpansion08.Append acrescenta a expansão à cena salva e é idempotente. RpgExpansion08.BuildPlayer chama Append + BuildUpdatedPlayer; não usar o gerador antigo Build.
+- RpgQuest08 controla questStage 0/1/2/3, silenced bitmask e captainDefeated. Campos adicionais conservam versão/chave de save v3. Recompensa única: 100XP, voo/Coração se faltarem, estágio 2 e Palma.
+- formStage 2 (FormStage consulta buff ativo) exige missão 3 e uma segunda carga C completa enquanto dourado; 25 energia, 12s, dano3.15x; aura vermelha com atlas e emissores existentes. Escala/acento interpolados e poses douradas preservadas durante transformação2.
+- Voo normal/dourado/rubro 6/8/12; Shift multiplica1.25 e custa+6/s; Ctrl tem prioridade, freia até hover. Dreno10/7/9 por segundo. Pouso1/Espaço, C força pouso antes de carregar.
+- [3] Palma:22energia, cooldown1.8/1.1s rubro; projétil com teste varrido por segmento e apenas um impacto. Boss enemyKind4 HP280 não renasce; batedor enemyKind3 HP78, aviso .6s e bote contínuo .24s; boss aviso .85s, leque3projéteis de16, cooldown2.8s.
+- -cibio-review08 mantém base, valida missão e save antigo, voo e dano comparativo; exporta inspeção dos ciclos nas4direções e captura cinematográfica24fps. Não alterar o save real em testes.

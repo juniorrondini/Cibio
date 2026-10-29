@@ -1,0 +1,2 @@
+Nivel 1; tres contatos de combo: normal=73,4, dourado=168,8, rubro=231,2.
+Capitao: 280 HP; projeteis de 16; antecipacao .85s; recarga 2.8s. Batedor: 78 HP; bote com antecipacao .6s; recarga 2.1s. Rubra dura 12s; voo turbo 15/s consome 15 energia/s.

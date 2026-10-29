@@ -1,0 +1,43 @@
+PASS Nova partida apos transformacao restaura sprite, porte e pose imediatamente
+PASS Paletas dos novos inimigos sao restauradas antes do primeiro quadro
+PASS Area expandida de 48x36 para 48x60, com 14 inimigos
+PASS NPC e tres amplificadores persistidos na cena
+PASS Caminho terrestre livre para amplificador 2
+PASS Caminho terrestre livre para amplificador 1
+PASS Caminho terrestre livre para amplificador 0
+PASS Caminho livre para Seu Davi
+PASS Nao desliga amplificador antes de receber a missao
+PASS Conversa aceita missao sem alterar os altares
+PASS Guardas proximos bloqueiam a interacao
+PASS Derrotar capitao registra objetivo da missao
+PASS Tres amplificadores e capitao liberam retorno ao NPC
+PASS Entrega libera estagio 2, voo e Palma
+PASS Recompensa nao pode ser recebida duas vezes
+PASS Missao e desbloqueios sobrevivem a serializacao do save v3
+PASS Save antigo conserva nivel e altares e recebe nova missao
+PASS Estagio 2 fica bloqueado antes da missao
+PASS Carga parcial nao ativa o segundo estagio
+PASS Segunda carga completa e liberada ativa Rubra por 12s e custa 25
+PASS Aura do estagio 2 tem paleta avermelhada
+PASS Voo decola sem teleporte no segundo estagio
+PASS Velocidade de cruzeiro Rubra e 12, contra 8 da dourada
+PASS Shift leva voo Rubra a 15 unidades/s
+PASS Impulso acelera continuamente e custa energia adicional
+PASS Ctrl prevalece sobre Shift e freia ate hover
+PASS Energia esgotada inicia pouso mesmo no estagio 2
+PASS Pouso suave termina no chao
+PASS Expiracao Rubra retorna ao estado normal
+PASS Palma custa 22 e libera projetil
+PASS Palma respeita recarga
+PASS Palma Rubra atinge e causa dano real sem atravessar o alvo
+PASS Projetil nao atravessa parede fina mesmo num quadro longo
+PASS Batedor anuncia o bote antes de mover ou causar dano
+PASS Aviso do bote preserva janela de esquiva
+PASS Bote avanca continuamente, sem teleporte
+PASS Bote causa um unico contato de 15 ao cruzar o alvo
+PASS Capitao anuncia a rajada sem dano instantaneo
+PASS Capitao libera um leque de tres projeteis apos aviso
+PASS Projetil do capitao ameaca o voo e causa 16 de dano uma unica vez
+PASS Combo normal tem dano esperado para inimigos comuns
+PASS Dano dourado preserva multiplicador 2,3x
+PASS Rubra aumenta dano sem eliminar a progressao entre formas

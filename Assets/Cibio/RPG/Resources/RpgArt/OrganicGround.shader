@@ -11,12 +11,16 @@ Shader "Cibio/Organic Ground"
    #pragma fragment frag
    #include "UnityCG.cginc"
    struct app{float4 vertex:POSITION;float2 uv:TEXCOORD0;};struct v2f{float4 vertex:SV_POSITION;float2 uv:TEXCOORD0;};
-   sampler2D _Grass,_Stone,_Mask;
+   sampler2D _Grass,_Stone,_Mask;float4 _WorldBounds;
    v2f vert(app i){v2f o;o.vertex=UnityObjectToClipPos(i.vertex);o.uv=i.uv;return o;}
    float hash(float2 p){float3 q=frac(float3(p.xyx)*.1031);q+=dot(q,q.yzx+33.33);return frac((q.x+q.y)*q.z);}
    fixed4 frag(v2f i):SV_Target
    {
-    float2 p=i.uv*float2(48,36);float4 m=tex2D(_Mask,i.uv);float2 uv=p/7;
+    float2 world=_WorldBounds.xy+i.uv*_WorldBounds.zw;float2 p=world+float2(24,18);float2 baseUV=p/float2(48,36);float4 m=tex2D(_Mask,baseUV);
+    float road=1-smoothstep(1.05,1.85,abs(world.x-sin(world.y*.19)*.65));
+    float cross=1-smoothstep(1.1,1.8,min(abs(world.y-24),min(abs(world.y-29),abs(world.y-37))));
+    cross*=1-smoothstep(11,15,abs(world.x));float plaza=1-smoothstep(4.4,5.3,length(world-float2(0,36.5)));
+    float north=smoothstep(15,18,world.y);m=lerp(m,float4(max(road,cross),plaza,0,0),north);float2 uv=p/7;
     float3 grass=tex2D(_Grass,uv).rgb*.83;float3 stone=tex2D(_Stone,p/6).rgb;
     float grain=hash(floor(p*48));float3 earth=lerp(float3(.30,.238,.15),float3(.48,.387,.25),grain);
     earth*=.92+.08*sin(p.x*3+sin(p.y*2));float3 col=lerp(grass,earth,m.r*.91);col=lerp(col,stone*.94,m.g);

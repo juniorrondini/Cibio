@@ -9,7 +9,7 @@ namespace Cibio.RPG
         public List<RpgSolid> solids=new();
         public List<RpgShrine> shrines=new();
         public List<RpgActor> enemies=new();
-        public readonly Rect bounds=new(-24,-18,48,36);
+        public Rect bounds=new(-24,-18,48,60);
         public RpgActor hero;public Transform scenery;public bool built;
         public void Build()
         {

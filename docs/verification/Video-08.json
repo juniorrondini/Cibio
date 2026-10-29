@@ -1,0 +1,9 @@
+{
+  "preview_frames": 358,
+  "preview_fps": 24,
+  "missing_capture_frames": [
+    223
+  ],
+  "handling": "Only in the encoded preview, repeat the preceding capture for missing files; raw captures are unchanged. CaptureScreenshot for the named transformation still superseded one sequence frame.",
+  "runtime_animation_audit_unchanged": true
+}

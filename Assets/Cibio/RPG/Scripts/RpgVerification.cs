@@ -16,7 +16,7 @@ namespace Cibio.RPG
             try
             {
                 foreach(string family in new[]{"Hero","HeroAwakened"})Check(RpgArt.FrameCount(family,"flight")==4,"Voo tem hover e avanco em quatro direcoes: "+family);
-                Check(w.built&&w.shrines.Count==3&&w.enemies.Count==7,"Mapa, 3 altares e 7 inimigos carregados");
+                Check(w.built&&w.shrines.Count==3&&w.enemies.Count==14,"Mapa expandido, 3 altares e 14 inimigos carregados");
                 var transition=RpgArt.Texture("Transform_Sequence05");Check(transition&&transition.width==768&&transition.height==512,"Atlas próprio da transição: seis etapas e quatro direções");
                 foreach(var shrine in w.shrines)Check(Reachable(w,new Vector2(0,-3),shrine.transform.position),"Caminho livre até "+shrine.title);
                 foreach(string action in new[]{"idle","walk","run","jump","slash","spellcast","hurt","thrust","backslash"})foreach(string person in new[]{"Hero","HeroLift","HeroGold","HeroAwakened","Enemy","EnemyHeavy","EnemyCaster"})
