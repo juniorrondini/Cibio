@@ -1,0 +1,355 @@
+[
+  {
+    "name": "Title_Vila13",
+    "size": [
+      1672,
+      941
+    ],
+    "aspect": 1.7768331562167907
+  },
+  {
+    "name": "UI_Palma13",
+    "size": [
+      256,
+      256
+    ]
+  },
+  {
+    "name": "Vfx_PalmaFlight13",
+    "size": [
+      1024,
+      1024
+    ],
+    "cells": [
+      {
+        "frame": 0,
+        "bounds": [
+          69,
+          23,
+          193,
+          236
+        ],
+        "nonempty_pixels": 16216
+      },
+      {
+        "frame": 1,
+        "bounds": [
+          68,
+          23,
+          194,
+          235
+        ],
+        "nonempty_pixels": 16379
+      },
+      {
+        "frame": 2,
+        "bounds": [
+          65,
+          22,
+          194,
+          235
+        ],
+        "nonempty_pixels": 16764
+      },
+      {
+        "frame": 3,
+        "bounds": [
+          67,
+          21,
+          191,
+          234
+        ],
+        "nonempty_pixels": 16864
+      },
+      {
+        "frame": 4,
+        "bounds": [
+          60,
+          21,
+          194,
+          235
+        ],
+        "nonempty_pixels": 17522
+      },
+      {
+        "frame": 5,
+        "bounds": [
+          66,
+          22,
+          198,
+          236
+        ],
+        "nonempty_pixels": 18036
+      },
+      {
+        "frame": 6,
+        "bounds": [
+          64,
+          21,
+          196,
+          238
+        ],
+        "nonempty_pixels": 17308
+      },
+      {
+        "frame": 7,
+        "bounds": [
+          66,
+          21,
+          197,
+          235
+        ],
+        "nonempty_pixels": 17482
+      },
+      {
+        "frame": 8,
+        "bounds": [
+          63,
+          20,
+          194,
+          236
+        ],
+        "nonempty_pixels": 17374
+      },
+      {
+        "frame": 9,
+        "bounds": [
+          67,
+          19,
+          193,
+          235
+        ],
+        "nonempty_pixels": 17664
+      },
+      {
+        "frame": 10,
+        "bounds": [
+          63,
+          18,
+          199,
+          235
+        ],
+        "nonempty_pixels": 17820
+      },
+      {
+        "frame": 11,
+        "bounds": [
+          67,
+          20,
+          194,
+          234
+        ],
+        "nonempty_pixels": 17000
+      },
+      {
+        "frame": 12,
+        "bounds": [
+          69,
+          22,
+          193,
+          233
+        ],
+        "nonempty_pixels": 16260
+      },
+      {
+        "frame": 13,
+        "bounds": [
+          64,
+          21,
+          196,
+          236
+        ],
+        "nonempty_pixels": 16544
+      },
+      {
+        "frame": 14,
+        "bounds": [
+          63,
+          22,
+          190,
+          234
+        ],
+        "nonempty_pixels": 16685
+      },
+      {
+        "frame": 15,
+        "bounds": [
+          67,
+          21,
+          192,
+          234
+        ],
+        "nonempty_pixels": 16456
+      }
+    ]
+  },
+  {
+    "name": "Vfx_PalmaImpact13",
+    "size": [
+      1024,
+      1024
+    ],
+    "cells": [
+      {
+        "frame": 0,
+        "bounds": [
+          84,
+          75,
+          179,
+          238
+        ],
+        "nonempty_pixels": 7220
+      },
+      {
+        "frame": 1,
+        "bounds": [
+          56,
+          62,
+          198,
+          238
+        ],
+        "nonempty_pixels": 11932
+      },
+      {
+        "frame": 2,
+        "bounds": [
+          43,
+          36,
+          207,
+          238
+        ],
+        "nonempty_pixels": 20881
+      },
+      {
+        "frame": 3,
+        "bounds": [
+          28,
+          27,
+          226,
+          230
+        ],
+        "nonempty_pixels": 27242
+      },
+      {
+        "frame": 4,
+        "bounds": [
+          18,
+          18,
+          235,
+          236
+        ],
+        "nonempty_pixels": 32021
+      },
+      {
+        "frame": 5,
+        "bounds": [
+          22,
+          18,
+          234,
+          238
+        ],
+        "nonempty_pixels": 31180
+      },
+      {
+        "frame": 6,
+        "bounds": [
+          22,
+          18,
+          234,
+          232
+        ],
+        "nonempty_pixels": 33530
+      },
+      {
+        "frame": 7,
+        "bounds": [
+          31,
+          21,
+          236,
+          237
+        ],
+        "nonempty_pixels": 31619
+      },
+      {
+        "frame": 8,
+        "bounds": [
+          35,
+          27,
+          223,
+          232
+        ],
+        "nonempty_pixels": 29867
+      },
+      {
+        "frame": 9,
+        "bounds": [
+          31,
+          27,
+          223,
+          231
+        ],
+        "nonempty_pixels": 28705
+      },
+      {
+        "frame": 10,
+        "bounds": [
+          27,
+          23,
+          224,
+          233
+        ],
+        "nonempty_pixels": 26721
+      },
+      {
+        "frame": 11,
+        "bounds": [
+          35,
+          18,
+          215,
+          230
+        ],
+        "nonempty_pixels": 24506
+      },
+      {
+        "frame": 12,
+        "bounds": [
+          36,
+          38,
+          216,
+          216
+        ],
+        "nonempty_pixels": 23021
+      },
+      {
+        "frame": 13,
+        "bounds": [
+          54,
+          35,
+          213,
+          212
+        ],
+        "nonempty_pixels": 20722
+      },
+      {
+        "frame": 14,
+        "bounds": [
+          65,
+          46,
+          209,
+          202
+        ],
+        "nonempty_pixels": 14446
+      },
+      {
+        "frame": 15,
+        "bounds": [
+          66,
+          57,
+          205,
+          194
+        ],
+        "nonempty_pixels": 10485
+      }
+    ]
+  }
+]

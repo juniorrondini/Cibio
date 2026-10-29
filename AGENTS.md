@@ -91,3 +91,11 @@
 - Chefe prefere soco abaixo de1.2u; poder só acima de1.8u, antecipação850ms em quadros0–4, liberação5 e recuperação6 durante240ms. Recarga2.8s preservada. Soco dura.6s e contato.55/quadro3. Barra de vida própria aparece até8u.
 - Originais, prompts finais e importador em Generated12; fonte Fontes-Chefe-12.zip acompanha player. Usar image_gen integrado para nova arte; não desenhar sprites via código. Referência do usuário não distribuída.
 - -cibio-boss-review12 valida base/evolução/vila/chefe,128quadros nativos, combate e conclusão da missão, sem alterar save real.
+
+## Atualização 13
+- Menu usa Title_Vila13 (vila e personagem atuais); zoom/deslocamento suaves preservados. UI_Palma13 é o ícone exclusivo da tecla3/index5,256px; os outros ícones continuam no atlas09.
+- Vfx_PalmaFlight13 e Vfx_PalmaImpact13 usam4×4/16quadros de256px com margem>=16px,1024². RpgEffects.Paint reconhece Vfx_Palma como grade4×4. Não voltar a Vfx_Wisp06 no projétil amigável.
+- RpgProjectile mantém custo22, recarga1.8/1.1, velocidade8/11, dano1.35/1.8 e colisão varrida/impacto único. O porte visual cresce por forma; cabeça do sprite registrada junto ao ponto de colisão mais elevação visual. Inimigos conservam Vfx_Wisp06.
+- RpgPalmaImpact13 dura.5s e respeita pausa, usa bloom/camada29, atlas orgânico e saída suave. Impacto ocorre no alvo ou lado livre da parede; sem geometria de contorno e sem quadrado opaco antes de texturizar.
+- Originais, prompts finais e importador em Generated13; Fontes-Visual-13.zip distribuído com créditos. Imagens criadas com image_gen integrado; importador só recorta/dimensiona/insere margens.
+- -cibio-art-review13 verifica base/evolução/vila/chefe e Palma; captura menu/32quadros/12vistas. Preservar savev3, GUIDs e cena byte a byte. BuildUpdatedPlayer para compilar, sem migrar/recriar a cena.

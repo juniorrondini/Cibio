@@ -30,3 +30,5 @@ Versao 07: voo com arte original gerada com image_gen a partir das referencias d
 Versão 08: Morro do Eco, missão, comportamento dos batedores/capitão, Palma e Centelha Rubra usam código e composição Cibio, reutilizando os sprites LPC e os efeitos/sons creditados acima. Nenhuma imagem ou áudio de franquia foi adicionado.
 
 Versão12: Companheiro, chefe original inspirado na referência do usuário: terno, barba branca e estrela vermelha13. Cinco ciclos exclusivos,128 quadros em4 direções, criados com image_gen integrado. Originais, prompts completos e importador em ThirdParty/Generated12 e Fontes-Chefe-12.zip; derivados Cibio CC BY-SA4.0, com atribuições anteriores preservadas. Referência do usuário não distribuída. Seu Davi passa a se chamar Seu Bonero; arte anterior preservada.
+
+Versão13: tela inicial da vila e protagonista atuais; ícone próprio da Palma da Centelha; animações de projétil/impacto com16quadros cada, criados com image_gen integrado. Originais, prompts finais e importador em ThirdParty/Generated13 e Fontes-Visual-13.zip. Derivados Cibio CC BY-SA4.0; créditos anteriores preservados. Referências são imagens/sprites do próprio projeto.

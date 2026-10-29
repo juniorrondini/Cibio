@@ -1,0 +1,31 @@
+[
+  {
+    "key": "title",
+    "transparent": false,
+    "prompt": "Use case: stylized-concept. Asset type: main menu background for Cibio, a Brazilian top-down pixel-art action RPG. Create ORIGINAL key art that faithfully belongs to this actual game. Reference1 shows the playable village and reference2 its town square: use the SAME small colonial houses, ochre/plaster walls, terracotta tile roofs, irregular cobblestone paths mixed with grass, purple flowering ipe trees, fruit trees, small white/blue chapel, wooden market stall, well, benches and warm daylight. Reference3 is the player sprite identity: young brown-skinned Brazilian with thick dark brown curly hair, yellow Brazil football shirt with green collar, blue trousers and dark shoes. Draw this SAME recognizable hero full body in the RIGHT foreground, about three-heads-tall game proportions, viewed three-quarter from behind at an elevated top-down angle, looking along the village street. A restrained warm golden organic energy flickers around his open hand. Detailed controlled PIXEL ART, coherent miniature RPG scale and elevated orthographic perspective, professional carefully painted pixel clusters, not low-poly, no photorealism. Show the actual welcoming playable village at human scale, not a fantasy continent. Composition wide16:9, hero and key architecture in RIGHT60%; LEFT40% subdued dark green foliage and a quiet cobbled path kept low-contrast to receive title/buttons. Background image only: NO text, logo, captions, HUD or UI panels. No capes, swords, armor, bandages, giant ruins, floating islands, mountains or monumental cathedral. 1920x1080 or larger16:9.",
+    "path": "title-original.png",
+    "references": [
+      "vila11.png",
+      "largo11.png",
+      "Hero_idle.png"
+    ]
+  },
+  {
+    "key": "icon",
+    "transparent": true,
+    "prompt": "Use case: stylized-concept. Asset type: polished square ability icon for the \"Palma da Centelha\", key3 in a detailed Brazilian pixel-art RPG. Draw an anatomically clear medium-brown bare OPEN HAND with five fingers, palm outward in a strong energy-release gesture; the hand must be the dominant readable silhouette even at54px. Bright compact white-gold energy gathering just beyond the palm and flowing toward the upper right, with a few organic plasma tendrils and soft cool blue edging. No bandages, gloves, weapons, rings, runes, hexagons, stars, polygon outlines or detached fingers. Detailed painted PIXEL ART with crisp clusters, restrained outline and strong light-dark separation; professional inventory icon, centered with12% transparent margin. Genuine transparent background; no square frame, ground, lettering, number or UI. Only one hand and one compact connected energy plume, not a human figure. Square512x512.",
+    "path": "icon-original.png"
+  },
+  {
+    "key": "projectile",
+    "transparent": true,
+    "prompt": "Use case: stylized-concept. Asset type: production transparent organic energy VFX animation atlas for a polished top-down pixel-art action RPG. Genuine alpha background with smooth soft transparency in glow, NO opaque background or checkerboard drawn. EXACTLY4 columns x4 rows=16 isolated frames, sequential left-to-right then top-to-bottom. Equal square256px cells, all art contained inside its cell with at least20px transparent gutters. White-hot ivory core and pale gold edge with restrained near-white cool highlights; neutral enough for game tinting. Beautiful flowing plasma texture and hand-painted pixel detail, no solid circle, ring outline, geometric polygon, symbols, text, labels or grid. Strong central silhouette, luminous edges and wispy organic movement. No hands or character bodies. 1024x1024 sheet. A continuous LOOP of a compact powerful ENERGY PALM PROJECTILE, like a dense flame/plasma comet. In ALL16frames the projectile points UP/north, brightest irregular rounded FLAMEHEAD near x50%,y30%, tapered curling tail flowing DOWN toward y82%. Shape about130px wide x195px tall inside each cell. Each consecutive frame subtly changes flame tongues and wispy curls, while maintaining same core position/size and anchor. No birth or fading sequence, all frames fully active, consistent luminous density. This is the moving projectile body, not an explosion or a stretched beam.",
+    "path": "projectile-original.png"
+  },
+  {
+    "key": "impact",
+    "transparent": true,
+    "prompt": "Use case: stylized-concept. Asset type: production transparent organic energy VFX animation atlas for a polished top-down pixel-art action RPG. Genuine alpha background with smooth soft transparency in glow, NO opaque background or checkerboard drawn. EXACTLY4 columns x4 rows=16 isolated frames, sequential left-to-right then top-to-bottom. Equal square256px cells, all art contained inside its cell with at least20px transparent gutters. White-hot ivory core and pale gold edge with restrained near-white cool highlights; neutral enough for game tinting. Beautiful flowing plasma texture and hand-painted pixel detail, no solid circle, ring outline, geometric polygon, symbols, text, labels or grid. Strong central silhouette, luminous edges and wispy organic movement. No hands or character bodies. 1024x1024 sheet. A SINGLE NONLOOPING ENERGY PALM IMPACT EXPLOSION lasting16frames. Every frame centered same spot. Frames1-3 compact bright irregular ignition,4-7 branching organic flame petals and filament spray expand,8-11 scatter and break into glowing embers,12-16 fade to a few wispy sparks. Maximum extent210px inside each256px cell. No enclosing circular ring or solid disc: feathery asymmetric flame/plasma petals with clear transparent gaps. Never touch neighboring cells. This is an impact sprite, separate from the moving projectile.",
+    "path": "impact-original.png"
+  }
+]

@@ -1,0 +1,75 @@
+PASS Mapa64x72 mantem a vila anterior e expande norte/laterais
+PASS Quatorze inimigos, tres altares e seus componentes preservados
+PASS Seu Bonero mantem identidade do objeto e ancora da missao
+PASS Davi exclusivo, direcao0 quadro0
+PASS Davi exclusivo, direcao0 quadro1
+PASS Davi exclusivo, direcao0 quadro2
+PASS Davi exclusivo, direcao0 quadro3
+PASS Davi exclusivo, direcao0 quadro4
+PASS Davi exclusivo, direcao0 quadro5
+PASS Davi exclusivo, direcao0 quadro6
+PASS Davi exclusivo, direcao0 quadro7
+PASS Davi exclusivo, direcao1 quadro0
+PASS Davi exclusivo, direcao1 quadro1
+PASS Davi exclusivo, direcao1 quadro2
+PASS Davi exclusivo, direcao1 quadro3
+PASS Davi exclusivo, direcao1 quadro4
+PASS Davi exclusivo, direcao1 quadro5
+PASS Davi exclusivo, direcao1 quadro6
+PASS Davi exclusivo, direcao1 quadro7
+PASS Davi exclusivo, direcao2 quadro0
+PASS Davi exclusivo, direcao2 quadro1
+PASS Davi exclusivo, direcao2 quadro2
+PASS Davi exclusivo, direcao2 quadro3
+PASS Davi exclusivo, direcao2 quadro4
+PASS Davi exclusivo, direcao2 quadro5
+PASS Davi exclusivo, direcao2 quadro6
+PASS Davi exclusivo, direcao2 quadro7
+PASS Davi exclusivo, direcao3 quadro0
+PASS Davi exclusivo, direcao3 quadro1
+PASS Davi exclusivo, direcao3 quadro2
+PASS Davi exclusivo, direcao3 quadro3
+PASS Davi exclusivo, direcao3 quadro4
+PASS Davi exclusivo, direcao3 quadro5
+PASS Davi exclusivo, direcao3 quadro6
+PASS Davi exclusivo, direcao3 quadro7
+PASS NPC sem reutilizar ou tingir o sprite do jogador
+PASS Caminho terrestre acessivel para (0.00, 46.00)
+PASS Caminho terrestre acessivel para (29.00, 16.00)
+PASS Caminho terrestre acessivel para (-29.00, 29.00)
+PASS Caminho terrestre acessivel para (-20.00, 40.00)
+PASS Arte original integrada: House11_0
+PASS Arte original integrada: House11_1
+PASS Arte original integrada: House11_2
+PASS Arte original integrada: House11_3
+PASS Arte original integrada: Tree11_0
+PASS Arte original integrada: Tree11_1
+PASS Arte original integrada: Tree11_2
+PASS Arte original integrada: Shrub11
+PASS Arte original integrada: Stone11
+PASS Arte original integrada: Reed11
+PASS Arte original integrada: Pond11
+PASS Arte original integrada: Terrain_Grass11
+PASS Arte original integrada: Terrain_Earth11
+PASS Arte original integrada: Terrain_Stone11
+PASS Arte original integrada: Terrain_Damp11
+PASS Arte original integrada: Barrel11
+PASS Arte original integrada: Bench11
+PASS Arte original integrada: Lamp11
+PASS Arte original integrada: Stall11
+PASS Arte original integrada: Planter11
+PASS Arte original integrada: Well11
+PASS NPC tem colisao propria e espaco de aproximacao livre
+PASS Materiais de terreno e sombras suaves suportados
+PASS Lago novo usa colisao eliptica
+PASS Agua bloqueia centro e libera cantos externos da margem arredondada
+PASS Area de dialogo vazia nao bloqueia clique no mundo
+PASS Painel de dialogo ativo bloqueia soco por clique sobre o texto
+PASS NPC animado aceita missao e inicia gesto de conversa
+PASS Tres amplificadores e capitao continuam concluindo a missao
+PASS Entrega da missao e recompensa preservadas com nova arte
+PASS Conversa repetida nao duplica recompensa
+PASS Nova sessao restaura idle do NPC e encerra conversa anterior
+PASS Nova avenida admite sonic boom e velocidade60 sem obstaculo invisivel
+PASS Voo rapido respeita geometria e limites expandidos
+PASS Savev3 permanece compativel

@@ -52,6 +52,7 @@ namespace Cibio.RPG
    g.progress=JsonUtility.FromJson<RpgProgress>("{\"version\":3,\"level\":4,\"xp\":12,\"perks\":7,\"x\":1,\"y\":-3}");q.RefreshState();Check(g.progress.level==4&&g.progress.perks==7&&g.progress.questStage==0,"Savev3 anterior a missao continua compativel");
    Check(RpgGame.SaveKey=="Cibio.RPG.v3.Progress","Mesma chave de progresso");
   }
+  public void ValidateMechanics(string path){folder=path;Directory.CreateDirectory(folder);g=GetComponent<RpgGame>();Tests();}
   public IEnumerator Run(string path)
   {
    folder=path;Directory.CreateDirectory(folder);g=GetComponent<RpgGame>();yield return new WaitForSecondsRealtime(.8f);

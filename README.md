@@ -4,6 +4,20 @@
 
 RPG de ação em pixel art com câmera em perspectiva, exploração de um bairro brasileiro, combos, poderes e progressão. Projeto Unity editável, em fase de protótipo jogável para Windows.
 
+## Versão 13 — a vila na tela inicial e nova Palma
+
+![Tela inicial](docs/images/menu13.png)
+
+A abertura agora mostra o brasileiro de camiseta amarela e cabelo castanho encaracolado diante da própria vila: casas coloniais, capela, feira, poço, ipês e caminhos de pedra. A perspectiva e a paleta acompanham o jogo. O fundo conserva a animação suave e uma área livre para a leitura do menu.
+
+A **Palma da Centelha (tecla 3)** ganhou um ícone exclusivo com mão aberta e energia legível na barra. O projétil tem **16 quadros próprios**, com núcleo luminoso e cauda fluida; o impacto tem outros **16 quadros** de expansão e dissipação. O efeito cresce visualmente nas formas dourada e Ascendente, conservando o custo de 22, dano, velocidades 8/11 e recargas 1,8/1,1 s. A colisão continua no chão, com um único impacto; paredes também recebem o efeito. Os projéteis dos inimigos permanecem com sua própria arte.
+
+![Palma da Centelha](docs/images/palma13.png)
+
+[Animação](docs/images/palma13.gif) · [Ícone e descrição](docs/images/skill3-13.png) · [Impacto](docs/images/impacto13.png) · [Originais, sprites finais, prompts e importador](Assets/Cibio/RPG/ThirdParty/Generated13/README.md)
+
+Revisão: `Cibio.exe -cibio-art-review13 "Review13" -logFile "review13.log"`. Captura menu, 32 quadros e as quatro direções em três formas, preservando o save real.
+
 ## Versão 12 — Companheiro e Seu Bonero
 
 ![Companheiro no Morro do Eco](docs/images/companheiro12.png)
@@ -145,6 +159,10 @@ $project = (Get-Location).Path
 **BuildUpdatedPlayer preserva a cena existente.** Os métodos antigos Build/BuildPlayer recriam o mapa. Preserve `.meta` e GUIDs. Não versionar Library, Temp, Logs ou builds.
 
 ## Verificação
+
+**Versão13: 756 verificações passaram** — 382 da base, 75 da evolução, 75 da vila, 157 do chefe e 67 da atualização visual/Palma. Foram capturados 32 quadros dos efeitos e 12 vistas de disparo (quatro direções em três formas), além do menu e do ícone na interface. Dano, custo, recarga, impacto único, parede e pausa foram conferidos. A cena permaneceu byte a byte idêntica e os GUIDs anteriores foram preservados. Os quatro assets finais foram reproduzidos byte a byte com as fontes incluídas.
+
+
 
 **Versão12: 691 verificações passaram** — 382 da base, 75 da evolução, 75 da vila e 159 do chefe. Foram capturados os 128 quadros no player Windows, incluindo quatro direções dos cinco ciclos. Soco e projéteis tiveram dano e momento de contato conferidos; o projétil central causa 16 e encerra após o impacto. Missão, recompensa única e saves antigos também foram exercitados. Os 8040 blocos da cena anterior foram mantidos, sem remoções/adições de objetos, e os GUIDs existentes foram preservados. Os cinco atlas foram reproduzidos byte a byte com o importador e os originais incluídos. Relatórios em docs/verification.
 

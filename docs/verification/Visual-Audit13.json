@@ -1,0 +1,12 @@
+{
+  "checks": 756,
+  "visual_checks": 67,
+  "scene_byte_for_byte_unchanged": true,
+  "scene_sha256": "8d3d8089067bb9ddd47950110edaeb2915c9fb9eea1a328e12fe4c6744ff8c8a",
+  "existing_guids_unchanged": true,
+  "source_assets_reproduced_byte_for_byte": 4,
+  "vfx_frames": 32,
+  "forms_and_directions": 12,
+  "menu_animation_mean_pixel_difference": 18.34800545408422,
+  "save_key": "Cibio.RPG.v3.Progress"
+}
