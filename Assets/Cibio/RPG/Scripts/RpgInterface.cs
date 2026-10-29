@@ -1,144 +1,71 @@
+using System.Collections.Generic;
 using UnityEngine;
-
 namespace Cibio.RPG
 {
-    public sealed class RpgInterface:MonoBehaviour
-    {
-        RpgGame game;Font font;Texture2D gradient;Vector2 creditsScroll;bool help;int previousMode=-1;
-        readonly Color ink=new(.035f,.075f,.09f,.95f),muted=RpgArt.Hex("9AACAB"),gold=RpgArt.Hex("F7D18A"),mint=RpgArt.Hex("71DAC4");
-        void Awake(){game=GetComponent<RpgGame>();font=Resources.Load<Font>("RpgArt/PixelifySans");}
-        void Update(){if(Input.GetKeyDown(KeyCode.H))help=!help;}
-        public static bool PointerOverHud(){float y=Screen.height-Input.mousePosition.y;return y<100*Screen.height/810f||y>Screen.height-110*Screen.height/810f||Input.mousePosition.x>Screen.width*.78f;}
-        void OnGUI()
-        {
-            if(!game||!game.ready)return;GUI.matrix=Matrix4x4.Scale(new Vector3(Screen.width/1440f,Screen.height/810f,1));GUI.depth=-20;
-            if(previousMode!=game.mode){GUI.FocusControl(null);previousMode=game.mode;}
-            if(game.mode==0||game.mode==3){Menu();return;}
-            Hud();
-            if(game.mode==2&&!game.reviewPose)Pause();
-            if(help&&game.mode==1)Help();
-        }
-        GUIStyle TextStyle(int size,Color color,TextAnchor align=TextAnchor.UpperLeft)
-        {
-            return new GUIStyle(GUI.skin.label){font=font,fontSize=size,normal={textColor=QualitySettings.activeColorSpace==ColorSpace.Linear?color.gamma:color},alignment=align,richText=false,wordWrap=true,padding=new RectOffset(0,0,0,0)};
-        }
-        void Label(Rect r,string text,int size,Color color,TextAnchor anchor=TextAnchor.UpperLeft){GUI.Label(r,text,TextStyle(size,color,anchor));}
-        static void Fill(Rect r,Color color){var old=GUI.color;GUI.color=color;GUI.DrawTexture(r,Texture2D.whiteTexture);GUI.color=old;}
-        void Panel(Rect r,Color? border=null)
-        {
-            Fill(new Rect(r.x+4,r.y+5,r.width,r.height),new Color(0,0,0,.25f));Fill(r,border??new Color(.35f,.5f,.48f,.6f));Fill(new Rect(r.x+1,r.y+1,r.width-2,r.height-2),ink);
-        }
-        bool Button(Rect r,string text,bool primary=false,bool enabled=true)
-        {
-            bool over=r.Contains(Event.current.mousePosition);Color c=primary?gold:muted;
-            Fill(new Rect(r.x,r.y+4,r.width,r.height),new Color(0,0,0,.3f));Fill(r,enabled?c:new Color(.25f,.31f,.3f));
-            Fill(new Rect(r.x+2,r.y+2,r.width-4,r.height-4),primary?(over?RpgArt.Hex("FBE5AD"):gold):(over?RpgArt.Hex("23403E"):ink));
-            Label(r,text,primary?27:21,primary?RpgArt.Hex("22352D"):enabled?Color.white:muted,TextAnchor.MiddleCenter);
-            bool old=GUI.enabled;GUI.enabled=enabled;bool click=GUI.Button(r,"",GUIStyle.none);GUI.enabled=old;return click;
-        }
-        void Menu()
-        {
-            float t=Time.unscaledTime;var bg=RpgArt.Texture("Title_VilaDaAurora");float zoom=1.025f+Mathf.Sin(t*.13f)*.008f;
-            GUI.DrawTexture(new Rect(720-720*zoom+Mathf.Sin(t*.12f)*5,405-405*zoom,1440*zoom,810*zoom),bg,ScaleMode.ScaleAndCrop);
-            if(!gradient){gradient=new Texture2D(256,1);for(int x=0;x<256;x++){float a=Mathf.Pow(1-x/255f,2)*.61f;gradient.SetPixel(x,0,new Color(.01f,.045f,.07f,a));}gradient.Apply();}
-            GUI.DrawTexture(new Rect(0,0,1100,810),gradient);
-            for(int i=0;i<38;i++)
-            {
-                float x=(i*137.7f+Mathf.Sin(t*.17f+i)*34)%1440,y=810-((t*(10+i%5*3)+i*73)%840);
-                float a=.25f+.35f*Mathf.Sin(t*1.3f+i)*Mathf.Sin(t*1.3f+i);Fill(new Rect(x,y,i%4==0?3:2,i%4==0?5:2),new Color(1,.76f,.35f,a));
-            }
-            Fill(new Rect(0,0,1440,4),new Color(gold.r,gold.g,gold.b,.7f));
-            Label(new Rect(78,67,520,26),"UM RPG BRASILEIRO",18,mint);
-            Label(new Rect(74,141,650,135),"CIBIO",118,gold);
-            Fill(new Rect(82,285,56,3),gold);
-            Label(new Rect(82,310,560,70),"O BRASIL VIROU\nUMA VUVUZELA",26,Color.white);
-            Label(new Rect(82,396,475,44),"Encontre sua centelha. Recupere sua voz.",18,RpgArt.Hex("BCCAC2"));
-            float pulse=.7f+Mathf.Sin(t*2)*.2f;Fill(new Rect(78,458,418,68),new Color(1,.75f,.3f,pulse*.25f));
-            if(Button(new Rect(82,462,410,60),"JOGAR   >",true))game.StartGame(!game.HasSave?false:true);
-            if(Button(new Rect(82,538,196,47),"Novo jogo"))game.StartGame(false);
-            if(Button(new Rect(294,538,198,47),"Créditos"))game.mode=3;
-            Label(new Rect(82,613,430,66),"Explore a vila. Desperte poderes.\nEnfrente os cobradores da Vuvuzela.",18,muted);
-            Label(new Rect(80,763,650,24),"PIXEL RPG  /  VILA DA CENTELHA  /  PROTÓTIPO 08",14,RpgArt.Hex("AAC1B6"));
-            Label(new Rect(1120,763,242,24),game.HasSave?"PROGRESSO SALVO  •  JOGAR CONTINUA":"SUA JORNADA COMEÇA AQUI",12,gold,TextAnchor.MiddleRight);
-            if(game.mode==3)Credits();
-        }
-        void Credits()
-        {
-            Fill(new Rect(0,0,1440,810),new Color(0,.025f,.03f,.78f));Panel(new Rect(230,80,980,650),gold);
-            Label(new Rect(270,108,800,45),"QUEM DEU VIDA À VILA",29,gold);
-            var text=Resources.Load<TextAsset>("RpgCredits").text;
-            creditsScroll=GUI.BeginScrollView(new Rect(270,171,900,440),creditsScroll,new Rect(0,0,860,TextStyle(19,Color.white).CalcHeight(new GUIContent(text),850)+20));
-            Label(new Rect(0,0,850,1400),text,19,RpgArt.Hex("C8D8CF"));GUI.EndScrollView();
-            if(Button(new Rect(270,649,210,46),"Voltar"))game.mode=0;
-            if(Button(new Rect(760,649,410,46),"Fontes e licenças"))Application.OpenURL(new System.Uri(System.IO.Path.Combine(Application.streamingAssetsPath,"Cibio-Licenses","FONTES-E-LICENCAS.txt")).AbsoluteUri);
-        }
-        void Hud()
-        {
-            var h=game.world.hero;var p=game.progress;
-            Fill(new Rect(0,0,1440,96),new Color(.025f,.06f,.075f,.94f));Fill(new Rect(0,95,1440,1),new Color(.47f,.64f,.53f,.4f));
-            Panel(new Rect(22,15,60,65),gold);var avatar=RpgArt.Texture(h.buff>0?"HeroAwakened_idle":"Hero_idle");GUI.DrawTextureWithTexCoords(new Rect(19,9,68,68),avatar,new Rect(0,.25f,.5f,.25f));
-            Label(new Rect(100,13,300,27),"BRASILEIRO",19,gold);Label(new Rect(355,14,95,25),"NV "+p.level.ToString("D2"),18,mint);
-            Bar(new Rect(100,43,326,13),h.health/h.MaxHealth,RpgArt.Hex("D66C61"));Label(new Rect(440,39,110,20),Mathf.CeilToInt(h.health)+" / "+h.MaxHealth,13,Color.white);
-            Bar(new Rect(100,65,326,9),h.energy/100,mint);Label(new Rect(440,60,110,20),"ENERGIA "+(int)h.energy,12,mint);
-            Label(new Rect(600,18,360,26),game.world.hero.Position.y>18?"MORRO DO ECO":"VILA DA CENTELHA",20,RpgArt.Hex("D5DCC5"),TextAnchor.MiddleCenter);
-            Label(new Rect(600,48,360,22),"EXP "+p.xp+" / "+p.NextLevel,12,muted,TextAnchor.MiddleCenter);Bar(new Rect(657,77,246,3),(float)p.xp/p.NextLevel,gold);
-            Label(new Rect(1120,20,290,20),"[M] SOM  •  [H] AJUDA  •  [ESC] MENU",13,muted,TextAnchor.MiddleRight);
-            Label(new Rect(1120,51,290,20),"PODERES "+Count(p.perks)+" / 3   •   VITÓRIAS "+p.defeated,13,gold,TextAnchor.MiddleRight);
-            Panel(new Rect(1148,116,270,198));Label(new Rect(1170,133,232,24),"ALTARES DA CENTELHA",17,gold);
-            string[] names={"Voo da Centelha","Coração Canarinho","Grito da Liberdade"};Color[] colors={mint,gold,RpgArt.Hex("BBA2F1")};
-            for(int i=0;i<3;i++){Label(new Rect(1170,173+i*39,220,21),(p.Has(i)?"+  ":"·  ")+names[i],17,p.Has(i)?colors[i]:muted);Label(new Rect(1190,194+i*39,200,15),p.Has(i)?"DESPERTO":"ENCONTRE O ALTAR",10,p.Has(i)?colors[i]:muted);}
-            Map(new Rect(1180,331,238,156));
-            Panel(new Rect(14,608,325,141));Label(new Rect(24,621,300,20),"A VOZ DO MORRO",16,gold);
-            Label(new Rect(24,650,300,91),game.GetComponent<RpgQuest08>().Objective,15,RpgArt.Hex("D0DACD"));
-            string[] keys={"J","1","C","2","3"};string[] titles={"COMBO","VOAR / POUSAR","TRANSFORMAR","LIBERDADE","PALMA"};
-            for(int i=0;i<5;i++)
-            {
-                Rect r=new(442+i*137,689,124,75);bool unlocked=i==0||i==2||(i==4?p.questStage==3:p.Has(i==1?0:2));Color c=i==2?gold:i==3?RpgArt.Hex("BBA2F1"):mint;
-                Panel(r,unlocked?c:new Color(.26f,.35f,.34f));Label(new Rect(r.x+12,r.y+6,30,28),keys[i],24,unlocked?c:muted);Label(new Rect(r.x+8,r.y+48,110,18),titles[i],11,unlocked?Color.white:muted,TextAnchor.MiddleCenter);
-                float cd=i==1?game.dashCooldown:i==3?game.waveCooldown:i==4?game.boltCooldown:0;
-                Label(new Rect(r.x+50,r.y+8,63,25),!unlocked?"SELADO":i==1&&h.flying?"NO AR":cd>0?cd.ToString("0.0"):i==2?h.buff>0?((int)h.buff)+"s":"SEGURE":"PRONTO",11,unlocked?c:muted,TextAnchor.MiddleRight);
-                if(GUI.Button(r,"",GUIStyle.none)&&game.Playing){if(i==0)h.Attack();if(i==1)game.Dash();if(i==2)game.Notify("Segure [C] para carregar; solte com a carga completa para transformar.");if(i==3)game.Wave();if(i==4)game.Bolt();}
-            }
-            Fill(new Rect(400,775,642,29),ink);Label(new Rect(422,781,600,19),h.flying?"WASD mover  •  SHIFT impulso  •  CTRL freio  •  ESPAÇO pousar":"WASD mover  •  SHIFT correr  •  ESPAÇO saltar  •  E interagir",12,muted,TextAnchor.MiddleCenter);
-            var shrine=game.world.NearestShrine(h.Position);
-            if(shrine&&game.Playing){Panel(new Rect(451,600,538,66),shrine.color);Label(new Rect(467,611,506,22),"[E]  "+shrine.title.ToUpper(),18,shrine.color,TextAnchor.MiddleCenter);Label(new Rect(467,639,506,18),p.Has(shrine.id)?"PODER JÁ DESPERTO":shrine.description,13,muted,TextAnchor.MiddleCenter);}
-            if(h.charging){Panel(new Rect(522,537,396,49),gold);Label(new Rect(538,544,365,18),h.charge>=99?"CARGA COMPLETA  •  SOLTE [C]":"CANALIZANDO ENERGIA   "+(int)h.charge+"%",14,gold,TextAnchor.MiddleCenter);Bar(new Rect(540,570,360,5),h.charge/100,gold);}
-            else if(h.buff>0)Label(new Rect(510,530,420,30),(h.FormStage==2?"CENTELHA RUBRA • ESTÁGIO 2 • ":"AURA CANARINHA • ESTÁGIO 1 • ")+Mathf.CeilToInt(h.buff)+"s",19,h.FormStage==2?RpgArt.Hex("FF7186"):gold,TextAnchor.MiddleCenter);
-            foreach(var e in game.world.enemies)if(!e.dead&&Vector2.Distance(h.Position,e.Position)<6){Vector2 v=Project(e.Position+Vector2.up*1.7f);Bar(new Rect(v.x-25,v.y,50,4),e.health/e.MaxHealth,RpgArt.Hex("D97178"));Label(new Rect(v.x-90,v.y-23,180,20),e.EnemyName,11,e.enemyKind==1?gold:e.enemyKind==2?mint:Color.white,TextAnchor.MiddleCenter);}
-            var quest=game.GetComponent<RpgQuest08>();if(quest.giver&&Vector2.Distance(h.Position,quest.giver.position)<6){var q=Project((Vector2)quest.giver.position+Vector2.up*1.9f);Label(new Rect(q.x-110,q.y-20,220,40),"SEU DAVI  •  [E] MISSÃO",15,gold,TextAnchor.MiddleCenter);}
-            foreach(var n in quest.nodes)if(Vector2.Distance(h.Position,n.transform.position)<6){var q=Project((Vector2)n.transform.position+Vector2.up*2.2f);Label(new Rect(q.x-120,q.y-20,240,42),(p.silenced&(1<<n.id))==0?"[E] AMPLIFICADOR "+(n.id+1):"SILENCIADO",14,mint,TextAnchor.MiddleCenter);}
-            foreach(var f in game.floating){float age=Time.unscaledTime-f.born;Vector2 v=Project(f.p+Vector2.up*age*.5f);var c=f.color;c.a=1-age/1.15f;Label(new Rect(v.x-40,v.y-15,80,34),f.text,23,c,TextAnchor.MiddleCenter);}
-            if(Time.unscaledTime<game.messageUntil){Panel(new Rect(350,112,740,77),new Color(gold.r,gold.g,gold.b,.7f));Label(new Rect(366,124,708,60),game.message,17,gold,TextAnchor.MiddleCenter);}
-            if(h.dead){Fill(new Rect(0,0,1440,810),new Color(.1f,.01f,.02f,.65f));Label(new Rect(420,310,600,90),"SUA VOZ AINDA ECOA",34,gold,TextAnchor.MiddleCenter);if(Button(new Rect(510,422,420,60),"[R] VOLTAR À PRAÇA",true))game.Revive();}
-        }
-        Vector2 Project(Vector2 p){var v=game.lens.WorldToScreenPoint(p);return new Vector2(v.x/Screen.width*1440,(1-v.y/Screen.height)*810);}
-        void Bar(Rect r,float value,Color color){Fill(r,new Color(0,0,0,.6f));Fill(new Rect(r.x+1,r.y+1,(r.width-2)*Mathf.Clamp01(value),r.height-2),color);}
-        int Count(int bits){int c=0;for(int i=0;i<3;i++)if((bits&(1<<i))!=0)c++;return c;}
-        void Map(Rect r)
-        {
-            Panel(r);Label(new Rect(r.x+11,r.y+8,220,20),"ARREDORES",12,muted);
-            Rect m=new(r.x+11,r.y+34,r.width-22,r.height-45);Fill(m,RpgArt.Hex("1F3832"));
-            var bounds=game.world.bounds;Vector2 Point(Vector2 p)=>new(m.x+(p.x-bounds.xMin)/bounds.width*m.width,m.y+(bounds.yMax-p.y)/bounds.height*m.height);
-            foreach(var b in game.world.obstacles){Vector2 v=Point(new Vector2(b.x,b.y+b.height));Fill(new Rect(v.x,v.y,b.width/bounds.width*m.width,b.height/bounds.height*m.height),RpgArt.Hex("52614A"));}
-            foreach(var solid in game.world.solids)if(solid&&solid.enabled){var b=solid.Bounds;Vector2 v=Point(new Vector2(b.x,b.y+b.height));Fill(new Rect(v.x,v.y,b.width/bounds.width*m.width,b.height/bounds.height*m.height),RpgArt.Hex("52614A"));}
-            foreach(var s in game.world.shrines){var v=Point(s.transform.position);Fill(new Rect(v.x-2,v.y-2,5,5),s.color);}
-            var quest=game.GetComponent<RpgQuest08>();if(quest.giver){var q=Point(quest.giver.position);Fill(new Rect(q.x-2,q.y-2,5,5),gold);}foreach(var n in quest.nodes){var q=Point(n.transform.position);Fill(new Rect(q.x-2,q.y-2,4,4),(game.progress.silenced&(1<<n.id))==0?RpgArt.Hex("FF7186"):mint);}
-            var h=Point(game.world.hero.Position);Fill(new Rect(h.x-2,h.y-2,5,5),Color.white);
-        }
-        void Pause()
-        {
-            Fill(new Rect(0,0,1440,810),new Color(0,.02f,.03f,.78f));Panel(new Rect(485,220,470,390),gold);Label(new Rect(520,253,400,52),"RESPIRE UM POUCO",29,gold,TextAnchor.MiddleCenter);
-            if(Button(new Rect(535,343,370,60),"CONTINUAR",true))game.mode=1;
-            if(Button(new Rect(535,425,370,48),"Controles"))help=!help;
-            if(Button(new Rect(535,496,370,48),"Salvar e voltar ao início")){game.Save();game.mode=0;}
-            if(help)Help();
-        }
-        void Help()
-        {
-            Panel(new Rect(290,130,890,570),gold);Label(new Rect(330,160,820,44),"ENCONTRE SUA CENTELHA",28,gold);
-            Label(new Rect(330,230,820,370),"WASD / setas     Explorar a vila\nShift                   Correr\nEspaço               Saltar\nJ / clique            Atacar\nE                         Despertar um altar próximo\n1                         Voo: decolar / pousar; Shift impulso, Ctrl freio\n2                         Grito da Liberdade (40 de energia)\n3                         Palma da Centelha (22, após missão)\nC                         Segurar para carregar; soltar para transformar\nEsc                     Pausar e salvar",21,Color.white);
-            if(Button(new Rect(830,636,280,44),"Entendi [H]"))help=false;
-        }
-    }
+ public sealed class RpgInterface:MonoBehaviour
+ {
+  static RpgInterface instance;RpgGame game;Font regular,semibold;Texture2D circle,gradient;Vector2 creditsScroll;bool help,questOpen=true;int previousMode=-1;
+  readonly Dictionary<int,GUIStyle> styles=new();readonly Color paper=new(.91f,.93f,.95f),muted=new(.72f,.76f,.79f),ink=new(.055f,.068f,.082f,.89f),line=new(.22f,.25f,.28f,.82f),gold=new(.87f,.72f,.43f),blue=new(.61f,.83f,1),teal=new(.43f,.72f,.68f);
+  public static Rect SkillBounds(int slot)=>new(529+slot*78,704,64,64);
+  static Vector2 Pointer=>new(Input.mousePosition.x/Screen.width*1440,(1-Input.mousePosition.y/Screen.height)*810);
+  public static bool ChargeButtonHeld()=>instance&&instance.game.Playing&&Input.GetMouseButton(0)&&SkillBounds(2).Contains(Pointer);
+  public static bool PointerOverHud()=>instance&&(new Rect(12,12,326,146).Contains(Pointer)||(new Rect(1232,20,188,150).Contains(Pointer)||new Rect(1150,187,270,instance.questOpen?112:35).Contains(Pointer))||new Rect(515,685,410,110).Contains(Pointer)||instance.help);
+  public int SkillCount=>5;int reviewSkill=-1;
+  public void ReviewSkill(int slot){if(game.reviewRun)reviewSkill=slot;}
+  public void ReviewHelp(bool visible){if(game.reviewRun)help=visible;}
+  void Awake(){instance=this;game=GetComponent<RpgGame>();regular=Resources.Load<Font>("RpgArt/UI09-Regular");semibold=Resources.Load<Font>("RpgArt/UI09-Semibold");if(!regular)regular=Resources.Load<Font>("RpgArt/PixelifySans");if(!semibold)semibold=regular;circle=new Texture2D(32,32,TextureFormat.RGBA32,false);for(int y=0;y<32;y++)for(int x=0;x<32;x++)circle.SetPixel(x,y,new Color(1,1,1,Mathf.Clamp01(16-Vector2.Distance(new Vector2(x+.5f,y+.5f),new Vector2(16,16)))));circle.Apply();}
+  void Update(){if(Input.GetKeyDown(KeyCode.H))help=!help;}
+  void OnGUI(){if(!game||!game.ready)return;GUI.matrix=Matrix4x4.Scale(new Vector3(Screen.width/1440f,Screen.height/810f,1));GUI.depth=-20;if(previousMode!=game.mode){GUI.FocusControl(null);previousMode=game.mode;}if(game.mode==0||game.mode==3){Menu();return;}Hud();if(game.mode==2&&!game.reviewPose)Pause();if(help)Help();}
+  GUIStyle Style(int size,Color color,bool bold=false,TextAnchor anchor=TextAnchor.UpperLeft){int key=size*32+(bold?16:0)+(int)anchor;if(!styles.TryGetValue(key,out var s)){s=new GUIStyle(GUI.skin.label){font=bold?semibold:regular,fontSize=size,wordWrap=true,alignment=anchor,padding=new RectOffset(0,0,0,0),richText=false};styles[key]=s;}s.normal.textColor=color;return s;}
+  void Text(Rect r,string value,int size,Color color,bool bold=false,TextAnchor anchor=TextAnchor.UpperLeft)=>GUI.Label(r,value,Style(size,color,bold,anchor));
+  static void Fill(Rect r,Color color){var old=GUI.color;GUI.color=color;GUI.DrawTexture(r,Texture2D.whiteTexture);GUI.color=old;}
+  void Round(Rect r,Color color,float radius=6){radius=Mathf.Min(radius,Mathf.Min(r.width,r.height)/2);Fill(new Rect(r.x+radius,r.y,r.width-2*radius,r.height),color);Fill(new Rect(r.x,r.y+radius,r.width,r.height-2*radius),color);var old=GUI.color;GUI.color=color;GUI.DrawTextureWithTexCoords(new Rect(r.x,r.y,radius,radius),circle,new Rect(0,.5f,.5f,.5f));GUI.DrawTextureWithTexCoords(new Rect(r.xMax-radius,r.y,radius,radius),circle,new Rect(.5f,.5f,.5f,.5f));GUI.DrawTextureWithTexCoords(new Rect(r.x,r.yMax-radius,radius,radius),circle,new Rect(0,0,.5f,.5f));GUI.DrawTextureWithTexCoords(new Rect(r.xMax-radius,r.yMax-radius,radius,radius),circle,new Rect(.5f,0,.5f,.5f));GUI.color=old;}
+  void Card(Rect r,float opacity=1){Round(new Rect(r.x,r.y+2,r.width,r.height),new Color(0,0,0,.18f*opacity),7);var b=line;b.a*=opacity;Round(r,b,7);var c=ink;c.a*=opacity;Round(new Rect(r.x+1,r.y+1,r.width-2,r.height-2),c,6);}
+  void Bar(Rect r,float value,Color color){if(r.height<=3){Fill(r,new Color(0,0,0,.4f));Fill(new Rect(r.x,r.y,r.width*Mathf.Clamp01(value),r.height),color);return;}Round(r,new Color(0,0,0,.40f),r.height/2);float width=(r.width-2)*Mathf.Clamp01(value);if(width>1)Round(new Rect(r.x+1,r.y+1,width,r.height-2),color,(r.height-2)/2);}
+  bool Button(Rect r,string label,bool primary=false){bool hover=r.Contains(Event.current.mousePosition);Round(r,primary?(hover?Color.white:paper):(hover?new Color(.18f,.22f,.25f,.98f):new Color(.1f,.13f,.16f,.92f)),6);Text(r,label,15,primary?ink:paper,true,TextAnchor.MiddleCenter);return GUI.Button(r,"",GUIStyle.none);}
+  void Icon(Rect r,int index,float alpha=1){var t=RpgArt.Texture("UI_Skills09");if(!t)return;var old=GUI.color;GUI.color=new Color(1,1,1,alpha);GUI.DrawTextureWithTexCoords(r,t,new Rect((index%4)/4f,(1-index/4)/2f,.25f,.5f));GUI.color=old;}
+  void Menu()
+  {
+   var bg=RpgArt.Texture("Title_VilaDaAurora");float t=Time.unscaledTime,z=1.018f+Mathf.Sin(t*.11f)*.006f;GUI.DrawTexture(new Rect(720-720*z+Mathf.Sin(t*.1f)*4,405-405*z,1440*z,810*z),bg,ScaleMode.ScaleAndCrop);if(!gradient){gradient=new Texture2D(256,1);for(int x=0;x<256;x++)gradient.SetPixel(x,0,new Color(.025f,.04f,.055f,Mathf.Pow(1-x/255f,1.6f)*.94f));gradient.Apply();}GUI.DrawTexture(new Rect(0,0,1300,810),gradient);
+   Text(new Rect(84,156,360,22),"VILA DA CENTELHA",12,muted,true);Text(new Rect(80,191,500,92),"CIBIO",76,paper,true);Text(new Rect(84,305,460,72),"O Brasil virou uma vuvuzela.",26,paper,true);Text(new Rect(85,393,390,54),"Explore a vila, encontre sua centelha\ne recupere a voz do Morro do Eco.",16,new Color(.72f,.76f,.77f));if(Button(new Rect(84,496,292,52),game.HasSave?"Continuar jornada":"Jogar",true))game.StartGame(game.HasSave);if(Button(new Rect(84,560,140,42),"Novo jogo"))game.StartGame(false);if(Button(new Rect(236,560,140,42),"Créditos"))game.mode=3;Text(new Rect(84,748,540,24),"Cibio  /  RPG em desenvolvimento  /  09",12,muted);Text(new Rect(1110,748,250,24),"Teclado e mouse",12,muted,false,TextAnchor.MiddleRight);if(game.mode==3)Credits();
+  }
+  void Hud()
+  {
+   var h=game.world.hero;var p=game.progress;var accent=h.FormStage==2?blue:h.FormStage==1?gold:teal;Card(new Rect(20,20,306,96));Round(new Rect(30,32,64,68),new Color(.08f,.1f,.12f,.7f),5);var portrait=RpgArt.Texture((h.FormStage==2?"HeroAscendant":h.FormStage==1?"HeroAwakened":"Hero")+"_idle");GUI.DrawTextureWithTexCoords(new Rect(30,32,64,64),portrait,h.FormStage==2?new Rect(.07f,.25f,.36f,.17f):new Rect(0,.25f,.5f,.25f));Text(new Rect(103,29,150,24),"Brasileiro",15,paper,true);Text(new Rect(258,30,54,22),"Nv. "+p.level,12,muted,true,TextAnchor.MiddleRight);Text(new Rect(104,52,70,16),"Vida",10,muted);Text(new Rect(236,52,76,16),Mathf.CeilToInt(h.health)+" / "+h.MaxHealth,10,paper,false,TextAnchor.UpperRight);Bar(new Rect(103,69,208,7),h.health/h.MaxHealth,new Color(.82f,.38f,.31f));Text(new Rect(104,82,90,15),"Energia",10,muted);Text(new Rect(265,82,47,15),Mathf.CeilToInt(h.energy).ToString(),10,paper,false,TextAnchor.UpperRight);Bar(new Rect(103,100,208,4),h.energy/100,teal);
+   if(h.FormStage>0){Text(new Rect(24,124,245,22),h.FormStage==2?"Forma Ascendente":"Aura Canarinha",12,accent,true);Text(new Rect(270,124,50,22),Mathf.CeilToInt(h.buff)+" s",12,accent,false,TextAnchor.UpperRight);Bar(new Rect(24,149,298,3),h.buff/(h.FormStage==2?16:p.Has(1)?24:16),accent);}
+   Text(new Rect(490,23,460,28),h.Position.y>18?"Morro do Eco":"Vila da Centelha",19,paper,true,TextAnchor.MiddleCenter);Round(new Rect(635,54,170,24),new Color(.025f,.04f,.055f,.72f),5);Text(new Rect(610,56,220,17),p.xp+" / "+p.NextLevel+" XP",10,muted,false,TextAnchor.MiddleCenter);Bar(new Rect(650,79,140,2),p.xp/(float)p.NextLevel,new Color(.65f,.68f,.7f));Map(new Rect(1232,20,188,150));Quest(new Rect(1150,187,270,questOpen?112:35));
+   if(h.flying){Card(new Rect(24,177,210,58));Text(new Rect(35,187,115,17),h.SonicActive?"SUPERSÔNICO":"Voo",11,h.SonicActive?blue:paper,true);Text(new Rect(155,187,65,18),h.velocity.magnitude.ToString("F1")+" u/s",11,paper,false,TextAnchor.UpperRight);Bar(new Rect(35,214,187,3),h.FormStage==2?h.SonicDistance/18:h.energy/100,h.SonicActive?blue:teal);}
+   int hovered=-1;for(int i=0;i<5;i++){Skill(i);if(SkillBounds(i).Contains(Event.current.mousePosition))hovered=i;}if(game.reviewRun&&reviewSkill>=0)hovered=reviewSkill;if(hovered>=0)Tooltip(hovered);Text(new Rect(22,778,290,18),"H  Controles     Esc  Menu",11,muted);if(h.flying)Text(new Rect(492,787,464,16),"Shift  Impulso     Ctrl  Freio     Espaço  Pousar",10,muted,false,TextAnchor.MiddleCenter);Context();
+   foreach(var e in game.world.enemies)if(!e.dead&&Vector2.Distance(h.Position,e.Position)<6){var q=Project(e.Position+Vector2.up*1.8f);Text(new Rect(q.x-92,q.y-26,184,20),e.EnemyName,11,e.enemyKind==4?new Color(.95f,.66f,.64f):paper,true,TextAnchor.MiddleCenter);Bar(new Rect(q.x-27,q.y,54,4),e.health/e.MaxHealth,new Color(.8f,.39f,.36f));}foreach(var f in game.floating){float age=Time.unscaledTime-f.born;var q=Project(f.p+Vector2.up*age*.5f);var c=f.color;c.a=Mathf.Clamp01(1-age/1.15f);Text(new Rect(q.x-45,q.y-22,90,34),f.text,20,c,true,TextAnchor.MiddleCenter);}
+   if(Time.unscaledTime<game.messageUntil){Card(new Rect(440,112,560,66),.95f);Text(new Rect(459,125,522,43),game.message,13,paper,false,TextAnchor.MiddleCenter);}if(h.charging){Card(new Rect(548,603,344,54));Text(new Rect(564,614,312,20),h.charge>=99?"Carga completa ÂÂ· solte C":"Canalizando  "+Mathf.FloorToInt(h.charge)+"%",12,gold,true,TextAnchor.MiddleCenter);Bar(new Rect(567,642,306,3),h.charge/100,gold);}if(h.dead){Fill(new Rect(0,0,1440,810),new Color(.03f,.04f,.06f,.74f));Text(new Rect(470,300,500,60),"Sua voz ainda ecoa",32,paper,true,TextAnchor.MiddleCenter);if(Button(new Rect(574,391,292,50),"R  Voltar à praça",true))game.Revive();}
+  }
+  int SkillIcon(int i)=>i==0?0:i==1?1:i==2?(game.world.hero.FormStage>0?3:2):i==3?4:5;
+  string SkillName(int i)=>i==0?"Soco":i==1?"Voo":i==2?(game.world.hero.FormStage==1?"Evoluir":"Aura"):i==3?"Onda":"Palma";
+  bool Unlocked(int i)=>i==0||i==2||(i==1?game.progress.Has(0):i==3?game.progress.Has(2):game.progress.questStage==3);
+  float Cost(int i)=>i==1?12:i==2&&game.world.hero.FormStage==1?25:i==3?40:i==4?22:0;
+  void Skill(int i)
+  {
+   var h=game.world.hero;Rect r=SkillBounds(i);bool unlock=Unlocked(i),active=i==1&&h.flying||i==2&&h.FormStage>0;float cd=i==1?game.dashCooldown:i==2?h.transforming:i==3?game.waveCooldown:i==4?game.boltCooldown:0;var color=active?(i==2&&h.FormStage==1?gold:blue):line;Round(new Rect(r.x-1,r.y-1,r.width+2,r.height+2),color,7);Round(r,new Color(.05f,.065f,.08f,.96f),6);Icon(new Rect(r.x+5,r.y+4,54,54),SkillIcon(i),unlock&&h.energy>=Cost(i)?1:.30f);
+   if(cd>0){float max=i==1?.35f:i==2?h.TransformationDuration:i==3?(h.FormStage>0?4:5):h.FormStage==2?1.1f:1.8f;Fill(new Rect(r.x+3,r.y+3,r.width-6,(r.height-6)*Mathf.Clamp01(cd/max)),new Color(.015f,.02f,.03f,.76f));Text(r,cd.ToString("F1"),19,paper,true,TextAnchor.MiddleCenter);}Round(new Rect(r.x-4,r.y-6,22,20),new Color(.13f,.16f,.19f,.98f),3);Text(new Rect(r.x-4,r.y-6,22,20),new[]{"J","1","C","2","3"}[i],11,paper,true,TextAnchor.MiddleCenter);Text(new Rect(r.x-9,r.yMax+7,r.width+18,17),SkillName(i),10,unlock?paper:muted,false,TextAnchor.MiddleCenter);if(active)Fill(new Rect(r.x+13,r.yMax-4,r.width-26,2),color);if(!unlock)Text(new Rect(r.x+19,r.y+41,40,17),"—",14,muted,true,TextAnchor.MiddleCenter);
+   if(i!=2&&GUI.Button(r,"",GUIStyle.none)&&game.Playing){if(i==0)h.Attack();if(i==1)game.ToggleFlight();if(i==3)game.Wave();if(i==4)game.Bolt();}
+  }
+  void Tooltip(int i)
+  {
+   var h=game.world.hero;Rect r=new(SkillBounds(i).center.x-157,536,314,142);Card(r);Icon(new Rect(r.x+14,r.y+14,38,38),SkillIcon(i));Text(new Rect(r.x+64,r.y+14,234,23),SkillName(i),16,paper,true);Text(new Rect(r.x+64,r.y+39,232,17),Cost(i)>0?Cost(i)+" de energia":"Sem custo inicial",11,teal);string[] descriptions={"Pressione J ou clique para atacar. Um novo comando no fim do golpe encadeia o combo.","1 decola ou pousa. Shift acelera; Ctrl freia. No estágio 2, percorra 18 unidades em impulso para romper a barreira sônica.",h.FormStage==0?"Segure C até completar a carga e solte para transformar.":h.FormStage==1?"Pressione C novamente para entrar na Forma Ascendente. Ativa também durante o voo.":"A Forma Ascendente está ativa. A aura se encerra quando o tempo acabar.","Uma onda de energia empurra os inimigos ao redor. Mais alcance e impacto durante a transformação.","Lança energia na direção em que você está voltado. Conclua a missão de Seu Davi para aprender."};Text(new Rect(r.x+15,r.y+67,284,64),Unlocked(i)?descriptions[i]:i==4?"Conclua a missão de Seu Davi para desbloquear esta habilidade.":"Aprenda esta habilidade no altar correspondente.",12,muted);
+  }
+  void Quest(Rect r)
+  {
+   var p=game.progress;Card(r,.86f);Icon(new Rect(r.x+10,r.y+7,22,22),7);Text(new Rect(r.x+40,r.y+9,r.width-72,22),"A voz do Morro",12,paper,true);Text(new Rect(r.xMax-25,r.y+8,18,22),questOpen?"−":"+",15,muted,false,TextAnchor.MiddleCenter);if(GUI.Button(new Rect(r.x,r.y,r.width,34),"",GUIStyle.none))questOpen=!questOpen;if(!questOpen)return;string objective=p.questStage==0?"Fale com Seu Davi, ao sul da praça.":p.questStage==1?"Silencie os amplificadores no Morro do Eco.":p.questStage==2?"Volte a Seu Davi para a recompensa.":"Missão concluída. A vila recuperou a voz.";Text(new Rect(r.x+14,r.y+39,r.width-28,38),objective,12,muted);if(p.questStage==1)Text(new Rect(r.x+14,r.y+86,r.width-28,18),game.GetComponent<RpgQuest08>().SilencedCount+"/3 amplificadores   ÂÂ·   Capitão "+(p.captainDefeated?"vencido":"ativo"),10,teal);else Text(new Rect(r.x+14,r.y+86,r.width-28,18),p.questStage==3?"Palma da Centelha desbloqueada":"E  Interagir",10,p.questStage==3?teal:gold);
+  }
+  void Map(Rect r)
+  {
+   Card(r,.90f);Text(new Rect(r.x+11,r.y+8,r.width-22,18),"Arredores",10,muted);Rect m=new(r.x+10,r.y+32,r.width-20,r.height-42);Round(m,new Color(.10f,.16f,.15f),3);var b=game.world.bounds;Vector2 Point(Vector2 p)=>new(m.x+(p.x-b.xMin)/b.width*m.width,m.y+(b.yMax-p.y)/b.height*m.height);foreach(var solid in game.world.solids)if(solid&&solid.enabled){var s=solid.Bounds;var q=Point(new Vector2(s.x,s.yMax));Fill(new Rect(q.x,q.y,s.width/b.width*m.width,s.height/b.height*m.height),new Color(.29f,.34f,.29f));}foreach(var shrine in game.world.shrines){var q=Point(shrine.transform.position);Round(new Rect(q.x-1.5f,q.y-1.5f,3,3),shrine.color,1);}var quest=game.GetComponent<RpgQuest08>();if(quest.giver){var q=Point(quest.giver.position);Round(new Rect(q.x-2,q.y-2,4,4),gold,2);}foreach(var n in quest.nodes){var q=Point(n.transform.position);Round(new Rect(q.x-1.5f,q.y-1.5f,3,3),(game.progress.silenced&(1<<n.id))==0?new Color(.88f,.49f,.43f):teal,1);}var hero=Point(game.world.hero.Position);Round(new Rect(hero.x-2.5f,hero.y-2.5f,5,5),paper,2.5f);
+  }
+  void Context(){var h=game.world.hero;var quest=game.GetComponent<RpgQuest08>();string message=null;if(quest.giver&&Vector2.Distance(h.Position,quest.giver.position)<2.2f)message="E   Conversar com Seu Davi";foreach(var n in quest.nodes)if(Vector2.Distance(h.Position,n.transform.position)<2.2f)message=(game.progress.silenced&(1<<n.id))==0?"E   Desligar amplificador":"Amplificador silencioso";var s=game.world.NearestShrine(h.Position);if(s)message=game.progress.Has(s.id)?s.title+" ÂÂ· aprendido":"E   Aprender "+s.title;if(message!=null){Card(new Rect(530,651,380,32));Text(new Rect(542,658,356,20),message,12,paper,false,TextAnchor.MiddleCenter);}}
+  Vector2 Project(Vector2 p){var v=game.lens.WorldToScreenPoint(p);return new Vector2(v.x/Screen.width*1440,(1-v.y/Screen.height)*810);}
+  void Pause(){Fill(new Rect(0,0,1440,810),new Color(.015f,.025f,.04f,.70f));Card(new Rect(505,217,430,360));Text(new Rect(543,252,354,45),"Pausa",30,paper,true);if(Button(new Rect(543,323,354,46),"Continuar",true))game.mode=1;if(Button(new Rect(543,383,354,44),"Controles"))help=true;if(Button(new Rect(543,443,354,44),"Salvar e voltar ao início")){game.Save();game.mode=0;}Text(new Rect(543,526,354,18),"Seu progresso foi salvo.",11,muted);}
+  void Help(){Fill(new Rect(0,0,1440,810),new Color(.015f,.025f,.04f,.75f));Card(new Rect(435,134,570,540));Text(new Rect(473,166,494,40),"Controles",27,paper,true);string[] keys={"WASD / setas","Shift","Ctrl","Espaço","J / clique","E","1","2 / 3","C","C transformado","Esc / M"};string[] action={"Mover","Correr / impulso durante o voo","Frear o voo","Saltar / pousar","Atacar e encadear golpes","Conversar, aprender ou interagir","Decolar / pousar","Onda / Palma da Centelha","Segurar até 100% e soltar","Pressionar novamente para evoluir","Pausa / som"};for(int i=0;i<keys.Length;i++){Text(new Rect(475,226+i*30,162,24),keys[i],12,muted,true);Text(new Rect(644,226+i*30,319,24),action[i],12,paper);}if(Button(new Rect(825,611,140,38),"Fechar  H"))help=false;}
+  void Credits(){Fill(new Rect(0,0,1440,810),new Color(.015f,.025f,.04f,.84f));Card(new Rect(294,94,852,622));Text(new Rect(330,125,780,45),"Créditos",29,paper,true);var text=Resources.Load<TextAsset>("RpgCredits").text;var s=Style(13,muted);float height=s.CalcHeight(new GUIContent(text),740)+30;creditsScroll=GUI.BeginScrollView(new Rect(330,191,780,415),creditsScroll,new Rect(0,0,740,height));Text(new Rect(0,0,740,height),text,13,muted);GUI.EndScrollView();if(Button(new Rect(330,644,160,38),"Voltar"))game.mode=0;if(Button(new Rect(860,644,250,38),"Fontes e licenças"))Application.OpenURL(new System.Uri(System.IO.Path.Combine(Application.streamingAssetsPath,"Cibio-Licenses/FONTES-E-LICENCAS.txt")).AbsoluteUri);}
+  void OnDestroy(){if(circle)Destroy(circle);if(gradient)Destroy(gradient);}
+ }
 }
-

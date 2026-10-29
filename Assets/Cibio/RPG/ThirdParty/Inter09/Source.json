@@ -1,0 +1,7 @@
+{
+  "sources": {
+    "Inter-Original.ttf": "https://raw.githubusercontent.com/google/fonts/main/ofl/inter/Inter%5Bopsz%2Cwght%5D.ttf",
+    "OFL.txt": "https://raw.githubusercontent.com/google/fonts/main/ofl/inter/OFL.txt"
+  },
+  "derivation": "Static optical size14, weights400/600, renamed Cibio UI; original copyright and SIL OFL retained."
+}

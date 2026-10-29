@@ -9,7 +9,7 @@ namespace Cibio.RPG
   void FindObjects(){if(!giver){var o=GameObject.Find("Seu Davi • missão");if(o)giver=o.transform;}nodes=Object.FindObjectsByType<RpgResonator08>(FindObjectsSortMode.None);}
   public int SilencedCount=>Count(game.progress.silenced);
   static int Count(int bits){int n=0;for(int i=0;i<3;i++)if((bits&(1<<i))!=0)n++;return n;}
-  public string Objective=>game.progress.questStage==0?"Fale com Seu Davi [E], ao sul da praça.":game.progress.questStage==3?"Morro liberto! Carregue C na forma dourada para ativar a Rubra. [3] Palma.":game.progress.questStage==2?"Volte a Seu Davi para receber a recompensa.":"Morro do Eco • norte da vila\nAmplificadores: "+SilencedCount+"/3  •  Capitão: "+(game.progress.captainDefeated?"vencido":"enfrente no largo norte");
+  public string Objective=>game.progress.questStage==0?"Fale com Seu Davi [E], ao sul da praça.":game.progress.questStage==3?"Morro liberto! Pressione C na forma dourada para evoluir. [3] Palma.":game.progress.questStage==2?"Volte a Seu Davi para receber a recompensa.":"Morro do Eco • norte da vila\nAmplificadores: "+SilencedCount+"/3  •  Capitão: "+(game.progress.captainDefeated?"vencido":"enfrente no largo norte");
   public void RefreshState(){FindObjects();foreach(var e in game.world.enemies)if(e.enemyKind==4&&game.progress.captainDefeated){e.dead=true;e.deadTime=40;e.health=0;e.body.color=Color.clear;}}
   public bool TryInteract()
   {
@@ -18,8 +18,8 @@ namespace Cibio.RPG
    {
     if(h.flightHeight>.15f){game.Notify("Pouse para conversar com Seu Davi.");return true;}
     if(game.progress.questStage==0){game.progress.questStage=1;game.Notify("Seu Davi: silencie os 3 amplificadores no Morro do Eco e vença o capitão. Siga ao norte!");game.Save();}
-    else if(game.progress.questStage==2){game.progress.questStage=3;game.progress.perks|=3;game.progress.xp+=100;while(game.progress.xp>=game.progress.NextLevel){game.progress.xp-=game.progress.NextLevel;game.progress.level++;}h.health=h.MaxHealth;h.energy=100;game.Notify("MISSÃO CONCLUÍDA • Centelha Rubra + Palma [3] • +100 XP! Carregue C na forma dourada e solte.");RpgEffects.Burst(h.Position,RpgArt.Hex("FF617A"),3.5f,.8f);RpgAudio.Play("item_gem_01",h.Position,.65f);game.Save();}
-    else game.Notify(game.progress.questStage==3?"Seu Davi: a voz da vila voltou! Na forma dourada, complete C outra vez para despertar o estágio 2.":"Seu Davi: o caminho fica ao norte. Desligue cada amplificador com [E] depois de afastar os guardas.");
+    else if(game.progress.questStage==2){game.progress.questStage=3;game.progress.perks|=3;game.progress.xp+=100;while(game.progress.xp>=game.progress.NextLevel){game.progress.xp-=game.progress.NextLevel;game.progress.level++;}h.health=h.MaxHealth;h.energy=100;game.Notify("MISSÃO CONCLUÍDA • Palma [3] + voo + aura de 24s • +100 XP! Seu domínio da Centelha está mais forte.");RpgEffects.Burst(h.Position,RpgArt.Hex("FF617A"),3.5f,.8f);RpgAudio.Play("item_gem_01",h.Position,.65f);game.Save();}
+    else game.Notify(game.progress.questStage==3?"Seu Davi: a voz da vila voltou! Na forma dourada, pressione C novamente para evoluir.":"Seu Davi: o caminho fica ao norte. Desligue cada amplificador com [E] depois de afastar os guardas.");
     return true;
    }
    foreach(var n in nodes)if(Vector2.Distance(h.Position,n.transform.position)<2.1f)

@@ -60,3 +60,11 @@
 - Voo normal/dourado/rubro 6/8/12; Shift multiplica1.25 e custa+6/s; Ctrl tem prioridade, freia até hover. Dreno10/7/9 por segundo. Pouso1/Espaço, C força pouso antes de carregar.
 - [3] Palma:22energia, cooldown1.8/1.1s rubro; projétil com teste varrido por segmento e apenas um impacto. Boss enemyKind4 HP280 não renasce; batedor enemyKind3 HP78, aviso .6s e bote contínuo .24s; boss aviso .85s, leque3projéteis de16, cooldown2.8s.
 - -cibio-review08 mantém base, valida missão e save antigo, voo e dano comparativo; exporta inspeção dos ciclos nas4direções e captura cinematográfica24fps. Não alterar o save real em testes.
+
+## Atualização 09
+- Estágio 2 substitui Rubra pela Forma Ascendente: novo toque de C enquanto dourado, sem nova carga nem missão; custo25, duração16s, sequência1.7s. HandleTransformInput é compartilhado pelo teclado e botãoC; não reativar enquanto a tecla permanece pressionada. TryAscend conserva voo, mas bloqueia movimento na sequência.
+- HeroAscendant possui dez ciclos próprios: células192, PPU64, pivot(.5,.10666667), quad3. HeroAwakened128 e LPC64 permanecem. RpgPowerForm deve usar tamanho do sprite/PPU na malha, sem supor quad2. Transform_Ascendant09 tem8colunas x4direções; shader consulta _TransformColumns.
+- Sonic em estágio2+voo+Shift exige18unidades de deslocamento real contínuo. Cruzeiro12, impulso15, sonic24; dreno9/15/18porsegundo. Freio, soltura, pouso, colisão bloqueada, inversão forte, morte/expiração reiniciam distância. Nunca acumular pela velocidade desejada contra parede.
+- RpgFlightWake09 usa atlas orgânico Vfx_Sonic09 e fantasmas do sprite; sem LineRenderer ou contornos geométricos. Designed09 contém efeitos originais DSP. Fonte CibioUI derivada de Inter OFL, originais e licença preservados.
+- RpgInterface usa cinco skills, tooltips, minimapa e objetivos recolhíveis. Textos em UTF-8; conferir acentos no player. Não voltar ao HUD de painéis grandes nem bloquear controles fora dos limites visuais dos botões.
+- -cibio-review09 testa input real compartilhado, sonic, família nova, fontes, quadros nas4direções e grava áudio em tempo real separado. Preservar savev3 e cena/GUIDs; continuar BuildUpdatedPlayer.

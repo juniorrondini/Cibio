@@ -1,0 +1,1 @@
+120 quadros, sem capturas: 1,982s, 60,6 FPS. Amostra curta, nao benchmark.

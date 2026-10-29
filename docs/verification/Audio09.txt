@@ -1,0 +1,1 @@
+Capture real-time; peak=0,58043; no fixed captureFramerate.

@@ -71,13 +71,13 @@ namespace Cibio.RPG.Editor
             if(!material)AssetDatabase.CreateAsset(new Material(shader),materialPath);else {material.shader=shader;EditorUtility.SetDirty(material);}
             foreach(string guid in AssetDatabase.FindAssets("t:Texture2D",new[]{Root+"/Resources/RpgArt"}))
             {
-                string path=AssetDatabase.GUIDToAssetPath(guid);var importer=AssetImporter.GetAtPath(path) as TextureImporter;var filter=path.Contains("Vfx_")||path.Contains("Title_")||path.Contains("Terrain_")?FilterMode.Bilinear:FilterMode.Point;
+                string path=AssetDatabase.GUIDToAssetPath(guid);var importer=AssetImporter.GetAtPath(path) as TextureImporter;var filter=path.Contains("Vfx_")||path.Contains("Title_")||path.Contains("Terrain_")||path.Contains("UI_")?FilterMode.Bilinear:FilterMode.Point;
                 if(importer&&(importer.npotScale!=TextureImporterNPOTScale.None||importer.filterMode!=filter)){importer.npotScale=TextureImporterNPOTScale.None;importer.filterMode=filter;importer.SaveAndReimport();}
             }
             AssetDatabase.SaveAssets();ValidateSaved();var world=Object.FindAnyObjectByType<RpgWorld>();RpgTerrain.Ensure(world);CaptureOverview(Camera.main);
             string output=Path.GetFullPath("Cibio04/Cibio.exe");var args=System.Environment.GetCommandLineArgs();for(int i=0;i<args.Length-1;i++)if(args[i]=="-cibio-build")output=args[i+1];Directory.CreateDirectory(Path.GetDirectoryName(output));
             var report=BuildPipeline.BuildPlayer(new BuildPlayerOptions{scenes=new[]{Scene},locationPathName=output,target=BuildTarget.StandaloneWindows64,options=BuildOptions.None});
-            if(report.summary.result!=UnityEditor.Build.Reporting.BuildResult.Succeeded)throw new System.Exception("Falha: "+report.summary.result);Debug.Log("CIBIO_08_BUILD_OK");
+            if(report.summary.result!=UnityEditor.Build.Reporting.BuildResult.Succeeded)throw new System.Exception("Falha: "+report.summary.result);Debug.Log("CIBIO_09_BUILD_OK");
         }
     }
     public sealed class RpgTextureImport:AssetPostprocessor
@@ -85,7 +85,7 @@ namespace Cibio.RPG.Editor
         void OnPreprocessTexture()
         {
             if(!assetPath.StartsWith(RpgBuilder.Root+"/Resources/RpgArt/"))return;
-            var t=(TextureImporter)assetImporter;t.textureType=TextureImporterType.Default;t.npotScale=TextureImporterNPOTScale.None;t.alphaIsTransparency=true;t.mipmapEnabled=false;t.filterMode=assetPath.Contains("Title_")||assetPath.Contains("Vfx_")||assetPath.Contains("Terrain_")?FilterMode.Bilinear:FilterMode.Point;t.wrapMode=TextureWrapMode.Clamp;t.textureCompression=TextureImporterCompression.Uncompressed;t.maxTextureSize=4096;t.sRGBTexture=!assetPath.Contains("Terrain_Mask");if(assetPath.Contains("Terrain_")&&!assetPath.Contains("Terrain_Mask"))t.wrapMode=TextureWrapMode.Repeat;t.isReadable=false;
+            var t=(TextureImporter)assetImporter;t.textureType=TextureImporterType.Default;t.npotScale=TextureImporterNPOTScale.None;t.alphaIsTransparency=true;t.mipmapEnabled=false;t.filterMode=assetPath.Contains("Title_")||assetPath.Contains("Vfx_")||assetPath.Contains("Terrain_")||assetPath.Contains("UI_")?FilterMode.Bilinear:FilterMode.Point;t.wrapMode=TextureWrapMode.Clamp;t.textureCompression=TextureImporterCompression.Uncompressed;t.maxTextureSize=4096;t.sRGBTexture=!assetPath.Contains("Terrain_Mask");if(assetPath.Contains("Terrain_")&&!assetPath.Contains("Terrain_Mask"))t.wrapMode=TextureWrapMode.Repeat;t.isReadable=false;
         }
     }
 }

@@ -1,0 +1,61 @@
+[
+  {
+    "action": "transition",
+    "scale": 0.5243104254324451,
+    "frames": 32
+  },
+  {
+    "action": "walk",
+    "scale": 0.5073170731707317,
+    "width": 1728,
+    "height": 768
+  },
+  {
+    "action": "run",
+    "scale": 0.5049019607843137,
+    "width": 1536,
+    "height": 768
+  },
+  {
+    "action": "jump",
+    "scale": 0.45317840054682157,
+    "width": 960,
+    "height": 768
+  },
+  {
+    "action": "slash",
+    "scale": 0.49523809523809526,
+    "width": 1152,
+    "height": 768
+  },
+  {
+    "action": "thrust",
+    "scale": 0.5279187817258884,
+    "width": 1536,
+    "height": 768
+  },
+  {
+    "action": "backslash",
+    "scale": 0.6956599552572706,
+    "width": 2496,
+    "height": 768
+  },
+  {
+    "action": "spellcast",
+    "scale": 0.5279187817258884,
+    "width": 1344,
+    "height": 768
+  },
+  {
+    "action": "hurt",
+    "scale": 0.5250783153498086,
+    "width": 1152,
+    "height": 192
+  },
+  {
+    "action": "flight",
+    "scale": 0.3859011427784662,
+    "width": 768,
+    "height": 768
+  }
+]

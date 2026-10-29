@@ -1,0 +1,1 @@
+Efeitos originais sintetizados por DSP, CC0 1.0. Sem gravações de franquias. 48 kHz estéreo. Seed 909. Explosão da evolução alinhada em 0,55 s; sonic boom com dois transientes separados por 55 ms. A mixagem usa o limiter do jogo. Requer numpy e soundfile. Altere R/O para regenerar em outro diretório.

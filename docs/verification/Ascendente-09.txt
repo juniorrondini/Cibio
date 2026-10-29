@@ -1,0 +1,75 @@
+PASS Segurar C nao transforma antes de soltar
+PASS Soltar carga completa ativa dourada
+PASS Novo toque C ativa estagio 2 sem segunda carga ou missao
+PASS Manter C nao repete evolucao nem cobra novamente
+PASS Soltar C conserva evolucao
+PASS Nova familia prateada e aura azul branca
+PASS Celulas 192 sem redimensionamento: idle
+PASS Perspectiva/PPU/quad de 3 unidades: idle 0
+PASS Perspectiva/PPU/quad de 3 unidades: idle 1
+PASS Perspectiva/PPU/quad de 3 unidades: idle 2
+PASS Perspectiva/PPU/quad de 3 unidades: idle 3
+PASS Celulas 192 sem redimensionamento: walk
+PASS Perspectiva/PPU/quad de 3 unidades: walk 0
+PASS Perspectiva/PPU/quad de 3 unidades: walk 1
+PASS Perspectiva/PPU/quad de 3 unidades: walk 2
+PASS Perspectiva/PPU/quad de 3 unidades: walk 3
+PASS Celulas 192 sem redimensionamento: run
+PASS Perspectiva/PPU/quad de 3 unidades: run 0
+PASS Perspectiva/PPU/quad de 3 unidades: run 1
+PASS Perspectiva/PPU/quad de 3 unidades: run 2
+PASS Perspectiva/PPU/quad de 3 unidades: run 3
+PASS Celulas 192 sem redimensionamento: jump
+PASS Perspectiva/PPU/quad de 3 unidades: jump 0
+PASS Perspectiva/PPU/quad de 3 unidades: jump 1
+PASS Perspectiva/PPU/quad de 3 unidades: jump 2
+PASS Perspectiva/PPU/quad de 3 unidades: jump 3
+PASS Celulas 192 sem redimensionamento: slash
+PASS Perspectiva/PPU/quad de 3 unidades: slash 0
+PASS Perspectiva/PPU/quad de 3 unidades: slash 1
+PASS Perspectiva/PPU/quad de 3 unidades: slash 2
+PASS Perspectiva/PPU/quad de 3 unidades: slash 3
+PASS Celulas 192 sem redimensionamento: thrust
+PASS Perspectiva/PPU/quad de 3 unidades: thrust 0
+PASS Perspectiva/PPU/quad de 3 unidades: thrust 1
+PASS Perspectiva/PPU/quad de 3 unidades: thrust 2
+PASS Perspectiva/PPU/quad de 3 unidades: thrust 3
+PASS Celulas 192 sem redimensionamento: backslash
+PASS Perspectiva/PPU/quad de 3 unidades: backslash 0
+PASS Perspectiva/PPU/quad de 3 unidades: backslash 1
+PASS Perspectiva/PPU/quad de 3 unidades: backslash 2
+PASS Perspectiva/PPU/quad de 3 unidades: backslash 3
+PASS Celulas 192 sem redimensionamento: spellcast
+PASS Perspectiva/PPU/quad de 3 unidades: spellcast 0
+PASS Perspectiva/PPU/quad de 3 unidades: spellcast 1
+PASS Perspectiva/PPU/quad de 3 unidades: spellcast 2
+PASS Perspectiva/PPU/quad de 3 unidades: spellcast 3
+PASS Celulas 192 sem redimensionamento: flight
+PASS Perspectiva/PPU/quad de 3 unidades: flight 0
+PASS Perspectiva/PPU/quad de 3 unidades: flight 1
+PASS Perspectiva/PPU/quad de 3 unidades: flight 2
+PASS Perspectiva/PPU/quad de 3 unidades: flight 3
+PASS Celulas 192 sem redimensionamento: hurt
+PASS Perspectiva/PPU/quad de 3 unidades: hurt 0
+PASS Perspectiva/PPU/quad de 3 unidades: hurt 1
+PASS Perspectiva/PPU/quad de 3 unidades: hurt 2
+PASS Perspectiva/PPU/quad de 3 unidades: hurt 3
+PASS Oito etapas exclusivas de transformacao
+PASS Tipografia profissional regular e semibold carregada
+PASS Cinco skills e atlas original de icones
+PASS Novos efeitos de transformacao e sonic boom carregados
+PASS Energia insuficiente nao evolui
+PASS Ataque impede evolucao no meio do golpe
+PASS Evolucao no ar conserva voo
+PASS Cinematica trava movimento e contagem sonica
+PASS Impulso ascendente inicial 15 u/s
+PASS Boom exige 18 unidades realmente percorridas: measured=18,22311 sonic=18 position=(2.22, -2.00)
+PASS Sonic aumenta velocidade para 24 u/s
+PASS Sonic consome 18 energia por segundo
+PASS Um boom por impulso continuo
+PASS Frear cancela sonic e reinicia distancia
+PASS Inversao de direcao reinicia embalo
+PASS Pouso limpa estado sonico
+PASS Expiracao devolve forma base
+PASS Empurrar parede nao acumula distancia nem atravessa obstaculos
+PASS Chave do save preservada

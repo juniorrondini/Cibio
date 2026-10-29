@@ -33,3 +33,5 @@ VERSÃO 04: cabelo spiked_liberty por Fabzy e bluecarrot16, CC BY-SA 3.0; compos
 VERSÃO 06: atlas de aura, véu, partículas, descargas e erupção criados com a ferramenta image_gen integrada. Originais, prompts e importador em Fontes-VFX-06.zip. Código dos efeitos e composição Cibio; sistema de partículas nativo da Unity. As licenças anteriores permanecem válidas.
 
 Versao 07: voo com arte original gerada com image_gen a partir das referencias do projeto; originais, prompt completo e importador em ThirdParty/Generated07. Sons CC0 e design DSP em SoundDesign07/Audio-07.txt. Fontes-07.zip acompanha a distribuicao.
+
+Versão 09: Forma Ascendente, oito etapas e dez ciclos exclusivos com cabelo prateado; ícones e vapor sônico criados com image_gen integrado. Originais e prompts completos em ThirdParty/Generated09. Derivados dos personagens Cibio distribuídos sob CC BY-SA 4.0, com atribuições herdadas acima. Novos efeitos sonoros originais DSP CC0 em SoundDesign09. Fonte Cibio UI derivada de Inter (Copyright 2020 The Inter Project Authors), OFL 1.1; original, licença e receita em ThirdParty/Inter09. https://github.com/google/fonts/tree/main/ofl/inter

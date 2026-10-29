@@ -8,8 +8,17 @@ namespace Cibio.RPG
   public bool charging,dead;public int hitsLanded,comboIndex;public float clock,enemyCooldown,deadTime;bool hitApplied,comboQueued;[SerializeField]Vector2 home;
   public bool flying,running,flightBoosting,flightBraking;public float flightHeight;public int formStage;Vector2 steering;float gaitTravel,flightTrail;public float attackContact;
   public int FormStage=>buff>0?(formStage>=2?2:1):0;
-  public Color EnergyColor=>RpgArt.Hex(FormStage==2?"FF576B":"FFE1A0");
-  public float FlightSpeed=>(FormStage==2?12:FormStage==1?8:6)*(flightBoosting&&!flightBraking?1.25f:1);
+  public Color EnergyColor=>RpgArt.Hex(FormStage==2?"A0D8FF":"FFE1A0");
+  public float TransformationDuration=>FormStage==2?1.7f:1.15f;
+  public bool SonicActive{get;private set;}public float SonicDistance{get;private set;}public int sonicBooms;Vector2 sonicHeading;
+  public void ResetSonic(){SonicActive=false;SonicDistance=0;sonicHeading=Vector2.zero;}
+  void TravelSonic(Vector2 travel,float dt,bool locked)
+  {
+   if(FormStage!=2||!flying||!flightBoosting||flightBraking||locked||travel.magnitude<.015f){ResetSonic();return;}
+   Vector2 heading=travel.normalized;if(sonicHeading.sqrMagnitude>.1f&&Vector2.Dot(sonicHeading,heading)<.45f){ResetSonic();}if(sonicHeading.sqrMagnitude<.1f)sonicHeading=heading;
+   SonicDistance=Mathf.Min(18,SonicDistance+travel.magnitude);if(!SonicActive&&SonicDistance>=18){SonicActive=true;sonicBooms++;RpgFlightWake09.Boom(this);}
+  }
+  public float FlightSpeed=>SonicActive&&FormStage==2&&flying&&flightBoosting&&!flightBraking?24:(FormStage==2?12:FormStage==1?8:6)*(flightBoosting&&!flightBraking?1.25f:1);
   public float GroundSpeed(bool run)=>(run?4.5f:2.8f)*(FormStage==2?1.45f:FormStage==1?1.3f:1);
   public float GaitTravel=>gaitTravel;
   public Color BaseTint=>isEnemy?(enemyKind==3?new Color(.72f,.9f,.85f):enemyKind==4?new Color(1,.66f,.7f):Color.white):Color.white;
@@ -18,26 +27,26 @@ namespace Cibio.RPG
   public void SetFlightControls(bool boost,bool brake){flightBraking=flying&&brake;flightBoosting=flying&&boost&&!brake;}
 float gaitPhase,poseClock;string lastPose="";
   public int animationFrame;public float AttackProgress=>attackDuration>0?1-attackTimer/attackDuration:0;
-  public void ResetMotion(){flying=flightBoosting=flightBraking=false;formStage=0;steering=Vector2.zero;flightHeight=gaitPhase=poseClock=gaitTravel=0;lastPose="";running=false;comboQueued=hitApplied=false;lastAttack=clock-2;comboIndex=0;}
+  public void ResetMotion(){ResetSonic();sonicBooms=0;flying=flightBoosting=flightBraking=false;formStage=0;steering=Vector2.zero;flightHeight=gaitPhase=poseClock=gaitTravel=0;lastPose="";running=false;comboQueued=hitApplied=false;lastAttack=clock-2;comboIndex=0;}
   public bool ToggleFlight()
   {
    if(flying){Land();return true;}if(dead||charging||transforming>0||powerPose>0||attackTimer>0||jumpTimer>0||flightHeight>0||energy<12)return false;
    energy-=12;flying=true;steering=Vector2.zero;flightBoosting=flightBraking=false;velocity=Vector2.zero;RpgAudio.Play("flight_launch",Position,.65f);RpgEffects.Burst(Position,RpgArt.Hex("A1F2DC"),1.6f,.45f);return true;
   }
-  public void Land(){if(!flying)return;flying=flightBoosting=flightBraking=false;RpgAudio.Play("flight_land",Position,.4f);}
+  public void Land(){ResetSonic();if(!flying)return;flying=flightBoosting=flightBraking=false;RpgAudio.Play("flight_land",Position,.4f);}
   float castWindup;float attackDuration=.53f,lastAttack=-20;public string attackAction="slash",currentAnimation="idle";
   public Vector2 Position=>(Vector2)transform.position;
   public int MaxHealth=>isEnemy?(enemyKind==4?280:enemyKind==3?78:enemyKind==1?120:enemyKind==2?55:65):100+((RpgGame.Instance?RpgGame.Instance.progress.level:1)-1)*12;
   public float Damage=>isEnemy?(enemyKind==4?26:enemyKind==3?15:enemyKind==1?22:12):(20+(RpgGame.Instance.progress.level-1)*3)*(FormStage==2?3.15f:FormStage==1?2.3f:1);
   public string EnemyName=>enemyKind==4?"Capitão do Eco":enemyKind==3?"Batedor do Morro":enemyKind==1?"Fiscal blindado":enemyKind==2?"Arauto da Vuvuzela":"Cobrador";
-  public string Family=>isEnemy?(enemyKind==1||enemyKind==4?"EnemyHeavy":enemyKind==2?"EnemyCaster":"Enemy"):buff>0?"HeroAwakened":charging&&charge>=55?"HeroLift":"Hero";
+  public string Family=>isEnemy?(enemyKind==1||enemyKind==4?"EnemyHeavy":enemyKind==2?"EnemyCaster":"Enemy"):FormStage==2?"HeroAscendant":buff>0?"HeroAwakened":charging&&charge>=55?"HeroLift":"Hero";
   public void Initialize(){home=Position;health=MaxHealth;shadow=RpgArt.Put("Sombra",RpgArt.Pixel,Position+Vector2.down*.04f,-3900,transform,new Color(.04f,.08f,.07f,.3f));shadow.transform.localScale=new Vector3(.72f,.12f,1);body=RpgArt.Put("Sprite animado",RpgArt.Frame(Family,"idle",2,0),Position,RpgWorld.Order(Position.y),transform);}
   public void ConfigureEnemy(int kind){enemyKind=kind;gameObject.name=EnemyName;health=MaxHealth;transform.localScale=Vector3.one*(kind==4?1.32f:kind==3?.98f:kind==1?1.12f:kind==2?.96f:1);body.color=BaseTint;Pose("idle",0);}
   public void Tick(float dt)
   {
    clock+=dt;invincible=Mathf.Max(0,invincible-dt);buff=Mathf.Max(0,buff-dt);transforming=buff>0?Mathf.Max(0,transforming-dt):0;jumpTimer=Mathf.Max(0,jumpTimer-dt);powerPose=Mathf.Max(0,powerPose-dt);castWindup=Mathf.Max(0,castWindup-dt);
-   if(dead){deadTime+=dt;Pose("hurt",Mathf.Min(5,(int)(deadTime*9)));body.color=new Color(1,1,1,Mathf.Clamp01(4-deadTime));if(isEnemy&&enemyKind!=4&&deadTime>40)ResetEnemy();return;}
-   if(flying){energy=Mathf.Max(0,energy-dt*((FormStage==2?9:FormStage==1?7:10)+(flightBoosting?6:0)));if(energy<=0)Land();}
+   if(dead){ResetSonic();deadTime+=dt;Pose("hurt",Mathf.Min(5,(int)(deadTime*9)));body.color=new Color(1,1,1,Mathf.Clamp01(4-deadTime));if(isEnemy&&enemyKind!=4&&deadTime>40)ResetEnemy();return;}
+   if(FormStage!=2)ResetSonic();if(flying){energy=Mathf.Max(0,energy-dt*((FormStage==2?9:FormStage==1?7:10)+(SonicActive?9:flightBoosting?6:0)));if(energy<=0)Land();}
    flightHeight=Mathf.MoveTowards(flightHeight,flying?(FormStage==2?2.2f:FormStage==1?1.9f:1.55f):0,dt*2.8f);
    if(flying){flightTrail+=dt;if(flightTrail>.06f&&velocity.sqrMagnitude>9){flightTrail=0;RpgEffects.Spark(Position+Vector2.up*flightHeight-velocity.normalized*.4f,EnergyColor,FormStage==2?1.4f:.7f);}}
    if(isEnemy)EnemyBrain(dt);
@@ -51,7 +60,7 @@ float gaitPhase,poseClock;string lastPose="";
    int frame=anim=="walk"?1+(int)(gaitPhase*8)%8:anim=="run"?(int)(gaitPhase*8)%8:anim=="flight"?(velocity.sqrMagnitude>.25f?2:0)+(int)(poseClock*4)%2:anim=="jump"?Mathf.Clamp((int)((.65f-jumpTimer)/.65f*count),0,count-1):attackTimer>0&&anim==attackAction?Mathf.Clamp((int)(AttackProgress*count),0,count-1):anim=="spellcast"?(int)(poseClock*9)%7:(int)(poseClock*2)%2;
    if(charging)frame=charge<20?1:charge<50?2:charge<75?3:4;
    if(powerPose>0)frame=castWindup>0?2:5;
-   if(transforming>0){float age=1.15f-transforming;frame=FormStage==2?new[]{2,3,4,5,5,4,3,2}[Mathf.Clamp((int)(age/1.15f*8),0,7)]:age<.24f?2:age<.66f?5:2;}
+   if(transforming>0){float age=TransformationDuration-transforming;frame=FormStage==2?new[]{2,3,4,5,5,4,3,2}[Mathf.Clamp((int)(age/TransformationDuration*8),0,7)]:age<.24f?2:age<.66f?5:2;}
    Pose(anim,frame);body.color=transforming<=0&&invincible>0&&((int)(clock*18)%2==0)?new Color(1,.65f,.63f):isEnemy?(eliteTell>0?new Color(1,.52f,.4f):enemyKind==3?new Color(.72f,.9f,.85f):enemyKind==4?new Color(1,.66f,.7f):Color.white):Color.white;
   }
   public void Pose(string animation,int frame){currentAnimation=animation;animationFrame=frame;body.sprite=RpgArt.Frame(transforming>0&&FormStage<2?"HeroLift":Family,animation,direction,frame);body.sortingOrder=RpgWorld.Order(Position.y);body.transform.localPosition=new Vector3(0,flightHeight+(flightHeight>.02f?Mathf.Sin(clock*4)*.035f:0)+(jumpTimer>0?Mathf.Sin(jumpTimer/.65f*Mathf.PI)*.75f:0),0);shadow.transform.localPosition=new Vector3(0,-.04f,0);}
@@ -59,7 +68,7 @@ float gaitPhase,poseClock;string lastPose="";
   {
    running=run;input=Vector2.ClampMagnitude(input,1);bool locked=attackTimer>0||charging||transforming>0||powerPose>0||dead;if(locked)input=Vector2.zero;if(!locked&&!flying&&input.sqrMagnitude>.01f){facing=input.normalized;direction=Mathf.Abs(input.x)>Mathf.Abs(input.y)?(input.x>0?3:1):(input.y>0?0:2);}
    if(flying){if(flightBraking)input=Vector2.zero;velocity=Vector2.SmoothDamp(velocity,input*speed,ref steering,flightBraking?.045f:.11f,Mathf.Infinity,dt);if(!locked&&velocity.sqrMagnitude>.25f){facing=velocity.normalized;direction=Mathf.Abs(facing.x)>Mathf.Abs(facing.y)?(facing.x>0?3:1):(facing.y>0?0:2);}}
-   else velocity=Vector2.MoveTowards(velocity,input*speed,dt*(input.sqrMagnitude>.01f?24:30));if(locked){velocity=steering=Vector2.zero;}Vector2 before=Position;transform.position=world.Move(Position,velocity*dt);float travel=Vector2.Distance(before,Position);gaitPhase+=travel/(running?2.9f:2.25f);gaitTravel+=travel;
+   else velocity=Vector2.MoveTowards(velocity,input*speed,dt*(input.sqrMagnitude>.01f?24:30));if(locked){velocity=steering=Vector2.zero;}Vector2 before=Position;transform.position=world.Move(Position,velocity*dt);float travel=Vector2.Distance(before,Position);gaitPhase+=travel/(running?2.9f:2.25f);gaitTravel+=travel;TravelSonic(Position-before,dt,locked);
    if(travel<.00001f&&input.sqrMagnitude>.01f)velocity=Vector2.zero;
   }
   public bool Attack()
@@ -82,7 +91,7 @@ float gaitPhase,poseClock;string lastPose="";
   public void TakeDamage(float amount)
   {
    if(dead||invincible>0)return;health=Mathf.Max(0,health-amount);invincible=isEnemy?.16f:.8f;RpgGame.Instance.FloatText(Position+Vector2.up*1.7f,"−"+Mathf.RoundToInt(amount),isEnemy?RpgArt.Hex("FFE39C"):RpgArt.Hex("FF8A84"));RpgAudio.Play("creature_hurt_01",Position,.12f,Random.Range(.92f,1.06f));
-   if(health<=0){flying=false;flightHeight=0;dead=true;deadTime=0;velocity=Vector2.zero;charging=false;charge=buff=transforming=0;if(isEnemy){RpgGame.Instance.EnemyDefeated(this);RpgAudio.Play("creature_die_01",Position,.35f);}else RpgGame.Instance.Notify("Você caiu. Pressione [R] para voltar à praça.");}
+   if(health<=0){ResetSonic();flying=false;flightHeight=0;dead=true;deadTime=0;velocity=Vector2.zero;charging=false;charge=buff=transforming=0;if(isEnemy){RpgGame.Instance.EnemyDefeated(this);RpgAudio.Play("creature_die_01",Position,.35f);}else RpgGame.Instance.Notify("Você caiu. Pressione [R] para voltar à praça.");}
   }
   float eliteTell,eliteRush;bool rushHit;Vector2 eliteAim;public bool WindingUp=>eliteTell>0;
   void EliteBrain(RpgActor target,Vector2 delta,float distance,float dt)

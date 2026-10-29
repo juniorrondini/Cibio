@@ -6,7 +6,7 @@ namespace Cibio.RPG
   public Vector2 velocity;public RpgActor owner;float age,damage;bool friendly,finished;Color color;SpriteRenderer sprite;
   public static RpgProjectile FireHero(RpgActor owner,Vector2 direction)
   {
-   var p=Fire(owner,direction);p.friendly=true;p.color=owner.FormStage==2?RpgArt.Hex("FF6B80"):owner.EnergyColor;p.velocity=direction.normalized*(owner.FormStage==2?11:8);p.damage=owner.Damage*(owner.FormStage==2?1.8f:1.35f);p.sprite.transform.localPosition=Vector2.up*(owner.flightHeight+.85f);return p;
+   var p=Fire(owner,direction);p.friendly=true;p.color=owner.EnergyColor;p.velocity=direction.normalized*(owner.FormStage==2?11:8);p.damage=owner.Damage*(owner.FormStage==2?1.8f:1.35f);p.sprite.transform.localPosition=Vector2.up*(owner.flightHeight+.85f);return p;
   }
   public static RpgProjectile Fire(RpgActor owner,Vector2 direction)
   {

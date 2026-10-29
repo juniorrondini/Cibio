@@ -1,0 +1,1 @@
+PASS revisão nativa de menu, HUD, tooltip de habilidade, controles e créditos; fontes e acentos UTF-8 conferidos nas capturas.
