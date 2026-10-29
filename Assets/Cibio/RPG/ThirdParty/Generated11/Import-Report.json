@@ -1,0 +1,112 @@
+[
+  {
+    "name": "Davi11",
+    "width": 1024,
+    "height": 512
+  },
+  {
+    "name": "House11_0",
+    "width": 384,
+    "height": 384
+  },
+  {
+    "name": "House11_1",
+    "width": 384,
+    "height": 384
+  },
+  {
+    "name": "House11_2",
+    "width": 384,
+    "height": 384
+  },
+  {
+    "name": "House11_3",
+    "width": 384,
+    "height": 384
+  },
+  {
+    "name": "Tree11_0",
+    "width": 384,
+    "height": 384
+  },
+  {
+    "name": "Tree11_1",
+    "width": 384,
+    "height": 384
+  },
+  {
+    "name": "Tree11_2",
+    "width": 384,
+    "height": 384
+  },
+  {
+    "name": "Shrub11",
+    "width": 256,
+    "height": 256
+  },
+  {
+    "name": "Stone11",
+    "width": 192,
+    "height": 192
+  },
+  {
+    "name": "Reed11",
+    "width": 192,
+    "height": 192
+  },
+  {
+    "name": "Pond11",
+    "width": 512,
+    "height": 512
+  },
+  {
+    "name": "Terrain_Grass11",
+    "width": 512,
+    "height": 512
+  },
+  {
+    "name": "Terrain_Earth11",
+    "width": 512,
+    "height": 512
+  },
+  {
+    "name": "Terrain_Stone11",
+    "width": 512,
+    "height": 512
+  },
+  {
+    "name": "Terrain_Damp11",
+    "width": 512,
+    "height": 512
+  },
+  {
+    "name": "Barrel11",
+    "width": 192,
+    "height": 192
+  },
+  {
+    "name": "Bench11",
+    "width": 256,
+    "height": 256
+  },
+  {
+    "name": "Lamp11",
+    "width": 256,
+    "height": 256
+  },
+  {
+    "name": "Stall11",
+    "width": 384,
+    "height": 384
+  },
+  {
+    "name": "Planter11",
+    "width": 192,
+    "height": 192
+  },
+  {
+    "name": "Well11",
+    "width": 256,
+    "height": 256
+  }
+]

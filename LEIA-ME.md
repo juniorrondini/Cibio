@@ -1,3 +1,3 @@
-# Cibio — versão10
+# Cibio — versão 11
 
-Leia [README.md](README.md). Na Forma Ascendente, voe com Shift por18unidades: BOOM, arrancada42u/s e velocidade máxima60u/s. Ctrl freia.
+Seu Davi com arte própria e vila ampliada/refinada. Leia [README.md](README.md) para os novos locais, controles, missão e verificação. O voo supersônico60u/s permanece.

@@ -1,0 +1,51 @@
+[
+  {
+    "key": "davi",
+    "transparent_background": true,
+    "prompt": "Use case: stylized-concept. Create an ORIGINAL production game sprite sheet for a friendly quest-giver named Seu Davi in Cibio, a detailed Brazilian top-down RPG. Image1 is ONLY a reference for broad facial/wardrobe traits: mature light-skinned man, receding neatly combed gray-brown side-parted hair, heavy eyebrows, blue eyes, lined face, charcoal suit, white shirt, vivid blue tie, green-and-yellow diagonal ceremonial sash. Image2 is ONLY the game camera and detailed sprite rendering reference. Draw a new full-body sprite from scratch, not a copy of the reference illustration. Polished detailed pixel-art sprite rendering, restrained outlines and natural fabric shading, about 3 heads tall, appropriate to top-down perspective with head/shoulder tops visible. EXACTLY 8 columns and 4 rows of separate full-body sprites, all identical scale, eye and foot registration, evenly spaced cells with ample genuine transparent gutters. Row0 NORTH viewed from behind (back of head and jacket, no face); row1 WEST left profile; row2 SOUTH facing viewer; row3 EAST right profile. Columns0-3: four subtly different breathing idle poses, feet fixed. Columns4-7: calm talking gestures, one open palm rising only to chest height, brief emphasis, return to rest. Every sprite entirely within its own cell including shoes and hands. Consistent identity, sash crosses right shoulder to left hip in anatomical coordinates in all views. No ground, no scenery, no labels, no typography, no logos. Genuine alpha transparent background. Do not reproduce the stock illustration's background, composition, lettering or watermark.",
+    "path": "davi-original.png",
+    "references": [
+      "codex-clipboard-793452c4-5888-4411-9d58-037ebd188bc6.png",
+      "Boom10.png"
+    ]
+  },
+  {
+    "key": "buildings",
+    "transparent_background": true,
+    "prompt": "Use case: stylized-concept. Production game environment atlas for Cibio, polished detailed top-down Brazilian colonial village RPG. Reference image ONLY defines orthographic camera: see front wall and broad roof, sides remain vertical, no diamond/isometric ground grid. Create four ORIGINAL isolated buildings in an EXACT 2x2 grid with generous transparent gutters, equal ground scale. Top-left: warm ochre stucco cottage with terracotta tiled hip roof, wood door, pale shutters, a small worn stone doorstep and modest planter. Top-right: muted salmon colonial house, weathered plaster, deep clay tiled roof, blue-gray wooden shutters and stone foundations. Bottom-left: pale sage/cream cottage with curved terracotta hip roof, green shutters, small shaded veranda, wood detail. Bottom-right: small whitewashed Brazilian village chapel with one modest bell tower, aged terracotta roof, dusty blue trim, wooden double door and discreet cross. All face SOUTH, matching the reference perspective. Refined hand-painted pixel-art materials with crisp clusters at game scale, subtle irregular roof tiles, soft ambient occlusion and consistent sunlight from upper left. Natural muted greens and clay tones, not oversaturated; convincing construction, not low-poly and not smooth toy 3D. Each building fully isolated from every other building, no courtyards extending outside footprint, no people, no text, no watermark, no ground slab, genuine transparent alpha around buildings.",
+    "path": "buildings-original.png",
+    "references": [
+      "House_0.png"
+    ]
+  },
+  {
+    "key": "nature",
+    "transparent_background": true,
+    "prompt": "Use case: stylized-concept. Create a polished production sprite atlas of Brazilian village nature, hand-painted detailed pixel art for a top-down RPG, matching mature colonial-village game art. EXACTLY 3 columns and 2 rows, 6 fully separated objects with generous genuine alpha-transparent gutters and consistent sunlight upper-left. Row0: (1) broad mature mango tree, irregular rounded dark olive canopy, visible brown trunk and roots; (2) asymmetrical rounded leafy Brazilian shade tree, sage/forest green, organic branches and visible trunk; (3) modest purple-flowered ipe tree with irregular branching crown, natural purple blossoms mixed with leaves, visible trunk. Row1: (1) low dense shrub with rounded irregular leaves, (2) small grouping of pale river stones with soft rounded weathering and moss, (3) small clump of reeds and ferns with tiny cream flowers. Detailed believable foliage, soft dappled leaf shadows, restrained palette, textured bark, no geometric canopies, no neon lime. Perspective sees tops of trees and front of trunks; no isometric diamond ground. Everything is fully inside its cell; no overlap between cells. No landscape, no ground tiles, no text, no watermark. Transparent background.",
+    "path": "nature-original.png"
+  },
+  {
+    "key": "ground",
+    "transparent_background": false,
+    "prompt": "Use case: stylized-concept. Production terrain material atlas for an orthographic detailed pixel-art Brazilian village RPG. EXACT 2x2 material tiles filling their quadrants edge to edge, no gutters, no borders, no labels. Top-left: subdued short olive/sage grass with sparse tiny clover clusters, varied subtle earth peeking through, no huge tufts, low visual noise. Top-right: dry warm sandy packed earth path, fine grit and a few tiny embedded rounded pebbles, subtle variations, no large stones. Bottom-left: worn irregular small rounded cobblestones in warm gray/beige, earth-filled uneven joints, old village plaza pavement; never a perfectly square chessboard. Bottom-right: slightly darker damp ground with mossy earth and sparse short grass. Flat overhead diffuse lighting, no directional cast shadows, consistent material scale. Each quadrant must be independently seamless/repeatable across its own edges. Refined hand-painted pixel-art microtexture, natural restrained colors, appropriate background behind detailed character sprites, no smooth plastic 3D, no photoreal camera blur, no strong distracting shapes or high contrast, no objects, no text, no watermark.",
+    "path": "ground-original.png"
+  },
+  {
+    "key": "pond",
+    "transparent_background": true,
+    "prompt": "Use case: stylized-concept. One isolated organic pond game sprite for a polished detailed top-down Brazilian village RPG. An irregular rounded natural pool with clear muted teal/olive water, soft small ripples, glimpses of sandy shallow bottom at edges, uneven shore of smooth warm river stones, small reed clusters, a few lily pads and low ferns. See the top of the pond and some front edges of rocks in the same slightly angled orthographic RPG camera. Refined hand-painted pixel-art texture, restrained highlights, sunlight upper-left, tranquil natural environment. Shape approximately 1.4 times wider than tall, no rectangular or square boundary, no man-made rim, no dramatic perspective, no people, no text, no watermark. Complete shore fully within canvas and large genuinely transparent alpha margin on every side, no ground plane beyond this small pool.",
+    "path": "pond-original.png"
+  },
+  {
+    "key": "nature-clean",
+    "prompt": "Edit this generated game nature atlas only to clean transparency and separate the six existing sprites. Preserve all six original tree/shrub/stone/reed designs, colors, perspective and detail. Remove ALL diffuse colored fog/glow and blurred background around the foliage; the empty areas outside the actual leaves, branches, trunks, rocks and plants must have alpha ZERO, not a semitransparent cloudy backdrop. Re-layout the six complete objects in a strict 3 columns by 2 equal rows grid with generous fully transparent padding inside each cell; each entire tree crown/trunk/roots must fit its row, and no object touches any neighbor or canvas edge. Do not include cast shadows or ground. Genuine transparent RGBA, crisp feathered foliage edge only at the actual leaf boundary. No text. This is an asset transparency/gutter repair, not a new art style.",
+    "transparent_background": true,
+    "path": "nature-clean-original.png"
+  },
+  {
+    "key": "props",
+    "prompt": "Use case: stylized-concept. One production game sprite atlas of six ORIGINAL village props for Cibio, polished detailed top-down Brazilian colonial RPG. Reference image is ONLY the established material/palette/camera style, not an edit target. EXACT 3 columns and 2 rows, generous genuinely transparent gutters, every complete object contained in its own cell. Row0 col0: one weathered wooden barrel with metal hoops, visible circular top and front; row0 col1: elegant worn wood park bench with dark wrought-iron supports facing south; row0 col2: slender dark wrought-iron colonial street lantern, full base to top. Row1 col0: small market stall with muted striped cream/terracotta canvas roof, wooden supports and baskets of mangoes and vegetables, no people; row1 col1: terracotta pot filled with modest ferns and cream flowers; row1 col2: small round stone village well with a wood crossbeam and bucket, viewed from above at the same slightly angled orthographic RPG camera. Refined hand-painted pixel-art materials, restrained warm clay/olive/slate palette, sunlight upper-left, detailed but readable at game scale, no toy 3D. See tops and front faces, no diamond isometric floor, no platform below props, no surrounding ground, no detached cast shadow. No letters, labels, branding or watermark. Genuine alpha transparency: empty outside object silhouettes, including gaps between bench slats and under stall canopy; no colored background fog.",
+    "path": "props-original.png",
+    "transparent_background": true
+  }
+]

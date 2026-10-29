@@ -72,7 +72,7 @@ namespace Cibio.RPG
         {
             if(p.x<bounds.xMin+radius||p.x>bounds.xMax-radius||p.y<bounds.yMin+radius||p.y>bounds.yMax-radius)return false;
             foreach(var r in obstacles)if(Touches(r,p,radius))return false;
-            foreach(var solid in solids)if(solid&&solid.enabled&&solid.gameObject.activeInHierarchy&&Touches(solid.Bounds,p,radius))return false;return true;
+            foreach(var solid in solids)if(solid&&solid.enabled&&solid.gameObject.activeInHierarchy&&solid.Blocks(p,radius))return false;return true;
         }
         static bool Touches(Rect r,Vector2 p,float radius){var nearest=new Vector2(Mathf.Clamp(p.x,r.xMin,r.xMax),Mathf.Clamp(p.y,r.yMin,r.yMax));return (nearest-p).sqrMagnitude<radius*radius;}
         public Vector2 Move(Vector2 p,Vector2 delta)

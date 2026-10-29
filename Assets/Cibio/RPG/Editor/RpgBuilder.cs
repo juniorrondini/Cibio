@@ -77,7 +77,7 @@ namespace Cibio.RPG.Editor
             AssetDatabase.SaveAssets();ValidateSaved();var world=Object.FindAnyObjectByType<RpgWorld>();RpgTerrain.Ensure(world);CaptureOverview(Camera.main);
             string output=Path.GetFullPath("Cibio04/Cibio.exe");var args=System.Environment.GetCommandLineArgs();for(int i=0;i<args.Length-1;i++)if(args[i]=="-cibio-build")output=args[i+1];Directory.CreateDirectory(Path.GetDirectoryName(output));
             var report=BuildPipeline.BuildPlayer(new BuildPlayerOptions{scenes=new[]{Scene},locationPathName=output,target=BuildTarget.StandaloneWindows64,options=BuildOptions.None});
-            if(report.summary.result!=UnityEditor.Build.Reporting.BuildResult.Succeeded)throw new System.Exception("Falha: "+report.summary.result);Debug.Log("CIBIO_10_BUILD_OK");
+            if(report.summary.result!=UnityEditor.Build.Reporting.BuildResult.Succeeded)throw new System.Exception("Falha: "+report.summary.result);Debug.Log("CIBIO_11_BUILD_OK");
         }
     }
     public sealed class RpgTextureImport:AssetPostprocessor

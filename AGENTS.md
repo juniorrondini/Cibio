@@ -74,3 +74,12 @@
 - Boom em Designed10: DSP CC0, duplo transiente42ms, subgrave58→33Hz, clip2s. RpgAudio dá prioridade16 e mix2D com duck320ms; nunca alterar volume do sistema ou remover limiter. Vento supersônico separado.
 - Câmera sonic9.4, follow.065s, previsão3.5; rastro.035s e nuvem7.4. Ctrl e colisões varridas preservados.
 - -cibio-sonic-review10 executa base, evolução e teste de arrancada, velocidade, freio, colisões e captura sonora em tempo real. Preservar cena/GUIDs e savev3.
+
+## Atualização 11
+- Cena64x72, bounds(-32,-18,64,72), Largo das Palmeiras ao norte e ruas laterais. RpgExpansion11.Append/Details preservam IDs e são idempotentes; BuildPlayer executa ambos e BuildUpdatedPlayer. Para manutenção normal continuar BuildUpdatedPlayer. Não usar o gerador base.
+- Seu Davi mantém o objeto/ancora(-2,-6.3). RpgNpcDavi11 usa Davi11:8colunas×4direções, células128/PPU64/pivot(.5,.16); col0–3 idle,4–7 conversa. Ele vira para o herói e fala por4.5s após interação. Não voltar a usar Hero_idle no NPC. Colisão elíptica pequena própria e painel de diálogo no RpgInterface.
+- House11/Tree11/natureza/props têm PPU específico viaRpgArt.ImagePPU. Novas imagens22 e originais/prompts/importador em Generated11; CC BY-SA4.0, preservar créditos anteriores. A referência do usuário não está incluída nas fontes.
+- RpgSolid.elliptical expande a elipse pelo raio do jogador; NPC, lagos, árvores e pequenos props usam. Colisões retangulares antigas e obstáculos continuam compatíveis.
+- OrganicGround usa quatro materiais11 e máscara da vila original, caminhos com bordas suaves e repetição suavizada da grama no shader. SoftShadow11 é um shader de sombra de contato, sem bitmap substituto da arte.
+- Preservar componentes/objetos anteriores: árvores que fechavam passagens foram desativadas; uma casa de(0,7) foi movida a(-5,10) para liberar o eixo central. Nenhum objeto original foi apagado. A capela fica em(0,48), sem corte no limite norte.
+- -cibio-village-review11 valida missão/NPC/rotas/colisões,32quadros, mapa e amostra de desempenho. Savev3 intacto. O supersônico10 de60u/s continua disponível.

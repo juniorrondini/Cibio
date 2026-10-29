@@ -1,0 +1,1 @@
+120 quadros sem capturas no Largo: 2,003s, 59,9 FPS. Amostra breve nesta maquina, nao benchmark.

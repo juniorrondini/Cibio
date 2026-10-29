@@ -4,7 +4,23 @@
 
 RPG de ação em pixel art com câmera em perspectiva, exploração de um bairro brasileiro, combos, poderes e progressão. Projeto Unity editável, em fase de protótipo jogável para Windows.
 
-![Forma Ascendente](docs/images/ascendente09.png)
+![Seu Davi e a vila refinada](docs/images/davi11.png)
+
+## Versão 11 — Seu Davi e Largo das Palmeiras
+
+Seu Davi ganhou **arte própria**, inspirada nos traços e no vestuário da referência enviada: cabelo grisalho, terno escuro, gravata azul e faixa verde/amarela. São **32 quadros** em quatro perspectivas, com idle e gestos de conversa. Ele olha para o personagem quando você se aproxima, tem colisão própria, identificação no cenário e um painel de diálogo com retrato. A missão A voz do Morro e suas recompensas continuam funcionando.
+
+![Prévia dos gestos de Seu Davi](docs/images/davi11.gif)
+
+A vila passou de 48×60 para **64×72 unidades**, ampliando a área em **60%**. O Largo das Palmeiras conecta o norte às novas ruas laterais, com três casas novas, pequena capela, lago, banca de feira, bancos, lampiões, vasos e poço. O calçamento foi reduzido à escala dos personagens; terra/grama se misturam por bordas suaves. Árvores, vegetação, construções, pedras e lagos receberam novas imagens, com materiais mais detalhados e paleta consistente. Sombras suaves dão contato com o chão; os lagos têm colisão elíptica para liberar os cantos da margem.
+
+A avenida leste/oeste comporta o voo supersônico. Uma casa que bloqueava o eixo central foi movida; obstáculos de vegetação que fechavam as novas passagens foram desativados, sem apagar os objetos. A expansão e os detalhes permanecem editáveis na cena Unity.
+
+![Largo das Palmeiras](docs/images/largo11.png)
+
+[Mapa completo](docs/images/mapa11.png) · [Largo](docs/images/largo11.png) · [Lago](docs/images/lago11.png) · [Quadros de Seu Davi](docs/images/davi-quadros11.jpg)
+
+Fontes, prompts finais e importador: [Generated11](Assets/Cibio/RPG/ThirdParty/Generated11/README.md). Todos os novos desenhos foram criados com image_gen integrado; a referência enviada não é distribuída com o projeto.
 
 ## Versão 10 — Ruptura supersônica
 
@@ -53,7 +69,7 @@ Consulte também as capturas de [habilidades](docs/images/skills09.png), [contro
 
 ## Vila e missão: A voz do Morro
 
-A vila mede **48×60 unidades**, incluindo o Morro do Eco, casas, caminhos e largo ao norte. A cena composta continua editável e foi preservada na versão 09.
+A vila mede **64×72 unidades**, incluindo o Morro do Eco, casas, caminhos e largo ao norte. A cena composta continua editável; a versão 11 acrescenta áreas e refina os objetos existentes.
 
 1. Converse com **Seu Davi**, ao sul da praça inicial, usando **E**.
 2. Vá ao norte, derrote ou afaste os guardas e desligue os **três amplificadores** com E depois de pousar.
@@ -115,6 +131,13 @@ $project = (Get-Location).Path
 **BuildUpdatedPlayer preserva a cena existente.** Os métodos antigos Build/BuildPlayer recriam o mapa. Preserve `.meta` e GUIDs. Não versionar Library, Temp, Logs ou builds.
 
 ## Verificação
+
+**Versão11: 532 verificações passaram** — 382 da base, 75 da evolução e75 da vila/NPC. Foram exercitados 32 quadros e auditadas as células por alpha; 17 sprites de cenário também passaram na verificação de conteúdo/margens. A missão completa e o voo supersônico foram testados na cena expandida. Os 7077 blocos originais da cena continuam presentes; a versão refinada tem 8040, sem remoções e com os GUIDs anteriores preservados.
+
+120 quadros sem capturas no Largo: 2,003s, 59,9 FPS. Amostra breve nesta maquina, nao benchmark.
+
+
+A versão 11 inclui revisão específica da expansão: `Cibio.exe -cibio-village-review11 "Review11" -logFile "review11.log"`. Exercita a missão completa com o novo NPC, os 32 quadros, caminhos para as novas áreas, colisões do lago/NPC e voo rápido na avenida; também produz uma imagem completa do mapa.
 
 **Versão 09: 457 verificações passaram** (382 da base + 75 da evolução). A revisão percorreu **272 quadros** nas quatro direções; a auditoria estática verificou **254 células únicas**, sem células vazias ou corte nas bordas. A gravação nativa ficou abaixo de saturação (pico 0.580).
 
