@@ -4,6 +4,33 @@
 
 RPG de ação em pixel art com câmera em perspectiva, exploração de um bairro brasileiro, combos, poderes e progressão. Projeto Unity editável, em fase de protótipo jogável para Windows.
 
+## Versão 14 — Costa da Brisa e combate
+
+![Costa da Brisa](docs/images/porto14.png)
+
+O mapa passou de 64×72 para **96×112 unidades**, mantendo a vila e acrescentando costa orgânica, mar animado, praia, trapiche, barcos, casa de pescador, mata e farol. Rotas pelos dois lados da capela conectam o Largo à região norte; caminhos laterais chegam ao porto e às praias. O minimapa mostra água, areia, terra e esconderijos. O mar limita a exploração; o trapiche é uma superfície acessível sobre a água.
+
+Oito novos inimigos ocupam os caminhos. Três **esconderijos** recompensam exploração com 45 XP e recuperação de 20 de vida/energia. Abra com **E**, no chão, depois de afastar inimigos próximos. A recompensa é única e fica no mesmo save v3. Seu Bonero, Companheiro e a missão anterior foram mantidos.
+
+### Combate
+
+- **Alt ou botão direito** executa uma esquiva curta no chão: 10 de energia, 0,85 s de recarga, 0,20 s de movimento e 0,13 s de proteção inicial. A direção acompanha o movimento; sem direção, usa a orientação atual. A esquiva respeita paredes e costa.
+- **J ou clique** aceita o comando antecipado para o próximo golpe. Um comando enfileira um golpe; a sequência usa três animações e contatos distintos. O movimento volta durante a recuperação final, e a esquiva pode cancelar essa recuperação.
+- Socos respeitam frente, alcance e paredes. Acertos geram reação curta; o finalizador interrompe inimigos comuns. Blindados e chefe resistem mais, evitando interrupção permanente do chefe.
+- Formas dourada/Ascendente mantêm seus poderes e aumentam o deslocamento visual/real da esquiva. Dano dos golpes, custos e recargas dos poderes e supersônico de 60 u/s permanecem.
+
+[Combate em movimento](docs/images/combate14.gif) · [Revisão dos quadros](docs/images/quadros-combate14.jpg) · [Mapa](docs/images/ilha14.png) · [Farol](docs/images/farol14.png) · [Trapiche](docs/images/trapiche14.png) · [Praia](docs/images/praia14.png) · [Originais, sprites, prompts e importador](Assets/Cibio/RPG/ThirdParty/Generated14/README.md)
+
+**Verificação da versão 14:** 872 verificações passaram: 382 da base, 75 da evolução, 75 da vila, 157 do chefe, 64 da Palma e 119 da ilha/combate. A revisão gerou 54 quadros dos combos e 28 da esquiva, além das novas regiões. Todos os 8.040 blocos originais da cena e os GUIDs existentes foram preservados. Os 12 assets novos foram reproduzidos byte a byte com o importador incluído.
+
+[Relatórios](docs/verification/Ilha-Combate14.txt) · [Balanceamento controlado](docs/verification/Balance14.csv) · [Integridade da cena](docs/verification/Scene-Audit14.json) · [Baú aberto](docs/images/bauaberto14.png) · [Quadros da esquiva](docs/images/quadros-esquiva14.jpg)
+
+No ensaio de golpes contra alvos estacionários no nível 1, o chefe levou 6,525 s na forma base, 3,042 s na dourada e 1,842 s na Ascendente. O ensaio não inclui aproximação, esquivas ou decisões da IA; orienta a comparação entre formas e não substitui sessões de jogo. Dano e vida anteriores foram mantidos.
+
+A amostra local de desempenho está em [Desempenho14.txt](docs/verification/Desempenho14.txt): 120 quadros a 1280×720, sem gravar imagens nesse trecho, em Intel UHD 630. É uma amostra curta desta máquina; o jogo ainda é um protótipo e precisa de otimização e testes em outras configurações.
+
+Revisão: `Cibio.exe -cibio-island-review14 "Review14" -logFile "review14.log"`. Inclui regressões, rotas, costas, recompensas, combos, esquiva, dano e um ensaio de tempo para derrotar alvos estacionários. As capturas e os ensaios preservam o save real.
+
 ## Versão 13 — a vila na tela inicial e nova Palma
 
 ![Tela inicial](docs/images/menu13.png)

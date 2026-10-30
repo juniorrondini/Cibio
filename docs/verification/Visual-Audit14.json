@@ -1,0 +1,18 @@
+{
+  "assets_reproduced_byte_for_byte": 12,
+  "original_scene_blocks": 8040,
+  "scene_blocks": 8984,
+  "original_scene_blocks_removed": 0,
+  "existing_guids_unchanged": true,
+  "save_key": "Cibio.RPG.v3.Progress",
+  "scene_sha256": "c619dd0807a92c416bd2ff8977c1d7bdc47467fa576d0e3252856067703ae1fc",
+  "functional_run": "Review14Focused, final player, 119 new checks",
+  "native_capture_run": "Review14Delivery, same art and combat; before the cache jump/flight guard and focus-only review option",
+  "checks": 872,
+  "new_checks": 119,
+  "native_combo_frames": 54,
+  "native_dodge_frames": 28,
+  "visual_review": "Porto, trapiche, farol, praia, bosque, vila, ilha, bau aberto, combos e esquiva",
+  "stationary_target_balance": "Balance14.csv; no AI, no approach travel, level 1; not a live encounter benchmark",
+  "original_scene_block_order_preserved": true
+}

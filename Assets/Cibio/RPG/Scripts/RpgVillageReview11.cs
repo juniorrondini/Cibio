@@ -31,7 +31,7 @@ namespace Cibio.RPG
   }
   void Tests()
   {
-   g.StartGame(false);g.reviewPose=true;Check(g.world.bounds==new Rect(-32,-18,64,72),"Mapa64x72 mantem a vila anterior e expande norte/laterais");Check(g.world.enemies.Count==14&&g.world.shrines.Count==3,"Quatorze inimigos, tres altares e seus componentes preservados");Check(npc&&quest.giver.position==new Vector3(-2,-6.3f,0),"Seu Bonero mantem identidade do objeto e ancora da missao");
+   g.StartGame(false);g.reviewPose=true;Check(g.world.bounds==RpgIsland14.Bounds,"Ilha96x112 mantem a vila anterior e expande a costa");Check(g.world.enemies.Count==22&&g.world.shrines.Count==3,"Vinte e dois inimigos, tres altares e seus componentes preservados");Check(npc&&quest.giver.position==new Vector3(-2,-6.3f,0),"Seu Bonero mantem identidade do objeto e ancora da missao");
    for(int d=0;d<4;d++)for(int f=0;f<8;f++){var s=RpgNpcDavi11.Frame(d,f);Check(s&&s.texture.name=="Davi11"&&s.pixelsPerUnit==64&&s.rect.size==new Vector2(128,128),$"Davi exclusivo, direcao{d} quadro{f}");}
    npc.Pose(2,0);Check(npc.body.color==Color.white&&npc.body.sprite.texture.name!="Hero_idle","NPC sem reutilizar ou tingir o sprite do jogador");
    foreach(var point in new[]{new Vector2(0,46),new Vector2(29,16),new Vector2(-29,29),new Vector2(-20,40)})Check(Reachable(new Vector2(0,-3),point),"Caminho terrestre acessivel para "+point);

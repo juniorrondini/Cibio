@@ -8,7 +8,7 @@ namespace Cibio.RPG
 {
     [Serializable] public sealed class RpgProgress
     {
-        public int version=3,level=1,xp,perks,defeated,questStage,silenced;public bool captainDefeated;public float x,y=-3;
+        public int version=3,level=1,xp,perks,defeated,questStage,silenced,islandCaches;public bool captainDefeated;public float x,y=-3;
         public bool Has(int id)=>(perks&(1<<id))!=0;
         public int NextLevel=>level*50;
     }
@@ -22,29 +22,29 @@ namespace Cibio.RPG
         void Awake()
         {
             Instance=this;Application.targetFrameRate=60;world=GetComponent<RpgWorld>();if(!world)world=gameObject.AddComponent<RpgWorld>();world.Build();if(!GetComponent<RpgQuest08>())gameObject.AddComponent<RpgQuest08>();RpgTerrain.Ensure(world);if(!world.hero.GetComponent<RpgPowerForm>())world.hero.gameObject.AddComponent<RpgPowerForm>();lens=Camera.main;if(!lens.GetComponent<RpgAudioLimiter>())lens.gameObject.AddComponent<RpgAudioLimiter>();if(!lens.GetComponent<RpgEnergyBloom>())lens.gameObject.AddComponent<RpgEnergyBloom>();for(int n=0;n<world.enemies.Count;n++)world.enemies[n].ConfigureEnemy(n<7?n%3:world.enemies[n].enemyKind);world.shrines[0].title="Voo da Centelha";world.shrines[0].description="[1] decolar/pousar | 12 energia + 10/s no ar.";world.shrines[1].description="Melhora sua transformação: duração de 24s.";if(!GetComponent<RpgFlightWake09>())gameObject.AddComponent<RpgFlightWake09>();if(!GetComponent<RpgFeedback09>())gameObject.AddComponent<RpgFeedback09>();if(!GetComponent<RpgAudio>())gameObject.AddComponent<RpgAudio>();ready=true;SnapCamera();
-            var args=Environment.GetCommandLineArgs();for(int i=0;i<args.Length-1;i++){if(args[i]=="-cibio-art-review13"){reviewRun=true;StartCoroutine(gameObject.AddComponent<RpgArtReview13>().Run(args[i+1]));}else if(args[i]=="-cibio-boss-review12"){reviewRun=true;StartCoroutine(gameObject.AddComponent<RpgBossReview12>().Run(args[i+1]));}else if(args[i]=="-cibio-village-review11"){reviewRun=true;StartCoroutine(gameObject.AddComponent<RpgVillageReview11>().Run(args[i+1]));}else if(args[i]=="-cibio-sonic-review10"){reviewRun=true;StartCoroutine(gameObject.AddComponent<RpgSonicReview10>().Run(args[i+1]));}else if(args[i]=="-cibio-ui-review09"){reviewRun=true;StartCoroutine(gameObject.AddComponent<RpgReview09>().RunUi(args[i+1]));}else if(args[i]=="-cibio-review09"){reviewRun=true;StartCoroutine(gameObject.AddComponent<RpgReview09>().Run(args[i+1]));}else if(args[i]=="-cibio-review08"){reviewRun=true;StartCoroutine(gameObject.AddComponent<RpgReview08>().Run(args[i+1]));}else if(args[i]=="-cibio-review07"){reviewRun=true;StartCoroutine(gameObject.AddComponent<RpgReview07>().Run(args[i+1]));}else if(args[i]=="-cibio-review"){reviewRun=true;StartCoroutine(ReviewEffects06(args[i+1]));}else if(args[i]=="-cibio-vfx-review"){reviewRun=true;StartCoroutine(gameObject.AddComponent<RpgVfxReview>().Run(args[i+1]));}}
+            var args=Environment.GetCommandLineArgs();for(int i=0;i<args.Length-1;i++){if(args[i]=="-cibio-island-review14"){reviewRun=true;StartCoroutine(gameObject.AddComponent<RpgIslandReview14>().Run(args[i+1]));}else if(args[i]=="-cibio-art-review13"){reviewRun=true;StartCoroutine(gameObject.AddComponent<RpgArtReview13>().Run(args[i+1]));}else if(args[i]=="-cibio-boss-review12"){reviewRun=true;StartCoroutine(gameObject.AddComponent<RpgBossReview12>().Run(args[i+1]));}else if(args[i]=="-cibio-village-review11"){reviewRun=true;StartCoroutine(gameObject.AddComponent<RpgVillageReview11>().Run(args[i+1]));}else if(args[i]=="-cibio-sonic-review10"){reviewRun=true;StartCoroutine(gameObject.AddComponent<RpgSonicReview10>().Run(args[i+1]));}else if(args[i]=="-cibio-ui-review09"){reviewRun=true;StartCoroutine(gameObject.AddComponent<RpgReview09>().RunUi(args[i+1]));}else if(args[i]=="-cibio-review09"){reviewRun=true;StartCoroutine(gameObject.AddComponent<RpgReview09>().Run(args[i+1]));}else if(args[i]=="-cibio-review08"){reviewRun=true;StartCoroutine(gameObject.AddComponent<RpgReview08>().Run(args[i+1]));}else if(args[i]=="-cibio-review07"){reviewRun=true;StartCoroutine(gameObject.AddComponent<RpgReview07>().Run(args[i+1]));}else if(args[i]=="-cibio-review"){reviewRun=true;StartCoroutine(ReviewEffects06(args[i+1]));}else if(args[i]=="-cibio-vfx-review"){reviewRun=true;StartCoroutine(gameObject.AddComponent<RpgVfxReview>().Run(args[i+1]));}}
         }
         public void StartGame(bool continueGame)
         {
             session++;progress=continueGame?Load():new RpgProgress();mode=1;var hero=world.hero;
             Vector2 spawn=new(progress.x,progress.y);hero.transform.position=world.CanStand(spawn)?spawn:new Vector2(0,-3);
-            bufferedAttack=transformInputHeld=false;hero.ResetMotion();hero.health=hero.MaxHealth;hero.energy=100;hero.buff=hero.charge=hero.attackTimer=hero.jumpTimer=hero.invincible=hero.transforming=hero.powerPose=0;hero.dead=hero.charging=false;hero.deadTime=0;hero.velocity=Vector2.zero;hero.direction=2;hero.facing=Vector2.down;dashCooldown=waveCooldown=boltCooldown=impactPause=0;hero.body.color=Color.white;hero.Pose("idle",0);var form=hero.GetComponent<RpgPowerForm>();if(form)form.Refresh(1);var aura=hero.GetComponent<RpgAura>();if(aura)aura.Refresh(1);foreach(var ps in hero.GetComponentsInChildren<ParticleSystem>())ps.Clear();
+            bufferedAttack=transformInputHeld=false;hero.ResetMotion();floating.Clear();hero.GetComponent<RpgPowerForm>()?.StopAllCoroutines();hero.health=hero.MaxHealth;hero.energy=100;hero.buff=hero.charge=hero.attackTimer=hero.jumpTimer=hero.invincible=hero.transforming=hero.powerPose=0;hero.dead=hero.charging=false;hero.deadTime=0;hero.velocity=Vector2.zero;hero.direction=2;hero.facing=Vector2.down;dashCooldown=waveCooldown=boltCooldown=impactPause=0;hero.body.color=Color.white;hero.Pose("idle",0);var form=hero.GetComponent<RpgPowerForm>();if(form)form.Refresh(1);var aura=hero.GetComponent<RpgAura>();if(aura)aura.Refresh(1);foreach(var ps in hero.GetComponentsInChildren<ParticleSystem>())ps.Clear();
             foreach(var enemy in world.enemies)enemy.ResetEnemy();GetComponent<RpgQuest08>().RefreshState();GetComponent<RpgQuest08>().giver?.GetComponent<RpgNpcDavi11>()?.ResetNpc();
             Save();SnapCamera();Notify("Seu Bonero espera ao sul da praça • [E] conversar • [C] carregar energia");
         }
         void Update()
         {
             if(!ready)return;
-            if(Input.GetKeyDown(KeyCode.Escape)){if(mode==1){Save();mode=2;}else if(mode==2)mode=1;else if(mode==3)mode=0;}
+            if(Input.GetKeyDown(KeyCode.Escape)){if(mode==1){bufferedAttack=false;world.hero.CancelQueuedAttack();Save();mode=2;}else if(mode==2)mode=1;else if(mode==3)mode=0;}
             if(!Playing||reviewPose)return;if(Input.GetKeyDown(KeyCode.J)||Input.GetMouseButtonDown(0)&&!RpgInterface.PointerOverHud())bufferedAttack=true;if(impactPause>0){impactPause=Mathf.Max(0,impactPause-Time.unscaledDeltaTime);return;}float dt=Time.deltaTime;
             var hero=world.hero;dashCooldown=Mathf.Max(0,dashCooldown-dt);waveCooldown=Mathf.Max(0,waveCooldown-dt);boltCooldown=Mathf.Max(0,boltCooldown-dt);
-            if(hero.dead){if(Input.GetKeyDown(KeyCode.R))Revive();}
+            if(hero.dead){bufferedAttack=false;if(Input.GetKeyDown(KeyCode.R))Revive();}
             else
             {
                 HandleTransformInput(Input.GetKey(KeyCode.C)||RpgInterface.ChargeButtonHeld());
                 Vector2 input=new(Input.GetAxisRaw("Horizontal"),Input.GetAxisRaw("Vertical"));
-                bool run=Input.GetKey(KeyCode.LeftShift);hero.SetFlightControls(run,Input.GetKey(KeyCode.LeftControl)||Input.GetKey(KeyCode.RightControl));float speed=hero.flying?hero.FlightSpeed:hero.GroundSpeed(run);hero.Walk(input,speed,dt,run);
-                if(bufferedAttack){hero.Attack();bufferedAttack=false;}
+                bool run=Input.GetKey(KeyCode.LeftShift);hero.SetFlightControls(run,Input.GetKey(KeyCode.LeftControl)||Input.GetKey(KeyCode.RightControl));float speed=hero.flying?hero.FlightSpeed:hero.GroundSpeed(run);if(Input.GetKeyDown(KeyCode.LeftAlt)||Input.GetKeyDown(KeyCode.RightAlt)||Input.GetMouseButtonDown(1)&&!RpgInterface.PointerOverHud())hero.TryDodge(input);hero.Walk(input,speed,dt,run);
+                if(bufferedAttack){hero.RequestAttack();bufferedAttack=false;}
                 if(Input.GetKeyDown(KeyCode.Space))hero.Jump();
                 if(Input.GetKeyDown(KeyCode.E))Interact();if(Input.GetKeyDown(KeyCode.Alpha1))Dash();if(Input.GetKeyDown(KeyCode.Alpha2))Wave();if(Input.GetKeyDown(KeyCode.Alpha3))Bolt();
             }
@@ -65,7 +65,7 @@ namespace Cibio.RPG
         public void SnapCamera(){if(lens)lens.transform.position=new Vector3(world.hero.Position.x,world.hero.Position.y+.8f,-10);}
         public bool Interact()
         {
-            if(world.hero.dead||world.hero.attackTimer>0||world.hero.transforming>0)return false;if(GetComponent<RpgQuest08>().TryInteract())return true;var s=world.NearestShrine(world.hero.Position);if(!s){Notify("Aproxime-se de um altar e pressione [E].");return false;}
+            if(world.hero.dead||world.hero.attackTimer>0||world.hero.transforming>0||world.hero.Dodging)return false;if(GetComponent<RpgQuest08>().TryInteract())return true;foreach(var cache in UnityEngine.Object.FindObjectsByType<RpgCache14>())if(cache.Interact())return true;var s=world.NearestShrine(world.hero.Position);if(!s){Notify("Aproxime-se de um altar e pressione [E].");return false;}
             if(progress.Has(s.id)){Notify(s.title+" já faz parte de você.");return false;}
             progress.perks|=1<<s.id;Save();Notify("PODER DESPERTO  •  "+s.title);RpgEffects.Burst(world.hero.Position,s.color,3,1);RpgAudio.Play("item_gem_01",world.hero.Position,.5f);shake=.4f;return true;
         }
@@ -79,7 +79,7 @@ namespace Cibio.RPG
         public bool Wave()
         {
             var h=world.hero;if(!progress.Has(2)){Notify("O altar da Liberdade guarda esse poder [E].");return false;}
-            if(h.dead||h.charging||h.transforming>0||h.attackTimer>0||h.powerPose>0||h.energy<40||waveCooldown>0)return false;
+            if(h.Dodging||h.dead||h.charging||h.transforming>0||h.attackTimer>0||h.powerPose>0||h.energy<40||waveCooldown>0)return false;
             bool power=h.buff>0;h.energy-=40;waveCooldown=power?4:5;h.Cast(power?.72f:.55f,power?.18f:.12f);
             StartCoroutine(LibertyPulse(h.Position,power,h.flightHeight,h.Damage*(h.FormStage==2?2.8f:power?2.4f:2.2f),session,h.FormStage));return true;
         }
@@ -100,7 +100,7 @@ namespace Cibio.RPG
         public bool Bolt()
         {
             var h=world.hero;if(progress.questStage!=3){Notify("Conclua a missão de Seu Bonero para aprender a Palma da Centelha.");return false;}
-            if(h.dead||h.charging||h.transforming>0||h.attackTimer>0||h.powerPose>0||h.energy<22||boltCooldown>0)return false;
+            if(h.Dodging||h.dead||h.charging||h.transforming>0||h.attackTimer>0||h.powerPose>0||h.energy<22||boltCooldown>0)return false;
             h.energy-=22;boltCooldown=h.FormStage==2?1.1f:1.8f;h.Cast(.32f);RpgProjectile.FireHero(h,h.facing);return true;
         }
         public void HandleTransformInput(bool held)
@@ -119,7 +119,7 @@ namespace Cibio.RPG
         {
             var h=world.hero;bool wasHeld=h.charging;
             if(held&&h.flying)h.Land();
-            if(held&&h.flightHeight<=0&&!h.dead&&h.attackTimer<=0&&h.jumpTimer<=0&&h.transforming<=0&&h.powerPose<=0)h.charging=true;
+            if(held&&h.flightHeight<=0&&!h.Dodging&&!h.dead&&h.attackTimer<=0&&h.jumpTimer<=0&&h.transforming<=0&&h.powerPose<=0)h.charging=true;
             else if(!held){h.charging=false;if(wasHeld||h.charge>0)ReleaseCharge();}
         }
         public void ReleaseCharge()

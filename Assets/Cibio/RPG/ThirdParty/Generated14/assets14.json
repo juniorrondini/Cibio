@@ -1,0 +1,30 @@
+[
+  {
+    "key": "ground",
+    "transparent": false,
+    "prompt": "Use case: stylized-concept. Production material atlas for extending an existing Brazilian top-down detailed pixel-art RPG with an island coastline. EXACTLY four equally sized square seamless material swatches in2x2 layout with no gutters or borders,1024x1024. Top-left: natural warm fine BEACH SAND with tiny grain/shell flecks, subdued pale beige, uniform surface without footprints or objects. Top-right: turquoise/teal OCEAN SURFACE seen straight down, gentle small ripples and caustics, restrained lighter wave glints, uniform depth and luminosity, no shoreline. Bottom-left: weathered warm timber DECK PLANKS seen top-down, evenly aligned horizontal planks, subtle seams and tiny nail details, no railing or shadows outside planks. Bottom-right: coastal warm gray weathered ROCK surface seen top-down, organic cracks and soft subtle lichen, no isolated rocks. Detailed controlled pixel clusters with painterly RPG texture, natural cohesive palette matching Cibio's existing colonial village. Avoid photorealistic photo noise, low-poly facets, exaggerated black seams, text, labels, icons, vignettes and composition objects. Each quadrant fills its complete rectangle and tiles seamlessly as a material.",
+    "path": "ground-original.png"
+  },
+  {
+    "key": "buildings",
+    "transparent": true,
+    "prompt": "Use case: stylized-concept. ORIGINAL production scenery sprite sheet for Cibio, a detailed Brazilian top-down 2.5D pixel-art RPG. References show the existing building/foliage art and game perspective; match their restrained painterly pixel rendering, muted warm colors, readable outlines and elevated orthographic projection showing roof/front/right side. EXACTLY2 columns x1 row of two fully separate complete buildings, no touching. LEFT: coastal LIGHTHOUSE, small whitewashed cylindrical masonry tower with muted teal/blue horizontal trim, warm terracotta base roof, timber door, glazed lantern room and small metal railing at top, weathered plaster and restrained amber lantern glow. RIGHT: FISHERMAN'S COTTAGE, modest cream/turquoise plaster and weathered wood structure, terracotta tiled pitched roof, wooden shutter, door, coiled fishing net and small crate close to base. Each structure complete from roof to ground, no crop. Large generous genuine transparent gutters and margin. No terrain patch, ground plane, horizon, background, cast shadow, labels, text or extra buildings. 1536x1024 landscape sheet.",
+    "path": "buildings-original.png",
+    "references": [
+      "House11_0.png",
+      "Tree11_1.png",
+      "largo11.png"
+    ]
+  },
+  {
+    "key": "props",
+    "transparent": true,
+    "prompt": "Use case: stylized-concept. ORIGINAL production props for the same Brazilian top-down pixel-art RPG style and elevated orthographic camera as the references. EXACTLY3 columns x2 rows=6 isolated props, each fully contained with ample transparent gutters, matching detailed painterly pixel clusters and cohesive natural colors. Row1 left: a small weathered WOODEN FISHING BOAT, horizontal left-to-right orientation, interior seats, coiled rope, no sail, no water. Row1 center: graceful tropical PALM TREE with curved textured trunk and lush natural fronds, complete roots to crown. Row1 right: group of organic rounded COASTAL ROCKS with moss, complete silhouette, no terrain. Row2 left: a WIDE HORIZONTAL TIMBER PIER viewed from above at the game angle, straight plank walkway with corner wooden support posts and modest rope railings along upper/lower edge, no water, full left and right ends visible. Row2 center: CLOSED weathered wood treasure CHEST with brass fittings. Row2 right: EXACT SAME chest with lid OPEN and a restrained warm interior gleam, identical scale and base. No additional objects, no terrain patches, cast ground shadows, scenery, labels or text. Genuine alpha background, no opaque or painted checkerboard. 1536x1024 landscape.",
+    "path": "props-original.png",
+    "references": [
+      "House11_0.png",
+      "Tree11_1.png",
+      "largo11.png"
+    ]
+  }
+]

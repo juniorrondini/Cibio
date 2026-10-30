@@ -40,13 +40,13 @@ namespace Cibio.RPG.Editor
         public static void ValidateSaved()
         {
             EditorSceneManager.OpenScene(Scene);var world=Object.FindAnyObjectByType<RpgWorld>();var game=Object.FindAnyObjectByType<RpgGame>();
-            if(!world||!game||!world.built||!world.hero||world.shrines.Count!=3||world.enemies.Count!=14||world.solids.Count<30)throw new System.Exception("Cena RPG incompleta");
+            if(!world||!game||!world.built||!world.hero||world.shrines.Count!=3||world.enemies.Count!=22||world.solids.Count<30)throw new System.Exception("Cena RPG incompleta");
             int renderers=0;
             foreach(var renderer in world.GetComponentsInChildren<SpriteRenderer>()){if(!renderer.sprite||!renderer.sprite.texture)throw new System.Exception("Sprite sem referência: "+renderer.name);renderers++;}
             foreach(var t in world.GetComponentsInChildren<Transform>())if(GameObjectUtility.GetMonoBehavioursWithMissingScriptCount(t.gameObject)>0)throw new System.Exception("Script ausente: "+t.name);
             if(!game.effectsMaterial||!game.lens)throw new System.Exception("Câmera ou material sem referência");
             foreach(string action in new[]{"walk","run","jump","slash","spellcast"}){var t=RpgArt.Texture("Hero_"+action);var importer=(TextureImporter)AssetImporter.GetAtPath(AssetDatabase.GetAssetPath(t));if(importer.npotScale!=TextureImporterNPOTScale.None||importer.filterMode!=FilterMode.Point)throw new System.Exception("Importação incorreta: "+action);}
-            Directory.CreateDirectory("RpgReview");File.WriteAllText("RpgReview/Validacao-Cena.txt","PASS cena persistida, "+renderers+" sprites, "+world.solids.Count+" obstáculos, câmera, material, scripts, 3 altares, 14 inimigos e importação sem redimensionamento.\n");Debug.Log("CIBIO_RPG_SAVED_SCENE_OK "+renderers);
+            Directory.CreateDirectory("RpgReview");File.WriteAllText("RpgReview/Validacao-Cena.txt","PASS cena persistida, "+renderers+" sprites, "+world.solids.Count+" obstáculos, câmera, material, scripts, 3 altares, 22 inimigos e importação sem redimensionamento.\n");Debug.Log("CIBIO_RPG_SAVED_SCENE_OK "+renderers);
         }
         static void CaptureOverview(Camera camera)
         {
@@ -77,7 +77,7 @@ namespace Cibio.RPG.Editor
             AssetDatabase.SaveAssets();ValidateSaved();var world=Object.FindAnyObjectByType<RpgWorld>();RpgTerrain.Ensure(world);CaptureOverview(Camera.main);
             string output=Path.GetFullPath("Cibio04/Cibio.exe");var args=System.Environment.GetCommandLineArgs();for(int i=0;i<args.Length-1;i++)if(args[i]=="-cibio-build")output=args[i+1];Directory.CreateDirectory(Path.GetDirectoryName(output));
             var report=BuildPipeline.BuildPlayer(new BuildPlayerOptions{scenes=new[]{Scene},locationPathName=output,target=BuildTarget.StandaloneWindows64,options=BuildOptions.None});
-            if(report.summary.result!=UnityEditor.Build.Reporting.BuildResult.Succeeded)throw new System.Exception("Falha: "+report.summary.result);Debug.Log("CIBIO_13_BUILD_OK");
+            if(report.summary.result!=UnityEditor.Build.Reporting.BuildResult.Succeeded)throw new System.Exception("Falha: "+report.summary.result);Debug.Log("CIBIO_14_BUILD_OK");
         }
     }
     public sealed class RpgTextureImport:AssetPostprocessor

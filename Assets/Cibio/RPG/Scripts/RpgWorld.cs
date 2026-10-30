@@ -10,7 +10,7 @@ namespace Cibio.RPG
         public List<RpgShrine> shrines=new();
         public List<RpgActor> enemies=new();
         public Rect bounds=new(-24,-18,48,60);
-        public RpgActor hero;public Transform scenery;public bool built;
+        public RpgActor hero;public Transform scenery;public bool built,coastal;
         public void Build()
         {
             if(built)return;built=true;
@@ -71,13 +71,15 @@ namespace Cibio.RPG
         public bool CanStand(Vector2 p,float radius=.22f)
         {
             if(p.x<bounds.xMin+radius||p.x>bounds.xMax-radius||p.y<bounds.yMin+radius||p.y>bounds.yMax-radius)return false;
+            if(coastal&&!RpgIsland14.OnLand(p,radius))return false;
             foreach(var r in obstacles)if(Touches(r,p,radius))return false;
             foreach(var solid in solids)if(solid&&solid.enabled&&solid.gameObject.activeInHierarchy&&solid.Blocks(p,radius))return false;return true;
         }
+        public bool HasClearPath(Vector2 a,Vector2 b){int steps=Mathf.Max(1,Mathf.CeilToInt(Vector2.Distance(a,b)/.12f));for(int i=1;i<steps;i++)if(!CanStand(Vector2.Lerp(a,b,i/(float)steps),.06f))return false;return true;}
         static bool Touches(Rect r,Vector2 p,float radius){var nearest=new Vector2(Mathf.Clamp(p.x,r.xMin,r.xMax),Mathf.Clamp(p.y,r.yMin,r.yMax));return (nearest-p).sqrMagnitude<radius*radius;}
         public Vector2 Move(Vector2 p,Vector2 delta)
         {
-            int steps=Mathf.Max(1,Mathf.CeilToInt(delta.magnitude/.12f));delta/=steps;
+            if(delta.sqrMagnitude<.00000001f)return p;int steps=Mathf.Max(1,Mathf.CeilToInt(delta.magnitude/.12f));delta/=steps;
             for(int i=0;i<steps;i++){if(CanStand(p+new Vector2(delta.x,0)))p.x+=delta.x;if(CanStand(p+new Vector2(0,delta.y)))p.y+=delta.y;}return p;
         }
         public RpgShrine NearestShrine(Vector2 p)

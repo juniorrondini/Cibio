@@ -1,0 +1,119 @@
+PASS Ilha96x112 com costa ativa
+PASS Oito novos inimigos preservam os14 originais e o chefe
+PASS Tres esconderijos exploraveis
+PASS Rota terrestre acessivel: (0.00, 62.00)
+PASS Rota terrestre acessivel: (25.00, 68.00)
+PASS Rota terrestre acessivel: (38.00, 10.00)
+PASS Rota terrestre acessivel: (44.00, 10.00)
+PASS Rota terrestre acessivel: (-39.00, 30.00)
+PASS Rota terrestre acessivel: (0.00, -21.00)
+PASS Rota terrestre acessivel: (-33.00, 63.00)
+PASS Rota terrestre acessivel: (30.00, 69.00)
+PASS Mar bloqueia movimento fora da costa: (47.00, 20.00)
+PASS Mar bloqueia movimento fora da costa: (0.00, 82.00)
+PASS Mar bloqueia movimento fora da costa: (-47.00, 30.00)
+PASS Mar bloqueia movimento fora da costa: (0.00, -27.00)
+PASS Trapiche libera apenas sua superficie sobre o mar
+PASS Passo longo nao atravessa limite da agua
+PASS Asset costeiro integrado: Lighthouse14
+PASS Asset costeiro integrado: Cabin14
+PASS Asset costeiro integrado: Boat14
+PASS Asset costeiro integrado: Palm14
+PASS Asset costeiro integrado: Pier14
+PASS Asset costeiro integrado: CoastRock14
+PASS Asset costeiro integrado: Cache14_closed
+PASS Asset costeiro integrado: Cache14_open
+PASS Asset costeiro integrado: Terrain_Sea14
+PASS Asset costeiro integrado: Terrain_Sand14
+PASS Asset costeiro integrado: Terrain_Wood14
+PASS Asset costeiro integrado: Terrain_CoastRock14
+PASS Golpe respeita frente/costas na direcao0
+PASS Impacto imobiliza inimigo comum na direcao0
+PASS Golpe respeita frente/costas na direcao1
+PASS Impacto imobiliza inimigo comum na direcao1
+PASS Golpe respeita frente/costas na direcao2
+PASS Impacto imobiliza inimigo comum na direcao2
+PASS Golpe respeita frente/costas na direcao3
+PASS Impacto imobiliza inimigo comum na direcao3
+PASS Soco nao atravessa parede fina
+PASS Comando inicia golpe
+PASS Segundo clique cedo fica no buffer
+PASS Buffer encadeia golpe2 sem clique no fim
+PASS Um comando nao gera varios golpes automaticos
+PASS Cancelamento limpa o comando antecipado
+PASS Antecipacao conserva direcao e trava deslocamento
+PASS Recuperacao final aceita movimento sem travar controle
+PASS Finalizador interrompe ataque comum
+PASS Blindado resiste mais ao stagger
+PASS Chefe ignora interrupcao por soco leve
+PASS Chefe recebe resposta curta ao finalizador
+PASS Esquiva custa10, forma0 direcao0
+PASS Janela inicial evita dano, forma0 direcao0
+PASS Esquiva percorre distancia continua esperada, forma0 direcao0
+PASS Recarga impede esquiva repetida, forma0 direcao0
+PASS Esquiva custa10, forma0 direcao1
+PASS Janela inicial evita dano, forma0 direcao1
+PASS Esquiva percorre distancia continua esperada, forma0 direcao1
+PASS Recarga impede esquiva repetida, forma0 direcao1
+PASS Esquiva custa10, forma0 direcao2
+PASS Janela inicial evita dano, forma0 direcao2
+PASS Esquiva percorre distancia continua esperada, forma0 direcao2
+PASS Recarga impede esquiva repetida, forma0 direcao2
+PASS Esquiva custa10, forma0 direcao3
+PASS Janela inicial evita dano, forma0 direcao3
+PASS Esquiva percorre distancia continua esperada, forma0 direcao3
+PASS Recarga impede esquiva repetida, forma0 direcao3
+PASS Esquiva custa10, forma1 direcao0
+PASS Janela inicial evita dano, forma1 direcao0
+PASS Esquiva percorre distancia continua esperada, forma1 direcao0
+PASS Recarga impede esquiva repetida, forma1 direcao0
+PASS Esquiva custa10, forma1 direcao1
+PASS Janela inicial evita dano, forma1 direcao1
+PASS Esquiva percorre distancia continua esperada, forma1 direcao1
+PASS Recarga impede esquiva repetida, forma1 direcao1
+PASS Esquiva custa10, forma1 direcao2
+PASS Janela inicial evita dano, forma1 direcao2
+PASS Esquiva percorre distancia continua esperada, forma1 direcao2
+PASS Recarga impede esquiva repetida, forma1 direcao2
+PASS Esquiva custa10, forma1 direcao3
+PASS Janela inicial evita dano, forma1 direcao3
+PASS Esquiva percorre distancia continua esperada, forma1 direcao3
+PASS Recarga impede esquiva repetida, forma1 direcao3
+PASS Esquiva custa10, forma2 direcao0
+PASS Janela inicial evita dano, forma2 direcao0
+PASS Esquiva percorre distancia continua esperada, forma2 direcao0
+PASS Recarga impede esquiva repetida, forma2 direcao0
+PASS Esquiva custa10, forma2 direcao1
+PASS Janela inicial evita dano, forma2 direcao1
+PASS Esquiva percorre distancia continua esperada, forma2 direcao1
+PASS Recarga impede esquiva repetida, forma2 direcao1
+PASS Esquiva custa10, forma2 direcao2
+PASS Janela inicial evita dano, forma2 direcao2
+PASS Esquiva percorre distancia continua esperada, forma2 direcao2
+PASS Recarga impede esquiva repetida, forma2 direcao2
+PASS Esquiva custa10, forma2 direcao3
+PASS Janela inicial evita dano, forma2 direcao3
+PASS Esquiva percorre distancia continua esperada, forma2 direcao3
+PASS Recarga impede esquiva repetida, forma2 direcao3
+PASS Energia insuficiente bloqueia esquiva
+PASS Esquiva nao substitui controle de voo
+PASS Carga de energia nao pode ser cancelada por esquiva
+PASS Esquiva nao atravessa parede mesmo com200ms
+PASS Esquiva nao concede invulnerabilidade permanente
+PASS Morte limpa esquiva e combo
+PASS Salto nao permite abrir bau
+PASS Voo bloqueia bau antes de subir
+PASS Inimigo proximo protege recompensa
+PASS Interacao abre esconderijo e salva bit
+PASS Esconderijo nao duplica XP
+PASS Esconderijo permanece aberto apos serializacao
+PASS Savev3 anterior recebe campo novo sem perder progresso
+PASS Combate real conclui alvo estacionario,forma0 tipo1
+PASS Combate real conclui alvo estacionario,forma0 tipo4
+PASS Combate real conclui alvo estacionario,forma1 tipo1
+PASS Combate real conclui alvo estacionario,forma1 tipo4
+PASS Combate real conclui alvo estacionario,forma2 tipo1
+PASS Combate real conclui alvo estacionario,forma2 tipo4
+PASS Evolucao reduz tempo real para vencer chefe no ensaio controlado
+PASS Save real preservado nos testes
+PASS Capturas e desempenho preservam save real

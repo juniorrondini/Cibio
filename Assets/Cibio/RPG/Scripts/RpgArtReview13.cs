@@ -41,6 +41,7 @@ namespace Cibio.RPG
    Reset();var enemy=g.world.enemies[1];enemy.transform.position=new Vector2(5,-10);var old=RpgProjectile.Fire(enemy,Vector2.right);old.enabled=false;old.Advance(0);Check(Properties(old).GetTexture("_Atlas").name=="Vfx_Wisp06","Projeteis inimigos mantem visual anterior");
    Check(RpgGame.SaveKey=="Cibio.RPG.v3.Progress","Chave de save preservada");
   }
+  public void ValidateMechanics(string path){folder=path;Directory.CreateDirectory(folder);g=GetComponent<RpgGame>();Tests();}
   public IEnumerator Run(string path)
   {
    folder=path;Directory.CreateDirectory(folder);g=GetComponent<RpgGame>();yield return new WaitForSecondsRealtime(.8f);yield return Shot("Menu13-A");yield return new WaitForSecondsRealtime(1.2f);yield return Shot("Menu13-B");bool saved=PlayerPrefs.HasKey(RpgGame.SaveKey);string save=PlayerPrefs.GetString(RpgGame.SaveKey,"");

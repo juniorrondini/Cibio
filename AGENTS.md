@@ -99,3 +99,11 @@
 - RpgPalmaImpact13 dura.5s e respeita pausa, usa bloom/camada29, atlas orgânico e saída suave. Impacto ocorre no alvo ou lado livre da parede; sem geometria de contorno e sem quadrado opaco antes de texturizar.
 - Originais, prompts finais e importador em Generated13; Fontes-Visual-13.zip distribuído com créditos. Imagens criadas com image_gen integrado; importador só recorta/dimensiona/insere margens.
 - -cibio-art-review13 verifica base/evolução/vila/chefe e Palma; captura menu/32quadros/12vistas. Preservar savev3, GUIDs e cena byte a byte. BuildUpdatedPlayer para compilar, sem migrar/recriar a cena.
+
+## Atualização14
+- Bounds(-48,-28,96,112), costa compartilhada RpgIsland14/OrganicGround, mar bloqueado e trapiche(35,8.5,11,3) acessível. Novos caminhos contornam a capela. RpgExpansion14.Append é idempotente, preserva objetos/GUIDs e acrescenta8 inimigos(total22),3 caches e paisagem. BuildPlayer chama Append+BuildUpdatedPlayer; nunca usar gerador base.
+- Savev3 conserva tudo e acrescenta islandCaches(default0), máscara de3 baús com45XP e20vida/energia uma única vez. ID2 fica no trapiche; caches interagem comE no chão, sem inimigo a3.3u. Posições(-33,64),(30,70),(44.3,10).
+- RequestAttack compartilha entradaJ/clique/UI, buffer.18s e fila de um golpe após25% da animação; Attack continua a API antiga. Recuperação aceita movimento após88%, esquiva após82%. Acertos usam arco frontal e HasClearPath, sem dano por parede. Stagger.16/.3 leve/finalizador; blindado fator.55, chefe só finalizador fator.25, sem cancelar rajada do chefe.
+- Esquiva Alt/botão direito:10energia,.85cooldown,.2duracao,.13iframes;9/11.5/13.5u/s por forma. Usa Run/afterimage existentes e colisão Move com passos.12. Não permitir durante carga, voo, salto, transformação ou início de ataque. Estado limpo em morte/reset; fila limpa em pausa.
+- Assets originais/prompts/importador em Generated14 e Fontes-Costa-14.zip, ferramenta image_gen integrada. PPU específico em RpgArt.ImagePPU. Sem novas imagens procedurais como substituto dos assets.
+- -cibio-island-review14 executa regressões e ensaios de mapa/combate, grava Balance14.csv para alvos estacionários, capturas e FPS breve. Preservar save real. Os testes devem considerar22 inimigos e o novo bounds; originais continuam na lista.
