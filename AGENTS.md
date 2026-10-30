@@ -10,7 +10,7 @@
 - Sprites LPC: 64 px por quadro; direções cima, esquerda, baixo e direita. Idle 2, walk 9, run 8, jump 5, slash 6, spellcast 7. Hurt tem 6 quadros em uma direção. Não reduzir texturas a potências de dois; usar NPOT None, filtro Point e sem compressão/mipmaps.
 - Antes de incorporar arte, conferir licenças e manter créditos por arquivo e originais em ThirdParty. Arte derivada LPC da versão 03 é CC BY-SA 4.0. Não usar arte extraída de franquias.
 - O menu Créditos precisa manter a atribuição acessível. A distribuição inclui StreamingAssets/Cibio-Licenses.
-- Verificação: gerar player com `Cibio.RPG.Editor.RpgBuilder.BuildPlayer`, argumento `-cibio-build` para escolher o EXE; depois executar player com `-cibio-review <pasta>` para testes e capturas. Esse modo não altera o save do jogador e fecha ao terminar. Capturas de janela oculta podem ficar pretas neste computador.
+- Verificação: gerar player com `Cibio.RPG.Editor.RpgBuilder.BuildUpdatedPlayer`, argumento `-cibio-build` para escolher o EXE; depois executar player com `-cibio-chronicle-review15 <pasta>` para testes e capturas. Esse modo não altera o save do jogador e fecha ao terminar. Capturas de janela oculta podem ficar pretas neste computador.
 - A chave de progresso é `Cibio.RPG.v3.Progress`. Nunca apagar saves do usuário durante verificações.
 - Interface, mensagens e documentação para o jogador em português.
 
@@ -107,3 +107,10 @@
 - Esquiva Alt/botão direito:10energia,.85cooldown,.2duracao,.13iframes;9/11.5/13.5u/s por forma. Usa Run/afterimage existentes e colisão Move com passos.12. Não permitir durante carga, voo, salto, transformação ou início de ataque. Estado limpo em morte/reset; fila limpa em pausa.
 - Assets originais/prompts/importador em Generated14 e Fontes-Costa-14.zip, ferramenta image_gen integrada. PPU específico em RpgArt.ImagePPU. Sem novas imagens procedurais como substituto dos assets.
 - -cibio-island-review14 executa regressões e ensaios de mapa/combate, grava Balance14.csv para alvos estacionários, capturas e FPS breve. Preservar save real. Os testes devem considerar22 inimigos e o novo bounds; originais continuam na lista.
+
+## Atualização 15
+- RpgTalents15 usa talentRanks (2 bits por talento, nove talentos) e pontos derivados de level-1+bonusTalentPoints. Não usar o bitmask perks dos altares para talentos. Sanitizar graus, dependências e orçamento ao carregar. Save v3 preservado. XP centralizado em GainExperience; Contratempo e ecos limpos entre sessões/morte. T usa mode4 e pausa as atualizações de jogo.
+- RpgWorldSecret15 é runtime, sem reconstruir ou salvar a cena. FormStage2+voo+Shift atravessa tudo e faz wrap. TravelSonic recebe deslocamento cru, nunca distância do teleporte de borda. Voltadas pelo eixo inicial; recuo/bounce não contam. Freeze de buff/energia só durante órbita ativa. Ctrl/soltar/pousar restaura posição standable.
+- Dez voltas iniciam revelação7.2s com WorldFold15 (2x4) e World_Vuvuzela15; arena mantém originais inativos e troca temporariamente a lista de inimigos. Restaurar bounds/lista/cenário ao sair/newgame. Save usa EntryPosition; descoberta pendente retoma arena. Nunca salvar coordenadas da arena sobre o retorno.
+- Bonero Companheiro é enemyKind5, Family BoneroCompanheiro15, células256/PPU64/pivô(.5,.1015625). Controlador RpgFusionBoss15 separado da IA antiga; quatro movimentos e fase aos60%PV. Ondas nativas RpgHornShot15 com colisão varrida; voar não evita voz. Não reaproveitar Companheiro12 para a fusão. Recompensa350XP+1bonusTalentPoint única. Não alterar captainDefeated/questStage do chefe original.
+- UI parcial RpgInterface15, arte11imagens em Generated15 e sons10 em SoundDesign15; originais/prompts/receitas/créditos incluídos. Imagegen integrado, sem imagens procedurais substitutas. BuildUpdatedPlayer compila sem modificar a cena. -cibio-chronicle-review15 valida regressões e novos sistemas, captura quadros por Camera.Render quando a janela não renderiza, preserva o save real.

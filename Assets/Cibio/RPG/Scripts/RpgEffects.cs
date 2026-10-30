@@ -12,7 +12,7 @@ namespace Cibio.RPG
   }
   public static void Paint(SpriteRenderer r,string atlas,float frame,Color color,float intensity,float veil=0)
   {
-   properties??=new MaterialPropertyBlock();properties.Clear();properties.SetTexture("_Atlas",RpgArt.Texture(atlas));properties.SetFloat("_Frame",frame);properties.SetVector("_Grid",(atlas.EndsWith("06")||atlas.EndsWith("09")||atlas.StartsWith("Vfx_Palma"))?new Vector4(4,4,16,0):new Vector4(4,2,8,0));properties.SetFloat("_Veil",veil);properties.SetFloat("_Filament",atlas.Contains("Arc06")?1:0);properties.SetColor("_Tint",color);properties.SetFloat("_Intensity",intensity);properties.SetFloat("_Phase",Mathf.Abs(r.transform.position.x*7.7f+r.transform.position.y*11.3f)%47);r.SetPropertyBlock(properties);r.enabled=true;
+   properties??=new MaterialPropertyBlock();properties.Clear();properties.SetTexture("_Atlas",RpgArt.Texture(atlas));properties.SetFloat("_Frame",frame);properties.SetVector("_Grid",(atlas.EndsWith("06")||atlas.EndsWith("09")||atlas.EndsWith("15")||atlas.StartsWith("Vfx_Palma"))?new Vector4(4,4,16,0):new Vector4(4,2,8,0));properties.SetFloat("_Veil",veil);properties.SetFloat("_Filament",atlas.Contains("Arc06")?1:0);properties.SetColor("_Tint",color);properties.SetFloat("_Intensity",intensity);properties.SetFloat("_Phase",Mathf.Abs(r.transform.position.x*7.7f+r.transform.position.y*11.3f)%47);r.SetPropertyBlock(properties);r.enabled=true;
   }
   public static void Spark(Vector2 p,Color c,float intensity)
   {

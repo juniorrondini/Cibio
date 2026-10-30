@@ -1,0 +1,17 @@
+{
+  "scene_byte_for_byte_unchanged": true,
+  "scene_sha256": "c619dd0807a92c416bd2ff8977c1d7bdc47467fa576d0e3252856067703ae1fc",
+  "existing_guids_unchanged": true,
+  "assets_reproduced_byte_for_byte": 11,
+  "sounds_reproduced_byte_for_byte": 10,
+  "vfx_padding": 16,
+  "save_key": "Cibio.RPG.v3.Progress",
+  "boss_frames": 128,
+  "world_metamorphosis_panels": 8,
+  "orbital_frames": 16,
+  "horn_frames": 16,
+  "talent_icons": 9,
+  "boss_cell_size": 256,
+  "complete_silhouettes_validated": 128,
+  "foreign_opaque_fragments": 0
+}

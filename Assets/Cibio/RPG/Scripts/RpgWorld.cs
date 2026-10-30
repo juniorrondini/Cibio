@@ -70,6 +70,7 @@ namespace Cibio.RPG
         public static int Order(float y)=>1000-Mathf.RoundToInt(y*32);
         public bool CanStand(Vector2 p,float radius=.22f)
         {
+            var secret=RpgGame.Instance?RpgGame.Instance.Secret:null;if(secret&&secret.InArena)return secret.CanStandInArena(p,radius);
             if(p.x<bounds.xMin+radius||p.x>bounds.xMax-radius||p.y<bounds.yMin+radius||p.y>bounds.yMax-radius)return false;
             if(coastal&&!RpgIsland14.OnLand(p,radius))return false;
             foreach(var r in obstacles)if(Touches(r,p,radius))return false;

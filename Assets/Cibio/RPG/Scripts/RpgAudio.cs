@@ -4,7 +4,7 @@ namespace Cibio.RPG
  public sealed class RpgAudio:MonoBehaviour
  {
   public static RpgAudio Instance;AudioSource ambient,bass,air,electric,sustain,flight,sonicWind;float boomDuck,duckGain=1,stepTimer;bool wasCharging;public int played;public bool suppressOneShots;
-  public static AudioClip Clip(string name)=>Resources.Load<AudioClip>("RpgAudio/Designed10/"+name)??Resources.Load<AudioClip>("RpgAudio/Designed09/"+name)??Resources.Load<AudioClip>("RpgAudio/Designed07/"+name)??Resources.Load<AudioClip>("RpgAudio/"+name)??Resources.Load<AudioClip>("RpgAudio/Designed05/"+name);
+  public static AudioClip Clip(string name)=>Resources.Load<AudioClip>("RpgAudio/Designed15/"+name)??Resources.Load<AudioClip>("RpgAudio/Designed10/"+name)??Resources.Load<AudioClip>("RpgAudio/Designed09/"+name)??Resources.Load<AudioClip>("RpgAudio/Designed07/"+name)??Resources.Load<AudioClip>("RpgAudio/"+name)??Resources.Load<AudioClip>("RpgAudio/Designed05/"+name);
   AudioSource Loop(string name,float volume=0){var s=gameObject.AddComponent<AudioSource>();s.clip=Clip(name);s.loop=true;s.volume=volume;s.Play();return s;}
   void Awake(){Instance=this;ambient=Loop("Forest_Ambience",.15f);bass=Loop("charge_bass");air=Loop("charge_air");electric=Loop("charge_electric");sustain=Loop("aura_sustain");flight=Loop("flight_wind");sonicWind=Loop("sonic_wind");}
   public static void Play(string name,Vector2 at,float volume=.5f,float pitch=1)

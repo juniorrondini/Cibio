@@ -50,6 +50,7 @@ namespace Cibio.RPG
   {
    float[] boss=new float[3];var rows=new List<string>{"form,armored_seconds,boss_seconds"};for(int stage=0;stage<3;stage++){float armor=KillTime(stage,1);boss[stage]=KillTime(stage,13);rows.Add(stage+","+armor.ToString("F3",System.Globalization.CultureInfo.InvariantCulture)+","+boss[stage].ToString("F3",System.Globalization.CultureInfo.InvariantCulture));}Check(boss[0]>boss[1]&&boss[1]>boss[2],"Evolucao reduz tempo real para vencer chefe no ensaio controlado");File.WriteAllLines(Path.Combine(folder,"Balance14.csv"),rows);
   }
+  public void ValidateMechanics(string path){folder=path;Directory.CreateDirectory(folder);g=GetComponent<RpgGame>();Tests();Balance();}
   public IEnumerator Run(string path)
   {
    folder=path;Directory.CreateDirectory(folder);g=GetComponent<RpgGame>();if(Array.IndexOf(Environment.GetCommandLineArgs(),"-cibio-review-visible")>=0){Debug.Log("CIBIO_14_WAITING_FOR_VISIBLE_WINDOW");float deadline=Time.realtimeSinceStartup+60;while(!Application.isFocused&&Time.realtimeSinceStartup<deadline)yield return null;if(!Application.isFocused){Debug.LogError("Revisao visual precisa da janela do player em foco.");Application.Quit(3);yield break;}Debug.Log("CIBIO_14_VISIBLE_REVIEW_STARTED");}yield return new WaitForSecondsRealtime(.8f);bool had=PlayerPrefs.HasKey(RpgGame.SaveKey);string old=PlayerPrefs.GetString(RpgGame.SaveKey,"");

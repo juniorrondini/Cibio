@@ -1,0 +1,105 @@
+[
+  {
+    "key": "boss_idle",
+    "transparent": true,
+    "prompt": "Use case: stylized-concept. Production sprite atlas for Cibio, a detailed top-down Brazilian pixel-art action RPG. Input images are STYLE AND CHARACTER REFERENCES only: first is Companheiro, second Seu Bonero. Create ONE ORIGINAL FUSION BOSS named Bonero Companheiro, combining both into a coherent single character: broad stocky elder statesman, swept brown-and-silver hair, intense blue eyes and thick brows, well-groomed white beard, charcoal formal suit, burgundy tie, diagonal green-and-yellow sash, small red star with legible 13 on chest. Distinct imposing silhouette, brass vuvuzela-shaped gauntlet on right arm, polished shoes. Detailed painterly pixel clusters matching the references, not low poly, not photoreal. EXACTLY 4 columns x 4 rows equal 256x256 cells in a 1024x1024 transparent atlas. Rows are BACK view, LEFT view, FRONT view, RIGHT view. Columns are FOUR subtle idle breathing animation frames. Every cell same character scale, feet baseline at y=224 from top, center x=128. Character occupies ~190px height; preserve 20px margins. No scenery, shadows, labels, captions or extra characters. Genuine transparent background. Consistent face/sash/gauntlet/scale in every frame.",
+    "path": "boss_idle-original.png",
+    "references": [
+      "Companheiro12_idle.png",
+      "Davi11.png"
+    ]
+  },
+  {
+    "key": "arena",
+    "transparent": false,
+    "prompt": "Use case: stylized-concept. Create an original finished arena background for the Brazilian top-down detailed pixel-art RPG Cibio. 2048x1536 landscape 4:3. A vast COSMIC VUVUZELA BELL seen from elevated top-down 3/4 perspective, where a secret boss fight takes place. The playable floor is a broad horizontal oval of aged golden brass occupying x=18%..82%, y=25%..80%, centered at 50%,53%; flat, clear and readable, warm burnished brass with tasteful organic engraved sound-flow grooves and fine patina. No objects obstruct the center. Huge curved bell lip forms a dramatic rim around the oval; outside it fall swirling teal cosmic cloud, distant stars and tiny fragments of the Brazilian village, showing this is the mouth of a world transformed into an instrument. A small safe glowing threshold at bottom center. Rich tactile pixel-art/painterly RPG style consistent with references, crisp material detail, cohesive warm brass and deep turquoise palette. Strong sense of scale and bespoke environmental storytelling. No characters, text, UI, random geometric platforms, grid, checkerboard or polygons. Floor lit evenly enough for character readability; celestial sky outside platform darker. Entire image opaque finished scene.",
+    "path": "arena-original.png",
+    "references": [
+      "Lighthouse14.png",
+      "Terrain_Sand14.png"
+    ]
+  },
+  {
+    "key": "world",
+    "transparent": false,
+    "prompt": "Use case: stylized-concept. Original reveal key art for Cibio Brazilian pixel-art action RPG secret cinematic, 2048x1152 landscape. THE ENTIRE WORLD HAS BECOME A VUVUZELA: a monumental curved golden-brass vuvuzela floating in a deep turquoise cosmic sky, mouthpiece toward lower left and immense flared bell toward upper right. The instrument itself is a living planet: blue oceans flow around its curved body, Brazilian colonial houses with terracotta roofs, tiny palms, an ivory lighthouse and green countryside visibly cling to the brass surface. At the wide bell there is a clearly visible golden arena inside. Epic surreal but coherent, beautiful polished brass catching amber sunlight, silver-blue sonic wake encircling it organically. Detailed painterly pixel-art aesthetic matching Cibio, not low poly or generic sci-fi. The vuvuzela is the single unmistakable focal silhouette, fully visible with 10% margin, no planet ball beside it. No characters, titles, labels, logos, UI or typography. Background dark with restrained stars and layered teal nebula, luminous distant horizon. Designed as a cinematic backdrop with high readability.",
+    "path": "world-original.png",
+    "references": [
+      "Lighthouse14.png"
+    ]
+  },
+  {
+    "key": "flight",
+    "transparent": true,
+    "prompt": "Use case: precise-object-edit. Image1 is the EDIT TARGET:16-frame4x4 transparent VFX atlas of organic silver-white/blue world-flight energy with brass motes and tiny architectural ghosts. Image2 is a STYLE/ARCHITECTURE REFERENCE from the actual Brazilian village. Change ONLY the tiny architecture ghosts embedded inside the effect: replace any pagoda/Asian temple-like silhouettes with unmistakably small Brazilian colonial TERRACOTTA GABLE ROOFS, white stucco cottages and the simple church belfry matching image2. Keep palms. Preserve all16 effect silhouettes, the full animation progression, registration, fluid wisps, colors, lighting, scale, transparent alpha and4x4 layout. Do not draw a hero. No geometric rings, polygons, borders, labels or typography. Keep existing bright comet core and brass dust; the architectural ghosts should be subtle enough to read as village memories swept into a unique sonic mantle, not large solid buildings. Genuine transparent background.",
+    "initial_prompt": "Use case: stylized-concept. Original spectacular world-flight rupture VFX atlas for Cibio top-down pixel-art RPG. References: hero with long swept silver hair (identity/style only), existing sonic visual (style only). Draw EFFECT ONLY, do not draw the hero. This is the special ascent into ten laps around the world: silver-blue wind tears open into an organic flowing comet mantle with white feather-like plasma ribbons, warm brass motes, delicate tiny ghost silhouettes of palms and roof tiles swept through the wake, light refracting like a world curving around the flying hero. Distinct bespoke animation, organic fluid flame and spray, not generic circles/rings, no polygons or straight speed lines. EXACT 4 columns x 4 rows,16 chronological frames left-to-right then top-to-bottom,1024x1024 atlas, equal256 cells. Every effect centered x128,y128, mainly elongated vertically and oriented UP with bright head near y70 and flowing tail toward y210. Frames0-3 gather energy,4-7 stretch to blazing burst,8-11 peel into flowing comet,12-15 dissipate into tiny brass and silver particles. Preserve 20px fully transparent margins each cell, no overlap between cells, consistent scale. Luminous detailed painted pixel clusters and semi-transparent soft fringes. Genuine transparent background, no scenery, text or UI.",
+    "path": "flight-original.png",
+    "references": [
+      "Flight15-before-refinement.png",
+      "House11_0.png"
+    ]
+  },
+  {
+    "key": "talents",
+    "transparent": true,
+    "prompt": "Use case: stylized-concept. Production talent icon atlas for Cibio detailed Brazilian pixel-art RPG, reference is material and art style only. EXACT 3 columns x 3 rows equal256 cells,768x768, nine distinct premium hand-painted pixel-art ability illustrations on genuine transparent background. No text, labels, borders, square cards or circles framing icons. Consistent scale,64px of margin? Each illustrated symbol fits 200x200 centered inside256 cell, 24px transparent padding. Top row IMPACT: left powerful wrapped fist with warm amber impact wisps; middle flowing three-strike fist sequence with three small light echoes; right huge final blow releasing a delayed golden shock echo. Middle row ENERGY: left breathing silver-blue flame inside open hand; middle deep emerald energy reservoir held between palms; right bright palm projectile splitting into three organically branching blue-gold comets. Bottom row VANGUARD: left agile boot with mint afterimage; middle silver-haired flight silhouette trailing wind; right raised guarded fist with precise icy-blue parry flash. Rich readable silhouettes, detailed controlled pixel clusters matching reference, restrained luminous accents, no generic flat vector symbols, not lowpoly, no logos. Each cell is an independent complete icon with genuine alpha.",
+    "path": "talents-original.png",
+    "references": [
+      "UI_Palma13.png"
+    ]
+  },
+  {
+    "key": "boss_walk",
+    "transparent": true,
+    "prompt": "Use case: stylized-concept. Production animation sprite atlas continuing EXACTLY the fusion boss in the reference: brown/silver swept hair, thick white beard, intense blue eyes/brows, broad stocky body, black suit, red tie, green/yellow sash, red star13 on chest, golden brass horn gauntlet. The reference is identity/style/layout reference, not an edit target. Keep this exact character and rendering style in every frame. WALK, eight chronological weighty walking frames: contact, down, passing, up, opposite contact, down, passing, up; alternating feet and gauntlet counter-swing. Feet stride naturally, don't duplicate idle poses. EXACTLY 8 columns x4 rows equal256x256 cells, 2048x1024 total. Rows: BACK, LEFT, FRONT, RIGHT. Each row is the same action from that viewpoint. Same camera elevated top-down RPG perspective, same scale and foot baseline throughout, body about190px tall in standing poses, feet baseline y224 from top of eachcell, centered x128. Arm/gauntlet follows correct facing. No horizontal flips of text13; back has no chest emblem. Keep20px transparent margins, no cell overlaps. Detailed painterly pixel clusters matching reference, no blur, no lowpoly. Genuine transparent background, no captions, cell labels, scenery, shadows or UI.",
+    "path": "boss_walk-original.png",
+    "references": [
+      "exec-f64cd1d2-5b85-4923-80d0-6a516ce1249b.png"
+    ]
+  },
+  {
+    "key": "boss_slash",
+    "transparent": true,
+    "prompt": "Use case: stylized-concept. Production animation sprite atlas continuing EXACTLY the fusion boss in the reference: brown/silver swept hair, thick white beard, intense blue eyes/brows, broad stocky body, black suit, red tie, green/yellow sash, red star13 on chest, golden brass horn gauntlet. The reference is identity/style/layout reference, not an edit target. Keep this exact character and rendering style in every frame. GAUNTLET ATTACK, six chronological frames: firm idle stance, lean back gathering, horn-gauntlet pulled back, forceful forward punch with extended arm, follow-through, recovery. No detached weapon. No drawn impact VFX; full body only. EXACTLY 6 columns x4 rows equal256x256 cells, 1536x1024 total. Rows: BACK, LEFT, FRONT, RIGHT. Each row is the same action from that viewpoint. Same camera elevated top-down RPG perspective, same scale and foot baseline throughout, body about190px tall in standing poses, feet baseline y224 from top of eachcell, centered x128. Arm/gauntlet follows correct facing. No horizontal flips of text13; back has no chest emblem. Keep20px transparent margins, no cell overlaps. Detailed painterly pixel clusters matching reference, no blur, no lowpoly. Genuine transparent background, no captions, cell labels, scenery, shadows or UI.",
+    "path": "boss_slash-original.png",
+    "references": [
+      "exec-f64cd1d2-5b85-4923-80d0-6a516ce1249b.png"
+    ]
+  },
+  {
+    "key": "boss_spell",
+    "transparent": true,
+    "prompt": "Use case: stylized-concept. Production animation sprite atlas continuing EXACTLY the fusion boss in the reference: brown/silver swept hair, thick white beard, intense blue eyes/brows, broad stocky body, black suit, red tie, green/yellow sash, red star13 on chest, golden brass horn gauntlet. The reference is identity/style/layout reference, not an edit target. Keep this exact character and rendering style in every frame. VUVUZELA POWER, eight chronological frames: idle, lift horn-gauntlet, brace with other hand, inhale/leanback, hold aiming, explosive forward blow pose with bell aimed ahead, recoil, settle. No drawn projectile/energy so the runtime can supply VFX. EXACTLY 8 columns x4 rows equal256x256 cells, 2048x1024 total. Rows: BACK, LEFT, FRONT, RIGHT. Each row is the same action from that viewpoint. Same camera elevated top-down RPG perspective, same scale and foot baseline throughout, body about190px tall in standing poses, feet baseline y224 from top of eachcell, centered x128. Arm/gauntlet follows correct facing. No horizontal flips of text13; back has no chest emblem. Keep20px transparent margins, no cell overlaps. Detailed painterly pixel clusters matching reference, no blur, no lowpoly. Genuine transparent background, no captions, cell labels, scenery, shadows or UI.",
+    "path": "boss_spell-original.png",
+    "references": [
+      "exec-f64cd1d2-5b85-4923-80d0-6a516ce1249b.png"
+    ]
+  },
+  {
+    "key": "boss_hurt",
+    "transparent": true,
+    "prompt": "Use case: stylized-concept. Production animation sprite atlas continuing EXACTLY the fusion boss in the reference: brown/silver swept hair, thick white beard, intense blue eyes/brows, broad stocky body, black suit, red tie, green/yellow sash, red star13 on chest, golden brass horn gauntlet. The reference is identity/style/layout reference, not an edit target. Keep this exact character and rendering style in every frame. DEFEAT, six chronological frames: recoil, stagger, knee buckles, kneeling, slump seated with lowered horn, final unconscious defeated seated pose. Keep the head/face and identity coherent, no gore. Falling poses take less height naturally, do not zoom in. EXACTLY 6 columns x4 rows equal256x256 cells, 1536x1024 total. Rows: BACK, LEFT, FRONT, RIGHT. Each row is the same action from that viewpoint. Same camera elevated top-down RPG perspective, same scale and foot baseline throughout, body about190px tall in standing poses, feet baseline y224 from top of eachcell, centered x128. Arm/gauntlet follows correct facing. No horizontal flips of text13; back has no chest emblem. Keep20px transparent margins, no cell overlaps. Detailed painterly pixel clusters matching reference, no blur, no lowpoly. Genuine transparent background, no captions, cell labels, scenery, shadows or UI.",
+    "path": "boss_hurt-original.png",
+    "references": [
+      "exec-f64cd1d2-5b85-4923-80d0-6a516ce1249b.png"
+    ]
+  },
+  {
+    "key": "hornfx",
+    "transparent": true,
+    "prompt": "Use case: stylized-concept. Original organic SOUND PRESSURE BLAST VFX for fusion vuvuzela boss of Cibio top-down pixel-art RPG. Reference supplies brass/green/red palette only, do NOT draw character. EXACT4x4 equal256 cells,1024x1024 transparent atlas,16chronological frames left-to-right row-by-row. A warm golden brass sonic plume unfurls forward like a roaring wind instrument: irregular scalloped pressure crests, pale luminous turbulent core, red/emerald intertwined wisps and flying golden dust. Orientation UP, origin x128,y200, spreading tohead x128,y60. Frames0-3 gather tiny motes,4-7 explosive blooming crest,8-11 traveling wave with broken organic filaments,12-15 dissipation. This is a painterly pixel-art sound attack effect, no circular geometric rings, polygons, wireframes, straight lines, logos or characters. Real transparent background and20px empty margin everycell. Semi-transparent soft fringes, readable bright core. Match detailed RPG art, rich brass material rather than generic neon energy.",
+    "path": "hornfx-original.png",
+    "references": [
+      "exec-f64cd1d2-5b85-4923-80d0-6a516ce1249b.png"
+    ]
+  },
+  {
+    "key": "fold",
+    "transparent": false,
+    "prompt": "Use case: stylized-concept. Original EIGHT FRAME WORLD TRANSFORMATION storyboard atlas for Cibio secret cinematic. Reference shows the FINAL WORLD and style. EXACT2 columns x4 rows of equally sized WIDE16:9 panels, total2048x2304, each1024x576. Chronological order left-to-right then down. Keep same dark teal cosmic background, consistent viewpoint and center/scale. Frame1: floating oval Brazilian island with sea, palms, colonial village and lighthouse. Frame2: island curves into a globe, coastline stretching. Frame3: globe elongates, golden brass veins reveal through earth. Frame4: one end narrows into a brass mouthpiece, other end widens. Frame5: body bends into a monumental horn while village stays on surface. Frame6: bell flares open into arena, seas flowing along horn body. Frame7: completed vuvuzela world glows with silver sonic wake. Frame8: EXACT final reference composition: golden vuvuzela planet mouthpiece lowerleft, bell upperright, colonial village and lighthouse on body. A progressive connected metamorphosis, no random scene changes. Fully opaque panels with no borders/gutters, no text, labels, UI or characters. Detailed painterly pixel-art RPG materials and celestial lighting matching reference. Eachframe fully independent with no objects crossing panel boundaries.",
+    "path": "fold-original.png",
+    "references": [
+      "exec-4ebc22f5-0837-4aae-b91b-35d31b9874b8.png"
+    ]
+  }
+]

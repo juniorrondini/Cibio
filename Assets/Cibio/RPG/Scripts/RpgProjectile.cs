@@ -22,7 +22,7 @@ namespace Cibio.RPG
    if(age>2.2f){finished=true;Destroy(gameObject);return;}
    int steps=Mathf.Max(1,Mathf.CeilToInt(Vector2.Distance(before,next)/.1f));for(int i=1;i<=steps;i++)if(!owner.world.CanStand(Vector2.Lerp(before,next,i/(float)steps),.12f)){if(friendly)Hit(Vector2.Lerp(before,next,(i-1)/(float)steps));else{finished=true;Destroy(gameObject);}return;}transform.position=next;
    Paint();if(Random.value<dt*16)RpgEffects.Spark(next+Vector2.up*(friendly?visualLift:.6f),color,.4f);
-   if(friendly){foreach(var e in owner.world.enemies)if(!e.dead&&DistanceToSegment(e.Position,before,next)<.6f){e.TakeDamage(damage);Hit(e.Position);break;}}
+   if(friendly){foreach(var e in owner.world.enemies)if(!e.dead&&DistanceToSegment(e.Position,before,next)<.6f){float health=e.health;e.TakeDamage(damage);if(e.health<health)RpgGame.Instance.Talents?.PalmaHit(e,damage);Hit(e.Position);break;}}
    else{var h=owner.world.hero;if(!h.dead&&DistanceToSegment(h.Position,before,next)<.4f){h.TakeDamage(owner.enemyKind==4?16:10);Hit(next);}}
   }
   void Paint(){sprite.sortingOrder=RpgWorld.Order(transform.position.y)+1;sprite.transform.localRotation=Quaternion.Euler(0,0,Mathf.Atan2(velocity.y,velocity.x)*Mathf.Rad2Deg-90);RpgEffects.Paint(sprite,friendly?"Vfx_PalmaFlight13":"Vfx_Wisp06",age*(friendly?20:18),color,friendly?1.65f:1.4f);}

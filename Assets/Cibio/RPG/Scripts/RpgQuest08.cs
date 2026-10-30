@@ -18,7 +18,7 @@ namespace Cibio.RPG
    {
     if(h.flightHeight>.15f){game.Notify("Pouse para conversar com Seu Bonero.");return true;}
     giver.GetComponent<RpgNpcDavi11>()?.Speak();if(game.progress.questStage==0){game.progress.questStage=1;game.Notify("Seu Bonero: silencie os 3 amplificadores no Morro do Eco e vença o Companheiro. Siga ao norte!");game.Save();}
-    else if(game.progress.questStage==2){game.progress.questStage=3;game.progress.perks|=3;game.progress.xp+=100;while(game.progress.xp>=game.progress.NextLevel){game.progress.xp-=game.progress.NextLevel;game.progress.level++;}h.health=h.MaxHealth;h.energy=100;game.Notify("MISSÃO CONCLUÍDA • Palma [3] + voo + aura de 24s • +100 XP! Seu domínio da Centelha está mais forte.");RpgEffects.Burst(h.Position,RpgArt.Hex("FF617A"),3.5f,.8f);RpgAudio.Play("item_gem_01",h.Position,.65f);game.Save();}
+    else if(game.progress.questStage==2){game.progress.questStage=3;game.progress.perks|=3;game.GainExperience(100);h.health=h.MaxHealth;h.energy=100;game.Notify("MISSÃO CONCLUÍDA • Palma [3] + voo + aura de 24s • +100 XP! Seu domínio da Centelha está mais forte.");RpgEffects.Burst(h.Position,RpgArt.Hex("FF617A"),3.5f,.8f);RpgAudio.Play("item_gem_01",h.Position,.65f);game.Save();}
     else game.Notify(game.progress.questStage==3?"Seu Bonero: a voz da vila voltou! Na forma dourada, pressione C novamente para evoluir.":"Seu Bonero: o caminho fica ao norte. Desligue cada amplificador com [E] depois de afastar os guardas.");
     return true;
    }

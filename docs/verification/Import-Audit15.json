@@ -1,0 +1,90 @@
+[
+  {
+    "name": "BoneroCompanheiro15_idle",
+    "source": "boss_idle-original.png",
+    "size": [
+      1024,
+      1024
+    ]
+  },
+  {
+    "name": "Arena_Vuvuzela15",
+    "source": "arena-original.png",
+    "size": [
+      2048,
+      1536
+    ]
+  },
+  {
+    "name": "World_Vuvuzela15",
+    "source": "world-original.png",
+    "size": [
+      2048,
+      1152
+    ]
+  },
+  {
+    "name": "Vfx_WorldFlight15",
+    "source": "flight-original.png",
+    "size": [
+      1024,
+      1024
+    ]
+  },
+  {
+    "name": "UI_Talents15",
+    "source": "talents-original.png",
+    "size": [
+      768,
+      768
+    ]
+  },
+  {
+    "name": "BoneroCompanheiro15_walk",
+    "source": "boss_walk-original.png",
+    "size": [
+      2048,
+      1024
+    ]
+  },
+  {
+    "name": "BoneroCompanheiro15_slash",
+    "source": "boss_slash-original.png",
+    "size": [
+      1536,
+      1024
+    ]
+  },
+  {
+    "name": "BoneroCompanheiro15_spellcast",
+    "source": "boss_spell-original.png",
+    "size": [
+      2048,
+      1024
+    ]
+  },
+  {
+    "name": "BoneroCompanheiro15_hurt",
+    "source": "boss_hurt-original.png",
+    "size": [
+      1536,
+      1024
+    ]
+  },
+  {
+    "name": "Vfx_Horn15",
+    "source": "hornfx-original.png",
+    "size": [
+      1024,
+      1024
+    ]
+  },
+  {
+    "name": "WorldFold15",
+    "source": "fold-original.png",
+    "size": [
+      2048,
+      2304
+    ]
+  }
+]

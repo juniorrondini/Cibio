@@ -4,6 +4,37 @@
 
 RPG de ação em pixel art com câmera em perspectiva, exploração de um bairro brasileiro, combos, poderes e progressão. Projeto Unity editável, em fase de protótipo jogável para Windows.
 
+## Versão 15 — Talentos e A décima volta
+
+![Arena e Bonero Companheiro, render nativo](docs/images/arena15.png)
+
+
+**T** abre os talentos e pausa o mundo. Cada nível concede um ponto, inclusive nos saves antigos. São três linhas, com dois talentos de três graus e um talento final em cada uma; 21 pontos completam tudo. Investir exige os graus anteriores. Reorganizar é gratuito quando está longe dos inimigos e fora da arena secreta.
+
+| Linha | Talentos |
+|---|---|
+| Impacto | Punhos de Aço: mais dano de soco; Ritmo Perfeito: finalizador forte; Último Acorde: eco atrasado de dano |
+| Centelha | Fôlego: regeneração de energia; Reserva Viva: custo menor e formas mais longas; Pulso em Cadeia: Palma atinge mais dois inimigos |
+| Vanguarda | Passo Leve: esquiva mais barata e rápida; Caçador da Brisa: corrida/voo mais velozes; Contratempo: esquiva precisa prepara um soco com +75% de dano |
+
+O **easter egg** começa na Forma Ascendente: decole com **1** e mantenha **Shift**. O voo orbital atravessa construções e água, acelera de 60 até 104 u/s e atravessa as bordas do mapa, reaparecendo no lado oposto. A direção inicial define o eixo da volta. Recuar na borda não fabrica voltas. O impulso sustenta a energia e a forma durante a órbita; soltar Shift, frear com Ctrl ou pousar cancela a tentativa e recupera uma posição segura.
+
+Na **décima volta**, uma sequência própria revela o mundo se tornando uma vuvuzela e leva à arena na boca do instrumento. **Bonero Companheiro** mistura os dois personagens, com 128 quadros próprios e manopla de sopro. A luta tem combo de três contatos, leques de voz, investida e uma segunda fase com dois leques em eixos diferentes. Golpes têm antecipação, contato e recuperação. Ondas de voz também alcançam quem estiver voando; a esquiva serve como resposta.
+
+A primeira vitória dá **350 XP e um ponto extra de talento**. R reinicia uma tentativa na arena; após vencer, E retorna à vila. O farol guarda a passagem para revisitar a convergência. Descoberta, vitória e recompensa ficam no save v3. Sair durante uma descoberta pendente permite retomar o chefe ao continuar; coordenadas da arena nunca substituem o ponto de retorno na vila. A missão original permanece independente.
+
+[Arte, originais, prompts e importador](Assets/Cibio/RPG/ThirdParty/Generated15/README.md) · [Receita dos sons](Assets/Cibio/RPG/ThirdParty/SoundDesign15/README.md)
+
+**Verificação:** 1.011 verificações passaram: 870 regressões e 141 ensaios da atualização. Foram renderizados 128 quadros do chefe, 144 quadros de trechos dos ataques e 16 do voo orbital pelo próprio Unity. Onze assets e dez sons foram reproduzidos byte a byte. A cena permaneceu byte a byte idêntica e os GUIDs anteriores foram preservados.
+
+[Relatório](docs/verification/Convergencia15.txt) · [Auditoria](docs/verification/Convergencia-Audit15.json) · [Animações do chefe](docs/images/bonero-companheiro15.gif) · [Trechos dos ataques](docs/images/ataques-fusao15.gif) · [Órbita](docs/images/orbita15.gif) · [Quadros completos](docs/images/quadros-fusao15.jpg)
+
+[Mundo-vuvuzela — arte](docs/images/mundo-vuvuzela15.jpg) · [Oito painéis da metamorfose — arte](docs/images/metamorfose-paineis15.jpg) · [Ícones dos talentos — arte](docs/images/talentos-icones15.png)
+
+Limite da revisão: o Windows negou a captura da janela (`GetCursorPos`, acesso negado). O painel de talentos e os overlays da sequência não tiveram inspeção visual da janela nesta execução. Capturas vazias foram excluídas; as imagens publicadas da arena e dos personagens são renders diretos de câmera Unity. Não foi medido desempenho por essas capturas.
+
+Revisão: `Cibio.exe -cibio-chronicle-review15 "Review15" -logFile "review15.log"`. Ensaios de talentos, voo, bordas, pausa, save, arena, ataques, fase e recompensa. As regressões anteriores isolam o novo controlador orbital; o voo intangível é verificado separadamente. O modo preserva o save real.
+
 ## Versão 14 — Costa da Brisa e combate
 
 ![Costa da Brisa](docs/images/porto14.png)

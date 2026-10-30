@@ -1,0 +1,33 @@
+{
+  "scene_byte_for_byte_unchanged": true,
+  "scene_sha256": "c619dd0807a92c416bd2ff8977c1d7bdc47467fa576d0e3252856067703ae1fc",
+  "existing_guids_unchanged": true,
+  "assets_reproduced_byte_for_byte": 11,
+  "sounds_reproduced_byte_for_byte": 10,
+  "vfx_padding": 16,
+  "save_key": "Cibio.RPG.v3.Progress",
+  "boss_frames": 128,
+  "world_metamorphosis_panels": 8,
+  "orbital_frames": 16,
+  "horn_frames": 16,
+  "talent_icons": 9,
+  "boss_cell_size": 256,
+  "complete_silhouettes_validated": 128,
+  "foreign_opaque_fragments": 0,
+  "checks": 1011,
+  "check_groups": {
+    "Verificacao-RPG.txt": 382,
+    "Ascendente-09.txt": 75,
+    "Vila11.txt": 75,
+    "Chefe12.txt": 157,
+    "Arte13.txt": 64,
+    "Ilha-Combate14.txt": 117,
+    "Convergencia15.txt": 141
+  },
+  "native_boss_animation_frames": 128,
+  "native_attack_excerpts_frames": 144,
+  "native_orbital_frames": 16,
+  "ui_window_visual_review": "Not verified: Windows computer-use GetCursorPos denied. ScreenCapture output was blank; blank images excluded.",
+  "native_render_method": "Unity Camera.Render; explicit review pose stepping; no FPS claim",
+  "source_archive_sha256": "1bc5e80f04f39bef80f5c4acd15e6fc48da41e87d478628740c3aa824777cc52"
+}
