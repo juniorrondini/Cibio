@@ -1,0 +1,141 @@
+PASS Nivel1 inicia sem ponto gratuito
+PASS Niveis anteriores concedem pontos retroativos
+PASS Pre-requisitos impedem saltar a linha de talentos
+PASS Investir Punhos grau1
+PASS Investir Punhos grau2
+PASS Investir Punhos grau3
+PASS Limite de grau3 respeitado
+PASS Investir Ritmo grau1
+PASS Investir Ritmo grau2
+PASS Talento final desbloqueado por investimento real
+PASS Talento final tem grau unico
+PASS Nao permite gastar alem dos pontos ganhos
+PASS Talentos sobrevivem serializacao no savev3
+PASS Save antigo conserva poderes/missao e ganha pontos retroativos
+PASS Sanitizacao respeita orcamento no nivel1
+PASS Grau e dependencia validos: nivel1 talento0
+PASS Grau e dependencia validos: nivel1 talento1
+PASS Grau e dependencia validos: nivel1 talento2
+PASS Grau e dependencia validos: nivel1 talento3
+PASS Grau e dependencia validos: nivel1 talento4
+PASS Grau e dependencia validos: nivel1 talento5
+PASS Grau e dependencia validos: nivel1 talento6
+PASS Grau e dependencia validos: nivel1 talento7
+PASS Grau e dependencia validos: nivel1 talento8
+PASS Sanitizacao respeita orcamento no nivel3
+PASS Grau e dependencia validos: nivel3 talento0
+PASS Grau e dependencia validos: nivel3 talento1
+PASS Grau e dependencia validos: nivel3 talento2
+PASS Grau e dependencia validos: nivel3 talento3
+PASS Grau e dependencia validos: nivel3 talento4
+PASS Grau e dependencia validos: nivel3 talento5
+PASS Grau e dependencia validos: nivel3 talento6
+PASS Grau e dependencia validos: nivel3 talento7
+PASS Grau e dependencia validos: nivel3 talento8
+PASS Sanitizacao respeita orcamento no nivel8
+PASS Grau e dependencia validos: nivel8 talento0
+PASS Grau e dependencia validos: nivel8 talento1
+PASS Grau e dependencia validos: nivel8 talento2
+PASS Grau e dependencia validos: nivel8 talento3
+PASS Grau e dependencia validos: nivel8 talento4
+PASS Grau e dependencia validos: nivel8 talento5
+PASS Grau e dependencia validos: nivel8 talento6
+PASS Grau e dependencia validos: nivel8 talento7
+PASS Grau e dependencia validos: nivel8 talento8
+PASS Sanitizacao respeita orcamento no nivel22
+PASS Grau e dependencia validos: nivel22 talento0
+PASS Grau e dependencia validos: nivel22 talento1
+PASS Grau e dependencia validos: nivel22 talento2
+PASS Grau e dependencia validos: nivel22 talento3
+PASS Grau e dependencia validos: nivel22 talento4
+PASS Grau e dependencia validos: nivel22 talento5
+PASS Grau e dependencia validos: nivel22 talento6
+PASS Grau e dependencia validos: nivel22 talento7
+PASS Grau e dependencia validos: nivel22 talento8
+PASS Reorganizar devolve todos os pontos
+PASS Reorganizacao bloqueada perto de inimigo
+PASS Punhos aumenta dano real de soco em24porcento
+PASS Ritmo aumenta dano real do terceiro golpe
+PASS Folego muda recuperacao real de energia
+PASS Reserva reduz custo real da Palma
+PASS Reserva reduz custo real da Onda
+PASS Reserva amplia forma dourada
+PASS Reserva atua na duracao e custo da Ascendente
+PASS Passo Leve altera custo e recarga reais da esquiva
+PASS Cacador aumenta corrida e voo sem mudar caminhada
+PASS Bonus de corrida nao altera caminhada normal
+PASS Esquiva perfeita evita dano e prepara Contratempo com8energia
+PASS Uma esquiva nao duplica energia do Contratempo
+PASS Proximo soco consome o contra-ataque e causa75porcento extra
+PASS Palma real encadeia somente dois alvos proximos
+PASS Ascendente com Shift atravessa parede com movimento continuo
+PASS Voo orbital sustenta energia e forma para permitir dez voltas
+PASS Orbita intangivel nao recebe dano perdido fora da camera
+PASS Soltar Shift restaura colisao e encontra chao seguro
+PASS Duas voltas reais com wrap na direcao(1.00, 0.00)
+PASS Velocidade orbital cresce alem do sonic na direcao(1.00, 0.00)
+PASS Orbita acelera acima de100 com voltas sucessivas(1.00, 0.00)
+PASS Ctrl cancela orbita e recupera posicao na direcao(1.00, 0.00)
+PASS Duas voltas reais com wrap na direcao(-1.00, 0.00)
+PASS Velocidade orbital cresce alem do sonic na direcao(-1.00, 0.00)
+PASS Orbita acelera acima de100 com voltas sucessivas(-1.00, 0.00)
+PASS Ctrl cancela orbita e recupera posicao na direcao(-1.00, 0.00)
+PASS Duas voltas reais com wrap na direcao(0.00, 1.00)
+PASS Velocidade orbital cresce alem do sonic na direcao(0.00, 1.00)
+PASS Orbita acelera acima de100 com voltas sucessivas(0.00, 1.00)
+PASS Ctrl cancela orbita e recupera posicao na direcao(0.00, 1.00)
+PASS Duas voltas reais com wrap na direcao(0.00, -1.00)
+PASS Velocidade orbital cresce alem do sonic na direcao(0.00, -1.00)
+PASS Orbita acelera acima de100 com voltas sucessivas(0.00, -1.00)
+PASS Ctrl cancela orbita e recupera posicao na direcao(0.00, -1.00)
+PASS Oscilar na borda nao fabrica voltas adicionais
+PASS Decima volta atingida por movimento real
+PASS Decima volta inicia revelacao e registra descoberta
+PASS Pausa conserva o tempo da revelacao
+PASS Entrada na arena zera impulso orbital
+PASS Revelacao desemboca na arena com chefe exclusivo
+PASS Altares e NPC da vila nao aparecem na arena
+PASS Vila fica preservada e oculta enquanto heroi entra na arena
+PASS Colisao acompanha o piso oval da arena
+PASS Save mantem coordenada da vila durante arena
+PASS Arena nao permite reorganizar talentos durante luta
+PASS Manopla antecipa sem dano antes do contato
+PASS Manopla causa dano no contato anunciado
+PASS Combo do chefe tem tres contatos distintos
+PASS Combo termina com janela de recuperacao
+PASS Discurso antecipa antes de soltar ondas
+PASS Discurso da primeira fase dispara leque de tres ondas
+PASS Ondas de voz tambem ameacam personagem voando
+PASS Esquiva inicial protege de onda real da convergencia
+PASS Marcha trava direcao e anuncia antes de arrancar
+PASS Marcha desloca chefe pelo piso e respeita arena
+PASS Marcha tem um unico impacto por investida
+PASS Sessenta por cento de vida inicia segunda fase
+PASS Clamor final tem antecipacao longa
+PASS Primeiro clamor libera sete ondas com espacamento
+PASS Segundo clamor muda o eixo do leque
+PASS Derrota real conclui chefe e marca recompensa
+PASS Chefe concede350XP e um ponto adicional
+PASS Chefe secreto nao altera missao do Companheiro original
+PASS Repetir notificacao de morte nao duplica recompensa
+PASS Retorno a vila remove qualquer impulso residual
+PASS Saida restaura vila, costa e22 inimigos originais
+PASS Retorno reativa altares e NPC originais
+PASS Vitoria e talentos permanecem depois da saida
+PASS Continuar descoberta pendente retoma chefe secreto
+PASS Nova tentativa zera velocidade residual
+PASS R na arena reinicia luta sem voltar a vila
+PASS Novo jogo limpa evento e talentos sem perder cena original
+PASS Audio original integrado: world_break15
+PASS Audio original integrado: world_reveal15
+PASS Audio original integrado: orbit_lap15
+PASS Audio original integrado: fusion_entry15
+PASS Audio original integrado: fusion_combo15
+PASS Audio original integrado: horn_windup15
+PASS Audio original integrado: horn_blast15
+PASS Audio original integrado: fusion_dash15
+PASS Audio original integrado: fusion_phase15
+PASS Audio original integrado: fusion_victory15
+PASS Save real preservado nos ensaios
+PASS Ultimo Acorde aplica eco atrasado real depois do finalizador
+PASS Capturas preservam save real

@@ -1,0 +1,43 @@
+{
+  "files": 29,
+  "static_total_bytes": 67864009,
+  "game_download_bytes": 60641452,
+  "all_files_below_25MiB": true,
+  "chunks_reconstruct_original_data_and_wasm": true,
+  "source_archive_included": false,
+  "sources_public_github": true,
+  "version": 20,
+  "checks": 1167,
+  "check_groups": {
+    "Verificacao-RPG.txt": 382,
+    "Ascendente-09.txt": 75,
+    "Vila11.txt": 75,
+    "Chefe12.txt": 157,
+    "Arte13.txt": 64,
+    "Ilha-Combate14.txt": 117,
+    "Convergencia15.txt": 141,
+    "Orbita16.txt": 57,
+    "Ruptura17.txt": 33,
+    "Historia18.txt": 35,
+    "Identidade19.txt": 31
+  },
+  "scene_byte_for_byte_unchanged": true,
+  "scene_sha256": "c619dd0807a92c416bd2ff8977c1d7bdc47467fa576d0e3252856067703ae1fc",
+  "existing_guids_unchanged": true,
+  "unity_company_product_settings_unchanged": true,
+  "generated_art_byte_for_byte_unchanged": true,
+  "local_document_links": 101,
+  "local_browser_review": [
+    "desktop landing",
+    "390px no horizontal overflow and CTA fits",
+    "controls navigation",
+    "name panel and live validation"
+  ],
+  "public_browser_review": [
+    "published page",
+    "Unity menu loaded over HTTPS without console errors",
+    "refined naming screen"
+  ],
+  "fps_measured": false,
+  "audio_audition": false
+}

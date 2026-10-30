@@ -1,0 +1,31 @@
+PASS Aceita nome: João
+PASS Aceita nome: Ana Maria
+PASS Aceita nome: D'Ávila
+PASS Aceita nome: Zé-13
+PASS Aceita nome: José123
+PASS Aceita nome: Trabalhador 2026
+PASS Recusa nome invalido #6
+PASS Recusa nome invalido #7
+PASS Recusa nome invalido #8
+PASS Recusa nome invalido #9
+PASS Recusa nome invalido #10
+PASS Recusa nome invalido #11
+PASS Recusa nome invalido #12
+PASS Recusa nome invalido #13
+PASS Recusa nome invalido #14
+PASS Recusa nome invalido #15
+PASS Normaliza espacos sem perder acentos
+PASS Normaliza acento Unicode decomposto
+PASS Limite exato de 18 caracteres aceito
+PASS Save antigo sem nome preserva progresso e nome padrao
+PASS Nome e progresso sobrevivem serializacao juntos
+PASS Jogar abre tela de nome e mantem mundo pausado
+PASS Abrir novo jogo nao substitui progresso antes da confirmacao
+PASS Nome invalido bloqueia inicio sem mudar progresso
+PASS Tela de nome bloqueia socos por clique
+PASS Cancelar volta ao menu sem reiniciar partida
+PASS Confirmacao inicia personagem novo com nome normalizado
+PASS Criacao nao interrompe partida em andamento
+PASS Confirmacao repetida nao reinicia personagem
+PASS Continuar respeita existencia do save real
+PASS Ensaios de criacao nunca alteram save real

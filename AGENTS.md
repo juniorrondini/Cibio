@@ -142,3 +142,9 @@
 - RpgWebBuild19.Build usa -buildTarget WebGL e -cibio-build <pasta>, valida a cena, aplica DXT5 só durante build e restaura metas/settings em finally. Nunca usar o gerador RpgBuilder.Build para publicar atualizações.
 - Web/site contém a interface do site; Web/prepareweb19.py prepara o transporte Web a partir do player compilado. O manifest .openai/hosting.json conserva o ID do Sites: não criar outro Site ao atualizar. Assets binários compilados ficam no checkout próprio do Sites, não no código-fonte do projeto Unity.
 - Site é single player público. Nome e progresso são locais ao navegador, sem conta ou backend multiplayer. Arte existente e créditos originais preservados. Não anunciar compatibilidade móvel sem testar controles próprios.
+
+## Atualização 20 — direção visual e documentação
+- Tela de nome mantém mode6 e as APIs BeginJourney/ConfirmJourney/CancelJourney da versão 19. NamePanel usa Title_Revolta20, tipografia maior, campo sem moldura de card, validação visual e botão habilitado apenas com nome válido. NameColor20 corrige cores de GUI no projeto com espaço linear, sem mudar o HUD restante.
+- Arte original e prompt em Generated20, referência Title_Vila13, ferramenta image_gen integrada. Title_Revolta20 e original têm os mesmos bytes. Fontes-Direcao-20.zip acompanha Windows; o site mantém fontes públicas no GitHub e créditos em texto.
+- Site público continua no mesmo project_id/URL. Preservar o transporte gzip/SHA-256, loader, fontes OFL e save por navegador. A identidade visual usa carvão, papel, amarelo gasto e vermelho; não reintroduzir painéis genéricos sobre a arte.
+- README principal apresenta o estado atual. Histórico até 19 preservado em docs/HISTORICO.md; manter links relativos corrigidos. Relatórios antigos continuam em docs/verification.

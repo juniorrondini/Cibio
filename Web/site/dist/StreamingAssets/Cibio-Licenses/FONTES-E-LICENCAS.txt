@@ -54,8 +54,10 @@ Versão17: rasgos temporais criados com image_gen integrado, fontes/prompts/impo
 
 Versão18: mesas de cobrança, arquivo de perseguição e terminal ficcional de apuração criados comimage_gen integrado; originais/prompts/importador emGenerated18, CC BY-SA4.0. Fontes-Historia-18.zip incluído. Narrativa de sátira política ficcional; créditos e licenças anteriores preservados.
 
+Direção visual 20: arte original Revolta20 criada com image_gen integrado. Fonte, prompt e manifesto em ThirdParty/Generated20 e Fontes-Direcao-20.zip; Cibio CC BY-SA 4.0.
 
-VERSÃO WEB 19: originais, fontes e arquivos ZIP de licenças permanecem disponíveis no repositório público:
+
+VERSÃO WEB 20: originais, fontes e arquivos ZIP de licenças permanecem disponíveis no repositório público:
 https://github.com/juniorrondini/Cibio/tree/main/Assets/Cibio/RPG/ThirdParty
 https://github.com/juniorrondini/Cibio/tree/main/Assets/StreamingAssets/Cibio-Licenses
 A distribuição Web conserva os textos de crédito e licença; os ZIPs completos não são baixados para jogar.

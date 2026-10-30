@@ -30,12 +30,12 @@ namespace Cibio.RPG.Editor
                 PlayerSettings.WebGL.decompressionFallback=false;
                 Directory.CreateDirectory(output);var result=BuildPipeline.BuildPlayer(new BuildPlayerOptions{scenes=new[]{RpgBuilder.Scene},target=BuildTarget.WebGL,locationPathName=output,options=BuildOptions.None});
                 if(result.summary.result!=UnityEditor.Build.Reporting.BuildResult.Succeeded)throw new Exception("Build Web falhou: "+result.summary.result);
-                Debug.Log("CIBIO_19_WEB_BUILD_OK "+output);
+                Debug.Log("CIBIO_20_WEB_BUILD_OK "+output);
             }
             finally
             {
                 foreach(var file in snapshot)File.WriteAllBytes(file.Key,file.Value);
-                Debug.Log("CIBIO_19_WEB_SOURCE_SETTINGS_RESTORED");
+                Debug.Log("CIBIO_20_WEB_SOURCE_SETTINGS_RESTORED");
             }
         }
     }

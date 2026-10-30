@@ -1,4 +1,4 @@
-# Cibio — versão 19
+# Cibio — versão 20
 
 **Jogar no navegador:** https://cibio-brasil-no-vermelho.viniandfriends.chatgpt.site
 
@@ -32,3 +32,5 @@ Recupere as reservas de emergência no chão e afaste os agentes próximos. Cada
 O save v3 mantém níveis, poderes, missão e chefe anteriores, acrescentando os baús encontrados. Consulte README.md para verificações, imagens e créditos. Fontes e licenças dos assets acompanham Cibio_Data/StreamingAssets/Cibio-Licenses.
 
 Talentos: um ponto a cada nível, retroativo para saves anteriores. Na Forma Ascendente, voo com Shift ignora obstáculos e dá a volta na ilha. O progresso conta mesmo ao mudar de direção; cada volta exige um mapa completo de deslocamento. A velocidade cresce 20% por volta, com distorção temporal periférica, até cerca de 372 u/s. Complete dez voltas para a revelação secreta e a luta contra Bonero Companheiro. Ctrl ou soltar Shift cancela a tentativa. Vitória única: 350 XP e um ponto extra. R tenta a luta novamente; E retorna à vila após vencer. A passagem permanece no farol.
+
+Direção visual 20: página e tela de nome redesenhadas com arte própria, maior contraste e expressão de indignação do Brasileiro. O funcionamento do nome e o progresso anterior foram preservados.
