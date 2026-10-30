@@ -1,0 +1,57 @@
+PASS Shift parado e virada perpendicular contam tres voltas: (0.00, 1.00) -> (-1.00, 0.00)
+PASS Decima volta dispara revelacao pelo mesmo TickWorld do jogo: (-1.00, 0.00)
+PASS Revelacao remove heroi e zera impulso: (-1.00, 0.00)
+PASS Sequencia entra automaticamente na arena: (-1.00, 0.00)
+PASS Shift parado e virada perpendicular contam tres voltas: (0.00, -1.00) -> (1.00, 0.00)
+PASS Decima volta dispara revelacao pelo mesmo TickWorld do jogo: (1.00, 0.00)
+PASS Revelacao remove heroi e zera impulso: (1.00, 0.00)
+PASS Sequencia entra automaticamente na arena: (1.00, 0.00)
+PASS Shift parado e virada perpendicular contam tres voltas: (-1.00, 0.00) -> (0.00, -1.00)
+PASS Decima volta dispara revelacao pelo mesmo TickWorld do jogo: (0.00, -1.00)
+PASS Revelacao remove heroi e zera impulso: (0.00, -1.00)
+PASS Sequencia entra automaticamente na arena: (0.00, -1.00)
+PASS Shift parado e virada perpendicular contam tres voltas: (1.00, 0.00) -> (0.00, 1.00)
+PASS Decima volta dispara revelacao pelo mesmo TickWorld do jogo: (0.00, 1.00)
+PASS Revelacao remove heroi e zera impulso: (0.00, 1.00)
+PASS Sequencia entra automaticamente na arena: (0.00, 1.00)
+PASS Diagonal chega a dez voltas em passo 0,04166667 direcao (1.00, 1.00)
+PASS Diagonal chega a dez voltas em passo 0,04166667 direcao (-1.00, 1.00)
+PASS Diagonal chega a dez voltas em passo 0,04166667 direcao (-1.00, -1.00)
+PASS Diagonal chega a dez voltas em passo 0,04166667 direcao (1.00, -1.00)
+PASS Diagonal chega a dez voltas em passo 0,01666667 direcao (1.00, 1.00)
+PASS Diagonal chega a dez voltas em passo 0,01666667 direcao (-1.00, 1.00)
+PASS Diagonal chega a dez voltas em passo 0,01666667 direcao (-1.00, -1.00)
+PASS Diagonal chega a dez voltas em passo 0,01666667 direcao (1.00, -1.00)
+PASS Diagonal chega a dez voltas em passo 0,006944444 direcao (1.00, 1.00)
+PASS Diagonal chega a dez voltas em passo 0,006944444 direcao (-1.00, 1.00)
+PASS Diagonal chega a dez voltas em passo 0,006944444 direcao (-1.00, -1.00)
+PASS Diagonal chega a dez voltas em passo 0,006944444 direcao (1.00, -1.00)
+PASS Trocar eixo durante a orbita conserva progresso e continua contando
+PASS Oscilar e fazer wrap nas bordas nao fabrica distancia de volta
+PASS Pausa nao move nem conta voltas
+PASS Soltar Shift cancela e recupera posicao segura
+PASS Passo que cruza mais de uma largura nao perde voltas nem sobra fracionaria
+PASS Cada volta acelera de verdade: volta 1, 71,36 u/s
+PASS Cada volta acelera de verdade: volta 2, 85,52 u/s
+PASS Cada volta acelera de verdade: volta 3, 102,54 u/s
+PASS Cada volta acelera de verdade: volta 4, 122,55 u/s
+PASS Cada volta acelera de verdade: volta 5, 146,62 u/s
+PASS Cada volta acelera de verdade: volta 6, 175,38 u/s
+PASS Cada volta acelera de verdade: volta 7, 209,50 u/s
+PASS Cada volta acelera de verdade: volta 8, 249,84 u/s
+PASS Cada volta acelera de verdade: volta 9, 297,78 u/s
+PASS Nona volta supera280u/s reais e300u/s de alvo
+PASS Breve correcao de direcao nao derruba velocidade acumulada
+PASS Dilatacao temporal cresce com velocidade e shader e suportado
+PASS Camera abre progressivamente para acompanhar velocidade extrema
+PASS Ctrl encerra intangibilidade e distorcao temporal
+PASS Pouso encerra orbita e recupera chao
+PASS Nova fusao dividida possui atlas completo: idle
+PASS Nova fusao dividida possui atlas completo: walk
+PASS Nova fusao dividida possui atlas completo: slash
+PASS Nova fusao dividida possui atlas completo: spellcast
+PASS Nova fusao dividida possui atlas completo: hurt
+PASS Arena carrega familia nova e tamanho/pivo correto
+PASS Shader temporal renderizou36quadros nativos com historico
+PASS Captura de voo tambem alcanca revelacao automaticamente
+PASS Save real intacto apos regressao e renders16

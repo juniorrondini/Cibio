@@ -1,0 +1,157 @@
+PASS NPC original renomeado em cena
+PASS Chefe tem identidade e familia exclusiva
+PASS Vida e dano anteriores preservados
+PASS Barba, terno e emblema usam cores originais da arte
+PASS Guardas blindados conservam a propria arte
+PASS Contagem do ciclo idle
+PASS Quadro exclusivo128/PPU64: idle direcao0 frame0
+PASS Quadro exclusivo128/PPU64: idle direcao0 frame1
+PASS Quadro exclusivo128/PPU64: idle direcao0 frame2
+PASS Quadro exclusivo128/PPU64: idle direcao0 frame3
+PASS Quadro exclusivo128/PPU64: idle direcao1 frame0
+PASS Quadro exclusivo128/PPU64: idle direcao1 frame1
+PASS Quadro exclusivo128/PPU64: idle direcao1 frame2
+PASS Quadro exclusivo128/PPU64: idle direcao1 frame3
+PASS Quadro exclusivo128/PPU64: idle direcao2 frame0
+PASS Quadro exclusivo128/PPU64: idle direcao2 frame1
+PASS Quadro exclusivo128/PPU64: idle direcao2 frame2
+PASS Quadro exclusivo128/PPU64: idle direcao2 frame3
+PASS Quadro exclusivo128/PPU64: idle direcao3 frame0
+PASS Quadro exclusivo128/PPU64: idle direcao3 frame1
+PASS Quadro exclusivo128/PPU64: idle direcao3 frame2
+PASS Quadro exclusivo128/PPU64: idle direcao3 frame3
+PASS Contagem do ciclo walk
+PASS Quadro exclusivo128/PPU64: walk direcao0 frame0
+PASS Quadro exclusivo128/PPU64: walk direcao0 frame1
+PASS Quadro exclusivo128/PPU64: walk direcao0 frame2
+PASS Quadro exclusivo128/PPU64: walk direcao0 frame3
+PASS Quadro exclusivo128/PPU64: walk direcao0 frame4
+PASS Quadro exclusivo128/PPU64: walk direcao0 frame5
+PASS Quadro exclusivo128/PPU64: walk direcao0 frame6
+PASS Quadro exclusivo128/PPU64: walk direcao0 frame7
+PASS Quadro exclusivo128/PPU64: walk direcao0 frame8
+PASS Quadro exclusivo128/PPU64: walk direcao1 frame0
+PASS Quadro exclusivo128/PPU64: walk direcao1 frame1
+PASS Quadro exclusivo128/PPU64: walk direcao1 frame2
+PASS Quadro exclusivo128/PPU64: walk direcao1 frame3
+PASS Quadro exclusivo128/PPU64: walk direcao1 frame4
+PASS Quadro exclusivo128/PPU64: walk direcao1 frame5
+PASS Quadro exclusivo128/PPU64: walk direcao1 frame6
+PASS Quadro exclusivo128/PPU64: walk direcao1 frame7
+PASS Quadro exclusivo128/PPU64: walk direcao1 frame8
+PASS Quadro exclusivo128/PPU64: walk direcao2 frame0
+PASS Quadro exclusivo128/PPU64: walk direcao2 frame1
+PASS Quadro exclusivo128/PPU64: walk direcao2 frame2
+PASS Quadro exclusivo128/PPU64: walk direcao2 frame3
+PASS Quadro exclusivo128/PPU64: walk direcao2 frame4
+PASS Quadro exclusivo128/PPU64: walk direcao2 frame5
+PASS Quadro exclusivo128/PPU64: walk direcao2 frame6
+PASS Quadro exclusivo128/PPU64: walk direcao2 frame7
+PASS Quadro exclusivo128/PPU64: walk direcao2 frame8
+PASS Quadro exclusivo128/PPU64: walk direcao3 frame0
+PASS Quadro exclusivo128/PPU64: walk direcao3 frame1
+PASS Quadro exclusivo128/PPU64: walk direcao3 frame2
+PASS Quadro exclusivo128/PPU64: walk direcao3 frame3
+PASS Quadro exclusivo128/PPU64: walk direcao3 frame4
+PASS Quadro exclusivo128/PPU64: walk direcao3 frame5
+PASS Quadro exclusivo128/PPU64: walk direcao3 frame6
+PASS Quadro exclusivo128/PPU64: walk direcao3 frame7
+PASS Quadro exclusivo128/PPU64: walk direcao3 frame8
+PASS Contagem do ciclo slash
+PASS Quadro exclusivo128/PPU64: slash direcao0 frame0
+PASS Quadro exclusivo128/PPU64: slash direcao0 frame1
+PASS Quadro exclusivo128/PPU64: slash direcao0 frame2
+PASS Quadro exclusivo128/PPU64: slash direcao0 frame3
+PASS Quadro exclusivo128/PPU64: slash direcao0 frame4
+PASS Quadro exclusivo128/PPU64: slash direcao0 frame5
+PASS Quadro exclusivo128/PPU64: slash direcao1 frame0
+PASS Quadro exclusivo128/PPU64: slash direcao1 frame1
+PASS Quadro exclusivo128/PPU64: slash direcao1 frame2
+PASS Quadro exclusivo128/PPU64: slash direcao1 frame3
+PASS Quadro exclusivo128/PPU64: slash direcao1 frame4
+PASS Quadro exclusivo128/PPU64: slash direcao1 frame5
+PASS Quadro exclusivo128/PPU64: slash direcao2 frame0
+PASS Quadro exclusivo128/PPU64: slash direcao2 frame1
+PASS Quadro exclusivo128/PPU64: slash direcao2 frame2
+PASS Quadro exclusivo128/PPU64: slash direcao2 frame3
+PASS Quadro exclusivo128/PPU64: slash direcao2 frame4
+PASS Quadro exclusivo128/PPU64: slash direcao2 frame5
+PASS Quadro exclusivo128/PPU64: slash direcao3 frame0
+PASS Quadro exclusivo128/PPU64: slash direcao3 frame1
+PASS Quadro exclusivo128/PPU64: slash direcao3 frame2
+PASS Quadro exclusivo128/PPU64: slash direcao3 frame3
+PASS Quadro exclusivo128/PPU64: slash direcao3 frame4
+PASS Quadro exclusivo128/PPU64: slash direcao3 frame5
+PASS Contagem do ciclo spellcast
+PASS Quadro exclusivo128/PPU64: spellcast direcao0 frame0
+PASS Quadro exclusivo128/PPU64: spellcast direcao0 frame1
+PASS Quadro exclusivo128/PPU64: spellcast direcao0 frame2
+PASS Quadro exclusivo128/PPU64: spellcast direcao0 frame3
+PASS Quadro exclusivo128/PPU64: spellcast direcao0 frame4
+PASS Quadro exclusivo128/PPU64: spellcast direcao0 frame5
+PASS Quadro exclusivo128/PPU64: spellcast direcao0 frame6
+PASS Quadro exclusivo128/PPU64: spellcast direcao1 frame0
+PASS Quadro exclusivo128/PPU64: spellcast direcao1 frame1
+PASS Quadro exclusivo128/PPU64: spellcast direcao1 frame2
+PASS Quadro exclusivo128/PPU64: spellcast direcao1 frame3
+PASS Quadro exclusivo128/PPU64: spellcast direcao1 frame4
+PASS Quadro exclusivo128/PPU64: spellcast direcao1 frame5
+PASS Quadro exclusivo128/PPU64: spellcast direcao1 frame6
+PASS Quadro exclusivo128/PPU64: spellcast direcao2 frame0
+PASS Quadro exclusivo128/PPU64: spellcast direcao2 frame1
+PASS Quadro exclusivo128/PPU64: spellcast direcao2 frame2
+PASS Quadro exclusivo128/PPU64: spellcast direcao2 frame3
+PASS Quadro exclusivo128/PPU64: spellcast direcao2 frame4
+PASS Quadro exclusivo128/PPU64: spellcast direcao2 frame5
+PASS Quadro exclusivo128/PPU64: spellcast direcao2 frame6
+PASS Quadro exclusivo128/PPU64: spellcast direcao3 frame0
+PASS Quadro exclusivo128/PPU64: spellcast direcao3 frame1
+PASS Quadro exclusivo128/PPU64: spellcast direcao3 frame2
+PASS Quadro exclusivo128/PPU64: spellcast direcao3 frame3
+PASS Quadro exclusivo128/PPU64: spellcast direcao3 frame4
+PASS Quadro exclusivo128/PPU64: spellcast direcao3 frame5
+PASS Quadro exclusivo128/PPU64: spellcast direcao3 frame6
+PASS Contagem do ciclo hurt
+PASS Quadro exclusivo128/PPU64: hurt direcao0 frame0
+PASS Quadro exclusivo128/PPU64: hurt direcao0 frame1
+PASS Quadro exclusivo128/PPU64: hurt direcao0 frame2
+PASS Quadro exclusivo128/PPU64: hurt direcao0 frame3
+PASS Quadro exclusivo128/PPU64: hurt direcao0 frame4
+PASS Quadro exclusivo128/PPU64: hurt direcao0 frame5
+PASS Quadro exclusivo128/PPU64: hurt direcao1 frame0
+PASS Quadro exclusivo128/PPU64: hurt direcao1 frame1
+PASS Quadro exclusivo128/PPU64: hurt direcao1 frame2
+PASS Quadro exclusivo128/PPU64: hurt direcao1 frame3
+PASS Quadro exclusivo128/PPU64: hurt direcao1 frame4
+PASS Quadro exclusivo128/PPU64: hurt direcao1 frame5
+PASS Quadro exclusivo128/PPU64: hurt direcao2 frame0
+PASS Quadro exclusivo128/PPU64: hurt direcao2 frame1
+PASS Quadro exclusivo128/PPU64: hurt direcao2 frame2
+PASS Quadro exclusivo128/PPU64: hurt direcao2 frame3
+PASS Quadro exclusivo128/PPU64: hurt direcao2 frame4
+PASS Quadro exclusivo128/PPU64: hurt direcao2 frame5
+PASS Quadro exclusivo128/PPU64: hurt direcao3 frame0
+PASS Quadro exclusivo128/PPU64: hurt direcao3 frame1
+PASS Quadro exclusivo128/PPU64: hurt direcao3 frame2
+PASS Quadro exclusivo128/PPU64: hurt direcao3 frame3
+PASS Quadro exclusivo128/PPU64: hurt direcao3 frame4
+PASS Quadro exclusivo128/PPU64: hurt direcao3 frame5
+PASS Dialogo apresenta Bonero e o chefe correto
+PASS De perto escolhe soco em vez de iniciar poder
+PASS Soco nao aplica dano antes do contato
+PASS Contato do soco no quadro3,26dano, sem projetil
+PASS Barra ativa do chefe bloqueia soco por clique na interface
+PASS Poder comeca na antecipacao
+PASS Nenhum projetil antes dos850ms; quadros0a4 antecipam
+PASS Tres projetis saem junto com a pose de liberacao5
+PASS Recarga2.8s preservada
+PASS Liberacao transita para recuperacao6 antes do idle
+PASS Projetil central causa16dano em trajeto real
+PASS Projetil encerrado nao aplica dano repetido
+PASS Vitoria sobre Companheiro conclui o objetivo antigo
+PASS Chefe nao renasce
+PASS Bonero entrega Palma,voo e Coracao
+PASS Recompensa nao se repete
+PASS Save existente captainDefeated conserva chefe vencido
+PASS Savev3 anterior a missao continua compativel
+PASS Mesma chave de progresso

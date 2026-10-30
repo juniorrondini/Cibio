@@ -22,8 +22,8 @@ namespace Cibio.RPG
         public bool reviewPose,reviewRun;public readonly List<FloatingText> floating=new();public sealed class FloatingText{public Vector2 p;public string text;public Color color;public float born;}
         void Awake()
         {
-            Instance=this;Application.targetFrameRate=60;world=GetComponent<RpgWorld>();if(!world)world=gameObject.AddComponent<RpgWorld>();world.Build();if(!GetComponent<RpgQuest08>())gameObject.AddComponent<RpgQuest08>();RpgTerrain.Ensure(world);if(!world.hero.GetComponent<RpgPowerForm>())world.hero.gameObject.AddComponent<RpgPowerForm>();lens=Camera.main;if(!lens.GetComponent<RpgAudioLimiter>())lens.gameObject.AddComponent<RpgAudioLimiter>();if(!lens.GetComponent<RpgEnergyBloom>())lens.gameObject.AddComponent<RpgEnergyBloom>();for(int n=0;n<world.enemies.Count;n++)world.enemies[n].ConfigureEnemy(n<7?n%3:world.enemies[n].enemyKind);world.shrines[0].title="Voo da Centelha";world.shrines[0].description="[1] decolar/pousar | 12 energia + 10/s no ar.";world.shrines[1].description="Melhora sua transformação: duração de 24s.";if(!GetComponent<RpgFlightWake09>())gameObject.AddComponent<RpgFlightWake09>();if(!GetComponent<RpgFeedback09>())gameObject.AddComponent<RpgFeedback09>();if(!GetComponent<RpgAudio>())gameObject.AddComponent<RpgAudio>();Talents=GetComponent<RpgTalents15>()??gameObject.AddComponent<RpgTalents15>();Secret=GetComponent<RpgWorldSecret15>()??gameObject.AddComponent<RpgWorldSecret15>();ready=true;SnapCamera();
-            var args=Environment.GetCommandLineArgs();for(int i=0;i<args.Length-1;i++){if(args[i]=="-cibio-chronicle-review15"){reviewRun=true;StartCoroutine(gameObject.AddComponent<RpgChronicleReview15>().Run(args[i+1]));}else if(args[i]=="-cibio-island-review14"){reviewRun=true;StartCoroutine(gameObject.AddComponent<RpgIslandReview14>().Run(args[i+1]));}else if(args[i]=="-cibio-art-review13"){reviewRun=true;StartCoroutine(gameObject.AddComponent<RpgArtReview13>().Run(args[i+1]));}else if(args[i]=="-cibio-boss-review12"){reviewRun=true;StartCoroutine(gameObject.AddComponent<RpgBossReview12>().Run(args[i+1]));}else if(args[i]=="-cibio-village-review11"){reviewRun=true;StartCoroutine(gameObject.AddComponent<RpgVillageReview11>().Run(args[i+1]));}else if(args[i]=="-cibio-sonic-review10"){reviewRun=true;StartCoroutine(gameObject.AddComponent<RpgSonicReview10>().Run(args[i+1]));}else if(args[i]=="-cibio-ui-review09"){reviewRun=true;StartCoroutine(gameObject.AddComponent<RpgReview09>().RunUi(args[i+1]));}else if(args[i]=="-cibio-review09"){reviewRun=true;StartCoroutine(gameObject.AddComponent<RpgReview09>().Run(args[i+1]));}else if(args[i]=="-cibio-review08"){reviewRun=true;StartCoroutine(gameObject.AddComponent<RpgReview08>().Run(args[i+1]));}else if(args[i]=="-cibio-review07"){reviewRun=true;StartCoroutine(gameObject.AddComponent<RpgReview07>().Run(args[i+1]));}else if(args[i]=="-cibio-review"){reviewRun=true;StartCoroutine(ReviewEffects06(args[i+1]));}else if(args[i]=="-cibio-vfx-review"){reviewRun=true;StartCoroutine(gameObject.AddComponent<RpgVfxReview>().Run(args[i+1]));}}
+            Instance=this;Application.targetFrameRate=60;world=GetComponent<RpgWorld>();if(!world)world=gameObject.AddComponent<RpgWorld>();world.Build();if(!GetComponent<RpgQuest08>())gameObject.AddComponent<RpgQuest08>();RpgTerrain.Ensure(world);if(!world.hero.GetComponent<RpgPowerForm>())world.hero.gameObject.AddComponent<RpgPowerForm>();lens=Camera.main;if(!lens.GetComponent<RpgAudioLimiter>())lens.gameObject.AddComponent<RpgAudioLimiter>();if(!lens.GetComponent<RpgEnergyBloom>())lens.gameObject.AddComponent<RpgEnergyBloom>();if(!lens.GetComponent<RpgTemporalFlight16>())lens.gameObject.AddComponent<RpgTemporalFlight16>();for(int n=0;n<world.enemies.Count;n++)world.enemies[n].ConfigureEnemy(n<7?n%3:world.enemies[n].enemyKind);world.shrines[0].title="Voo da Centelha";world.shrines[0].description="[1] decolar/pousar | 12 energia + 10/s no ar.";world.shrines[1].description="Melhora sua transformação: duração de 24s.";if(!GetComponent<RpgFlightWake09>())gameObject.AddComponent<RpgFlightWake09>();if(!GetComponent<RpgFeedback09>())gameObject.AddComponent<RpgFeedback09>();if(!GetComponent<RpgAudio>())gameObject.AddComponent<RpgAudio>();Talents=GetComponent<RpgTalents15>()??gameObject.AddComponent<RpgTalents15>();Secret=GetComponent<RpgWorldSecret15>()??gameObject.AddComponent<RpgWorldSecret15>();ready=true;SnapCamera();
+            var args=Environment.GetCommandLineArgs();for(int i=0;i<args.Length-1;i++){if(args[i]=="-cibio-chronicle-review15"||args[i]=="-cibio-orbit-review16"){reviewRun=true;StartCoroutine(gameObject.AddComponent<RpgChronicleReview15>().Run(args[i+1]));}else if(args[i]=="-cibio-island-review14"){reviewRun=true;StartCoroutine(gameObject.AddComponent<RpgIslandReview14>().Run(args[i+1]));}else if(args[i]=="-cibio-art-review13"){reviewRun=true;StartCoroutine(gameObject.AddComponent<RpgArtReview13>().Run(args[i+1]));}else if(args[i]=="-cibio-boss-review12"){reviewRun=true;StartCoroutine(gameObject.AddComponent<RpgBossReview12>().Run(args[i+1]));}else if(args[i]=="-cibio-village-review11"){reviewRun=true;StartCoroutine(gameObject.AddComponent<RpgVillageReview11>().Run(args[i+1]));}else if(args[i]=="-cibio-sonic-review10"){reviewRun=true;StartCoroutine(gameObject.AddComponent<RpgSonicReview10>().Run(args[i+1]));}else if(args[i]=="-cibio-ui-review09"){reviewRun=true;StartCoroutine(gameObject.AddComponent<RpgReview09>().RunUi(args[i+1]));}else if(args[i]=="-cibio-review09"){reviewRun=true;StartCoroutine(gameObject.AddComponent<RpgReview09>().Run(args[i+1]));}else if(args[i]=="-cibio-review08"){reviewRun=true;StartCoroutine(gameObject.AddComponent<RpgReview08>().Run(args[i+1]));}else if(args[i]=="-cibio-review07"){reviewRun=true;StartCoroutine(gameObject.AddComponent<RpgReview07>().Run(args[i+1]));}else if(args[i]=="-cibio-review"){reviewRun=true;StartCoroutine(ReviewEffects06(args[i+1]));}else if(args[i]=="-cibio-vfx-review"){reviewRun=true;StartCoroutine(gameObject.AddComponent<RpgVfxReview>().Run(args[i+1]));}}
         }
         public void StartGame(bool continueGame)
         {
@@ -37,20 +37,31 @@ namespace Cibio.RPG
         {
             if(!ready)return;
             if(Input.GetKeyDown(KeyCode.Escape)){if(mode==1){bufferedAttack=false;world.hero.CancelQueuedAttack();Save();mode=2;}else if(mode==2)mode=1;else if(mode==3)mode=0;else if(mode==4)mode=1;}
-            if(!Playing||reviewPose||Secret.Cinematic)return;if(Input.GetKeyDown(KeyCode.J)||Input.GetMouseButtonDown(0)&&!RpgInterface.PointerOverHud())bufferedAttack=true;if(impactPause>0){impactPause=Mathf.Max(0,impactPause-Time.unscaledDeltaTime);return;}float dt=Time.deltaTime;
+            if(!Playing||reviewPose)return;if(Secret.Cinematic){Secret.Advance(Time.deltaTime);return;}if(Input.GetKeyDown(KeyCode.J)||Input.GetMouseButtonDown(0)&&!RpgInterface.PointerOverHud())bufferedAttack=true;if(impactPause>0){impactPause=Mathf.Max(0,impactPause-Time.unscaledDeltaTime);return;}float dt=Time.deltaTime;
             var hero=world.hero;dashCooldown=Mathf.Max(0,dashCooldown-dt);waveCooldown=Mathf.Max(0,waveCooldown-dt);boltCooldown=Mathf.Max(0,boltCooldown-dt);
             if(hero.dead){bufferedAttack=false;if(Input.GetKeyDown(KeyCode.R))Revive();}
             else
             {
                 HandleTransformInput(Input.GetKey(KeyCode.C)||RpgInterface.ChargeButtonHeld());
                 Vector2 input=new(Input.GetAxisRaw("Horizontal"),Input.GetAxisRaw("Vertical"));
-                bool run=Input.GetKey(KeyCode.LeftShift);hero.SetFlightControls(run,Input.GetKey(KeyCode.LeftControl)||Input.GetKey(KeyCode.RightControl));float speed=hero.flying?hero.FlightSpeed:hero.GroundSpeed(run);if(Input.GetKeyDown(KeyCode.LeftAlt)||Input.GetKeyDown(KeyCode.RightAlt)||Input.GetMouseButtonDown(1)&&!RpgInterface.PointerOverHud())hero.TryDodge(input);hero.Walk(input,speed,dt,run);
+                bool run=Input.GetKey(KeyCode.LeftShift)||Input.GetKey(KeyCode.RightShift);if(Input.GetKeyDown(KeyCode.LeftAlt)||Input.GetKeyDown(KeyCode.RightAlt)||Input.GetMouseButtonDown(1)&&!RpgInterface.PointerOverHud())hero.TryDodge(input);DriveHero(input,run,Input.GetKey(KeyCode.LeftControl)||Input.GetKey(KeyCode.RightControl),dt);
                 if(bufferedAttack){hero.RequestAttack();bufferedAttack=false;}
                 if(Input.GetKeyDown(KeyCode.Space))hero.Jump();
                 if(Input.GetKeyDown(KeyCode.E))Interact();if(Input.GetKeyDown(KeyCode.Alpha1))Dash();if(Input.GetKeyDown(KeyCode.Alpha2))Wave();if(Input.GetKeyDown(KeyCode.Alpha3))Bolt();
             }
-            hero.Tick(dt);foreach(var enemy in world.enemies)enemy.Tick(dt);
+            TickWorld(dt);
             saveTimer+=dt;if(saveTimer>12){saveTimer=0;Save();}floating.RemoveAll(t=>Time.unscaledTime-t.born>1.15f);
+        }
+        // Shared by live input and regression playback: reveal occurs in the same simulation step.
+        public void DriveHero(Vector2 input,bool boost,bool brake,float dt)
+        {
+            if(!Playing||Secret.Cinematic)return;var hero=world.hero;hero.SetFlightControls(boost,brake);
+            hero.Walk(input,hero.flying?hero.FlightSpeed:hero.GroundSpeed(boost),dt,boost);
+        }
+        public void TickWorld(float dt)
+        {
+            if(!Playing)return;if(Secret.Cinematic){Secret.Advance(dt);return;}
+            world.hero.Tick(dt);foreach(var enemy in world.enemies)enemy.Tick(dt);Secret.Advance(dt);
         }
         void LateUpdate()
         {
@@ -198,8 +209,3 @@ namespace Cibio.RPG
         }
     }
 }
-
-
-
-
-

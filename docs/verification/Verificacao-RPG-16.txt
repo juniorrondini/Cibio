@@ -1,0 +1,382 @@
+PASS Voo tem hover e avanco em quatro direcoes: Hero
+PASS Voo tem hover e avanco em quatro direcoes: HeroAwakened
+PASS Mapa expandido, 3 altares e 22 inimigos carregados
+PASS Atlas próprio da transição: seis etapas e quatro direções
+PASS Caminho livre até Voo da Centelha
+PASS Caminho livre até Coração Canarinho
+PASS Caminho livre até Grito da Liberdade
+PASS Atlas com dimensões originais Hero idle
+PASS Direção 0 de Hero idle
+PASS Direção 1 de Hero idle
+PASS Direção 2 de Hero idle
+PASS Direção 3 de Hero idle
+PASS Atlas com dimensões originais HeroLift idle
+PASS Direção 0 de HeroLift idle
+PASS Direção 1 de HeroLift idle
+PASS Direção 2 de HeroLift idle
+PASS Direção 3 de HeroLift idle
+PASS Atlas com dimensões originais HeroGold idle
+PASS Direção 0 de HeroGold idle
+PASS Direção 1 de HeroGold idle
+PASS Direção 2 de HeroGold idle
+PASS Direção 3 de HeroGold idle
+PASS Atlas com dimensões originais HeroAwakened idle
+PASS Direção 0 de HeroAwakened idle
+PASS Direção 1 de HeroAwakened idle
+PASS Direção 2 de HeroAwakened idle
+PASS Direção 3 de HeroAwakened idle
+PASS Atlas com dimensões originais Enemy idle
+PASS Direção 0 de Enemy idle
+PASS Direção 1 de Enemy idle
+PASS Direção 2 de Enemy idle
+PASS Direção 3 de Enemy idle
+PASS Atlas com dimensões originais EnemyHeavy idle
+PASS Direção 0 de EnemyHeavy idle
+PASS Direção 1 de EnemyHeavy idle
+PASS Direção 2 de EnemyHeavy idle
+PASS Direção 3 de EnemyHeavy idle
+PASS Atlas com dimensões originais EnemyCaster idle
+PASS Direção 0 de EnemyCaster idle
+PASS Direção 1 de EnemyCaster idle
+PASS Direção 2 de EnemyCaster idle
+PASS Direção 3 de EnemyCaster idle
+PASS Atlas com dimensões originais Hero walk
+PASS Direção 0 de Hero walk
+PASS Direção 1 de Hero walk
+PASS Direção 2 de Hero walk
+PASS Direção 3 de Hero walk
+PASS Atlas com dimensões originais HeroLift walk
+PASS Direção 0 de HeroLift walk
+PASS Direção 1 de HeroLift walk
+PASS Direção 2 de HeroLift walk
+PASS Direção 3 de HeroLift walk
+PASS Atlas com dimensões originais HeroGold walk
+PASS Direção 0 de HeroGold walk
+PASS Direção 1 de HeroGold walk
+PASS Direção 2 de HeroGold walk
+PASS Direção 3 de HeroGold walk
+PASS Atlas com dimensões originais HeroAwakened walk
+PASS Direção 0 de HeroAwakened walk
+PASS Direção 1 de HeroAwakened walk
+PASS Direção 2 de HeroAwakened walk
+PASS Direção 3 de HeroAwakened walk
+PASS Atlas com dimensões originais Enemy walk
+PASS Direção 0 de Enemy walk
+PASS Direção 1 de Enemy walk
+PASS Direção 2 de Enemy walk
+PASS Direção 3 de Enemy walk
+PASS Atlas com dimensões originais EnemyHeavy walk
+PASS Direção 0 de EnemyHeavy walk
+PASS Direção 1 de EnemyHeavy walk
+PASS Direção 2 de EnemyHeavy walk
+PASS Direção 3 de EnemyHeavy walk
+PASS Atlas com dimensões originais EnemyCaster walk
+PASS Direção 0 de EnemyCaster walk
+PASS Direção 1 de EnemyCaster walk
+PASS Direção 2 de EnemyCaster walk
+PASS Direção 3 de EnemyCaster walk
+PASS Atlas com dimensões originais Hero run
+PASS Direção 0 de Hero run
+PASS Direção 1 de Hero run
+PASS Direção 2 de Hero run
+PASS Direção 3 de Hero run
+PASS Atlas com dimensões originais HeroLift run
+PASS Direção 0 de HeroLift run
+PASS Direção 1 de HeroLift run
+PASS Direção 2 de HeroLift run
+PASS Direção 3 de HeroLift run
+PASS Atlas com dimensões originais HeroGold run
+PASS Direção 0 de HeroGold run
+PASS Direção 1 de HeroGold run
+PASS Direção 2 de HeroGold run
+PASS Direção 3 de HeroGold run
+PASS Atlas com dimensões originais HeroAwakened run
+PASS Direção 0 de HeroAwakened run
+PASS Direção 1 de HeroAwakened run
+PASS Direção 2 de HeroAwakened run
+PASS Direção 3 de HeroAwakened run
+PASS Atlas com dimensões originais Enemy run
+PASS Direção 0 de Enemy run
+PASS Direção 1 de Enemy run
+PASS Direção 2 de Enemy run
+PASS Direção 3 de Enemy run
+PASS Atlas com dimensões originais EnemyHeavy run
+PASS Direção 0 de EnemyHeavy run
+PASS Direção 1 de EnemyHeavy run
+PASS Direção 2 de EnemyHeavy run
+PASS Direção 3 de EnemyHeavy run
+PASS Atlas com dimensões originais EnemyCaster run
+PASS Direção 0 de EnemyCaster run
+PASS Direção 1 de EnemyCaster run
+PASS Direção 2 de EnemyCaster run
+PASS Direção 3 de EnemyCaster run
+PASS Atlas com dimensões originais Hero jump
+PASS Direção 0 de Hero jump
+PASS Direção 1 de Hero jump
+PASS Direção 2 de Hero jump
+PASS Direção 3 de Hero jump
+PASS Atlas com dimensões originais HeroLift jump
+PASS Direção 0 de HeroLift jump
+PASS Direção 1 de HeroLift jump
+PASS Direção 2 de HeroLift jump
+PASS Direção 3 de HeroLift jump
+PASS Atlas com dimensões originais HeroGold jump
+PASS Direção 0 de HeroGold jump
+PASS Direção 1 de HeroGold jump
+PASS Direção 2 de HeroGold jump
+PASS Direção 3 de HeroGold jump
+PASS Atlas com dimensões originais HeroAwakened jump
+PASS Direção 0 de HeroAwakened jump
+PASS Direção 1 de HeroAwakened jump
+PASS Direção 2 de HeroAwakened jump
+PASS Direção 3 de HeroAwakened jump
+PASS Atlas com dimensões originais Enemy jump
+PASS Direção 0 de Enemy jump
+PASS Direção 1 de Enemy jump
+PASS Direção 2 de Enemy jump
+PASS Direção 3 de Enemy jump
+PASS Atlas com dimensões originais EnemyHeavy jump
+PASS Direção 0 de EnemyHeavy jump
+PASS Direção 1 de EnemyHeavy jump
+PASS Direção 2 de EnemyHeavy jump
+PASS Direção 3 de EnemyHeavy jump
+PASS Atlas com dimensões originais EnemyCaster jump
+PASS Direção 0 de EnemyCaster jump
+PASS Direção 1 de EnemyCaster jump
+PASS Direção 2 de EnemyCaster jump
+PASS Direção 3 de EnemyCaster jump
+PASS Atlas com dimensões originais Hero slash
+PASS Direção 0 de Hero slash
+PASS Direção 1 de Hero slash
+PASS Direção 2 de Hero slash
+PASS Direção 3 de Hero slash
+PASS Atlas com dimensões originais HeroLift slash
+PASS Direção 0 de HeroLift slash
+PASS Direção 1 de HeroLift slash
+PASS Direção 2 de HeroLift slash
+PASS Direção 3 de HeroLift slash
+PASS Atlas com dimensões originais HeroGold slash
+PASS Direção 0 de HeroGold slash
+PASS Direção 1 de HeroGold slash
+PASS Direção 2 de HeroGold slash
+PASS Direção 3 de HeroGold slash
+PASS Atlas com dimensões originais HeroAwakened slash
+PASS Direção 0 de HeroAwakened slash
+PASS Direção 1 de HeroAwakened slash
+PASS Direção 2 de HeroAwakened slash
+PASS Direção 3 de HeroAwakened slash
+PASS Atlas com dimensões originais Enemy slash
+PASS Direção 0 de Enemy slash
+PASS Direção 1 de Enemy slash
+PASS Direção 2 de Enemy slash
+PASS Direção 3 de Enemy slash
+PASS Atlas com dimensões originais EnemyHeavy slash
+PASS Direção 0 de EnemyHeavy slash
+PASS Direção 1 de EnemyHeavy slash
+PASS Direção 2 de EnemyHeavy slash
+PASS Direção 3 de EnemyHeavy slash
+PASS Atlas com dimensões originais EnemyCaster slash
+PASS Direção 0 de EnemyCaster slash
+PASS Direção 1 de EnemyCaster slash
+PASS Direção 2 de EnemyCaster slash
+PASS Direção 3 de EnemyCaster slash
+PASS Atlas com dimensões originais Hero spellcast
+PASS Direção 0 de Hero spellcast
+PASS Direção 1 de Hero spellcast
+PASS Direção 2 de Hero spellcast
+PASS Direção 3 de Hero spellcast
+PASS Atlas com dimensões originais HeroLift spellcast
+PASS Direção 0 de HeroLift spellcast
+PASS Direção 1 de HeroLift spellcast
+PASS Direção 2 de HeroLift spellcast
+PASS Direção 3 de HeroLift spellcast
+PASS Atlas com dimensões originais HeroGold spellcast
+PASS Direção 0 de HeroGold spellcast
+PASS Direção 1 de HeroGold spellcast
+PASS Direção 2 de HeroGold spellcast
+PASS Direção 3 de HeroGold spellcast
+PASS Atlas com dimensões originais HeroAwakened spellcast
+PASS Direção 0 de HeroAwakened spellcast
+PASS Direção 1 de HeroAwakened spellcast
+PASS Direção 2 de HeroAwakened spellcast
+PASS Direção 3 de HeroAwakened spellcast
+PASS Atlas com dimensões originais Enemy spellcast
+PASS Direção 0 de Enemy spellcast
+PASS Direção 1 de Enemy spellcast
+PASS Direção 2 de Enemy spellcast
+PASS Direção 3 de Enemy spellcast
+PASS Atlas com dimensões originais EnemyHeavy spellcast
+PASS Direção 0 de EnemyHeavy spellcast
+PASS Direção 1 de EnemyHeavy spellcast
+PASS Direção 2 de EnemyHeavy spellcast
+PASS Direção 3 de EnemyHeavy spellcast
+PASS Atlas com dimensões originais EnemyCaster spellcast
+PASS Direção 0 de EnemyCaster spellcast
+PASS Direção 1 de EnemyCaster spellcast
+PASS Direção 2 de EnemyCaster spellcast
+PASS Direção 3 de EnemyCaster spellcast
+PASS Atlas com dimensões originais Hero hurt
+PASS Direção 0 de Hero hurt
+PASS Atlas com dimensões originais HeroLift hurt
+PASS Direção 0 de HeroLift hurt
+PASS Atlas com dimensões originais HeroGold hurt
+PASS Direção 0 de HeroGold hurt
+PASS Atlas com dimensões originais HeroAwakened hurt
+PASS Direção 0 de HeroAwakened hurt
+PASS Atlas com dimensões originais Enemy hurt
+PASS Direção 0 de Enemy hurt
+PASS Atlas com dimensões originais EnemyHeavy hurt
+PASS Direção 0 de EnemyHeavy hurt
+PASS Atlas com dimensões originais EnemyCaster hurt
+PASS Direção 0 de EnemyCaster hurt
+PASS Atlas com dimensões originais Hero thrust
+PASS Direção 0 de Hero thrust
+PASS Direção 1 de Hero thrust
+PASS Direção 2 de Hero thrust
+PASS Direção 3 de Hero thrust
+PASS Atlas com dimensões originais HeroLift thrust
+PASS Direção 0 de HeroLift thrust
+PASS Direção 1 de HeroLift thrust
+PASS Direção 2 de HeroLift thrust
+PASS Direção 3 de HeroLift thrust
+PASS Atlas com dimensões originais HeroGold thrust
+PASS Direção 0 de HeroGold thrust
+PASS Direção 1 de HeroGold thrust
+PASS Direção 2 de HeroGold thrust
+PASS Direção 3 de HeroGold thrust
+PASS Atlas com dimensões originais HeroAwakened thrust
+PASS Direção 0 de HeroAwakened thrust
+PASS Direção 1 de HeroAwakened thrust
+PASS Direção 2 de HeroAwakened thrust
+PASS Direção 3 de HeroAwakened thrust
+PASS Atlas com dimensões originais Enemy thrust
+PASS Direção 0 de Enemy thrust
+PASS Direção 1 de Enemy thrust
+PASS Direção 2 de Enemy thrust
+PASS Direção 3 de Enemy thrust
+PASS Atlas com dimensões originais EnemyHeavy thrust
+PASS Direção 0 de EnemyHeavy thrust
+PASS Direção 1 de EnemyHeavy thrust
+PASS Direção 2 de EnemyHeavy thrust
+PASS Direção 3 de EnemyHeavy thrust
+PASS Atlas com dimensões originais EnemyCaster thrust
+PASS Direção 0 de EnemyCaster thrust
+PASS Direção 1 de EnemyCaster thrust
+PASS Direção 2 de EnemyCaster thrust
+PASS Direção 3 de EnemyCaster thrust
+PASS Atlas com dimensões originais Hero backslash
+PASS Direção 0 de Hero backslash
+PASS Direção 1 de Hero backslash
+PASS Direção 2 de Hero backslash
+PASS Direção 3 de Hero backslash
+PASS Atlas com dimensões originais HeroLift backslash
+PASS Direção 0 de HeroLift backslash
+PASS Direção 1 de HeroLift backslash
+PASS Direção 2 de HeroLift backslash
+PASS Direção 3 de HeroLift backslash
+PASS Atlas com dimensões originais HeroGold backslash
+PASS Direção 0 de HeroGold backslash
+PASS Direção 1 de HeroGold backslash
+PASS Direção 2 de HeroGold backslash
+PASS Direção 3 de HeroGold backslash
+PASS Atlas com dimensões originais HeroAwakened backslash
+PASS Direção 0 de HeroAwakened backslash
+PASS Direção 1 de HeroAwakened backslash
+PASS Direção 2 de HeroAwakened backslash
+PASS Direção 3 de HeroAwakened backslash
+PASS Atlas com dimensões originais Enemy backslash
+PASS Direção 0 de Enemy backslash
+PASS Direção 1 de Enemy backslash
+PASS Direção 2 de Enemy backslash
+PASS Direção 3 de Enemy backslash
+PASS Atlas com dimensões originais EnemyHeavy backslash
+PASS Direção 0 de EnemyHeavy backslash
+PASS Direção 1 de EnemyHeavy backslash
+PASS Direção 2 de EnemyHeavy backslash
+PASS Direção 3 de EnemyHeavy backslash
+PASS Atlas com dimensões originais EnemyCaster backslash
+PASS Direção 0 de EnemyCaster backslash
+PASS Direção 1 de EnemyCaster backslash
+PASS Direção 2 de EnemyCaster backslash
+PASS Direção 3 de EnemyCaster backslash
+PASS Movimento contínuo com aceleração
+PASS Colisão impede atravessar parede em dash
+PASS Velocidade diagonal normalizada
+PASS Poder bloqueado não consome energia
+PASS Interação aprende o primeiro poder
+PASS Altar não duplica poder
+PASS Voo decola sem teleportar e cobra 12 de energia
+PASS Intervalo impede alternar voo acidentalmente
+PASS Voo move continuamente, ganha altura e consome energia
+PASS Energia esgotada inicia pouso automatico
+PASS Pouso volta ao chao sem alterar a posicao bruscamente
+PASS Caminhada transformada nao toca corrida
+PASS Shift seleciona corrida explicitamente
+PASS Golpe trava direcao, alvo e movimento ate terminar
+PASS Cabelo muda de silhueta durante a carga
+PASS Soltar antes da carga completa não transforma
+PASS Pressionar, completar e soltar C transforma sem altar
+PASS Expirar transformação devolve o cabelo normal
+PASS Altar melhora transformação
+PASS Carga parcial não transforma
+PASS Canalização completa acumula carga e recupera energia
+PASS Altar amplia transformação para 24 segundos
+PASS Forma desperta tem porte e torso maiores
+PASS Shader do corpo desperto suportado
+PASS Terreno orgânico ativo
+PASS Aura aumenta dano real
+PASS Onda desbloqueada no terceiro altar
+PASS Onda prepara animacao antes de liberar dano e cobra energia
+PASS Onda respeita cooldown
+PASS Ataque inicia animação
+PASS Golpe causa dano sincronizado à animação
+PASS Combo alterna três poses diferentes de golpes
+PASS Três arquétipos com vida e aparências próprias
+PASS Projétil do arauto atinge e causa dano
+PASS Áudio real carregado: charge_bass
+PASS Áudio real carregado: charge_air
+PASS Áudio real carregado: charge_electric
+PASS Áudio real carregado: aura_sustain
+PASS Áudio real carregado: transform_ignite
+PASS Áudio real carregado: punch_hit0
+PASS Áudio real carregado: punch_hit1
+PASS Áudio real carregado: punch_hit2
+PASS Áudio real carregado: power_hit2
+PASS Áudio real carregado: flight_wind
+PASS Áudio real carregado: flight_launch
+PASS Áudio real carregado: flight_land
+PASS Áudio real carregado: wave_awakened
+PASS Áudio real carregado: wave_windup
+PASS Áudio real carregado: wave_blast
+PASS Áudio real carregado: Forest_Ambience
+PASS Áudio real carregado: footstep00
+PASS Áudio real carregado: blade_01
+PASS Áudio real carregado: blade_02
+PASS Áudio real carregado: blade_03
+PASS Áudio real carregado: spell_01
+PASS Áudio real carregado: spell_fire_01
+PASS Áudio real carregado: spell_fire_02
+PASS Áudio real carregado: spell_fire_03
+PASS Áudio real carregado: creature_hurt_01
+PASS Áudio real carregado: creature_die_01
+PASS Shader orgânico suportado
+PASS Aura e poderes sem contornos geométricos
+PASS Invulnerabilidade evita dano duplicado
+PASS Vitórias dão XP e sobem nível
+PASS Save recupera nível e poderes
+PASS Save corrompido recupera padrão seguro
+PASS Morte interrompe o personagem
+PASS Renascimento recupera vida e posição
+PASS Salto disponível
+PASS Salto levanta o sprite sem perder posição no mapa
+PASS Atlas de energia com 16 quadros: AuraBody
+PASS Atlas de energia com 16 quadros: AuraVeil
+PASS Atlas de energia com 16 quadros: Wisp
+PASS Atlas de energia com 16 quadros: Surge
+PASS Atlas de energia com 16 quadros: Arc
+PASS Shader de volume orgânico suportado
+PASS Partículas usam textura orgânica e shader próprio
+PASS Brilho seletivo das energias disponível
+PASS Aura carregada envolve o corpo e emite partículas limitadas
+PASS Encerrar carga dissipa as camadas da aura
+PASS Morte encerra a aura volumétrica

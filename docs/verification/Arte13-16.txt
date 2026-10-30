@@ -1,0 +1,64 @@
+PASS Tela inicial nova em16:9
+PASS Palma tem icone proprio256px
+PASS Atlas16quadros sem redimensionamento: Vfx_PalmaFlight13
+PASS Shader seleciona Vfx_PalmaFlight13 quadro0
+PASS Shader seleciona Vfx_PalmaFlight13 quadro1
+PASS Shader seleciona Vfx_PalmaFlight13 quadro2
+PASS Shader seleciona Vfx_PalmaFlight13 quadro3
+PASS Shader seleciona Vfx_PalmaFlight13 quadro4
+PASS Shader seleciona Vfx_PalmaFlight13 quadro5
+PASS Shader seleciona Vfx_PalmaFlight13 quadro6
+PASS Shader seleciona Vfx_PalmaFlight13 quadro7
+PASS Shader seleciona Vfx_PalmaFlight13 quadro8
+PASS Shader seleciona Vfx_PalmaFlight13 quadro9
+PASS Shader seleciona Vfx_PalmaFlight13 quadro10
+PASS Shader seleciona Vfx_PalmaFlight13 quadro11
+PASS Shader seleciona Vfx_PalmaFlight13 quadro12
+PASS Shader seleciona Vfx_PalmaFlight13 quadro13
+PASS Shader seleciona Vfx_PalmaFlight13 quadro14
+PASS Shader seleciona Vfx_PalmaFlight13 quadro15
+PASS Atlas16quadros sem redimensionamento: Vfx_PalmaImpact13
+PASS Shader seleciona Vfx_PalmaImpact13 quadro0
+PASS Shader seleciona Vfx_PalmaImpact13 quadro1
+PASS Shader seleciona Vfx_PalmaImpact13 quadro2
+PASS Shader seleciona Vfx_PalmaImpact13 quadro3
+PASS Shader seleciona Vfx_PalmaImpact13 quadro4
+PASS Shader seleciona Vfx_PalmaImpact13 quadro5
+PASS Shader seleciona Vfx_PalmaImpact13 quadro6
+PASS Shader seleciona Vfx_PalmaImpact13 quadro7
+PASS Shader seleciona Vfx_PalmaImpact13 quadro8
+PASS Shader seleciona Vfx_PalmaImpact13 quadro9
+PASS Shader seleciona Vfx_PalmaImpact13 quadro10
+PASS Shader seleciona Vfx_PalmaImpact13 quadro11
+PASS Shader seleciona Vfx_PalmaImpact13 quadro12
+PASS Shader seleciona Vfx_PalmaImpact13 quadro13
+PASS Shader seleciona Vfx_PalmaImpact13 quadro14
+PASS Shader seleciona Vfx_PalmaImpact13 quadro15
+PASS Skill3 continua bloqueada antes da missao
+PASS Custo22 e recarga preservados,forma0
+PASS Projetil nasce texturizado na camada de energia,forma0
+PASS Velocidade preservada e porte visual por forma0
+PASS Recarga impede disparo repetido,forma0
+PASS Dano original do projetil,forma0
+PASS Impacto unico preservado,forma0
+PASS Impacto exclusivo substitui explosao generica,forma0
+PASS Impacto encerra sem quadro opaco,forma0
+PASS Custo22 e recarga preservados,forma1
+PASS Projetil nasce texturizado na camada de energia,forma1
+PASS Velocidade preservada e porte visual por forma1
+PASS Recarga impede disparo repetido,forma1
+PASS Dano original do projetil,forma1
+PASS Impacto unico preservado,forma1
+PASS Impacto exclusivo substitui explosao generica,forma1
+PASS Impacto encerra sem quadro opaco,forma1
+PASS Custo22 e recarga preservados,forma2
+PASS Projetil nasce texturizado na camada de energia,forma2
+PASS Velocidade preservada e porte visual por forma2
+PASS Recarga impede disparo repetido,forma2
+PASS Dano original do projetil,forma2
+PASS Impacto unico preservado,forma2
+PASS Impacto exclusivo substitui explosao generica,forma2
+PASS Impacto encerra sem quadro opaco,forma2
+PASS Parede fina interrompe Palma e recebe impacto no lado correto
+PASS Projeteis inimigos mantem visual anterior
+PASS Chave de save preservada

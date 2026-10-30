@@ -41,7 +41,9 @@ namespace Cibio.RPG
         {
             var s=game.GetComponent<RpgWorldSecret15>();if(s.Active)
             {
-                Card(new Rect(504,93,432,64));Text(new Rect(522,104,396,24),"ÓRBITA DO MUNDO   "+s.Laps+" / 10",17,blue,true,TextAnchor.MiddleCenter);Text(new Rect(522,134,396,17),"Eixo "+s.AxisLabel+" • Shift mantém • Ctrl interrompe",11,muted,false,TextAnchor.MiddleCenter);
+                Card(new Rect(474,93,492,87));Text(new Rect(492,102,456,24),"ÓRBITA DO MUNDO   "+s.Laps+" / 10",17,blue,true,TextAnchor.MiddleCenter);
+                Text(new Rect(492,130,456,18),(s.Laps>=4?"DILATAÇÃO TEMPORAL  •  ":"")+game.world.hero.velocity.magnitude.ToString("F0")+" u/s",12,paper,true,TextAnchor.MiddleCenter);
+                Bar(new Rect(495,156,450,3),s.LapProgress,blue);Text(new Rect(492,163,456,14),"Shift mantém o impulso • Ctrl interrompe",10,muted,false,TextAnchor.MiddleCenter);
             }
             if(!s.InArena)return;
             if(s.IntroRemaining>0){Fill(new Rect(0,0,1440,72),new Color(.01f,.02f,.03f,.94f));Fill(new Rect(0,716,1440,94),new Color(.01f,.02f,.03f,.94f));Text(new Rect(280,723,880,42),"BONERO COMPANHEIRO",28,gold,true,TextAnchor.MiddleCenter);Text(new Rect(280,767,880,22),"A convergência das duas vozes",13,muted,false,TextAnchor.MiddleCenter);}

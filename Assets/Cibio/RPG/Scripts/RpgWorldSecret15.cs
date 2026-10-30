@@ -12,14 +12,19 @@ namespace Cibio.RPG
         public bool InArena=>State==SecretState.Arena||State==SecretState.Victory;
         public bool Victory=>State==SecretState.Victory;
         public int Laps{get;private set;}public float OrbitAge{get;private set;}public float CinemaAge{get;private set;}
-        public string AxisLabel=>axis.x!=0?"leste/oeste":"norte/sul";
-        public float Speed=>Mathf.Lerp(60,104,Mathf.SmoothStep(0,1,OrbitAge/3));
+        public string AxisLabel=>Mathf.Abs(heading.x)>=Mathf.Abs(heading.y)?"leste/oeste":"norte/sul";
+        public float LapProgress=>Mathf.Clamp01(Mathf.Max(Mathf.Abs(orbitDisplacement.x),Mathf.Abs(orbitDisplacement.y)));
+        public float FlightTier{get;private set;}
+        public float Speed=>60*Mathf.Pow(1.20f,Mathf.Min(10,FlightTier));
+        public float TemporalIntensity=>Active?Mathf.Clamp01((Speed-60)/(60*Mathf.Pow(1.2f,10)-60)):0;
+        public int WrapSerial{get;private set;}
+        public float LapPulse{get;private set;}
         public Vector2 EntryPosition{get;private set;}
         public Vector2 SavePosition=>State==SecretState.Village?game.world.hero.Position:EntryPosition;
         public Texture2D IslandSnapshot{get;private set;}
         public RpgActor Boss{get;private set;}
         public float IntroRemaining{get;private set;}
-        RpgGame game;Vector2 heading,axis;float lapTravel,span;List<RpgActor> villageEnemies;Rect villageBounds;GameObject arena;SpriteRenderer flightMantle;bool sceneryWasActive;readonly Dictionary<GameObject,bool> villageExtras=new();
+        RpgGame game;Vector2 heading,orbitDisplacement;List<RpgActor> villageEnemies;Rect villageBounds;GameObject arena;SpriteRenderer flightMantle;bool sceneryWasActive;readonly Dictionary<GameObject,bool> villageExtras=new();
         void Awake(){game=GetComponent<RpgGame>();}
         public Vector2 ResolveInput(RpgActor hero,Vector2 input,float dt)
         {
@@ -29,24 +34,35 @@ namespace Cibio.RPG
             if(!Active)
             {
                 EntryPosition=NearestLand(hero.Position,hero.Position);heading=input.sqrMagnitude>.1f?input.normalized:hero.facing.normalized;if(heading.sqrMagnitude<.1f)heading=Vector2.right;
-                axis=Mathf.Abs(heading.x)>=Mathf.Abs(heading.y)?new Vector2(Mathf.Sign(heading.x),0):new Vector2(0,Mathf.Sign(heading.y));span=axis.x!=0?game.world.bounds.width:game.world.bounds.height;
-                Laps=0;lapTravel=span;OrbitAge=0;State=SecretState.Orbit;game.Notify("ALÉM DA BARREIRA • mantenha Shift • a ilha já não limita você");RpgAudio.Play("world_break15",hero.Position,.8f);
+                orbitDisplacement=Vector2.zero;WrapSerial=0;LapPulse=0;FlightTier=0;
+                Laps=0;OrbitAge=0;State=SecretState.Orbit;game.Notify("ALÉM DA BARREIRA • mantenha Shift • a ilha já não limita você");RpgAudio.Play("world_break15",hero.Position,.8f);
                 flightMantle=RpgEffects.Create("Manto orbital • ruptura do mundo",hero.transform);flightMantle.transform.localPosition=Vector2.up*2.2f;flightMantle.transform.localScale=new Vector3(4.8f,7.4f,1);flightMantle.sortingOrder=hero.body.sortingOrder+6;
             }
-            OrbitAge+=dt;if(input.sqrMagnitude>.1f)heading=input.normalized;return heading;
+            OrbitAge+=dt;LapPulse=Mathf.Max(0,LapPulse-dt*2);if(input.sqrMagnitude>.1f)heading=input.normalized;return heading;
         }
         public Vector2 MoveOrbit(Vector2 before,Vector2 delta)
         {
             var b=game.world.bounds;Vector2 next=before+delta;bool crossX=next.x>=b.xMax||next.x<b.xMin,crossY=next.y>=b.yMax||next.y<b.yMin;
-            lapTravel=Mathf.Max(0,lapTravel+Vector2.Dot(delta,axis));bool sameDirection=Vector2.Dot(delta,axis)>0;
-            if((axis.x!=0?crossX:crossY)&&sameDirection&&lapTravel>=span*.85f){Laps++;lapTravel=0;RpgAudio.Play("orbit_lap15",before,.35f,1+Laps*.025f);game.FloatText(before+Vector2.up*3,Laps+" / 10",RpgArt.Hex("C5EDFF"));}
+            // Integrate UNWRAPPED real travel, normalized to each world dimension.
+            // Starting while idle or changing heading can never lock counting to an old axis.
+            // Signed displacement cancels boundary jitter and short backtracking.
+            orbitDisplacement+=new Vector2(delta.x/b.width,delta.y/b.height);
+            float progress=Mathf.Max(Mathf.Abs(orbitDisplacement.x),Mathf.Abs(orbitDisplacement.y));
+            while(progress>=1&&Laps<10)
+            {
+                orbitDisplacement*=1-1/progress;Laps++;LapPulse=1;
+                RpgAudio.Play("orbit_lap15",before,.5f,Mathf.Min(1.7f,1+Laps*.065f));
+                game.FloatText(before+Vector2.up*3,Laps+" / 10",RpgArt.Hex("C5EDFF"));
+                progress=Mathf.Max(Mathf.Abs(orbitDisplacement.x),Mathf.Abs(orbitDisplacement.y));
+            }
+            FlightTier=Mathf.Max(FlightTier,Laps+LapProgress);
             if(crossX)next.x=b.xMin+Mathf.Repeat(next.x-b.xMin,b.width);if(crossY)next.y=b.yMin+Mathf.Repeat(next.y-b.yMin,b.height);
-            if(crossX||crossY){game.lens.transform.position=new Vector3(next.x,next.y+1.5f,-10);game.ClearCameraInertia();}
+            if(crossX||crossY){WrapSerial++;game.lens.transform.position=new Vector3(next.x,next.y+1.5f,-10);game.ClearCameraInertia();}
             return next;
         }
         public void CancelOrbit()
         {
-            if(State!=SecretState.Orbit)return;State=SecretState.Village;Laps=0;OrbitAge=0;ClearMantle();
+            if(State!=SecretState.Orbit)return;State=SecretState.Village;Laps=0;OrbitAge=0;FlightTier=0;orbitDisplacement=Vector2.zero;LapPulse=0;ClearMantle();
             var h=game.world.hero;Vector2 safe=NearestLand(h.Position,EntryPosition);if(Vector2.Distance(safe,h.Position)>.1f){h.transform.position=safe;game.SnapCamera();}h.ResetSonic();
         }
         Vector2 NearestLand(Vector2 point,Vector2 fallback)
@@ -55,7 +71,6 @@ namespace Cibio.RPG
             for(float r=.5f;r<=9;r+=.5f)for(int k=0;k<24;k++){float a=k*Mathf.PI/12;Vector2 p=point+new Vector2(Mathf.Cos(a),Mathf.Sin(a))*r;if(game.world.CanStand(p))return p;}
             return game.world.CanStand(fallback)?fallback:new Vector2(0,-3);
         }
-        void Update(){if(!game.ready||!game.Playing||game.reviewPose)return;Advance(Time.deltaTime);}
         public void Advance(float dt)
         {
             if(!game.Playing)return;if(Active&&Laps>=10)BeginRevelation();
@@ -107,7 +122,16 @@ namespace Cibio.RPG
         public bool CanStandInArena(Vector2 p,float radius=.22f){Vector2 q=p-new Vector2(0,-1);return q.x*q.x/Mathf.Pow(17-radius,2)+q.y*q.y/Mathf.Pow(9-radius,2)<1;}
         public bool CameraStep(float dt)
         {
-            if(Cinematic)return true;if(!InArena)return false;var h=game.world.hero;
+            if(Cinematic)return true;
+            if(Active)
+            {
+                var hero=game.world.hero;float targetSize=Mathf.Lerp(9.4f,13.8f,TemporalIntensity)+LapPulse*.55f;
+                game.lens.orthographicSize=Mathf.Lerp(game.lens.orthographicSize,targetSize,1-Mathf.Exp(-dt*7));
+                Vector2 ahead=hero.Position+Vector2.up*(.8f+hero.flightHeight*.35f)+heading*1.2f;
+                game.lens.transform.position=Vector3.Lerp(game.lens.transform.position,new Vector3(ahead.x,ahead.y,-10),1-Mathf.Exp(-dt*18));
+                return true;
+            }
+            if(!InArena)return false;var h=game.world.hero;
             game.lens.orthographicSize=Mathf.Lerp(game.lens.orthographicSize,11.4f,dt*4);Vector2 p=Vector2.Lerp(h.Position,Boss?Boss.Position:Vector2.zero,.35f);p=Vector2.ClampMagnitude(p,2.2f);
             game.shake=Mathf.MoveTowards(game.shake,0,dt*2);Vector2 shake=UnityEngine.Random.insideUnitCircle*game.shake*.07f;
             game.lens.transform.position=Vector3.Lerp(game.lens.transform.position,new Vector3(p.x+shake.x,-.3f+p.y*.25f+shake.y,-10),1-Mathf.Exp(-dt*6));return true;
@@ -135,7 +159,7 @@ namespace Cibio.RPG
         public void ResetWorld()
         {
             ClearHostileShots();if(arena){ClearTransientCombat();game.world.bounds=villageBounds;game.world.enemies=villageEnemies;game.world.scenery.gameObject.SetActive(sceneryWasActive);foreach(var e in villageEnemies)if(e)e.gameObject.SetActive(true);foreach(var pair in villageExtras)if(pair.Key)pair.Key.SetActive(pair.Value);villageExtras.Clear();arena.SetActive(false);Destroy(arena);}
-            arena=null;villageEnemies=null;Boss=null;ClearMantle();flightMantle=null;State=SecretState.Village;Laps=0;OrbitAge=CinemaAge=IntroRemaining=0;game.world.hero.gameObject.SetActive(true);
+            arena=null;villageEnemies=null;Boss=null;ClearMantle();flightMantle=null;State=SecretState.Village;Laps=0;FlightTier=0;orbitDisplacement=Vector2.zero;LapPulse=0;OrbitAge=CinemaAge=IntroRemaining=0;game.world.hero.gameObject.SetActive(true);
         }
         void OnDisable(){if(game&&game.ready&&State==SecretState.Orbit)CancelOrbit();}
         void OnDestroy(){if(IslandSnapshot)Destroy(IslandSnapshot);}

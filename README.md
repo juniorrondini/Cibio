@@ -4,6 +4,24 @@
 
 RPG de ação em pixel art com câmera em perspectiva, exploração de um bairro brasileiro, combos, poderes e progressão. Projeto Unity editável, em fase de protótipo jogável para Windows.
 
+## Versão 16 — Voltas livres e distorção temporal
+
+A contagem orbital agora usa deslocamento real, antes do wrap, normalizado pela largura/altura da ilha. Iniciar Shift parado e depois mudar de direção funciona. A cada largura ou altura completa percorrida, soma uma volta; pequenas idas e voltas se anulam. O progresso parcial aparece na barra. A revelação da décima volta é acionada no mesmo passo da simulação de movimento, sem depender da ordem de Update de outro componente. Shift esquerdo e direito são aceitos.
+
+O alvo de velocidade cresce continuamente **20% por volta**, de 60 até aproximadamente **372 u/s** na décima volta (antes dos talentos). A velocidade acumulada não cai durante uma correção breve de direção. Câmera mais aberta, alongamento periférico, separação cromática e ecos do cenário do quadro anterior dão a sensação de dilatação temporal. O centro fica protegido para manter o personagem legível; o HUD é desenhado depois do efeito. O histórico é descartado nas bordas, pausa e saída. O som do vento acompanha a aceleração. Ctrl/soltar Shift/pousar continuam encerrando a tentativa e recuperando chão seguro.
+
+**Bonero Companheiro** foi redesenhado como uma divisão literal: metade do rosto, cabelo, barba e traje de cada personagem. Na frente, Bonero fica à esquerda da imagem, com cabelo castanho, rosto sem barba, gravata azul e meia faixa; Companheiro fica à direita, com cabelo/barba brancos, gravata vinho e estrela 13 no peito. Cinco folhas próprias cobrem 128 quadros em quatro direções. Mantém os quatro movimentos, fases e recompensas da versão 15.
+
+[Arte, prompts e importador](Assets/Cibio/RPG/ThirdParty/Generated16/README.md). Save v3, vila e GUIDs preservados.
+
+![Bonero Companheiro dividido ao meio, render Unity](docs/images/fusao16.png)
+
+**Verificação da versão16:** 1.068 checks aprovados (incluindo 57 específicos desta correção), com preservação do save real. A sequência completa foi exercitada pelo mesmo caminho de movimento do jogo, incluindo Shift parado e mudanças de eixo, diagonais e passos de24/60/144Hz. O shader temporal renderizou36quadros nativos, e os128quadros do chefe foram capturados. Cinco atlas reproduzidos byte a byte; cena e GUIDs preservados.
+
+[Contagem e regressões](docs/verification/Orbita16.txt) · [Velocidade real por volta](docs/verification/Velocidade16.csv) · [Auditoria](docs/verification/Orbita-Audit16.json) · [Voo temporal](docs/images/temporal16.gif) · [Chefe animado](docs/images/bonero-companheiro16.gif) · [Todos os quadros](docs/images/quadros-fusao16.jpg)
+
+Revisão: `Cibio.exe -cibio-orbit-review16 "Review16" -logFile "review16.log"`. Evidência visual por Camera.Render; os overlays IMGUI não foram inspecionados visualmente pela janela. Capturas de simulação não medem FPS. Áudio modulado foi integrado, mas não houve audição nesta máquina, sem dispositivo de saída.
+
 ## Versão 15 — Talentos e A décima volta
 
 ![Arena e Bonero Companheiro, render nativo](docs/images/arena15.png)

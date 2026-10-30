@@ -1,0 +1,12 @@
+{
+  "scene_byte_for_byte_unchanged": true,
+  "scene_sha256": "c619dd0807a92c416bd2ff8977c1d7bdc47467fa576d0e3252856067703ae1fc",
+  "existing_guids_unchanged": true,
+  "boss_frames": 128,
+  "cell_size": 256,
+  "assets_reproduced_byte_for_byte": 5,
+  "foreign_opaque_fragments": 0,
+  "source_archive_sha256": "314049107a1b8d358e0239bdd44e5cfb5c7396acc5b13e16e0ce28c3a9031d6e",
+  "save_key": "Cibio.RPG.v3.Progress",
+  "render_method": "Unity Camera.Render; no window HUD visual audit and no FPS claim"
+}
