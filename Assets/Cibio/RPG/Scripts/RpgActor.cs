@@ -46,7 +46,7 @@ float gaitPhase,poseClock;string lastPose="";
   public Vector2 Position=>(Vector2)transform.position;
   public int MaxHealth=>isEnemy?(enemyKind==5?1100+60*Mathf.Clamp(RpgGame.Instance.progress.level-1,0,20):enemyKind==4?280:enemyKind==3?78:enemyKind==1?120:enemyKind==2?55:65):100+((RpgGame.Instance?RpgGame.Instance.progress.level:1)-1)*12;
   public float Damage=>isEnemy?(enemyKind==5?28:enemyKind==4?26:enemyKind==3?15:enemyKind==1?22:12):(20+(RpgGame.Instance.progress.level-1)*3)*(FormStage==2?3.15f:FormStage==1?2.3f:1);
-  public string EnemyName=>enemyKind==5?"Bonero Companheiro":enemyKind==4?"Companheiro":enemyKind==3?"Batedor do Morro":enemyKind==1?"Fiscal blindado":enemyKind==2?"Arauto da Vuvuzela":"Cobrador";
+  public string EnemyName=>RpgStory18.EnemyName(enemyKind);
   public string Family=>isEnemy?(enemyKind==5?"BoneroCompanheiro16":enemyKind==4?"Companheiro12":enemyKind==1?"EnemyHeavy":enemyKind==2?"EnemyCaster":"Enemy"):FormStage==2?"HeroAscendant":buff>0?"HeroAwakened":charging&&charge>=55?"HeroLift":"Hero";
   public void Initialize(){home=Position;health=MaxHealth;shadow=RpgArt.Put("Sombra",RpgArt.Pixel,Position+Vector2.down*.04f,-3900,transform,new Color(.04f,.08f,.07f,.3f));shadow.transform.localScale=new Vector3(.72f,.12f,1);body=RpgArt.Put("Sprite animado",RpgArt.Frame(Family,"idle",2,0),Position,RpgWorld.Order(Position.y),transform);}
   public void ConfigureEnemy(int kind){enemyKind=kind;gameObject.name=EnemyName;health=MaxHealth;transform.localScale=Vector3.one*(kind==5?1.28f:kind==4?1.32f:kind==3?.98f:kind==1?1.12f:kind==2?.96f:1);body.color=BaseTint;Pose("idle",0);}

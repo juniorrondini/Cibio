@@ -18,7 +18,7 @@ namespace Cibio.RPG
         {
             Fill(new Rect(0,0,1440,810),new Color(.018f,.024f,.032f,.94f));Rect panel=new(170,52,1100,706);Card(panel,.98f);
             var controller=game.GetComponent<RpgTalents15>();var p=game.progress;int points=RpgTalents15.Available(p);
-            Text(new Rect(202,78,500,38),"Desenvolva sua centelha",28,paper,true);Text(new Rect(203,120,650,22),"Um ponto por nível. Combine estilos e desbloqueie o talento final de cada linha.",13,muted);
+            Text(new Rect(202,78,500,38),"Desenvolva sua resistência",28,paper,true);Text(new Rect(203,120,650,22),"Um ponto por nível. Combine estilos e desbloqueie o talento final de cada linha.",13,muted);
             Text(new Rect(925,82,307,33),points+" ponto"+(points==1?"":"s")+" disponível"+(points==1?"":"s"),21,gold,true,TextAnchor.MiddleRight);
             string[] branches={"IMPACTO","CENTELHA","VANGUARDA"};Color[] colors={gold,blue,teal};
             for(int branch=0;branch<3;branch++)
@@ -46,9 +46,9 @@ namespace Cibio.RPG
                 Bar(new Rect(495,156,450,3),s.LapProgress,blue);Text(new Rect(492,163,456,14),"Shift mantém o impulso • Ctrl interrompe",10,muted,false,TextAnchor.MiddleCenter);
             }
             if(!s.InArena)return;
-            if(s.IntroRemaining>0){Fill(new Rect(0,0,1440,72),new Color(.01f,.02f,.03f,.94f));Fill(new Rect(0,716,1440,94),new Color(.01f,.02f,.03f,.94f));Text(new Rect(280,723,880,42),"BONERO COMPANHEIRO",28,gold,true,TextAnchor.MiddleCenter);Text(new Rect(280,767,880,22),"A convergência das duas vozes",13,muted,false,TextAnchor.MiddleCenter);}
+            if(s.IntroRemaining>0){Fill(new Rect(0,0,1440,72),new Color(.01f,.02f,.03f,.94f));Fill(new Rect(0,716,1440,94),new Color(.01f,.02f,.03f,.94f));Text(new Rect(280,723,880,42),"BONERO COMPANHEIRO",28,gold,true,TextAnchor.MiddleCenter);Text(new Rect(280,767,880,22),"Dois rostos. A mesma máquina.",13,muted,false,TextAnchor.MiddleCenter);}
             else if(!s.Victory){var b=s.Boss.GetComponent<RpgFusionBoss15>();Text(new Rect(475,158,490,26),b.MoveName,12,b.Enraged?gold:muted,true,TextAnchor.MiddleCenter);}
-            if(s.Victory){Card(new Rect(416,166,608,82));Text(new Rect(437,178,566,28),"O ÚLTIMO ECO SE CALOU",21,gold,true,TextAnchor.MiddleCenter);Text(new Rect(437,215,566,20),"E  Retornar à vila     •     T  Desenvolver talentos",12,paper,false,TextAnchor.MiddleCenter);}
+            if(s.Victory){Card(new Rect(416,166,608,82));Text(new Rect(437,178,566,28),"AS CONTAS FORAM PRESTADAS",21,gold,true,TextAnchor.MiddleCenter);Text(new Rect(437,215,566,20),"E  Retornar à vila     •     T  Desenvolver talentos",12,paper,false,TextAnchor.MiddleCenter);}
         }
         void SecretQuest(Rect r)
         {

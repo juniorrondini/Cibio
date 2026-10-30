@@ -26,7 +26,7 @@ namespace Cibio.RPG
         {
             if(actor.dead){actor.deadTime+=dt;actor.velocity=Vector2.zero;actor.Pose("hurt",Mathf.Clamp((int)(actor.deadTime*7),0,5));actor.body.color=Color.white;return;}
             var secret=game.GetComponent<RpgWorldSecret15>();var hero=game.world.hero;if(!secret.InArena||secret.IntroRemaining>0||hero.dead){actor.velocity=Vector2.zero;actor.Pose("idle",(int)(actor.clock*2)%4);return;}
-            if(!Enraged&&actor.health<=actor.MaxHealth*.6f){Enraged=true;game.Notify("BONERO COMPANHEIRO • duas vozes, um só clamor");RpgAudio.Play("fusion_phase15",actor.Position,.65f);RpgAtlasFx15.Emit("Vfx_Horn15",actor.Position+Vector2.up,new Vector2(6,7),.8f,RpgArt.Hex("FFE4AE"));}
+            if(!Enraged&&actor.health<=actor.MaxHealth*.6f){Enraged=true;game.Notify("BONERO COMPANHEIRO • dois rostos, a mesma cobrança");RpgAudio.Play("fusion_phase15",actor.Position,.65f);RpgAtlasFx15.Emit("Vfx_Horn15",actor.Position+Vector2.up,new Vector2(6,7),.8f,RpgArt.Hex("FFE4AE"));}
             actor.body.color=actor.invincible>0?new Color(1,.65f,.53f):Enraged?new Color(1,.91f,.82f):Color.white;MoveAge+=dt;
             Vector2 delta=hero.Position-actor.Position;float distance=delta.magnitude;
             if(CurrentMove==Move.Approach)

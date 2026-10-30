@@ -1,0 +1,32 @@
+[
+  {
+    "name": "Cobranca18.png",
+    "size": [
+      512,
+      512
+    ],
+    "ppu": 192,
+    "padding_min": 32,
+    "sha256": "9cea1cbc89eb6d98a88ff6a96d15a77844dbe376abbdfd00e7e0bc40df35094d"
+  },
+  {
+    "name": "Perseguicao18.png",
+    "size": [
+      512,
+      512
+    ],
+    "ppu": 192,
+    "padding_min": 32,
+    "sha256": "c480ff12f47706967e6dc5dfe6fcc816500bc431defe027122da55679ebeec0d"
+  },
+  {
+    "name": "Apuracao18.png",
+    "size": [
+      512,
+      512
+    ],
+    "ppu": 192,
+    "padding_min": 32,
+    "sha256": "4f1e0e73298a03c2860affa5eb6886fede6f58f121e39b1df8be47b272499d47"
+  }
+]

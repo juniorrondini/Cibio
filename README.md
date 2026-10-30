@@ -1,8 +1,38 @@
-# Cibio — Vila da Centelha
+# Cibio — Brasil no Vermelho
 
 **O Brasil virou uma Vuvuzela. Sua voz pode despertar a vila.**
 
-RPG de ação em pixel art com câmera em perspectiva, exploração de um bairro brasileiro, combos, poderes e progressão. Projeto Unity editável, em fase de protótipo jogável para Windows.
+RPG de ação e sátira política ficcional em pixel art, com um trabalhador brasileiro enfrentando o sistema do Companheiro, combos, poderes e progressão. Projeto Unity editável, em fase de protótipo jogável para Windows.
+
+## Versão 18 — Brasil no Vermelho
+
+O jogo assume sua premissa de **sátira política ficcional no Brasil da Vuvuzela**. O trabalhador enfrenta boletos, dívidas que nunca terminam, juros abusivos, perseguição política e uma apuração adulterada no distrito controlado por Companheiro. A história acompanha a resistência do bairro e a exposição desse sistema.
+
+**Brasil no Vermelho** substitui a missão A voz do Morro. Seu Bonero apresenta a investigação; no **Distrito do Poder**, ao norte, o jogador encontra três registros:
+
+| Local | Prova |
+|---|---|
+| Central de Cobrança | Livro-caixa de cobranças duplicadas, boletos e juros sobre juros |
+| Arquivo da Perseguição | Listas ligando multas e intimidações a críticas ao Companheiro |
+| Central de Apuração | Log da urna que revela a fraude eleitoral do distrito ficcional |
+
+Afaste os agentes, recolha as três provas com **E**, derrote Companheiro e entregue o dossiê a Seu Bonero. **N** abre o dossiê, pausa o jogo e permite ler os achados. O HUD, contexto, diálogos, abertura e nomes de regiões/inimigos acompanham a nova história. As antigas estruturas da missão têm três artes próprias de repartição: mesa de boletos, arquivo de perseguição e terminal de apuração.
+
+Vila da Centelha passa a se apresentar como **Bairro do Trabalhador**, e Morro do Eco como **Distrito do Poder**. As reservas de emergência da ilha e os talentos Acerto de Contas, Troco em Dobro, Fôlego do Trabalhador e Corre do Brasileiro dão continuidade ao tema. O combate, as formas, o voo temporal e o chefe secreto permanecem na campanha.
+
+O progresso v3 é reaproveitado: os três bits antigos da missão correspondem às provas já recolhidas. Missões encerradas, níveis, talentos e poderes são conservados. Os 100 XP da entrega continuam únicos. Esta atualização reformula a narrativa e a apresentação; os temas econômicos ainda não são uma simulação de finanças pessoais.
+
+[Roteiro e direção narrativa](docs/NARRATIVA.md) · [Assets, prompts e importador](Assets/Cibio/RPG/ThirdParty/Generated18/README.md)
+
+<!-- verification18 -->
+![Central de Cobrança — render nativo Unity](docs/images/cobranca18.png)
+
+**Validação:** 1.136 verificações aprovadas, incluindo 35 novas sobre investigação, recompensa única, compatibilidade do progresso antigo e pausa do dossiê. Os três assets foram reproduzidos byte a byte e renderizados no mundo pelo Unity. Cena, GUIDs, localização do save e configurações de produto permanecem preservados.
+
+[Arquivo da Perseguição](docs/images/perseguicao18.png) · [Central de Apuração](docs/images/apuracao18.png) · [Testes da campanha](docs/verification/Historia18.txt) · [Auditoria](docs/verification/Historia-Audit18.json)
+
+Revisão automática: `Cibio.exe -cibio-story-review18 "Review18" -logFile "review18.log"`. As imagens são renders de câmera do mundo. A inspeção visual do dossiê ficou pendente após a interrupção do controle da janela pelo usuário com Esc; a execução oculta não desenhou o OnGUI. Os testes cobrem comportamento, pausa e save, sem afirmar validação visual do painel ou medir FPS.
+<!-- end-verification18 -->
 
 ## Versão 17 — A quinta volta rompe o tempo
 

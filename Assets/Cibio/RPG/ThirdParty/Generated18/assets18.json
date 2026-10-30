@@ -1,0 +1,20 @@
+[
+  {
+    "key": "Cobranca18",
+    "path": "Cobranca18-original.png",
+    "prompt": "Use case: stylized-concept. Asset type: isolated environmental quest prop in a refined Brazilian top-down 2.5D RPG with painterly pixel shading. Primary request: A squat municipal debt-collection counter: dark varnished Brazilian wood desk, green ledger, stacks of pale boletos with tiny barcode lines, red late-payment stamps, brass calculator and a small amber receipt printer spewing bills. A green steel cashbox with a heavy chained debt ledger. No actual bank logos or readable real payment information. Fictional papers, no faces. Composition: ONE complete compact workstation centered, camera looking down at about35degrees, front and right sides visible, entire feet/base visible, strong readable silhouette, no ground plane. Warm muted wood/cream/green palette, handpainted material detail, crisp RPG sprite edges. Genuine transparent alpha outside object, generous20% empty margins. 1024x1024 square. No background, scenery, human characters, large lettering, UI frame, polygons or lowpoly. Designed to be readable at a world height2.4 units.",
+    "tool": "image_gen integrated"
+  },
+  {
+    "key": "Perseguicao18",
+    "path": "Perseguicao18-original.png",
+    "prompt": "Use case: stylized-concept. Asset type: isolated environmental quest prop in a refined Brazilian top-down 2.5D RPG with painterly pixel shading. Primary request: A squat authoritarian records cabinet: dark green steel drawers with brass handles, cream folders and sealed dossiers spilling across a small clerk desk, red censorship tape crossing sheets, a stamp pad and black redacted lines on documents. A red warning lamp rests beside closed case files. No faces, no actual government seal, no real people's information. Composition: ONE complete compact workstation centered, camera looking down at about35degrees, front and right sides visible, entire feet/base visible, strong readable silhouette, no ground plane. Warm muted wood/cream/green palette, handpainted material detail, crisp RPG sprite edges. Genuine transparent alpha outside object, generous20% empty margins. 1024x1024 square. No background, scenery, human characters, large lettering, UI frame, polygons or lowpoly. Designed to be readable at a world height2.4 units.",
+    "tool": "image_gen integrated"
+  },
+  {
+    "key": "Apuracao18",
+    "path": "Apuracao18-original.png",
+    "prompt": "Use case: stylized-concept. Asset type: isolated environmental quest prop in a refined Brazilian top-down 2.5D RPG with painterly pixel shading. Primary request: A fictional election counting device for a satirical RPG: compact offwhite keypad terminal on a dark wood stand, small teal display with abstract tally bars, a thick paper audit roll, opened maintenance panel with visible red and blue wires, evidence folder and broken wax seal alongside. Clear tiny ballot slot and numbered keypad, readable silhouette. No real electoral authority logos, no real election date, no faces. Show a fictional compromised tally machine rather than a real product. Composition: ONE complete compact workstation centered, camera looking down at about35degrees, front and right sides visible, entire feet/base visible, strong readable silhouette, no ground plane. Warm muted wood/cream/green palette, handpainted material detail, crisp RPG sprite edges. Genuine transparent alpha outside object, generous20% empty margins. 1024x1024 square. No background, scenery, human characters, large lettering, UI frame, polygons or lowpoly. Designed to be readable at a world height2.4 units.",
+    "tool": "image_gen integrated"
+  }
+]

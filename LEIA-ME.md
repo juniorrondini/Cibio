@@ -1,8 +1,10 @@
-# Cibio — versão 17
+# Cibio — versão 18
 
 Execute **Cibio.exe** para jogar. Projeto: https://github.com/juniorrondini/Cibio
 
-Ganhe pontos de talento ao subir de nível e desenvolva combos, energia e esquiva com **T**. Na Forma Ascendente, voo com Shift revela um segredo: dez voltas ao mundo levam à arena de **Bonero Companheiro**. Na quinta volta, o tempo se rompe com novos efeitos e sons. A ilha, as missões e o save anterior permanecem disponíveis.
+**Brasil no Vermelho** é uma sátira política ficcional no Brasil da Vuvuzela. O Companheiro sufoca o bairro com boletos, dívidas, juros abusivos e perseguição. Reúna registros de cobrança, listas de perseguição e o log de uma apuração fraudada; enfrente-o e entregue o dossiê a Seu Bonero.
+
+**Comece conversando com Seu Bonero [E], ao sul da praça.** Siga para o Distrito do Poder ao norte, afaste os agentes e investigue os três postos com E. **N** abre o dossiê e pausa o jogo. Quem já terminou a missão conserva a conclusão, as provas e as recompensas.
 
 | Controle | Ação |
 |---|---|
@@ -12,6 +14,7 @@ Ganhe pontos de talento ao subir de nível e desenvolva combos, energia e esquiv
 | Alt / clique direito | Esquivar no chão (10 de energia) |
 | E | Conversar, ativar altar, abrir baú ou sair da arena após vencer |
 | T | Talentos: gastar pontos e reorganizar em segurança |
+| N | Dossiê: objetivos e provas recolhidas |
 | C | Carregar energia e transformar; repetir na forma dourada evolui ao estágio 2 |
 | 1 | Decolar / pousar após obter o poder |
 | Ctrl | Frear o voo |
@@ -22,7 +25,7 @@ Ganhe pontos de talento ao subir de nível e desenvolva combos, energia e esquiv
 | H / M | Ajuda / áudio |
 | R | Voltar à praça após cair |
 
-Abra os baús no chão e afaste os inimigos próximos. Cada baú dá 45 XP e recupera até 20 de vida e energia uma única vez. O mar delimita a exploração; o trapiche é acessível.
+Recupere as reservas de emergência no chão e afaste os agentes próximos. Cada baú dá 45 XP e recupera até 20 de vida e energia uma única vez. O mar delimita a exploração; o trapiche é acessível.
 
 O save v3 mantém níveis, poderes, missão e chefe anteriores, acrescentando os baús encontrados. Consulte README.md para verificações, imagens e créditos. Fontes e licenças dos assets acompanham Cibio_Data/StreamingAssets/Cibio-Licenses.
 

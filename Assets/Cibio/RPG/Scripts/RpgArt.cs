@@ -11,7 +11,7 @@ namespace Cibio.RPG
         {
             if(!textures.TryGetValue(name,out var t)) {t=Resources.Load<Texture2D>("RpgArt/"+name);if(t)t.filterMode=name.StartsWith("Vfx_")||name.StartsWith("UI_")||name.StartsWith("Terrain_")||name.StartsWith("Title_")?FilterMode.Bilinear:FilterMode.Point;textures[name]=t;}return t;
         }
-        public static float ImagePPU(string name)=>name=="Lighthouse14"?96:name=="Cabin14"?80:name=="Boat14"?64:name=="Palm14"?80:name=="CoastRock14"?96:name=="Pier14"?40:name.StartsWith("Cache14_")?80:name.StartsWith("House11_")?64:name.StartsWith("Tree11_")?80:name=="Shrub11"?128:name=="Stone11"?192:name=="Reed11"?128:name=="Pond11"?64:name=="Barrel11"?128:name=="Bench11"?112:name=="Lamp11"?80:name=="Stall11"?112:name=="Planter11"?128:name=="Well11"?112:32;
+        public static float ImagePPU(string name)=>name=="Cobranca18"||name=="Perseguicao18"||name=="Apuracao18"?192:name=="Lighthouse14"?96:name=="Cabin14"?80:name=="Boat14"?64:name=="Palm14"?80:name=="CoastRock14"?96:name=="Pier14"?40:name.StartsWith("Cache14_")?80:name.StartsWith("House11_")?64:name.StartsWith("Tree11_")?80:name=="Shrub11"?128:name=="Stone11"?192:name=="Reed11"?128:name=="Pond11"?64:name=="Barrel11"?128:name=="Bench11"?112:name=="Lamp11"?80:name=="Stall11"?112:name=="Planter11"?128:name=="Well11"?112:32;
         public static Sprite Image(string name, Vector2? pivot=null)
         {
             string key=name+"/"+(pivot??Vector2.zero);

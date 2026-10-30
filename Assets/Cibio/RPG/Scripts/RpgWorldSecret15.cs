@@ -140,7 +140,7 @@ namespace Cibio.RPG
         {
             if(!InArena||Victory)return;State=SecretState.Victory;game.progress.fusionBossDefeated=true;
             if(!game.progress.fusionRewardClaimed){game.progress.fusionRewardClaimed=true;game.progress.bonusTalentPoints=1;game.GainExperience(350);game.Notify("CONVERGÊNCIA VENCIDA • +350 XP • +1 ponto de talento • [E] retornar à vila");}
-            else game.Notify("A CONVERGÊNCIA SE CALOU • [E] retornar à vila");
+            else game.Notify("O SISTEMA FOI VENCIDO • [E] retornar à vila");
             ClearHostileShots();RpgEffects.Burst(Boss.Position,RpgArt.Hex("FFE2A4"),6,.9f);RpgAudio.Play("fusion_victory15",Boss.Position,.8f);game.world.hero.health=game.world.hero.MaxHealth;game.world.hero.energy=100;game.Save();
         }
         public bool Interaction()
@@ -154,7 +154,7 @@ namespace Cibio.RPG
             if(!InArena)return;ClearTransientCombat();State=SecretState.Arena;var h=game.world.hero;h.ResetMotion();h.dead=false;h.deadTime=0;h.attackTimer=h.powerPose=h.transforming=0;h.buff=16+game.GetComponent<RpgTalents15>().ExtraDuration;h.formStage=2;h.transform.position=new Vector2(0,-6);h.health=h.MaxHealth;h.energy=100;h.invincible=2;h.body.color=Color.white;h.jumpTimer=0;h.direction=0;h.facing=Vector2.up;h.Pose("idle",0);Boss.ResetEnemy();Boss.GetComponent<RpgFusionBoss15>().ResetFight();IntroRemaining=1.2f;game.GetComponent<RpgTalents15>().ResetSession();game.SnapCamera();
         }
         void ClearHostileShots(){foreach(var p in Object.FindObjectsByType<RpgHornShot15>(FindObjectsSortMode.None)){p.gameObject.SetActive(false);Destroy(p.gameObject);}}
-        public void ReturnToVillage(){Vector2 at=EntryPosition;ResetWorld();var h=game.world.hero;h.ResetMotion();h.buff=h.attackTimer=h.powerPose=h.transforming=0;h.transform.position=NearestLand(at,new Vector2(0,-3));h.invincible=2;h.jumpTimer=0;h.direction=0;h.facing=Vector2.up;h.Pose("idle",0);game.SnapCamera();game.Save();game.Notify("O farol guarda a passagem de volta ao mundo-vuvuzela. [T] desenvolva sua centelha.");}
+        public void ReturnToVillage(){Vector2 at=EntryPosition;ResetWorld();var h=game.world.hero;h.ResetMotion();h.buff=h.attackTimer=h.powerPose=h.transforming=0;h.transform.position=NearestLand(at,new Vector2(0,-3));h.invincible=2;h.jumpTimer=0;h.direction=0;h.facing=Vector2.up;h.Pose("idle",0);game.SnapCamera();game.Save();game.Notify("O farol guarda a passagem de volta ao mundo-vuvuzela. [T] desenvolva sua resistência.");}
         public void Resume(bool continuing){if(continuing&&game.progress.worldHornDiscovered&&!game.progress.fusionBossDefeated){EntryPosition=game.world.hero.Position;EnterArena();}}
         public void ResetWorld()
         {

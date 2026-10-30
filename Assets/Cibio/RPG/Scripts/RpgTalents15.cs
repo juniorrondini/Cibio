@@ -6,7 +6,7 @@ namespace Cibio.RPG
 {
     public sealed class RpgTalents15 : MonoBehaviour
     {
-        public static readonly string[] Names={"Punhos de Aço","Ritmo Perfeito","Último Acorde","Fôlego da Centelha","Reserva Viva","Pulso em Cadeia","Passo Leve","Caçador da Brisa","Contratempo"};
+        public static readonly string[] Names={"Punhos de Aço","Acerto de Contas","Troco em Dobro","Fôlego do Trabalhador","Reserva Viva","Pulso em Cadeia","Passo Leve","Corre do Brasileiro","Contratempo"};
         public static readonly string[] Descriptions={
             "+8% de dano nos socos por ponto.",
             "+12% de dano no finalizador por ponto.",

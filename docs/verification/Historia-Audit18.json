@@ -1,0 +1,28 @@
+{
+  "scene_byte_for_byte_unchanged": true,
+  "scene_sha256": "c619dd0807a92c416bd2ff8977c1d7bdc47467fa576d0e3252856067703ae1fc",
+  "existing_guids_unchanged": true,
+  "assets_reproduced_byte_for_byte": 3,
+  "source_archive_sha256": "2d23a312196bdf511b3d3b7e4baf19affc6fcf93f961301b6612182151a23b89",
+  "save_key": "Cibio.RPG.v3.Progress",
+  "unity_company_product_settings_unchanged": true,
+  "legacy_quest_state": "silenced bits0..2 reused as evidence; questStage and captainDefeated retained",
+  "render_method": "Unity Camera.Render for world props; native UI screenshots require explicit visual inspection",
+  "computer_use": "User stopped Computer Use with physical Escape. No further UI automation after that event.",
+  "checks": 1136,
+  "check_groups": {
+    "Verificacao-RPG.txt": 382,
+    "Ascendente-09.txt": 75,
+    "Vila11.txt": 75,
+    "Chefe12.txt": 157,
+    "Arte13.txt": 64,
+    "Ilha-Combate14.txt": 117,
+    "Convergencia15.txt": 141,
+    "Orbita16.txt": 57,
+    "Ruptura17.txt": 33,
+    "Historia18.txt": 35
+  },
+  "native_world_prop_renders": 3,
+  "ui_dossier_visual_review": "Not completed: user stopped Computer Use with physical Escape; hidden automated run did not render OnGUI. State/pause/save tests passed; no visual layout claim.",
+  "fps_claim": false
+}

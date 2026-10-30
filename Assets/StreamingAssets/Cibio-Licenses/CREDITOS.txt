@@ -40,3 +40,5 @@ Versão 15 — A décima volta: Bonero Companheiro (128 quadros próprios), aren
 Versão16: Bonero Companheiro literalmente dividido ao meio, 128 quadros próprios criados com image_gen integrado usando sprites Cibio como referências. Fontes, prompts e importador em ThirdParty/Generated16 e Fontes-Fusao-16.zip. Derivados Cibio CC BY-SA4.0, créditos anteriores mantidos. Distorção temporal é shader original do projeto; sons reaproveitam Designed15/09/10 com modulação de pitch.
 
 Versão17: rasgos temporais criados com image_gen integrado, fontes/prompts/importador em Generated17, CC BY-SA4.0. Áudio:8samples de Sci-Fi Sounds1.0 por Kenney (https://kenney.nl/assets/sci-fi-sounds), CC0-1.0; licença original e OGG/PCM em SoundDesign17. Sete efeitos derivados e receita DSP tambémCC0. Fontes-Ruptura-17.zip acompanha o player. Créditos anteriores preservados.
+
+Versão18: mesas de cobrança, arquivo de perseguição e terminal ficcional de apuração criados comimage_gen integrado; originais/prompts/importador emGenerated18, CC BY-SA4.0. Fontes-Historia-18.zip incluído. Narrativa de sátira política ficcional; créditos e licenças anteriores preservados.
