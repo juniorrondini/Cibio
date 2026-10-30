@@ -1,0 +1,33 @@
+PASS Tunel e ruptura permanecem ausentes antes da quinta volta
+PASS Succao reversa antecipa a quinta volta uma unica vez
+PASS Quinta volta dispara impacto exatamente no cruzamento real
+PASS Entrada tem tunel forte, dois leitos de audio e ducking de fundo
+PASS Pausa congela a ruptura e silencia loops temporais
+PASS Retomar recupera leitos sem repetir impacto
+PASS Uma unica entrada durante a quinta volta
+PASS Sexta volta renova o impacto sem reiniciar toda a sequencia
+PASS Passagens5a9 tem cinco rupturas e intensidade maxima
+PASS Decima passagem usa ruptura final e mantem revelacao do mundo
+PASS Revelacao desliga tunel e leitos sem encobrir o mundo-vuvuzela
+PASS Arena e chefe dividido continuam acessiveis apos efeitos17
+PASS Ctrl cancela efeitos, faz cauda sonora e recupera chao seguro
+PASS Nova sessao limpa contadores e loops sem mudar save
+PASS Efeito estereo de biblioteca/DSP importado: chronal_entry17
+PASS PCM importado tem sinal e headroom: chronal_entry17 peak=0,852
+PASS Efeito estereo de biblioteca/DSP importado: chronal_lap17
+PASS PCM importado tem sinal e headroom: chronal_lap17 peak=0,849
+PASS Efeito estereo de biblioteca/DSP importado: chronal_rise17
+PASS PCM importado tem sinal e headroom: chronal_rise17 peak=0,619
+PASS Efeito estereo de biblioteca/DSP importado: chronal_loop17
+PASS PCM importado tem sinal e headroom: chronal_loop17 peak=0,557
+PASS Efeito estereo de biblioteca/DSP importado: chronal_air17
+PASS PCM importado tem sinal e headroom: chronal_air17 peak=0,556
+PASS Efeito estereo de biblioteca/DSP importado: chronal_exit17
+PASS PCM importado tem sinal e headroom: chronal_exit17 peak=0,417
+PASS Efeito estereo de biblioteca/DSP importado: chronal_reveal17
+PASS PCM importado tem sinal e headroom: chronal_reveal17 peak=0,849
+PASS Impacto temporal usa rota2D dedicada e prioridade alta no Unity
+PASS Atlas organico temporal16quadros integrado
+PASS 72renders nativos atravessam a quinta volta e registram tunel real
+PASS Mixagem Unity capturada abaixo do teto do limiter
+PASS Save real preservado em testes, audio e capturas17

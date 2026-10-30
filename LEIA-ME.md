@@ -1,8 +1,8 @@
-# Cibio — versão 16
+# Cibio — versão 17
 
 Execute **Cibio.exe** para jogar. Projeto: https://github.com/juniorrondini/Cibio
 
-Ganhe pontos de talento ao subir de nível e desenvolva combos, energia e esquiva com **T**. Na Forma Ascendente, voo com Shift revela um segredo: dez voltas ao mundo levam à arena de **Bonero Companheiro**. A ilha, as missões e o save anterior permanecem disponíveis.
+Ganhe pontos de talento ao subir de nível e desenvolva combos, energia e esquiva com **T**. Na Forma Ascendente, voo com Shift revela um segredo: dez voltas ao mundo levam à arena de **Bonero Companheiro**. Na quinta volta, o tempo se rompe com novos efeitos e sons. A ilha, as missões e o save anterior permanecem disponíveis.
 
 | Controle | Ação |
 |---|---|

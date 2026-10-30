@@ -1,0 +1,1 @@
+PASS cena persistida, 2837 sprites, 341 obstÃ¡culos, cÃ¢mera, material, scripts, 3 altares, 22 inimigos e importaÃ§Ã£o sem redimensionamento.

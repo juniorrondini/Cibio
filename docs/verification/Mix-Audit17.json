@@ -1,0 +1,12 @@
+{
+  "label": "Offline demonstration montage, not a live Unity recording or listening validation",
+  "peak_before_limiter": 0.8184974290211995,
+  "peak_after_limiter": 0.818432589875968,
+  "rms": 0.1418874060102336,
+  "seconds": 13,
+  "clips": 7,
+  "sample_rate": 48000,
+  "sources": 8,
+  "license": "Kenney CC0-1.0, original license included",
+  "sha256": "fda169e905e9542602dd3c071bb59ce9608a8debdf604a5b3e16dd3930830c4c"
+}

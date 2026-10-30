@@ -42,7 +42,7 @@ namespace Cibio.RPG
             var s=game.GetComponent<RpgWorldSecret15>();if(s.Active)
             {
                 Card(new Rect(474,93,492,87));Text(new Rect(492,102,456,24),"ÓRBITA DO MUNDO   "+s.Laps+" / 10",17,blue,true,TextAnchor.MiddleCenter);
-                Text(new Rect(492,130,456,18),(s.Laps>=4?"DILATAÇÃO TEMPORAL  •  ":"")+game.world.hero.velocity.magnitude.ToString("F0")+" u/s",12,paper,true,TextAnchor.MiddleCenter);
+                Text(new Rect(492,130,456,18),(s.Laps>=5?"RUPTURA TEMPORAL  •  ":"")+game.world.hero.velocity.magnitude.ToString("F0")+" u/s",12,paper,true,TextAnchor.MiddleCenter);
                 Bar(new Rect(495,156,450,3),s.LapProgress,blue);Text(new Rect(492,163,456,14),"Shift mantém o impulso • Ctrl interrompe",10,muted,false,TextAnchor.MiddleCenter);
             }
             if(!s.InArena)return;

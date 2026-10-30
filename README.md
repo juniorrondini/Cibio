@@ -4,6 +4,24 @@
 
 RPG de ação em pixel art com câmera em perspectiva, exploração de um bairro brasileiro, combos, poderes e progressão. Projeto Unity editável, em fase de protótipo jogável para Windows.
 
+## Versão 17 — A quinta volta rompe o tempo
+
+A quinta volta tem uma entrada audiovisual própria: sucção reversa no final da quarta, impacto grave na quinta, rasgos de energia nas bordas e ecos de momentos anteriores da vila. A paisagem torce e alonga com mais força, enquanto o centro e o HUD conservam a leitura. O impulso breve da câmera acompanha o impacto; cada volta seguinte renova a ruptura até a revelação final. A intensidade muda de patamar na quinta volta, sem alterar a contagem ou a aceleração20% por volta.
+
+O som utiliza **oito samples CC0 do pacote Sci-fi Sounds1.0 da Kenney**, baixados pelo site oficial, combinados em sete efeitos próprios: preparação reversa, entrada, passagens, dois leitos contínuos, saída e ápice. Subgrave, ar, textura mecânica, estéreo e reflexões curtas substituem o simples aumento de pitch. O fundo recua durante o impacto para criar contraste, e os efeitos seguem a pausa/cancelamento. Licença e fontes ficam na distribuição. [Biblioteca original](https://kenney.nl/assets/sci-fi-sounds).
+
+[Atlas e prompts](Assets/Cibio/RPG/ThirdParty/Generated17/README.md) · [Sons, licença e receita reproduzível](Assets/Cibio/RPG/ThirdParty/SoundDesign17/README.md)
+
+<!-- verification17 -->
+![Ruptura temporal na quinta volta — render nativo Unity](docs/images/ruptura17.png)
+
+**Validação:** 1.101 checks aprovados, incluindo 33 ensaios novos de timing, pausa, cancelamento, áudio e integração. A revisão gerou72quadros nativos atravessando a quinta volta e capturou áudio do mixerUnity: pico0.924, abaixo do teto0.985 do limiter. Um atlas e sete sons foram reproduzidos byte a byte. A cena, GUIDs e save anterior permanecem preservados.
+
+[Passagem4..6 em câmera lenta](docs/images/ruptura17.gif) · [Comparação do mesmo enquadramento](docs/images/comparacao-temporal17.jpg) · [Áudio capturado noUnity](docs/audio/ruptura17-unity.wav) · [Relatório](docs/verification/Ruptura17.txt) · [Auditoria](docs/verification/Ruptura-Audit17.json)
+
+Revisão: `Cibio.exe -cibio-chronal-review17 "Review17" -logFile "review17.log"`. Imagens porCamera.Render e áudio capturado do mixer. Não houve audição física nem revisão visual dos overlays da janela; as capturas não medemFPS. A montagemDSPoffline distribuída separadamente está identificada como demonstração, não como gravação ao vivo.
+<!-- end-verification17 -->
+
 ## Versão 16 — Voltas livres e distorção temporal
 
 A contagem orbital agora usa deslocamento real, antes do wrap, normalizado pela largura/altura da ilha. Iniciar Shift parado e depois mudar de direção funciona. A cada largura ou altura completa percorrida, soma uma volta; pequenas idas e voltas se anulam. O progresso parcial aparece na barra. A revelação da décima volta é acionada no mesmo passo da simulação de movimento, sem depender da ordem de Update de outro componente. Shift esquerdo e direito são aceitos.

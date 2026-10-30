@@ -1,0 +1,72 @@
+[
+  {
+    "name": "chronal_entry17",
+    "seconds": 2.2,
+    "peak": 0.84,
+    "rms": 0.20542551467055692,
+    "dc": 0.0008450044266392624,
+    "loop": false,
+    "seam": 0,
+    "sha256": "f1230a586c19ade537f30e903a4cbfa74cb40464ff15a5fad6f1613309c9728d"
+  },
+  {
+    "name": "chronal_lap17",
+    "seconds": 0.95,
+    "peak": 0.84,
+    "rms": 0.2171629014030704,
+    "dc": 0.0018968917375317966,
+    "loop": false,
+    "seam": 0,
+    "sha256": "5643d127bc28dead247417cfe54652a1d4a511faa367bba7130b6eb6116f0b67"
+  },
+  {
+    "name": "chronal_rise17",
+    "seconds": 1.5,
+    "peak": 0.6023682215448417,
+    "rms": 0.11658364843529254,
+    "dc": 3.1357007711932216e-06,
+    "loop": false,
+    "seam": 0,
+    "sha256": "075f6c1248f76eee165bf3b25a6a31df410b5ea1602aa5dc9af36a40cdb5f240"
+  },
+  {
+    "name": "chronal_loop17",
+    "seconds": 6.0,
+    "peak": 0.5518016734540028,
+    "rms": 0.16329440377415425,
+    "dc": 0.0002027821328519048,
+    "loop": true,
+    "seam": 0.0,
+    "sha256": "b4a1cf805a8d229fb1065507d7ce6237a4fa547a263ef7f28a597b7a454bbc1a"
+  },
+  {
+    "name": "chronal_air17",
+    "seconds": 4.0,
+    "peak": 0.5504162262355428,
+    "rms": 0.10599586001645099,
+    "dc": 2.8533185234290908e-05,
+    "loop": true,
+    "seam": 0.0,
+    "sha256": "8d78b711980a498ada15c0596dc21f1a2ff9fdc13c73a09139dc74786a786527"
+  },
+  {
+    "name": "chronal_exit17",
+    "seconds": 1.2,
+    "peak": 0.41206028420308866,
+    "rms": 0.07990341173001983,
+    "dc": 0.00026363838490116033,
+    "loop": false,
+    "seam": 0,
+    "sha256": "33497b68ba60b25dc7dbc3ab732440ce0f4f1374acb2d4ab77cc2cae3c80ce51"
+  },
+  {
+    "name": "chronal_reveal17",
+    "seconds": 3.0,
+    "peak": 0.84,
+    "rms": 0.17002479471234402,
+    "dc": 0.0011437015882894426,
+    "loop": false,
+    "seam": 0,
+    "sha256": "98d109951c303337a71ac4d38654606804f0daa30826dbc72ce1d8caedd4a64a"
+  }
+]

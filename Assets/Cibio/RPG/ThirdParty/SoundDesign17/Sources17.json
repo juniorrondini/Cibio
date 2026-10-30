@@ -1,0 +1,66 @@
+[
+  {
+    "file": "lowFrequency_explosion_000.ogg",
+    "author": "Kenney",
+    "pack": "Sci-Fi Sounds1.0",
+    "license": "CC0-1.0",
+    "source": "https://kenney.nl/assets/sci-fi-sounds",
+    "sha256": "3cb48d86dab63140cfb9aaeea4d4a6846abaca5831d157d8adbec0490da26343"
+  },
+  {
+    "file": "forceField_002.ogg",
+    "author": "Kenney",
+    "pack": "Sci-Fi Sounds1.0",
+    "license": "CC0-1.0",
+    "source": "https://kenney.nl/assets/sci-fi-sounds",
+    "sha256": "051b0eafc479695af4ca3607d41fd4be41bae7c21f4f9508d004722b09f1bd63"
+  },
+  {
+    "file": "impactMetal_002.ogg",
+    "author": "Kenney",
+    "pack": "Sci-Fi Sounds1.0",
+    "license": "CC0-1.0",
+    "source": "https://kenney.nl/assets/sci-fi-sounds",
+    "sha256": "0c1bb4db8a4d48b2b8c2e65a175d9056b845f1063837599995d81be1c5957d2c"
+  },
+  {
+    "file": "doorOpen_001.ogg",
+    "author": "Kenney",
+    "pack": "Sci-Fi Sounds1.0",
+    "license": "CC0-1.0",
+    "source": "https://kenney.nl/assets/sci-fi-sounds",
+    "sha256": "8c204ca94eb722d3af95f29221f4551938ca3c217fda32c14dabe2cf6a9c782b"
+  },
+  {
+    "file": "spaceEngineLow_002.ogg",
+    "author": "Kenney",
+    "pack": "Sci-Fi Sounds1.0",
+    "license": "CC0-1.0",
+    "source": "https://kenney.nl/assets/sci-fi-sounds",
+    "sha256": "3b1adf8645a40c35fcad25eee224c82c9836dc443102a9af5586eb22cbedabcc"
+  },
+  {
+    "file": "engineCircular_002.ogg",
+    "author": "Kenney",
+    "pack": "Sci-Fi Sounds1.0",
+    "license": "CC0-1.0",
+    "source": "https://kenney.nl/assets/sci-fi-sounds",
+    "sha256": "5f364bd42269e111df1d421fa2b45f0b2f0cc99a873ceae2d55b34898ad0d779"
+  },
+  {
+    "file": "thrusterFire_002.ogg",
+    "author": "Kenney",
+    "pack": "Sci-Fi Sounds1.0",
+    "license": "CC0-1.0",
+    "source": "https://kenney.nl/assets/sci-fi-sounds",
+    "sha256": "5f7731c30196d73777d62eec7cb36a28bf63852e70244057b7625b888e71a3a8"
+  },
+  {
+    "file": "spaceEngineLarge_003.ogg",
+    "author": "Kenney",
+    "pack": "Sci-Fi Sounds1.0",
+    "license": "CC0-1.0",
+    "source": "https://kenney.nl/assets/sci-fi-sounds",
+    "sha256": "c1e6542f9ad0839083072d9b2d4d77208b9ceb60e5f3fd9873047de7f0c57a83"
+  }
+]

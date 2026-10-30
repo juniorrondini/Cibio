@@ -50,8 +50,8 @@ namespace Cibio.RPG
             float progress=Mathf.Max(Mathf.Abs(orbitDisplacement.x),Mathf.Abs(orbitDisplacement.y));
             while(progress>=1&&Laps<10)
             {
-                orbitDisplacement*=1-1/progress;Laps++;LapPulse=1;
-                RpgAudio.Play("orbit_lap15",before,.5f,Mathf.Min(1.7f,1+Laps*.065f));
+                orbitDisplacement*=1-1/progress;Laps++;LapPulse=1;game.Chronal?.OnLap(Laps,before);
+                if(Laps<5)RpgAudio.Play("orbit_lap15",before,.5f,Mathf.Min(1.7f,1+Laps*.065f));
                 game.FloatText(before+Vector2.up*3,Laps+" / 10",RpgArt.Hex("C5EDFF"));
                 progress=Mathf.Max(Mathf.Abs(orbitDisplacement.x),Mathf.Abs(orbitDisplacement.y));
             }
@@ -63,7 +63,7 @@ namespace Cibio.RPG
         public void CancelOrbit()
         {
             if(State!=SecretState.Orbit)return;State=SecretState.Village;Laps=0;OrbitAge=0;FlightTier=0;orbitDisplacement=Vector2.zero;LapPulse=0;ClearMantle();
-            var h=game.world.hero;Vector2 safe=NearestLand(h.Position,EntryPosition);if(Vector2.Distance(safe,h.Position)>.1f){h.transform.position=safe;game.SnapCamera();}h.ResetSonic();
+            var h=game.world.hero;Vector2 safe=NearestLand(h.Position,EntryPosition);if(Vector2.Distance(safe,h.Position)>.1f){h.transform.position=safe;game.SnapCamera();}h.ResetSonic();game.Chronal?.Tick(0);
         }
         Vector2 NearestLand(Vector2 point,Vector2 fallback)
         {
@@ -73,7 +73,7 @@ namespace Cibio.RPG
         }
         public void Advance(float dt)
         {
-            if(!game.Playing)return;if(Active&&Laps>=10)BeginRevelation();
+            if(!game.Playing)return;game.Chronal?.Tick(dt);if(Active&&Laps>=10)BeginRevelation();
             if(Cinematic){CinemaAge+=dt;if(CinemaAge>=7.2f)EnterArena();}
             if(InArena)IntroRemaining=Mathf.Max(0,IntroRemaining-dt);
         }
@@ -125,10 +125,10 @@ namespace Cibio.RPG
             if(Cinematic)return true;
             if(Active)
             {
-                var hero=game.world.hero;float targetSize=Mathf.Lerp(9.4f,13.8f,TemporalIntensity)+LapPulse*.55f;
+                game.shake=Mathf.MoveTowards(game.shake,0,dt*2);var hero=game.world.hero;float targetSize=Mathf.Lerp(9.4f,13.8f,TemporalIntensity)+LapPulse*.55f+(game.Chronal?.Impulse??0)*.9f;
                 game.lens.orthographicSize=Mathf.Lerp(game.lens.orthographicSize,targetSize,1-Mathf.Exp(-dt*7));
                 Vector2 ahead=hero.Position+Vector2.up*(.8f+hero.flightHeight*.35f)+heading*1.2f;
-                game.lens.transform.position=Vector3.Lerp(game.lens.transform.position,new Vector3(ahead.x,ahead.y,-10),1-Mathf.Exp(-dt*18));
+                float shock=game.Chronal?.Impulse??0;Vector2 kick=new Vector2(Mathf.Sin(OrbitAge*37),Mathf.Cos(OrbitAge*29))*shock*.10f;game.lens.transform.position=Vector3.Lerp(game.lens.transform.position,new Vector3(ahead.x+kick.x,ahead.y+kick.y,-10),1-Mathf.Exp(-dt*18));
                 return true;
             }
             if(!InArena)return false;var h=game.world.hero;

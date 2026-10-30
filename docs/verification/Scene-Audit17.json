@@ -1,0 +1,14 @@
+{
+  "scene_byte_for_byte_unchanged": true,
+  "scene_sha256": "c619dd0807a92c416bd2ff8977c1d7bdc47467fa576d0e3252856067703ae1fc",
+  "existing_guids_unchanged": true,
+  "assets_reproduced_byte_for_byte": 1,
+  "sounds_reproduced_byte_for_byte": 7,
+  "cc0_original_samples": 8,
+  "library": "Kenney Sci-Fi Sounds1.0",
+  "source": "https://kenney.nl/assets/sci-fi-sounds",
+  "license": "CC0-1.0",
+  "source_archive_sha256": "ba7f92df2a787112a3219cee6b1ed7399b1628e6b838be2bd75a1b4d76f22581",
+  "save_key": "Cibio.RPG.v3.Progress",
+  "render_method": "Unity Camera.Render; no window HUD visual audit or FPS claim; audio probe labelled separately from offline preview"
+}
