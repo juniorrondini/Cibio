@@ -134,3 +134,11 @@
 - N abre dossiê mode5 e pausa Playing; Esc/N retorna a mode1. PointerOverHud abrange modal e entrada; não permitir clique vazar para socos. RpgInterface18 usa fontes e estilos existentes. Só exibir conteúdo de provas conforme bits salvos.
 - Preservar productName/companyName internos: alterá-los muda o local do PlayerPrefs mesmo mantendo SaveKey. Nomes antigos de arquivos, cenas e tipos permanecem para compatibilidade. Não usar Build para reescrever a cena.
 - Generated18 e Fontes-Historia-18.zip contêm artes originais image_gen, prompts e importador. -cibio-story-review18 verifica missão, dossiê, legados, recompensa única, novas artes e regressões. A inspeção visual do dossiê ficou pendente após o usuário interromper Computer Use com Esc; não apresentar captura oculta vazia como evidência visual.
+
+## Atualização 19 — nome e Web
+- RpgProgress.playerName é opcional no save v3. RpgIdentity19 valida 2..18 caracteres e normaliza Unicode/espaços; Display faz fallback para Brasileiro. Não trocar SaveKey, companyName ou productName.
+- Menu usa BeginJourney: mode6 recebe nome; ConfirmJourney chama StartGame(bool,string) apenas após validação. Cancelar não altera o progresso. Preservar StartGame(bool) compatível com código de revisão. HUD ajusta fonte à largura do nome.
+- -cibio-identity-review19 inclui regressões 15..18 e 31 ensaios da identidade, sem tocar no save real.
+- RpgWebBuild19.Build usa -buildTarget WebGL e -cibio-build <pasta>, valida a cena, aplica DXT5 só durante build e restaura metas/settings em finally. Nunca usar o gerador RpgBuilder.Build para publicar atualizações.
+- Web/site contém a interface do site; Web/prepareweb19.py prepara o transporte Web a partir do player compilado. O manifest .openai/hosting.json conserva o ID do Sites: não criar outro Site ao atualizar. Assets binários compilados ficam no checkout próprio do Sites, não no código-fonte do projeto Unity.
+- Site é single player público. Nome e progresso são locais ao navegador, sem conta ou backend multiplayer. Arte existente e créditos originais preservados. Não anunciar compatibilidade móvel sem testar controles próprios.

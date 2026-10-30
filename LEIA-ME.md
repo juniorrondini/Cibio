@@ -1,6 +1,8 @@
-# Cibio — versão 18
+# Cibio — versão 19
 
-Execute **Cibio.exe** para jogar. Projeto: https://github.com/juniorrondini/Cibio
+**Jogar no navegador:** https://cibio-brasil-no-vermelho.viniandfriends.chatgpt.site
+
+Execute **Cibio.exe** para jogar. Antes de começar, escolha seu nome na tela personalizada. Enter confirma; Esc volta sem alterar o progresso. O nome aparece no HUD e fica salvo. Projeto: https://github.com/juniorrondini/Cibio
 
 **Brasil no Vermelho** é uma sátira política ficcional no Brasil da Vuvuzela. O Companheiro sufoca o bairro com boletos, dívidas, juros abusivos e perseguição. Reúna registros de cobrança, listas de perseguição e o log de uma apuração fraudada; enfrente-o e entregue o dossiê a Seu Bonero.
 

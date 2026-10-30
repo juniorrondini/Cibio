@@ -1,0 +1,28 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Cibio — Brasil no Vermelho</title>
+  <meta name="description" content="Entre no Brasil da Vuvuzela. RPG de ação em pixel art: explore o bairro, desperte poderes e enfrente Companheiro. Jogue no navegador.">
+  <meta name="theme-color" content="#101916">
+  <link rel="icon" href="icon.png"><link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header><a class="brand" href="./" aria-label="Cibio, início">CIBIO<span>BRASIL NO VERMELHO</span></a><span class="edition">RPG DE AÇÃO · VERSÃO 19</span></header>
+  <main>
+    <section class="game-shell" aria-label="Jogo Cibio">
+      <canvas id="game" width="1440" height="810" tabindex="0" aria-label="Cibio. Jogo controlado por teclado e mouse." hidden></canvas>
+      <div id="cover" class="cover">
+        <div class="intro"><p class="eyebrow">O BRASIL VIROU UMA VUVUZELA.</p><h1>O bairro precisa<br>da sua resistência.</h1><p class="synopsis">Boletos, dívidas e medo. Explore o Bairro do Trabalhador, reúna as provas e enfrente o Companheiro.</p><button id="play" type="button">Jogar no navegador <span aria-hidden="true">↗</span></button><p class="platform">Teclado e mouse · Escolha seu nome ao começar</p></div>
+        <span class="fiction">Uma sátira política ficcional.</span>
+      </div>
+      <div id="loading" class="loading" hidden role="status" aria-live="polite"><p class="eyebrow">PREPARANDO SUA JORNADA</p><h2 id="load-title">Abrindo o bairro…</h2><progress id="progress" max="1" value="0" aria-label="Carregamento do jogo"></progress><p id="load-detail">Conectando…</p><p class="subtle">O primeiro carregamento pode levar alguns minutos.<br>Mantenha esta aba aberta.</p></div>
+      <div id="error" class="loading" hidden role="alert"><p class="eyebrow">NÃO FOI POSSÍVEL ENTRAR</p><h2>Vamos tentar de novo?</h2><p id="error-message"></p><button id="retry" type="button">Tentar novamente</button><a href="https://github.com/juniorrondini/Cibio" target="_blank" rel="noopener">Ver projeto no GitHub ↗</a></div>
+    </section>
+    <div class="game-toolbar"><span id="state">SINGLE PLAYER · PROGRESSO NESTE NAVEGADOR</span><button id="fullscreen" type="button" disabled>Tela cheia <span aria-hidden="true">⛶</span></button></div>
+    <section class="below"><div><p class="eyebrow">UM TRABALHADOR. MUITA CONTA A ACERTAR.</p><h2>Comece com Seu Bonero.</h2><p>Na praça, converse com ele usando <kbd>E</kbd>. Vá ao Distrito do Poder e investigue os três postos. Seu dossiê guarda as provas — e os próximos passos.</p><p class="save-note">Seu nome e progresso ficam neste navegador. A versão Windows tem um save separado. Para jogar, use um computador com WebGL 2 e teclado.</p></div><details open><summary>Controles do bairro</summary><dl><div><dt><kbd>W A S D</kbd> / setas</dt><dd>Mover</dd></div><div><dt><kbd>J</kbd> / clique</dt><dd>Combo de socos</dd></div><div><dt><kbd>Alt</kbd> / botão direito</dt><dd>Esquivar</dd></div><div><dt><kbd>C</kbd></dt><dd>Carregar e transformar</dd></div><div><dt><kbd>1</kbd> · <kbd>Shift</kbd> · <kbd>Ctrl</kbd></dt><dd>Voo · impulso · freio</dd></div><div><dt><kbd>2</kbd> / <kbd>3</kbd></dt><dd>Onda / Palma</dd></div><div><dt><kbd>E</kbd> · <kbd>T</kbd> · <kbd>N</kbd></dt><dd>Interagir · talentos · dossiê</dd></div><div><dt><kbd>Esc</kbd> · <kbd>M</kbd></dt><dd>Pausa · som</dd></div></dl></details></section>
+  </main>
+  <footer><span>Cibio · Protótipo jogável</span><nav aria-label="Links do projeto"><a href="credits.txt" target="_blank" rel="noopener">Créditos e licenças</a><a href="https://github.com/juniorrondini/Cibio" target="_blank" rel="noopener">Código e fontes ↗</a></nav></footer>
+  <script src="app.js" defer></script>
+</body>
+</html>

@@ -1,0 +1,35 @@
+PASS Tres postos e22inimigos da cena anterior preservados
+PASS Posto usa asset proprio de investigacao: 0
+PASS Escala e nome publico do posto corretos: 0
+PASS Posto usa asset proprio de investigacao: 2
+PASS Escala e nome publico do posto corretos: 2
+PASS Posto usa asset proprio de investigacao: 1
+PASS Escala e nome publico do posto corretos: 1
+PASS Investigacao exige receber a missao primeiro
+PASS Seu Bonero apresenta investigacao e antagonista corretos
+PASS Voo impede recolher prova ate pousar
+PASS Agente proximo protege o posto
+PASS Recolha real registra prova e contador: 0
+PASS Investigar de novo nao duplica prova nem XP: 0
+PASS Recolha real registra prova e contador: 1
+PASS Investigar de novo nao duplica prova nem XP: 1
+PASS Recolha real registra prova e contador: 2
+PASS Investigar de novo nao duplica prova nem XP: 2
+PASS Tres provas ainda exigem confrontar Companheiro
+PASS Derrota real de Companheiro abre entrega do dossie
+PASS Entrega conserva100XP e desbloqueios de voo/aura/Palma
+PASS Conversa pos-missao usa novo desfecho sem recompensa repetida
+PASS Provas e conclusao sobrevivem serializacao v3
+PASS Save legado reaproveita mascara sem perder nivel/poder/talento: 0
+PASS Save legado reaproveita mascara sem perder nivel/poder/talento: 1
+PASS Save legado reaproveita mascara sem perder nivel/poder/talento: 3
+PASS Save legado reaproveita mascara sem perder nivel/poder/talento: 7
+PASS Dossie abre pelo controlador compartilhado e pausa mundo
+PASS Dossie aberto impede atualizacao do combate
+PASS Clique no dossie nao vaza para soco no mundo
+PASS Fechar dossie retoma jogo
+PASS Dossie nao abre sobre menu inicial
+PASS Dossie nao interrompe revelacao cinematografica
+PASS Regioes publicas acompanham a nova narrativa
+PASS Chefes mantem identidades pedidas pelo usuario
+PASS Save real preservado durante reformulacao e capturas18

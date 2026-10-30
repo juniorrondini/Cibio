@@ -1,0 +1,18 @@
+{
+  "checks": 1167,
+  "check_groups": {
+    "Verificacao-RPG.txt": 382,
+    "Ascendente-09.txt": 75,
+    "Vila11.txt": 75,
+    "Chefe12.txt": 157,
+    "Arte13.txt": 64,
+    "Ilha-Combate14.txt": 117,
+    "Convergencia15.txt": 141,
+    "Orbita16.txt": 57,
+    "Ruptura17.txt": 33,
+    "Historia18.txt": 35,
+    "Identidade19.txt": 31
+  },
+  "real_save_preserved": true,
+  "save_key": "Cibio.RPG.v3.Progress"
+}

@@ -1,8 +1,24 @@
 # Cibio — Brasil no Vermelho
 
+**Jogar no navegador:** https://cibio-brasil-no-vermelho.viniandfriends.chatgpt.site
+
 **O Brasil virou uma Vuvuzela. Sua voz pode despertar a vila.**
 
 RPG de ação e sátira política ficcional em pixel art, com um trabalhador brasileiro enfrentando o sistema do Companheiro, combos, poderes e progressão. Projeto Unity editável, em fase de protótipo jogável para Windows.
+
+## Versão 19 — Seu nome no bairro e versão Web
+
+![Tela personalizada de nome na versão Web pública](docs/images/nome-publico19.png)
+
+**Jogar** e **Novo jogo** abrem uma tela própria com o personagem animado e o campo de nome. No continuar, o nome salvo vem preenchido; o jogador pode mantê-lo ou escolher outro. Aceita 2 a 18 caracteres, incluindo acentos, espaços, números, hífen e apóstrofo. Enter confirma; Voltar/Esc cancela sem trocar o progresso. O HUD usa o nome escolhido, com tamanho ajustado ao espaço disponível.
+
+O nome é um campo opcional no save v3. Saves anteriores continuam válidos e mostram Brasileiro até a escolha. Não há cadastro, senha ou envio do nome a um servidor de jogadores.
+
+A versão Web executa o mesmo jogo Unity em WebGL 2, com teclado e mouse. É single player acessível por URL pública; multiplayer não faz parte desta atualização. Progresso e nome ficam no navegador, separados do save Windows. Use **Esc** para pausar e salvar antes de fechar a aba. Créditos e fontes permanecem acessíveis no jogo, no site e neste repositório.
+
+O builder Web preserva a cena e restaura as configurações/metas de origem depois de gerar o player. Overrides DXT5 aplicam compressão apenas ao Web. O site transporta data/wasm em partes gzip de até 8 MiB, verifica SHA-256 e reconstrói os arquivos originais no navegador. ZIPs históricos de fontes permanecem disponíveis no GitHub, sem entrar no download obrigatório para jogar.
+
+**Validação automática:** 1.167 verificações aprovadas, incluindo 31 sobre nomes, Unicode, limites, criação/cancelamento, continuação, serialização e proteção do save real. [Relatório da identidade](docs/verification/Identidade19.txt). A validação do navegador e o resultado da publicação são registrados em [Web](Web/README.md).
 
 ## Versão 18 — Brasil no Vermelho
 

@@ -1,0 +1,36 @@
+{
+  "files": 27,
+  "static_total_bytes": 60757327,
+  "game_download_bytes": 56373997,
+  "all_files_below_25MiB": true,
+  "chunks_reconstruct_original_data_and_wasm": true,
+  "source_archive_included": false,
+  "sources_public_github": true,
+  "publication": {
+    "project_id": "appgprj_6ae48b9c842c8191a6fd12c78edeb4b3",
+    "version_id": "appgprj_6ae48b9c842c8191a6fd12c78edeb4b3~appgver_71308f6c7c54819199cfb89fe40c2e0d",
+    "deployment_id": "appgdep_6ae48ffcb8fc81919d59ba3fb4ad9e4e",
+    "source_commit": "28806863f98712281bba06a4231836b2fb14011e",
+    "access_mode": "public",
+    "status": "succeeded",
+    "url": "https://cibio-brasil-no-vermelho.viniandfriends.chatgpt.site"
+  },
+  "local_browser_ui_verified": [
+    "Unity menu",
+    "name panel",
+    "typing name",
+    "name on HUD",
+    "responsive landing 390px"
+  ],
+  "original_scene_unchanged": true,
+  "original_guids_unchanged": true,
+  "unity_company_product_settings_unchanged": true,
+  "performance_measured": false,
+  "audio_listening_verified": false,
+  "public_browser_verified": [
+    "published page loaded anonymously",
+    "gzip/chunk loader completed over HTTPS",
+    "Unity menu rendered",
+    "name panel opened"
+  ]
+}

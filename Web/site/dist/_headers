@@ -1,0 +1,4 @@
+/Build/*
+  Cache-Control: public, max-age=31536000, immutable
+/game-manifest.json
+  Cache-Control: no-cache
